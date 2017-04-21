@@ -35,28 +35,51 @@ public class MaxSubseqSum {
         return MaxSum;
     }
 
-    public static void main(String[] args) {
-        int size = 10;
-        int[] testArr = {3, -1, 5, 10, -8, 2, 1, 4, 0, 7};
+    public static int DivideAndConquer(int[] List, int left, int right) {
+        int MaxLeftSum, MaxRightSum;
+        int MaxLeftBorderSum, MaxRightBorderSum;
+        int LeftBorderSum, RightBorderSum;
+        int center, i;
 
-        //算法1运行时间
-        int maxSum1 = 0;
-        long startTime1 = System.currentTimeMillis();
-        for (int i = 0; i < 1000; i++) {
-            maxSum1 = MaxSubseqSum1(testArr, size);
+        if (left == right) {
+            if (List[left] > 0) {
+                return List[left];
+            } else {
+                return 0;
+            }
         }
-        long endTime1 = System.currentTimeMillis();
-        System.out.println("Max Subsequence Sum 1 is " + maxSum1);
-        System.out.println("function1 run time is  "+ (endTime1 - startTime1) +"ms");
 
-        //算法2运行时间
-        int maxSum2 = 0;
-        long startTime2 = System.currentTimeMillis();
-        for (int i = 0; i < 1000; i++) {
-            maxSum2 = MaxSubseqSum2(testArr, size);
-        }
-        long endTime2 = System.currentTimeMillis();
-        System.out.println("Max Subsequence Sum 2 is " + maxSum2);
-        System.out.println("function2 run time is  "+ (endTime2 - startTime2) +"ms");
+        center = (left + right) / 2;
+
+        MaxLeftSum = DivideAndConquer(List, left, center);
+        MaxRightSum = DivideAndConquer(List, left, center);
+        System.out.println("Now MaxLeftSum = " + MaxLeftSum);
+        System.out.println("Now MaxRightSum = " + MaxRightSum);
+        return 0;
     }
+
+//    public static void main(String[] args) {
+//        int size = 10;
+//        int[] testArr = {3, -1, 5, 10, -8, 2, 1, 4, 0, 7};
+//
+//        //算法1运行时间
+//        int maxSum1 = 0;
+//        long startTime1 = System.currentTimeMillis();
+//        for (int i = 0; i < 1000; i++) {
+//            maxSum1 = MaxSubseqSum1(testArr, size);
+//        }
+//        long endTime1 = System.currentTimeMillis();
+//        System.out.println("Max Subsequence Sum 1 is " + maxSum1);
+//        System.out.println("function1 run time is  "+ (endTime1 - startTime1) +"ms");
+//
+//        //算法2运行时间
+//        int maxSum2 = 0;
+//        long startTime2 = System.currentTimeMillis();
+//        for (int i = 0; i < 1000; i++) {
+//            maxSum2 = MaxSubseqSum2(testArr, size);
+//        }
+//        long endTime2 = System.currentTimeMillis();
+//        System.out.println("Max Subsequence Sum 2 is " + maxSum2);
+//        System.out.println("function2 run time is  "+ (endTime2 - startTime2) +"ms");
+//    }
 }
