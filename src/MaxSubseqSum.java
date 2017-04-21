@@ -19,17 +19,45 @@ public class MaxSubseqSum {
         return MaxSum;
     }
 
+    public static int MaxSubseqSum2(int[] A, int N) {
+        int ThisSum = 0;
+        int MaxSum = 0;
+        int i, j;
+        for (i = 0; i < N; i++) {
+//            ThisSum = 0;
+            for (j = i; j < N; j++) {
+                ThisSum += A[j];
+                System.out.println("thissum = " + ThisSum);
+                if (ThisSum > MaxSum) {
+                    MaxSum = ThisSum;
+                }
+            }
+        }
+        return MaxSum;
+    }
+
     public static void main(String[] args) {
         int size = 10;
         int[] testArr = {3, -1, 5, 10, -8, 2, 1, 4, 0, 7};
-        int maxSum = 0;
+
         //算法1运行时间
-        long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 1000; i++) {
-            maxSum = MaxSubseqSum1(testArr, size);
+//        int maxSum1 = 0;
+//        long startTime1 = System.currentTimeMillis();
+//        for (int i = 0; i < 1000; i++) {
+//            maxSum1 = MaxSubseqSum1(testArr, size);
+//        }
+//        long endTime1 = System.currentTimeMillis();
+//        System.out.println("Max Subsequence Sum 1 is " + maxSum1);
+//        System.out.println("function1 run time is  "+ (endTime1 - startTime1) +"ms");
+
+        //算法2运行时间
+        int maxSum2 = 0;
+        long startTime2 = System.currentTimeMillis();
+        for (int i = 0; i < 1; i++) {
         }
-        long endTime = System.currentTimeMillis();
-        System.out.println("Max Subsequence Sum is " + maxSum);
-        System.out.println("function run time is  "+ (endTime - startTime) +"ms");
+            maxSum2 = MaxSubseqSum2(testArr, size);
+        long endTime2 = System.currentTimeMillis();
+        System.out.println("Max Subsequence Sum 2 is " + maxSum2);
+        System.out.println("function1 run time is  "+ (endTime2 - startTime2) +"ms");
     }
 }
