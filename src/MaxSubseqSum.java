@@ -35,6 +35,10 @@ public class MaxSubseqSum {
         return MaxSum;
     }
 
+    public static int MaxSubseqSum3(int[] A, int N) {
+        return DivideAndConquer(A, 0, N-1);
+    }
+
     public static int DivideAndConquer(int[] List, int left, int right) {
         int MaxLeftSum, MaxRightSum;
         int MaxLeftBorderSum, MaxRightBorderSum;
@@ -55,15 +59,37 @@ public class MaxSubseqSum {
         MaxRightSum = DivideAndConquer(List, center + 1, right);
         System.out.println("Now MaxLeftSum = " + MaxLeftSum);
         System.out.println("Now MaxRightSum = " + MaxRightSum);
-        return 0;
+
+        MaxLeftBorderSum = 0; LeftBorderSum = 0;
+        for (i = center; i >= left; i--) {
+            LeftBorderSum += List[i];
+            if (LeftBorderSum > MaxLeftBorderSum) {
+                MaxLeftBorderSum = LeftBorderSum;
+            }
+        }
+        System.out.println("Now MaxLeftBorderSum = " + MaxLeftBorderSum);
+
+        MaxRightBorderSum = 0; RightBorderSum = 0;
+        for (i = center + 1; i <= right; i++) {
+            RightBorderSum += List[i];
+            if (RightBorderSum > MaxLeftBorderSum) {
+                MaxRightBorderSum = RightBorderSum;
+            }
+        }
+        System.out.println("Now MaxRightBorderSum = " + MaxRightBorderSum);
+        return Max3(MaxLeftSum, MaxRightSum, MaxLeftBorderSum + MaxRightBorderSum);
+    }
+
+    private static int Max3(int A, int B, int C) {
+        return A > B ? A > C ? A : C : B > C ? B : C;
     }
 
     public static void main(String[] args) {
         int size = 4;
         int[] testArr = {3, -1, 5, 10};
-        DivideAndConquer(testArr, 0, 3);
-        int c = (2 + 3) / 2;
-        System.out.println("c = " + c);
+        int maxSum3;
+        maxSum3 = MaxSubseqSum3(testArr, size);
+        System.out.println("Max Subsequence Sum 3 is " + maxSum3);
     }
 
 //    public static void main(String[] args) {
