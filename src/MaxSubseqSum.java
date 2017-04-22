@@ -40,7 +40,7 @@ public class MaxSubseqSum {
         int MaxLeftBorderSum, MaxRightBorderSum;
         int LeftBorderSum, RightBorderSum;
         int center, i;
-
+        System.out.println("Now Left = " + left + ", Now Right = " + right);
         if (left == right) {
             if (List[left] > 0) {
                 return List[left];
@@ -50,12 +50,20 @@ public class MaxSubseqSum {
         }
 
         center = (left + right) / 2;
-
+        System.out.println("center = " + center);
         MaxLeftSum = DivideAndConquer(List, left, center);
-        MaxRightSum = DivideAndConquer(List, left, center);
+        MaxRightSum = DivideAndConquer(List, center + 1, right);
         System.out.println("Now MaxLeftSum = " + MaxLeftSum);
         System.out.println("Now MaxRightSum = " + MaxRightSum);
         return 0;
+    }
+
+    public static void main(String[] args) {
+        int size = 4;
+        int[] testArr = {3, -1, 5, 10};
+        DivideAndConquer(testArr, 0, 3);
+        int c = (2 + 3) / 2;
+        System.out.println("c = " + c);
     }
 
 //    public static void main(String[] args) {
