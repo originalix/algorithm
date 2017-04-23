@@ -35,10 +35,23 @@ public class MaxSubseqSum {
         return MaxSum;
     }
 
+    /**
+     * 分治法，保持API一致
+     * @param A 求解数列
+     * @param N 元素总数
+     * @return
+     */
     public static int MaxSubseqSum3(int[] A, int N) {
         return DivideAndConquer(A, 0, N-1);
     }
 
+    /**
+     * 分治法主体
+     * @param List 求解数列
+     * @param left 左半边的下标
+     * @param right 右半边的下标
+     * @return 所求数列的最大子列和
+     */
     public static int DivideAndConquer(int[] List, int left, int right) {
         int MaxLeftSum, MaxRightSum;
         int MaxLeftBorderSum, MaxRightBorderSum;
@@ -76,6 +89,10 @@ public class MaxSubseqSum {
         return Max3(MaxLeftSum, MaxRightSum, MaxLeftBorderSum + MaxRightBorderSum);
     }
 
+    /**
+     * 取三个数中的最大值
+     * @return int
+     */
     private static int Max3(int A, int B, int C) {
         return A > B ? A > C ? A : C : B > C ? B : C;
     }
