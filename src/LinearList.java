@@ -65,8 +65,10 @@ public class LinearList implements List {
         try {
             Integer a = new Integer(21);
             Integer b = new Integer(50);
+            Integer c = new Integer(2150);
             list.insert(0, a);
-            list.insert(1, b);
+            list.insert(0, b);
+            list.insert(1, c);
             for (int i = 0; i < list.size; i++) {
                 System.out.println("第" + i + "个数为 : " + list.get(i));
             }
