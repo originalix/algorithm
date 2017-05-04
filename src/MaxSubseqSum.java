@@ -120,8 +120,8 @@ public class MaxSubseqSum {
             maxSum1 = MaxSubseqSum1(List, size);
         }
         long endTime1 = System.currentTimeMillis();
-        System.out.println("Max Subsequence Sum 1 is " + maxSum1);
-        System.out.println("function1 run time is  "+ (endTime1 - startTime1) +"ms");
+//        System.out.println("Max Subsequence Sum 1 is " + maxSum1);
+//        System.out.println("function1 run time is  "+ (endTime1 - startTime1) +"ms");
     }
 
     private static void testFunction2(int[] List, int size, int runCount) {
@@ -132,8 +132,8 @@ public class MaxSubseqSum {
             maxSum2 = MaxSubseqSum2(List, size);
         }
         long endTime2 = System.currentTimeMillis();
-        System.out.println("Max Subsequence Sum 2 is " + maxSum2);
-        System.out.println("function2 run time is  "+ (endTime2 - startTime2) +"ms");
+//        System.out.println("Max Subsequence Sum 2 is " + maxSum2);
+//        System.out.println("function2 run time is  "+ (endTime2 - startTime2) +"ms");
     }
 
     private static void testFunction3(int[] List, int size, int runCount) {
@@ -144,8 +144,8 @@ public class MaxSubseqSum {
             maxSum3 = MaxSubseqSum3(List, size);
         }
         long endTime3 = System.currentTimeMillis();
-        System.out.println("Max Subsequence Sum 3 is " + maxSum3);
-        System.out.println("function3 run time is  "+ (endTime3 - startTime3) +"ms");
+//        System.out.println("Max Subsequence Sum 3 is " + maxSum3);
+//        System.out.println("function3 run time is  "+ (endTime3 - startTime3) +"ms");
     }
 
     private static void testFunction4(int[] List, int size, int runCount) {
@@ -156,8 +156,8 @@ public class MaxSubseqSum {
             maxSum4 = MaxSubseqSum3(List, size);
         }
         long endTime4 = System.currentTimeMillis();
-        System.out.println("Max Subsequence Sum 4 is " + maxSum4);
-        System.out.println("function4 run time is  "+ (endTime4 - startTime4) +"ms");
+//        System.out.println("Max Subsequence Sum 4 is " + maxSum4);
+//        System.out.println("function4 run time is  "+ (endTime4 - startTime4) +"ms");
     }
 
     public static void main(String[] args) {

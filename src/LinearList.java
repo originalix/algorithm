@@ -59,4 +59,23 @@ public class LinearList implements List {
     public int size() {
         return size;
     }
+
+    public static void test() {
+        LinearList list = new LinearList(20);
+        try {
+            Integer a = new Integer(21);
+            Integer b = new Integer(50);
+            list.insert(0, a);
+            list.insert(1, b);
+            for (int i = 0; i < list.size; i++) {
+                System.out.println("第" + i + "个数为 : " + list.get(i));
+            }
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        test();
+    }
 }
