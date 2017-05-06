@@ -1,6 +1,13 @@
 /**
  * Created by Leon on 2017/5/5.
  */
-public class LinkList<T> {
+class Node {
+    Object element;
+    Node next;
+
+    
+}
+
+public class LinkList {
 
 }
