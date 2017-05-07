@@ -75,6 +75,7 @@ public class LinkList implements List {
 
     @Override
     public void insert(int index, Object obj) throws Exception {
+        
     }
 
     @Override
@@ -89,11 +90,11 @@ public class LinkList implements List {
 
     @Override
     public int size() {
-        return 0;
+        return this.size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 }
