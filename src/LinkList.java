@@ -55,7 +55,6 @@ public class LinkList implements List {
 
     @Override
     public void insert(int index, Object obj) throws Exception {
-
     }
 
     @Override
