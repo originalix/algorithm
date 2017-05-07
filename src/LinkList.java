@@ -53,6 +53,26 @@ public class LinkList implements List {
         this.size = 0;
     }
 
+    //定位函数，也就是让当前节点定位到要操作节点的前一个节点
+    //比如要修改a2节点，就把当前节点定位到a1节点，然后修改a1节点的指针域
+    public void index(int index) throws Exception {
+        if (index < -1 || index > size - 1) {
+            throw new Exception("参数错误");
+        }
+
+        //说明在头结点之后操作
+        if (index == -1) {
+            return;
+        }
+
+        current = head.next;
+        int j = 0;
+        while (current != null && j < index) {
+            current = current.next;
+            j++;
+        }
+    }
+
     @Override
     public void insert(int index, Object obj) throws Exception {
     }
