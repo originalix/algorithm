@@ -78,14 +78,22 @@ public class LinkList implements List {
         if (index < 0 || index > size) {
             throw new Exception("参数错误!");
         }
-        index(index - 1);
+        index(index - 1); //定位节点到要操作的前一个节点
         current.setNext(new Node(obj, current.next));
         size++;
     }
 
     @Override
     public void delete(int index, Object obj) throws Exception {
-
+        if (isEmpty()) {
+            throw new Exception("链表为空，无法删除");
+        }
+        if (index < 0 || index > size) {
+            throw new Exception("参数错误");
+        }
+        index(index - 1);
+        current.setNext(current.next.next);
+        size--;
     }
 
     @Override
