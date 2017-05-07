@@ -75,7 +75,12 @@ public class LinkList implements List {
 
     @Override
     public void insert(int index, Object obj) throws Exception {
-        
+        if (index < 0 || index > size) {
+            throw new Exception("参数错误!");
+        }
+        index(index - 1);
+        current.setNext(new Node(obj, current.next));
+        size++;
     }
 
     @Override
