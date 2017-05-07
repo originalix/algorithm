@@ -84,7 +84,7 @@ public class LinkList implements List {
     }
 
     @Override
-    public void delete(int index, Object obj) throws Exception {
+    public void delete(int index) throws Exception {
         if (isEmpty()) {
             throw new Exception("链表为空，无法删除");
         }
@@ -113,5 +113,22 @@ public class LinkList implements List {
     @Override
     public boolean isEmpty() {
         return size == 0;
+    }
+}
+
+class LinkListTest {
+    public static void main(String[] args) throws Exception {
+        LinkList list = new LinkList();
+        for (int i = 0; i < 10; i++) {
+            int temp = (int)(Math.random() * 100);
+            list.insert(i, temp);
+            System.out.println(temp + " ");
+        }
+
+        list.delete(4);
+        System.out.println("\n-----删除了第五个元素后-----");
+        for (int i = 0; i < list.size; i++) {
+            System.out.println(list.get(i) + " ");
+        }
     }
 }

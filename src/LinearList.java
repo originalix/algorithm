@@ -32,7 +32,7 @@ public class LinearList implements List {
         size++;
     }
 
-    public void delete(int index, Object obj) throws Exception {
+    public void delete(int index) throws Exception {
         if (isEmpty()) {
             throw new Exception("顺序表没有元素，无法删除");
         }
