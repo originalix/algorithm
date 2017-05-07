@@ -98,7 +98,11 @@ public class LinkList implements List {
 
     @Override
     public Object get(int index) throws Exception {
-        return null;
+        if (index < -1 || index > size - 1) {
+            throw new Exception("参数非法");
+        }
+        index(index);
+        return current.getElement();
     }
 
     @Override
