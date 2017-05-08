@@ -20,7 +20,19 @@ public class Stack {
     }
 
     public void push(Object obj) {
+        ensureCapacity();
+        elementData[size++] = obj;
+    }
 
+    public Object pop() throws Exception {
+        if (size == 0) {
+            throw new Exception("取出数据错误，空栈");
+        }
+        return elementData[--size];
+    }
+
+    public int size() {
+        return size;
     }
 
     private void ensureCapacity() {
@@ -29,6 +41,22 @@ public class Stack {
             int newLength = (int)(elementData.length * 1.5);
             elementData = new Object[newLength];
             System.arraycopy(oldElements, 0, elementData, 0, size);
+        }
+    }
+
+    public static void main(String[] args) {
+        Stack stack = new Stack();
+        for (int i = 0; i < 10; i++) {
+            stack.push("元素 " + i);
+            System.out.println("元素 " + i + "入栈");
+        }
+
+        try {
+            for (int i = 0; i < 10; i++) {
+                System.out.println(stack.pop() + "出栈");
+            }
+        } catch (Exception error) {
+            error.printStackTrace();
         }
     }
 }
