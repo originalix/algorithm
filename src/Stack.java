@@ -44,6 +44,7 @@ public class Stack {
         }
     }
 
+    //入栈出栈测试
     public static void main(String[] args) {
         Stack stack = new Stack();
         for (int i = 0; i < 10; i++) {
