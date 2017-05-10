@@ -18,6 +18,22 @@ public class ListStack {
         this.size = size;
     }
 
-    
+    public void setHeader(Node header) {
+        this.header = header;
+    }
+
+    public boolean isFull() {
+        if (size == elementCount) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isEmpty() {
+        if (elementCount == 0) {
+            return true;
+        }
+        return false;
+    }
 
 }
