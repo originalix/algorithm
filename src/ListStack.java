@@ -54,4 +54,10 @@ public class ListStack {
         return  obj;
     }
 
+    public Object peak() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("空栈");
+        }
+        return header.getElement();
+    }
 }
