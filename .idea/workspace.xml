@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7787e7d8-69a2-4a5c-a388-3f24a7cd0bfa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListStack.java" afterPath="$PROJECT_DIR$/src/ListStack.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,11 +18,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="LinkList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ListStack.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ListStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state relative-caret-position="475">
+              <caret line="54" column="5" lean-forward="false" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
               <folding>
                 <element signature="e#373#374#0" expanded="true" />
                 <element signature="e#409#410#0" expanded="true" />
@@ -1005,8 +1014,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ListStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state relative-caret-position="475">
+          <caret line="54" column="5" lean-forward="false" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
           <folding>
             <element signature="e#373#374#0" expanded="true" />
             <element signature="e#409#410#0" expanded="true" />

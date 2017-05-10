@@ -36,4 +36,22 @@ public class ListStack {
         return false;
     }
 
+    public void push(Object value) throws Exception {
+        if (isFull()) {
+            throw new Exception("栈已满，没有空位");
+        }
+        header = new Node(value, header);
+        elementCount++;
+    }
+
+    public Object pop() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("空栈，没有可以返回的元素");
+        }
+        Object obj = header.getElement();
+        header = header.next;
+        elementCount--;
+        return  obj;
+    }
+
 }
