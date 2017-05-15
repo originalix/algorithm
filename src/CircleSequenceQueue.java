@@ -35,6 +35,26 @@ public class CircleSequenceQueue implements Queue {
     }
 
     @Override
+    public Object delete() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("空队列！");
+        }
+        Object obj = queue[front];
+        front = (front + 1) % maxSize;
+        count--;
+        return obj;
+    }
+
+    @Override
+    public Object getFront() throws Exception {
+        if (!isEmpty()) {
+            return queue[front];
+        } else {
+            return null;
+        }
+    }
+
+    @Override
     public boolean isEmpty() {
         return count == 0;
     }
