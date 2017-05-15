@@ -81,9 +81,14 @@
       <file leaf-file-name="CircleSequenceQueue.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CircleSequenceQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding>
+                <element signature="e#276#277#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
+                <element signature="e#379#380#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1022,9 +1027,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CircleSequenceQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="323">
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
