@@ -1,7 +1,7 @@
 /**
  * Created by Leon on 2017/5/16.
  */
-public class CircleSequenceQueue {
+public class CircleSequenceQueue implements Queue {
     static final int defaultSize = 10; //队列默认长度
     int front; //队头
     int rear; //队尾
@@ -22,5 +22,20 @@ public class CircleSequenceQueue {
         front = rear = 0;
         count = 0;
         queue = new Object[size];
+    }
+
+    @Override
+    public void append(Object obj) throws Exception {
+        if (count > 0 && front == rear) {
+            throw new Exception("队列已满!");
+        }
+        queue[rear] = obj;
+        rear = (rear + 1) % maxSize;
+        count++;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return count == 0;
     }
 }
