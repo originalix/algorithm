@@ -1,3 +1,5 @@
+import com.sun.org.glassfish.external.amx.AMX;
+
 /**
  * Created by Leon on 2017/5/17.
  */
@@ -11,7 +13,18 @@ public class WindowQueue {
 
     //排队买票
     public synchronized void producter() throws Exception {
-
+        if (queue.count < maxSize) {
+            queue.append(num++);
+            System.out.println("第" + num + "顾客排队买票");
+            this.notifyAll(); //唤醒卖票线程
+        } else {
+            try {
+                System.out.println("队列已满...请等待!");
+                this.wait();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     //卖票
