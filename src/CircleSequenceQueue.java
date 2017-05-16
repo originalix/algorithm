@@ -59,3 +59,26 @@ public class CircleSequenceQueue implements Queue {
         return count == 0;
     }
 }
+
+class CircleSequenceQueueTest {
+    public static void main(String[] args) throws Exception {
+        CircleSequenceQueue queue = new CircleSequenceQueue();
+        queue.append("a");
+        queue.append("b");
+        queue.append("c");
+        queue.append("d");
+        queue.append("e");
+        queue.append("f");
+        queue.append("g");
+        queue.append("h");
+
+        queue.delete();
+        queue.delete();
+
+        queue.append("i");
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.delete());
+        }
+    }
+}
