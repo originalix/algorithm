@@ -48,3 +48,17 @@ public class WindowQueue {
     }
 
 }
+
+class WindowQueueTest {
+    public static void main(String[] args) throws Exception {
+        WindowQueue queue = new WindowQueue();
+        Producer p = new Producer(queue);
+        Consumer c = new Consumer(queue);
+
+        Thread pThread = new Thread(p);
+        Thread cThread = new Thread(c);
+
+        pThread.start();
+        cThread.start();
+    }
+}

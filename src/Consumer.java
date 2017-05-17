@@ -3,7 +3,7 @@
  */
 
 //卖票者
-public class Consumer {
+public class Consumer implements Runnable {
 
     WindowQueue queue;
 
@@ -11,6 +11,7 @@ public class Consumer {
         this.queue = queue;
     }
 
+    @Override
     public void run() {
         while (queue.isAlive) {
             try {
