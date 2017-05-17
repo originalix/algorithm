@@ -29,7 +29,22 @@ public class WindowQueue {
 
     //卖票
     public synchronized void consumer() throws Exception {
-
+        if (queue.count > 0) {
+            Object obj = queue.delete();
+            int temp = Integer.parseInt(obj.toString());
+            System.out.println("第" + (temp + 1) + "个顾客买到票离开了队列");
+            if (queue.isEmpty() && this.num >= 100) {
+                this.isAlive = false;
+            }
+            this.notifyAll();
+        } else {
+            try {
+                System.out.println("队列已空...请等待");
+                this.wait();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }
