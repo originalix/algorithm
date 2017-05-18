@@ -33,4 +33,23 @@ public class LinkQueue implements Queue {
 
         count++;
     }
+
+    @Override
+    public Object delete() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("队列已空，没有元素");
+        }
+
+        Node node = front;
+        front = front.next;
+        count--;
+        return node.getElement();
+    }
+
+
+
+    @Override
+    public boolean isEmpty() {
+        return count == 0;
+    }
 }

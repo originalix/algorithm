@@ -54,11 +54,13 @@
       <file leaf-file-name="LinkQueue.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+            <state relative-caret-position="486">
+              <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
               <folding>
                 <element signature="e#153#154#0" expanded="true" />
                 <element signature="e#175#176#0" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1098,11 +1100,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="486">
+          <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
           <folding>
             <element signature="e#153#154#0" expanded="true" />
             <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
           </folding>
         </state>
       </provider>
