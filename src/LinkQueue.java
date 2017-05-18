@@ -60,3 +60,24 @@ public class LinkQueue implements Queue {
         return count == 0;
     }
 }
+
+class TestLinkQueue {
+    public static void main(String[] args) throws Exception {
+        LinkQueue queue = new LinkQueue();
+        queue.append("a");
+        queue.append("b");
+        queue.append("c");
+        queue.append("d");
+        queue.append("e");
+        queue.append("f");
+
+        queue.delete();
+        queue.delete();
+
+        queue.append("g");
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.delete());
+        }
+    }
+}
