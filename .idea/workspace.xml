@@ -41,8 +41,8 @@
       <file leaf-file-name="LinkList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+            <state relative-caret-position="57">
+              <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
               <folding>
                 <element signature="e#146#147#0" expanded="true" />
                 <element signature="e#181#182#0" expanded="true" />
@@ -54,13 +54,13 @@
       <file leaf-file-name="LinkQueue.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+            <state relative-caret-position="315">
+              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
               <folding>
                 <element signature="e#153#154#0" expanded="true" />
                 <element signature="e#175#176#0" expanded="true" />
-                <element signature="e#895#896#0" expanded="true" />
-                <element signature="e#928#929#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="e#1139#1140#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1089,8 +1089,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        <state relative-caret-position="57">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding>
             <element signature="e#146#147#0" expanded="true" />
             <element signature="e#181#182#0" expanded="true" />
@@ -1100,13 +1100,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        <state relative-caret-position="315">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding>
             <element signature="e#153#154#0" expanded="true" />
             <element signature="e#175#176#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
           </folding>
         </state>
       </provider>

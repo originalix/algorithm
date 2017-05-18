@@ -46,7 +46,14 @@ public class LinkQueue implements Queue {
         return node.getElement();
     }
 
-
+    @Override
+    public Object getFront() throws Exception {
+        if (!isEmpty()) {
+            return front.getElement();
+        } else {
+            return null;
+        }
+    }
 
     @Override
     public boolean isEmpty() {
