@@ -18,7 +18,7 @@ typedef int TElemType; /* 树节点的数据类型, 目前暂定为整型 */
 typedef struct PTNode {
     TElemType data;
     int parent;
-}PTNode;
+} PTNode;
 
 /**
  树结构
@@ -26,4 +26,24 @@ typedef struct PTNode {
 typedef struct {
     PTNode nodes[MAX_TREE_SIZE]; /* 结点数组 */
     int r,n; /* 根的位置和结点数 */
-}PTree;
+} PTree;
+
+/**
+ 孩子结点
+ */
+typedef struct CTNode {
+    int child;
+    struct CTNode *next;
+} *ChildPtr;
+
+/**
+ 表头结构
+ */
+typedef struct {
+    TElemType data;
+    ChildPtr firstchild;
+} CTBox;
+
+
+
+
