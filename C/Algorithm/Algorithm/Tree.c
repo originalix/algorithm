@@ -44,6 +44,13 @@ typedef struct {
     ChildPtr firstchild;
 } CTBox;
 
+/**
+ 树结构
+ */
+typedef struct {
+    CTBox nodes[MAX_TREE_SIZE];
+    int r,n;
+} CTree;
 
 
 
