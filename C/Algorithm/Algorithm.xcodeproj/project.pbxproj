@@ -27,6 +27,36 @@
 		567A7D631ED17DCC0023B43B /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		567A7D661ED17DCC0023B43B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		567A7D721ED1C83C0023B43B /* Tree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Tree.c; sourceTree = "<group>"; };
+		567A7D751ED1CDEE0023B43B /* 01线性表顺序存储_List_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "01线性表顺序存储_List_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D761ED1CDEE0023B43B /* 02线性表链式存储_LinkList_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "02线性表链式存储_LinkList_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D771ED1CDEE0023B43B /* 03静态链表_StaticLinkList_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "03静态链表_StaticLinkList_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D791ED1CDEE0023B43B /* 01顺序栈_Stack_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "01顺序栈_Stack_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D7A1ED1CDEE0023B43B /* 02两栈共享空间_DoubleStack_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "02两栈共享空间_DoubleStack_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D7B1ED1CDEE0023B43B /* 03链栈_LinkStack_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "03链栈_LinkStack_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D7C1ED1CDEE0023B43B /* 04斐波那契函数_Fibonacci_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "04斐波那契函数_Fibonacci_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D7D1ED1CDEE0023B43B /* 05顺序队列_Queue_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "05顺序队列_Queue_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D7E1ED1CDEE0023B43B /* 06链队列_LinkQueue_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "06链队列_LinkQueue_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D801ED1CDEE0023B43B /* 01串_String_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "01串_String_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D811ED1CDEE0023B43B /* 02模式匹配_KMP_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "02模式匹配_KMP_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D831ED1CDEE0023B43B /* 01二叉树顺序结构实现_BiTreeArray_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "01二叉树顺序结构实现_BiTreeArray_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D841ED1CDEE0023B43B /* 02二叉树链式结构实现_BiTreeLink_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "02二叉树链式结构实现_BiTreeLink_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D851ED1CDEE0023B43B /* 03线索二叉树_ThreadBinaryTree_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "03线索二叉树_ThreadBinaryTree_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D871ED1CDEE0023B43B /* 01邻接矩阵创建_CreateMGraph_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "01邻接矩阵创建_CreateMGraph_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D881ED1CDEE0023B43B /* 02邻接表创建_CreateALGraph_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "02邻接表创建_CreateALGraph_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D891ED1CDEE0023B43B /* 03邻接矩阵深度和广度遍历DFS_BFS_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "03邻接矩阵深度和广度遍历DFS_BFS_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D8A1ED1CDEE0023B43B /* 04邻接表深度和广度遍历DFS_BFS_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "04邻接表深度和广度遍历DFS_BFS_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D8B1ED1CDEE0023B43B /* 05最小生成树_Prim_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "05最小生成树_Prim_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D8C1ED1CDEE0023B43B /* 06最小生成树_Kruskal_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "06最小生成树_Kruskal_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D8D1ED1CDEE0023B43B /* 07最短路径_Dijkstra_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "07最短路径_Dijkstra_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D8E1ED1CDEE0023B43B /* 08最短路径_Floyd_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "08最短路径_Floyd_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D8F1ED1CDEE0023B43B /* 09拓扑排序_TopologicalSort_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "09拓扑排序_TopologicalSort_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D901ED1CDEE0023B43B /* 10关键路径_CriticalPath_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "10关键路径_CriticalPath_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D921ED1CDF70023B43B /* 01静态查找_Search_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "01静态查找_Search_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D931ED1CDF70023B43B /* 02二叉排序树_BinarySortTree_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "02二叉排序树_BinarySortTree_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D941ED1CDF70023B43B /* 03平衡二叉树_AVLTree_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "03平衡二叉树_AVLTree_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D951ED1CDF70023B43B /* 04B树_BTree_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "04B树_BTree_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D961ED1CDF70023B43B /* 05散列表_HashTable_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "05散列表_HashTable_UTF-8.c"; sourceTree = "<group>"; };
+		567A7D981ED1CDF70023B43B /* 01排序_Sort_UTF-8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "01排序_Sort_UTF-8.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +91,94 @@
 			children = (
 				567A7D661ED17DCC0023B43B /* main.c */,
 				567A7D721ED1C83C0023B43B /* Tree.c */,
+				567A7D911ED1CDF70023B43B /* 第8章查找 */,
+				567A7D971ED1CDF70023B43B /* 第9章排序 */,
+				567A7D741ED1CDEE0023B43B /* 第3章线性表 */,
+				567A7D781ED1CDEE0023B43B /* 第4章栈与队列 */,
+				567A7D7F1ED1CDEE0023B43B /* 第5章串 */,
+				567A7D821ED1CDEE0023B43B /* 第6章树 */,
+				567A7D861ED1CDEE0023B43B /* 第7章图 */,
 			);
 			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		567A7D741ED1CDEE0023B43B /* 第3章线性表 */ = {
+			isa = PBXGroup;
+			children = (
+				567A7D751ED1CDEE0023B43B /* 01线性表顺序存储_List_UTF-8.c */,
+				567A7D761ED1CDEE0023B43B /* 02线性表链式存储_LinkList_UTF-8.c */,
+				567A7D771ED1CDEE0023B43B /* 03静态链表_StaticLinkList_UTF-8.c */,
+			);
+			path = "第3章线性表";
+			sourceTree = "<group>";
+		};
+		567A7D781ED1CDEE0023B43B /* 第4章栈与队列 */ = {
+			isa = PBXGroup;
+			children = (
+				567A7D791ED1CDEE0023B43B /* 01顺序栈_Stack_UTF-8.c */,
+				567A7D7A1ED1CDEE0023B43B /* 02两栈共享空间_DoubleStack_UTF-8.c */,
+				567A7D7B1ED1CDEE0023B43B /* 03链栈_LinkStack_UTF-8.c */,
+				567A7D7C1ED1CDEE0023B43B /* 04斐波那契函数_Fibonacci_UTF-8.c */,
+				567A7D7D1ED1CDEE0023B43B /* 05顺序队列_Queue_UTF-8.c */,
+				567A7D7E1ED1CDEE0023B43B /* 06链队列_LinkQueue_UTF-8.c */,
+			);
+			path = "第4章栈与队列";
+			sourceTree = "<group>";
+		};
+		567A7D7F1ED1CDEE0023B43B /* 第5章串 */ = {
+			isa = PBXGroup;
+			children = (
+				567A7D801ED1CDEE0023B43B /* 01串_String_UTF-8.c */,
+				567A7D811ED1CDEE0023B43B /* 02模式匹配_KMP_UTF-8.c */,
+			);
+			path = "第5章串";
+			sourceTree = "<group>";
+		};
+		567A7D821ED1CDEE0023B43B /* 第6章树 */ = {
+			isa = PBXGroup;
+			children = (
+				567A7D831ED1CDEE0023B43B /* 01二叉树顺序结构实现_BiTreeArray_UTF-8.c */,
+				567A7D841ED1CDEE0023B43B /* 02二叉树链式结构实现_BiTreeLink_UTF-8.c */,
+				567A7D851ED1CDEE0023B43B /* 03线索二叉树_ThreadBinaryTree_UTF-8.c */,
+			);
+			path = "第6章树";
+			sourceTree = "<group>";
+		};
+		567A7D861ED1CDEE0023B43B /* 第7章图 */ = {
+			isa = PBXGroup;
+			children = (
+				567A7D871ED1CDEE0023B43B /* 01邻接矩阵创建_CreateMGraph_UTF-8.c */,
+				567A7D881ED1CDEE0023B43B /* 02邻接表创建_CreateALGraph_UTF-8.c */,
+				567A7D891ED1CDEE0023B43B /* 03邻接矩阵深度和广度遍历DFS_BFS_UTF-8.c */,
+				567A7D8A1ED1CDEE0023B43B /* 04邻接表深度和广度遍历DFS_BFS_UTF-8.c */,
+				567A7D8B1ED1CDEE0023B43B /* 05最小生成树_Prim_UTF-8.c */,
+				567A7D8C1ED1CDEE0023B43B /* 06最小生成树_Kruskal_UTF-8.c */,
+				567A7D8D1ED1CDEE0023B43B /* 07最短路径_Dijkstra_UTF-8.c */,
+				567A7D8E1ED1CDEE0023B43B /* 08最短路径_Floyd_UTF-8.c */,
+				567A7D8F1ED1CDEE0023B43B /* 09拓扑排序_TopologicalSort_UTF-8.c */,
+				567A7D901ED1CDEE0023B43B /* 10关键路径_CriticalPath_UTF-8.c */,
+			);
+			path = "第7章图";
+			sourceTree = "<group>";
+		};
+		567A7D911ED1CDF70023B43B /* 第8章查找 */ = {
+			isa = PBXGroup;
+			children = (
+				567A7D921ED1CDF70023B43B /* 01静态查找_Search_UTF-8.c */,
+				567A7D931ED1CDF70023B43B /* 02二叉排序树_BinarySortTree_UTF-8.c */,
+				567A7D941ED1CDF70023B43B /* 03平衡二叉树_AVLTree_UTF-8.c */,
+				567A7D951ED1CDF70023B43B /* 04B树_BTree_UTF-8.c */,
+				567A7D961ED1CDF70023B43B /* 05散列表_HashTable_UTF-8.c */,
+			);
+			path = "第8章查找";
+			sourceTree = "<group>";
+		};
+		567A7D971ED1CDF70023B43B /* 第9章排序 */ = {
+			isa = PBXGroup;
+			children = (
+				567A7D981ED1CDF70023B43B /* 01排序_Sort_UTF-8.c */,
+			);
+			path = "第9章排序";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
