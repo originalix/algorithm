@@ -67,5 +67,25 @@ typedef struct CSNode
     struct CSNode *firstchild, *rightsib;
 }CSNode, *CSTree;
 
-//切换函数定义
+void CreateBiTree(CSTree *T)
+{
+    TElemType ch;
+    scanf("%d", &ch);
+    // if (ch == '#') {
+    //     *T = NULL;
+    // } else {
+    //     *T = (CSTree)malloc(sizeof(CSNode));
+    //     if (!*T) {
+    //         exit(OVERFLOW);
+    //     }
+    //     (*T)->data = ch;
+    //     CreateBiTree(&(*T)->firstchild);
+    //     CreateBiTree(&(*T)->rightsib);
+    // }
+}
+
+int main()
+{
+
+}
 

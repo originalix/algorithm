@@ -1,7 +1,7 @@
-﻿#include "stdio.h"    
-#include "stdlib.h"   
+﻿#include "stdio.h"
+#include "stdlib.h"
 
-#include "math.h"  
+#include "math.h"
 #include "time.h"
 
 #define OK 1
@@ -40,13 +40,13 @@ Status InitBiTree(SqBiTree T)
 
 /* 按层序次序输入二叉树中结点的值(字符型或整型), 构造顺序存储的二叉树T */
 Status CreateBiTree(SqBiTree T)
-{ 
+{
 	int i=0;
  	printf("请按层序输入结点的值(整型)，0表示空结点，输999结束。结点数≤%d:\n",MAX_TREE_SIZE);
 	while(i<10)
 	{
 		T[i]=i+1;
-		
+
 		if(i!=0&&T[(i+1)/2-1]==Nil&&T[i]!=Nil) /* 此结点(不空)无双亲且不是根 */
 		{
 			printf("出现无双亲的非根结点%d\n",T[i]);
@@ -68,7 +68,7 @@ Status CreateBiTree(SqBiTree T)
 /* 初始条件: 二叉树T存在 */
 /* 操作结果: 若T为空二叉树,则返回TRUE,否则FALSE */
 Status BiTreeEmpty(SqBiTree T)
-{ 
+{
 	if(T[0]==Nil) /* 根结点为空,则树空 */
 		return TRUE;
 	else
@@ -77,12 +77,12 @@ Status BiTreeEmpty(SqBiTree T)
 
 /* 初始条件: 二叉树T存在。操作结果: 返回T的深度 */
 int BiTreeDepth(SqBiTree T)
-{ 
+{
    int i,j=-1;
    for(i=MAX_TREE_SIZE-1;i>=0;i--) /* 找到最后一个结点 */
      if(T[i]!=Nil)
        break;
-   i++; 
+   i++;
    do
      j++;
    while(i>=powl(2,j));/* 计算2的j次幂。 */
@@ -92,11 +92,11 @@ int BiTreeDepth(SqBiTree T)
 /* 初始条件: 二叉树T存在 */
 /* 操作结果:  当T不空,用e返回T的根,返回OK;否则返回ERROR,e无定义 */
 Status Root(SqBiTree T,TElemType *e)
-{ 
+{
 	if(BiTreeEmpty(T)) /* T空 */
 		return ERROR;
 	else
-	{	
+	{
 		*e=T[0];
 		return OK;
 	}
@@ -105,14 +105,14 @@ Status Root(SqBiTree T,TElemType *e)
 /* 初始条件: 二叉树T存在,e是T中某个结点(的位置) */
 /* 操作结果: 返回处于位置e(层,本层序号)的结点的值 */
 TElemType Value(SqBiTree T,Position e)
-{ 
+{
 	 return T[(int)powl(2,e.level-1)+e.order-2];
 }
 
 /* 初始条件: 二叉树T存在,e是T中某个结点(的位置) */
 /* 操作结果: 给处于位置e(层,本层序号)的结点赋新值value */
 Status Assign(SqBiTree T,Position e,TElemType value)
-{ 
+{
 	int i=(int)powl(2,e.level-1)+e.order-2; /* 将层、本层序号转为矩阵的序号 */
 	if(value!=Nil&&T[(i+1)/2-1]==Nil) /* 给叶子赋非空值但双亲为空 */
 		return ERROR;
@@ -125,7 +125,7 @@ Status Assign(SqBiTree T,Position e,TElemType value)
 /* 初始条件: 二叉树T存在,e是T中某个结点 */
 /* 操作结果: 若e是T的非根结点,则返回它的双亲,否则返回＂空＂ */
 TElemType Parent(SqBiTree T,TElemType e)
-{ 
+{
 	int i;
 	if(T[0]==Nil) /* 空树 */
 		return Nil;
@@ -139,7 +139,7 @@ TElemType Parent(SqBiTree T,TElemType e)
 /* 初始条件: 二叉树T存在,e是T中某个结点 */
 /* 操作结果: 返回e的左孩子。若e无左孩子,则返回＂空＂ */
 TElemType LeftChild(SqBiTree T,TElemType e)
-{ 
+{
 	int i;
 	if(T[0]==Nil) /* 空树 */
 		return Nil;
@@ -152,7 +152,7 @@ TElemType LeftChild(SqBiTree T,TElemType e)
 /* 初始条件: 二叉树T存在,e是T中某个结点 */
 /* 操作结果: 返回e的右孩子。若e无右孩子,则返回＂空＂ */
 TElemType RightChild(SqBiTree T,TElemType e)
-{ 
+{
 	int i;
 	if(T[0]==Nil) /* 空树 */
 		return Nil;
@@ -165,7 +165,7 @@ TElemType RightChild(SqBiTree T,TElemType e)
 /* 初始条件: 二叉树T存在,e是T中某个结点 */
 /* 操作结果: 返回e的左兄弟。若e是T的左孩子或无左兄弟,则返回＂空＂ */
 TElemType LeftSibling(SqBiTree T,TElemType e)
-{ 
+{
 	int i;
 	if(T[0]==Nil) /* 空树 */
 		return Nil;
@@ -178,7 +178,7 @@ TElemType LeftSibling(SqBiTree T,TElemType e)
 /* 初始条件: 二叉树T存在,e是T中某个结点 */
 /* 操作结果: 返回e的右兄弟。若e是T的右孩子或无右兄弟,则返回＂空＂ */
 TElemType RightSibling(SqBiTree T,TElemType e)
-{ 
+{
 	int i;
 	if(T[0]==Nil) /* 空树 */
 		return Nil;
@@ -190,7 +190,7 @@ TElemType RightSibling(SqBiTree T,TElemType e)
 
 /* PreOrderTraverse()调用 */
 void PreTraverse(SqBiTree T,int e)
-{ 
+{
 	visit(T[e]);
 	if(T[2*e+1]!=Nil) /* 左子树不空 */
 		PreTraverse(T,2*e+1);
@@ -201,7 +201,7 @@ void PreTraverse(SqBiTree T,int e)
 /* 初始条件: 二叉树存在 */
 /* 操作结果: 先序遍历T。 */
 Status PreOrderTraverse(SqBiTree T)
-{ 
+{
 	if(!BiTreeEmpty(T)) /* 树不空 */
 	 PreTraverse(T,0);
 	printf("\n");
@@ -210,7 +210,7 @@ Status PreOrderTraverse(SqBiTree T)
 
 /* InOrderTraverse()调用 */
 void InTraverse(SqBiTree T,int e)
-{ 
+{
 	if(T[2*e+1]!=Nil) /* 左子树不空 */
 		InTraverse(T,2*e+1);
 	visit(T[e]);
@@ -221,7 +221,7 @@ void InTraverse(SqBiTree T,int e)
 /* 初始条件: 二叉树存在 */
 /* 操作结果: 中序遍历T。 */
 Status InOrderTraverse(SqBiTree T)
-{ 
+{
 	if(!BiTreeEmpty(T)) /* 树不空 */
 		InTraverse(T,0);
 	printf("\n");
@@ -230,7 +230,7 @@ Status InOrderTraverse(SqBiTree T)
 
 /* PostOrderTraverse()调用 */
 void PostTraverse(SqBiTree T,int e)
-{ 
+{
 	if(T[2*e+1]!=Nil) /* 左子树不空 */
 		PostTraverse(T,2*e+1);
 	if(T[2*e+2]!=Nil) /* 右子树不空 */
@@ -241,7 +241,7 @@ void PostTraverse(SqBiTree T,int e)
 /* 初始条件: 二叉树T存在 */
 /* 操作结果: 后序遍历T。 */
 Status PostOrderTraverse(SqBiTree T)
-{ 
+{
 	if(!BiTreeEmpty(T)) /* 树不空 */
 		PostTraverse(T,0);
 	printf("\n");
@@ -250,7 +250,7 @@ Status PostOrderTraverse(SqBiTree T)
 
 /* 层序遍历二叉树 */
 void LevelOrderTraverse(SqBiTree T)
-{ 
+{
 	int i=MAX_TREE_SIZE-1,j;
 	while(T[i]==Nil)
 		i--; /* 找到最后一个非空结点的序号 */
@@ -262,7 +262,7 @@ void LevelOrderTraverse(SqBiTree T)
 
 /* 逐层、按本层序号输出二叉树 */
 void Print(SqBiTree T)
-{ 
+{
 	int j,k;
 	Position p;
 	TElemType e;
@@ -323,7 +323,7 @@ int main()
 		printf("二叉树的根为：%d\n",e);
 	else
 		printf("树空，无根\n");
-	
+
 	return 0;
 }
 
