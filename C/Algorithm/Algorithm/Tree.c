@@ -66,4 +66,9 @@ typedef struct CSNode
     struct CSNode *firstchild, *rightsib;
 }CSNode, *CSTree;
 
+int test()
+{
+    return 100;
+}
+
 

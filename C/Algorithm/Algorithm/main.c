@@ -7,9 +7,9 @@
 //
 
 #include <stdio.h>
+#include "Tree.c"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    test();
     return 0;
 }
