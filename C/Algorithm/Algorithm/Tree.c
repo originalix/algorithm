@@ -7,3 +7,15 @@
 //
 
 #include <stdio.h>
+
+/* 树的双亲表示法结点结构定义 */
+#define MAX_TREE_SIZE 100
+typedef int TElemType; /* 树节点的数据类型, 目前暂定为整型 */
+
+/**
+ 结点结构
+ */
+typedef struct PTNode {
+    TElemType data;
+    int parent;
+}PTNode;
