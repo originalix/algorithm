@@ -67,10 +67,5 @@ typedef struct CSNode
     struct CSNode *firstchild, *rightsib;
 }CSNode, *CSTree;
 
-void test()
-{
-    printf("hello world\n");
-}
-
 //切换函数定义
 
