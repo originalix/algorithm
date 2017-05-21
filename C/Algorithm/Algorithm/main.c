@@ -7,9 +7,7 @@
 //
 
 #include <stdio.h>
-#include "Tree.c"
 
 int main(int argc, const char * argv[]) {
-    test();
     return 0;
 }
