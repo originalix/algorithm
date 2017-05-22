@@ -48,7 +48,7 @@ Status CreateBiTree(SqBiTree T)
     printf("请按层序输入结点的值(整型), 0表示空结点，输999结束。结点数<= %d:\n", MAX_TREE_SIZE);
     while(i < 10) {
         T[i] = i + 1;
-        if (i != 0 && T[(i + 1) / 2 - 1] == Nil && T[i] != Nil) {
+        if (i != 0 && T[(i + 1) / 2 - 1] == Nil && T[i] != Nil) { /* 此结点(不空)无双亲且不是根 */
             printf("出现无双亲的非根结点%d\n", T[i]);
             exit(ERROR);
         }
@@ -56,11 +56,23 @@ Status CreateBiTree(SqBiTree T)
     }
 
     while(i < MAX_TREE_SIZE) {
-        T[i] = Nil;
+        T[i] = Nil; /* 将空赋值给T的后面的结点 */
         i++;
     }
 
     return OK;
+}
+
+#define ClearBiTree InitBiTree
+/* 初始条件： 二叉树T存在 */
+/* 操作结果： 若T为空二叉树，则返回TRUE,否则FALSE */
+Status BiTreeEmpty(SqBiTree T)
+{
+    if (T[0] == Nil) {
+        return TRUE;
+    } else {
+        return FALSE;
+    }
 }
 
 int main()
