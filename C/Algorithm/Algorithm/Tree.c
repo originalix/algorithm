@@ -31,7 +31,7 @@ TElemType Nil = 0; /* 设整型以0为空 */
 
 Status visit(TElemType c)
 {
-    printf("%d\n", c);
+    printf("%d ", c);
     return OK;
 }
 
@@ -117,9 +117,9 @@ TElemType Value(SqBiTree T, Position e)
 Status Assign(SqBiTree T, Position e, TElemType value)
 {
     int i = (int)powl(2, e.level -1) + e.order - 2;
-    if (value != Nil && (T[i*2+1] != Nil || T[i*2+2] != Nil)) {
+    if (value != Nil && T[(i+1)/2-1] == Nil) {
         return ERROR;
-    } else if (value == Nil && (T[i*2+1] != Nil)) {
+    } else if (value == Nil && (T[i*2+1] != Nil || T[i*2+2] != Nil)) {
         return ERROR;
     }
     T[i] = value;
@@ -279,12 +279,13 @@ int main()
     printf("后序遍历二叉树\n");
     PostOrderTraverse(T);
     printf("修改结点的层号3本层序号2。\n");
-    p.level = 3;
-    p.order = 2;
+    p.level = 1;
+    p.order = 1;
     e = Value(T, p);
     printf("待修改结点的原值为%d请输入新值: 50\n", e);
     e = 50;
-    Assign(T, p, e);
+    i = Assign(T, p, e);
+    printf("修改结果是否成功 %d\n", i);
     printf("层序遍历二叉树:\n");
     LevelOrderTraverse(T);
     // printf("前序遍历二叉树\n");
