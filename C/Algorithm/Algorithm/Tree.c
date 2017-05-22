@@ -24,7 +24,7 @@ typedef TElemType SqBiTree[MAX_TREE_SIZE]; /* 0号单元存储根结点 */
 
 typedef struct
 {
-    int lezvel,order; /* 结点的层，本层的序号(按满二叉树计算) */
+    int level,order; /* 结点的层，本层的序号(按满二叉树计算) */
 }Position;
 
 TElemType Nil = 0; /* 设整型以0为空 */
@@ -97,12 +97,31 @@ int BiTreeDepth(SqBiTree T)
 /* 操作结果： 当T不空，用e返回T的根，返回OK；否则返回ERROR，e无定义 */
 Status Root(SqBiTree T, TElemType *e)
 {
-    if (BiTreeEmpty()) {
+    if (BiTreeEmpty(T)) {
         return ERROR;
     } else {
         *e = T[0];
         return OK;
     }
+}
+
+/* 初始条件: 二叉树T存在，e是T中某个结点(的位置) */
+/* 操作结果: 返回处于位置e(层，本层序号)的结点的值 */
+TElemType Value(SqBiTree T, Position e)
+{
+    return T[(int)powl(2, e.level - 1) + e.order - 2];
+}
+
+Status Assign(SqBiTree T, Position e, TElemType value)
+{
+    int i = (int)powl(2, e.level -1) + e.order - 2;
+    if (value != Nil && (T[i*2+1] != Nil || T[i*2+2] != Nil)) {
+        return ERROR;
+    } else if (value == Nil && (T[i*2+1] != Nil)) {
+        return ERROR;
+    }
+    T[i] = value;
+    return OK;
 }
 
 int main()
