@@ -112,6 +112,8 @@ TElemType Value(SqBiTree T, Position e)
     return T[(int)powl(2, e.level - 1) + e.order - 2];
 }
 
+/* 初始条件: 二叉树T存在，e是T中某个结点(的位置) */
+/* 操作结果: 给处于位置e(层，本层序号)的结点赋新值value */
 Status Assign(SqBiTree T, Position e, TElemType value)
 {
     int i = (int)powl(2, e.level -1) + e.order - 2;
@@ -122,6 +124,22 @@ Status Assign(SqBiTree T, Position e, TElemType value)
     }
     T[i] = value;
     return OK;
+}
+
+/* 初始条件: 二叉树T存在，e是T中某个结点 */
+/* 操作结果: 若e是T的非根结点,则返回它的双亲,否则返回"空" */
+TElemType Parent(SqBiTree T, TElemType e)
+{
+    int i;
+    if (T[0] == Nil) {
+        return Nil;
+    }
+    for (i = 1; i <= MAX_TREE_SIZE - 1; i++) {
+        if (T[i] == e) {
+            return T[(i+1)/2-1];
+        }
+    }
+    return Nil;
 }
 
 int main()
