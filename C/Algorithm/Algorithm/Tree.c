@@ -94,6 +94,13 @@ int BiTreeDepth(SqBiTree T)
 
 int main()
 {
+    Status i;
+    Position p;
+    TElemType e;
+    SqBiTree T;
+    InitBiTree(T);
+    CreateBiTree(T);
+    printf("建立二叉树后,树空否? %d(1:是 0:否) 树的深度 = %d\n", BiTreeEmpty(T), BiTreeDepth(T));
     printf("HELLO WORLD WSX\n");
 }
 
