@@ -7,6 +7,8 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 #define OK 1
 #define ERROR 0
@@ -73,6 +75,21 @@ Status BiTreeEmpty(SqBiTree T)
     } else {
         return FALSE;
     }
+}
+
+int BiTreeDepth(SqBiTree T)
+{
+    int i, j = -1;
+    for (i = MAX_TREE_SIZE -1; i >= 0; i--) {
+        if (T[i] != Nil) {
+            break;
+        }
+    }
+    i++;
+    do {
+        j++;
+    } while(i >= powl(2, j));
+    return j;
 }
 
 int main()
