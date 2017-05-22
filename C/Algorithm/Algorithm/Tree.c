@@ -158,6 +158,20 @@ TElemType LeftChild(SqBiTree T, TElemType e)
     return Nil; /* 没找到e */
 }
 
+TElemType RightChild(SqBiTree T, TElemType e)
+{
+    int i;
+    if (T[0] == Nil) {
+        return Nil;
+    }
+    for (i = 0; i <= MAX_TREE_SIZE - 1; i++) {
+        if (T[i] == e) {
+            return T[i*2+2];
+        }
+    }
+    return Nil;
+}
+
 int main()
 {
     Status i;
@@ -173,6 +187,5 @@ int main()
     } else {
         printf("树空，无根\n");
     }
-    printf("HELLO WORLD WSX\n");
 }
 
