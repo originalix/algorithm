@@ -278,4 +278,9 @@ int main()
     InOrderTraverse(T);
     printf("后序遍历二叉树\n");
     PostOrderTraverse(T);
+    printf("修改结点的层号3本层序号2。\n");
+    p.level = 3;
+    p.order = 2;
+    e = Value(T, p);
+    printf("待修改结点的原值为%d请输入新值: 50\n", e);
 }
