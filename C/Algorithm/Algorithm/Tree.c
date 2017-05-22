@@ -217,6 +217,18 @@ Status InOrderTraverse(SqBiTree T)
     return OK;
 }
 
+/* PostOrderTraverse()调用 */
+void PostTraverse(SqBiTree T, int e)
+{
+    if (T[2*e+1] != Nil) {
+        PostTraverse(T, 2*e+1);
+    }
+    if (T[2*e+2] != Nil) {
+        PostTraverse(T, 2*e+1);
+    }
+    visit(T[e]);
+}
+
 /* 层序遍历二叉树 */
 void LevelOrderTraverse(SqBiTree T)
 {
