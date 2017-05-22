@@ -324,5 +324,13 @@ int main()
     PreOrderTraverse(T);
     printf("结点%d的双亲为%d, 左右孩子分别为\n",e, Parent(T, e));
     printf("%d,%d左右兄弟分别为,\n",LeftChild(T, e), RightChild(T, e));
-    // printf("%d,%d\n", LeftSibling(T, e), RightSibling());
+    printf("%d,%d\n", LeftSibling(T, e), RightSibling(T, e));
+    ClearBiTree(T);
+    printf("清楚二叉树后，树空否？%d(1:是 0:否) 树的深度=%d\n", BiTreeEmpty(T), BiTreeDepth(T));
+    i = Root(T, &e);
+    if (i) {
+        printf("二叉树的根为: %d\n", e);
+    } else {
+        printf("树空，无根\n");
+    }
 }
