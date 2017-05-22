@@ -167,6 +167,12 @@ int main()
     InitBiTree(T);
     CreateBiTree(T);
     printf("建立二叉树后,树空否? %d(1:是 0:否) 树的深度 = %d\n", BiTreeEmpty(T), BiTreeDepth(T));
+    i = Root(T, &e);
+    if (i) {
+        printf("二叉树的根为: %d\n", e);
+    } else {
+        printf("树空，无根\n");
+    }
     printf("HELLO WORLD WSX\n");
 }
 
