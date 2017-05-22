@@ -224,9 +224,19 @@ void PostTraverse(SqBiTree T, int e)
         PostTraverse(T, 2*e+1);
     }
     if (T[2*e+2] != Nil) {
-        PostTraverse(T, 2*e+1);
+        PostTraverse(T, 2*e+2);
     }
     visit(T[e]);
+}
+
+/* 操作结果: 后序遍历T */
+Status PostOrderTraverse(SqBiTree T)
+{
+    if (!BiTreeEmpty(T)) {
+        PostTraverse(T, 0);
+    }
+    printf("\n");
+    return OK;
 }
 
 /* 层序遍历二叉树 */
@@ -266,4 +276,6 @@ int main()
     PreOrderTraverse(T);
     printf("中序遍历二叉树\n");
     InOrderTraverse(T);
+    printf("后序遍历二叉树\n");
+    PostOrderTraverse(T);
 }
