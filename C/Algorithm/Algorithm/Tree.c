@@ -77,6 +77,7 @@ Status BiTreeEmpty(SqBiTree T)
     }
 }
 
+/* 初始条件： 二叉树T存在。操作结果：返回T的深度 */
 int BiTreeDepth(SqBiTree T)
 {
     int i, j = -1;
@@ -92,6 +93,8 @@ int BiTreeDepth(SqBiTree T)
     return j;
 }
 
+/* 初始条件：二叉树T存在 */
+/* 操作结果： 当T不空，用e返回T的根，返回OK；否则返回ERROR，e无定义 */
 Status Root(SqBiTree T, TElemType *e)
 {
     if (BiTreeEmpty()) {
