@@ -16,9 +16,9 @@
 #define MAXSIZE 100 /* 存储空间初始分配量 */
 #define MAX_TREE_SIZE 100 /* 二叉树的最大结点数 */
 
-typedef int TElemType; /* 树节点的数据类型, 目前暂定为整型 */
 typedef int Status; /* Status是函数类型，其值是函数的返回结果 */
-
+typedef int TElemType; /* 树节点的数据类型, 目前暂定为整型 */
+typedef TElemType SqBiTree[MAX_TREE_SIZE]; /* 0号单元存储根结点 */
 
 int main()
 {
