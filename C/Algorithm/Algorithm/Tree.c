@@ -142,6 +142,20 @@ TElemType Parent(SqBiTree T, TElemType e)
     return Nil;
 }
 
+TElemType LeftChild(SqBiTree T, TElemType e)
+{
+    int i;
+    if (T[0] == Nil) {
+        return Nil;
+    }
+    for (i = 0; i <= MAX_TREE_SIZE - 1; i++) {
+        if (T[i] == e) {
+            return T[i*2+1];
+        }
+    }
+    return Nil;
+}
+
 int main()
 {
     Status i;
