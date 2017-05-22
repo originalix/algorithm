@@ -279,8 +279,8 @@ int main()
     printf("后序遍历二叉树\n");
     PostOrderTraverse(T);
     printf("修改结点的层号3本层序号2。\n");
-    p.level = 1;
-    p.order = 1;
+    p.level = 3;
+    p.order = 2;
     e = Value(T, p);
     printf("待修改结点的原值为%d请输入新值: 50\n", e);
     e = 50;
@@ -288,6 +288,9 @@ int main()
     printf("修改结果是否成功 %d\n", i);
     printf("层序遍历二叉树:\n");
     LevelOrderTraverse(T);
-    // printf("前序遍历二叉树\n");
-    // PreOrderTraverse(T);
+    printf("前序遍历二叉树\n");
+    PreOrderTraverse(T);
+    printf("结点%d的双亲为%d, 左右孩子分别为\n",e, Parent(T, e));
+    printf("%d,%d左右兄弟分别为,\n",LeftChild(T, e), RightChild(T, e));
+    // printf("%d,%d\n", LeftSibling(T, e), RightSibling());
 }
