@@ -195,6 +195,28 @@ Status PreOrderTraverse(SqBiTree T)
     return OK;
 }
 
+/* InOrderTraverse()调用 */
+void InTraverse(SqBiTree T, int e)
+{
+    if (T[2*e+1] != Nil) {
+        InTraverse(T, 2*e+1);
+    }
+    visit(T[e]);
+    if (T[2*e+2] != Nil) {
+        InTraverse(T, 2*e+2);
+    }
+}
+
+/* 操作结果: 中序遍历T。*/
+Status InOrderTraverse(SqBiTree T)
+{
+    if (!BiTreeEmpty(T)) {
+        InTraverse(T, 0);
+    }
+    printf("\n");
+    return OK;
+}
+
 /* 层序遍历二叉树 */
 void LevelOrderTraverse(SqBiTree T)
 {
@@ -230,4 +252,6 @@ int main()
     LevelOrderTraverse(T);
     printf("前序遍历二叉树\n");
     PreOrderTraverse(T);
+    printf("中序遍历二叉树\n");
+    InOrderTraverse(T);
 }
