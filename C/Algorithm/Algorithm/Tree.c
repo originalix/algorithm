@@ -70,7 +70,7 @@ typedef struct CSNode
 void CreateBiTree(CSTree *T)
 {
     TElemType ch;
-    scanf("%d", &ch);
+    scanf("请输入数字 = %d", &ch);
     // if (ch == '#') {
     //     *T = NULL;
     // } else {
@@ -86,6 +86,8 @@ void CreateBiTree(CSTree *T)
 
 int main()
 {
-
+    CSTree *T;
+    CreateBiTree(T);
+    printf("HELLO WORLD WSX\n");
 }
 
