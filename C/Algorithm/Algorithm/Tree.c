@@ -173,7 +173,30 @@ TElemType RightChild(SqBiTree T, TElemType e)
     return Nil;
 }
 
-void LevelOrderTraverse()
+/* PreOrderTraverse()调用 */
+void PreTraverse(SqBiTree T, int e)
+{
+    visit(T[e]);
+    if (T[2*e+1] != Nil) {
+        PreTraverse(T, 2*e+1);
+    }
+    if (T[2*e+2] != Nil) {
+        PreTraverse(T, 2*e+2);
+    }
+}
+
+/* 操作结果: 先序遍历T。 */
+Status PreOrderTraverse(SqBiTree T)
+{
+    if (!BiTreeEmpty(T)) {
+        PreTraverse(T, 0);
+    }
+    printf("\n");
+    return OK;
+}
+
+/* 层序遍历二叉树 */
+void LevelOrderTraverse(SqBiTree T)
 {
     int i = MAX_TREE_SIZE - 1, j;
     while(T[i] == Nil) {
@@ -203,5 +226,8 @@ int main()
     } else {
         printf("树空，无根\n");
     }
+    printf("层序遍历二叉树:\n");
+    LevelOrderTraverse(T);
+    printf("前序遍历二叉树\n");
+    PreOrderTraverse(T);
 }
-
