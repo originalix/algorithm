@@ -36,9 +36,30 @@ Status visit(TElemType c)
 Status InitBiTree(SqBiTree T)
 {
     int i;
-    for (int i = 0; i < MAX_TREE_SIZE; i++) {
+    for (i = 0; i < MAX_TREE_SIZE; i++) {
         T[i] = Nil;
     }
+    return OK;
+}
+
+Status CreateBiTree(SqBiTree T)
+{
+    int i = 0;
+    printf("请按层序输入结点的值(整型), 0表示空结点，输999结束。结点数<= %d:\n", MAX_TREE_SIZE);
+    while(i < 10) {
+        T[i] = i + 1;
+        if (i != 0 && T[(i + 1) / 2 - 1] == Nil && T[i] != Nil) {
+            printf("出现无双亲的非根结点%d\n", T[i]);
+            exit(ERROR);
+        }
+        i++;
+    }
+
+    while(i < MAX_TREE_SIZE) {
+        T[i] = Nil;
+        i++;
+    }
+
     return OK;
 }
 
