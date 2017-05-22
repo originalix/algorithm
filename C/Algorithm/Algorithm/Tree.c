@@ -283,4 +283,10 @@ int main()
     p.order = 2;
     e = Value(T, p);
     printf("待修改结点的原值为%d请输入新值: 50\n", e);
+    e = 50;
+    Assign(T, p, e);
+    printf("层序遍历二叉树:\n");
+    LevelOrderTraverse(T);
+    // printf("前序遍历二叉树\n");
+    // PreOrderTraverse(T);
 }
