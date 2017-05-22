@@ -92,6 +92,16 @@ int BiTreeDepth(SqBiTree T)
     return j;
 }
 
+Status Root(SqBiTree T, TElemType *e)
+{
+    if (BiTreeEmpty()) {
+        return ERROR;
+    } else {
+        *e = T[0];
+        return OK;
+    }
+}
+
 int main()
 {
     Status i;
