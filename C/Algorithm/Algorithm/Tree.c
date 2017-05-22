@@ -158,6 +158,7 @@ TElemType LeftChild(SqBiTree T, TElemType e)
     return Nil; /* 没找到e */
 }
 
+/* 返回e的右孩子。若e无右孩子,则返回"空" */
 TElemType RightChild(SqBiTree T, TElemType e)
 {
     int i;
@@ -171,6 +172,21 @@ TElemType RightChild(SqBiTree T, TElemType e)
     }
     return Nil;
 }
+
+void LevelOrderTraverse()
+{
+    int i = MAX_TREE_SIZE - 1, j;
+    while(T[i] == Nil) {
+        i--; /* 找到最后一个非空结点的序号 */
+    }
+    for (j = 0; j <= i; j++) { /* 从根结点起,按层序遍历二叉树 */
+        if (T[j] != Nil) {
+            visit(T[j]); /* 只遍历非空的结点 */
+        }
+    }
+    printf("\n");
+}
+
 
 int main()
 {
