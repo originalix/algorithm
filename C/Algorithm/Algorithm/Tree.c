@@ -67,27 +67,9 @@ typedef struct CSNode
     struct CSNode *firstchild, *rightsib;
 }CSNode, *CSTree;
 
-void CreateBiTree(CSTree *T)
-{
-    TElemType ch;
-    scanf("请输入数字 = %d", &ch);
-    // if (ch == '#') {
-    //     *T = NULL;
-    // } else {
-    //     *T = (CSTree)malloc(sizeof(CSNode));
-    //     if (!*T) {
-    //         exit(OVERFLOW);
-    //     }
-    //     (*T)->data = ch;
-    //     CreateBiTree(&(*T)->firstchild);
-    //     CreateBiTree(&(*T)->rightsib);
-    // }
-}
 
 int main()
 {
-    CSTree *T;
-    CreateBiTree(T);
     printf("HELLO WORLD WSX\n");
 }
 
