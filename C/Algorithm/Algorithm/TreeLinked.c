@@ -14,10 +14,18 @@ typedef int Status; /* Status是函数类型，其值是函数的返回结果 */
 typedef char TElemType;
 typedef enum {Link, Thread} PointerTag; /* Link==0 表示指向左右孩子指针 */
 
-typedef struct BiThrNode
+typedef struct BiThrNode /* 二叉线索存储结点结构 */
 {
-    TElemType data;
-    struct BiThrNode *lchild, *rchild;
+    TElemType data; /* 结点数据 */
+    struct BiThrNode *lchild, *rchild; /* 左右孩子指针 */
     PointerTag LTag;
-    PointerTag RTag;
+    PointerTag RTag; /* 左右标志 */
 } BiThrNode, *BiThrTree;
+
+TElemType Nil = '#'; /* 字符型以空格符为空 */
+
+Status visit(TElemType e)
+{
+    printf("%c\n", e);
+    return OK;
+}
