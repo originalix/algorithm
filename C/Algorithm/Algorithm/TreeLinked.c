@@ -11,3 +11,13 @@
 #define MAXSIZE 100 /* 存储空间初始分配量 */
 
 typedef int Status; /* Status是函数类型，其值是函数的返回结果 */
+typedef char TElemType;
+typedef enum {Link, Thread} PointerTag; /* Link==0 表示指向左右孩子指针 */
+
+typedef struct BiThrNode
+{
+    TElemType data;
+    struct BiThrNode *lchild, *rchild;
+    PointerTag LTag;
+    PointerTag RTag;
+} BiThrNode, *BiThrTree;
