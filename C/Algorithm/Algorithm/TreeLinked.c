@@ -58,22 +58,44 @@ Status CreateBiThrTree(BiThrTree *T)
 }
 
 BiThrTree pre; /* 全局变量，始终指向刚刚访问过的结点 */
-
+/* 中序遍历进行中序线索化 */
 void InThreading(BiThrTree p)
 {
     if (p) {
-        InTreading(p->lchild);
-        if (!p->lchild) {
-            p->LTag = Thread;
-            p->lchild = pre;
+        InThreading(p->lchild); /*递归左子树线索化*/
+        if (!p->lchild) { /* 没有左孩子 */
+            p->LTag = Thread; /* 前驱搜索 */
+            p->lchild = pre; /* 左孩子指针指向前驱 */
         }
-        if (!pre->rchild) {
-            pre->RTag = Thread;
-            pre->rchild = p;
+        if (!pre->rchild) { /* 前驱没有右孩子 */
+            pre->RTag = Thread; /* 后继搜索 */
+            pre->rchild = p; /* 前驱右孩子指针指向后继(当前结点p) */
         }
-        pre = p;
-        InThreading(p->rchild);
+        pre = p; /* 保持pre指向p的前驱 */
+        InThreading(p->rchild); /* 递归右子树线索化  */
     }
+}
+
+Status InOrderThreading(BiThrTree *Thrt, BiThrTree T)
+{
+    *Thrt = (BiThrTree)malloc(sizeof(BiThrNode));
+    if (!*Thrt) {
+        exit(OVERFLOW);
+    }
+    (*Thrt)->LTag = Link;
+    (*Thrt)->RTag = Thread;
+    (*Thrt)->rchild = (*Thrt);
+    if (!T) {
+        (*Thrt)->lchild = *Thrt;
+    } else {
+        (*Thrt)->lchild = T;
+        pre = (*Thrt);
+        InThreading(T);
+        pre->rchild = *Thrt;
+        pre->RTag = Thread;
+        (*Thrt)->rchild = pre;
+    }
+    return OK;
 }
 
 int main()
