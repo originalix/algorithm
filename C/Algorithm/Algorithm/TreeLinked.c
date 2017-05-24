@@ -76,23 +76,24 @@ void InThreading(BiThrTree p)
     }
 }
 
+/* 中序遍历二叉树T 并将其中序线索化 Thrt指向头结点 */
 Status InOrderThreading(BiThrTree *Thrt, BiThrTree T)
 {
     *Thrt = (BiThrTree)malloc(sizeof(BiThrNode));
     if (!*Thrt) {
         exit(OVERFLOW);
     }
-    (*Thrt)->LTag = Link;
+    (*Thrt)->LTag = Link; /* 建头结点 */
     (*Thrt)->RTag = Thread;
-    (*Thrt)->rchild = (*Thrt);
-    if (!T) {
+    (*Thrt)->rchild = (*Thrt); /* 右指针回指 */
+    if (!T) { /* 若二叉树空，则左指针回指 */
         (*Thrt)->lchild = *Thrt;
     } else {
         (*Thrt)->lchild = T;
         pre = (*Thrt);
-        InThreading(T);
+        InThreading(T); /* 中序遍历进行中序线索化 */
         pre->rchild = *Thrt;
-        pre->RTag = Thread;
+        pre->RTag = Thread; /* 最后一个结点线索化 */
         (*Thrt)->rchild = pre;
     }
     return OK;
