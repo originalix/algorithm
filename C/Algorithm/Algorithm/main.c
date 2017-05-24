@@ -10,6 +10,18 @@
 #define TRUE 1
 #define FALSE 0
 
+/* 练习递归函数 */
+long factorial(int n)
+{
+    long result;
+
+    if (n == 0 || n == 1) {
+        result =;
+    }
+
+    return result;
+}
+
 int main()
 {
     printf("hello world\n");
