@@ -57,6 +57,27 @@ Status CreateBiThrTree(BiThrTree *T)
     return OK;
 }
 
+Status CreateBiTree(SqBiTree T)
+{
+    int i = 0;
+    printf("请按层序输入结点的值(整型), 0表示空结点，输999结束。结点数<= %d:\n", MAX_TREE_SIZE);
+    while(i < 10) {
+        T[i] = i + 1;
+        if (i != 0 && T[(i + 1) / 2 - 1] == Nil && T[i] != Nil) { /* 此结点(不空)无双亲且不是根 */
+            printf("出现无双亲的非根结点%d\n", T[i]);
+            exit(ERROR);
+        }
+        i++;
+    }
+
+    while(i < MAX_TREE_SIZE) {
+        T[i] = Nil; /* 将空赋值给T的后面的结点 */
+        i++;
+    }
+
+    return OK;
+}
+
 BiThrTree pre; /* 全局变量，始终指向刚刚访问过的结点 */
 /* 中序遍历进行中序线索化 */
 void InThreading(BiThrTree p)
