@@ -17,8 +17,11 @@ long factorial(int n)
 
     if (n == 0 || n == 1) {
         result =;
+    } else {
+        printf("递归调用函数\n");
+        result = factorial(n - 1) * n;
+        printf("递归返回 %d\n", result);
     }
-
     return result;
 }
 
