@@ -99,6 +99,26 @@ Status InOrderThreading(BiThrTree *Thrt, BiThrTree T)
     return OK;
 }
 
+Status InOrderTraverse_Thr(BiThrTree T)
+{
+    BiThrTree p;
+    p = T->lchild;
+    while(p != T) {
+        while(p->LTag == Link) {
+            p = p->lchild;
+        }
+        if (!visit(p->data)) {
+            return ERROR;
+        }
+        while (p->RTag == Thread && p->rchild != T) {
+            p = p->rchild;
+            visit(p->data);
+        }
+        p = p->rchild;
+    }
+    return OK;
+}
+
 int main()
 {
     BiThrTree H, T;
