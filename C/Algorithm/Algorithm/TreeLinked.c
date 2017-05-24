@@ -99,6 +99,7 @@ Status InOrderThreading(BiThrTree *Thrt, BiThrTree T)
     return OK;
 }
 
+/* 中序遍历二叉搜索树T(头结点)的非递归算法 */
 Status InOrderTraverse_Thr(BiThrTree T)
 {
     BiThrTree p;
@@ -126,5 +127,6 @@ int main()
     CreateBiThrTree(&T);
     InOrderThreading(&H, T);
     printf("中序遍历(输出)二岔线索树\n");
+    InOrderTraverse_Thr(H); /* 中序遍历(输出)二叉线索树 */
     printf("hello wsx\n");
 }

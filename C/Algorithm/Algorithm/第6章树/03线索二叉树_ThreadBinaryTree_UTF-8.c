@@ -1,8 +1,8 @@
 ﻿#include "string.h"
-#include "stdio.h"    
-#include "stdlib.h"   
+#include "stdio.h"
+#include "stdlib.h"
 
-#include "math.h"  
+#include "math.h"
 #include "time.h"
 
 #define OK 1
@@ -35,7 +35,7 @@ Status visit(TElemType e)
 /* 按前序输入二叉线索树中结点的值,构造二叉线索树T */
 /* 0(整型)/空格(字符型)表示空结点 */
 Status CreateBiThrTree(BiThrTree *T)
-{ 
+{
 	TElemType h;
 	scanf("%c",&h);
 
@@ -60,7 +60,7 @@ Status CreateBiThrTree(BiThrTree *T)
 BiThrTree pre; /* 全局变量,始终指向刚刚访问过的结点 */
 /* 中序遍历进行中序线索化 */
 void InThreading(BiThrTree p)
-{ 
+{
 	if(p)
 	{
 		InThreading(p->lchild); /* 递归左子树线索化 */
@@ -81,7 +81,7 @@ void InThreading(BiThrTree p)
 
 /* 中序遍历二叉树T,并将其中序线索化,Thrt指向头结点 */
 Status InOrderThreading(BiThrTree *Thrt,BiThrTree T)
-{ 
+{
 	*Thrt=(BiThrTree)malloc(sizeof(BiThrNode));
 	if(!*Thrt)
 		exit(OVERFLOW);
@@ -104,7 +104,7 @@ Status InOrderThreading(BiThrTree *Thrt,BiThrTree T)
 
 /* 中序遍历二叉线索树T(头结点)的非递归算法 */
 Status InOrderTraverse_Thr(BiThrTree T)
-{ 
+{
 	BiThrTree p;
 	p=T->lchild; /* p指向根结点 */
 	while(p!=T)
@@ -132,8 +132,6 @@ int main()
 	printf("中序遍历(输出)二叉线索树:\n");
 	InOrderTraverse_Thr(H); /* 中序遍历(输出)二叉线索树 */
 	printf("\n");
-	
+
 	return 0;
 }
-
-
