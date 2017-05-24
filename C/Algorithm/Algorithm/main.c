@@ -27,7 +27,7 @@ long factorial(int n)
 
 int main()
 {
-
+    factorial(4);
     printf("hello world\n");
     return 0;
 }
