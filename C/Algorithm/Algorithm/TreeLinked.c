@@ -59,6 +59,22 @@ Status CreateBiThrTree(BiThrTree *T)
 
 BiThrTree pre; /* 全局变量，始终指向刚刚访问过的结点 */
 
+void InThreading(BiThrTree p)
+{
+    if (p) {
+        InTreading(p->lchild);
+        if (!p->lchild) {
+            p->LTag = Thread;
+            p->lchild = pre;
+        }
+        if (!pre->rchild) {
+            pre->RTag = Thread;
+            pre->rchild = p;
+        }
+        pre = p;
+        InThreading(p->rchild);
+    }
+}
 
 int main()
 {
