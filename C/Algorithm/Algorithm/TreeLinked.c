@@ -101,5 +101,10 @@ Status InOrderThreading(BiThrTree *Thrt, BiThrTree T)
 
 int main()
 {
+    BiThrTree H, T;
+    printf("请按前序输入二叉树（如:'ABDH##I##EJ###CF##G##'）\n");
+    CreateBiThrTree(&T);
+    InOrderThreading(&H, T);
+    printf("中序遍历(输出)二岔线索树\n");
     printf("hello wsx\n");
 }
