@@ -29,3 +29,33 @@ Status visit(TElemType e)
     printf("%c\n", e);
     return OK;
 }
+
+Status CreateBiThrTree(BiThrTree *T)
+{
+    TElemType h;
+    scanf("%c", &h);
+
+    if (h == Nil) {
+        *T = NULL;
+    } else {
+        *T = (BiThrTree)malloc(sizeof(BiThrTree));
+        if (!*T) {
+            exit(OVERFLOW);
+        }
+        (*T)->data = h;
+        CreateBiThrTree(&(*T)->lchild);
+        if ((*T)->lchild) {
+            (*T)->LTag = Link;
+        }
+        CreateBiThrTree(&(*T)->rchild);
+        if ((*T)->rchild) {
+            (*T)->RTag = Link;
+        }
+    }
+    return OK;
+}
+
+int main()
+{
+    printf("hello wsx\n");
+}
