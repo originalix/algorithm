@@ -10,7 +10,7 @@
 #define TRUE 1
 #define FALSE 0
 
-/* 练习递归函数 */
+/* 阶乘 */
 long factorial(int n)
 {
     long result;
