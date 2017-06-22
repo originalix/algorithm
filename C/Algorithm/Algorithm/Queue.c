@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdlib.h>
-#include "malloc.h"
+// #include "malloc.h"
 #include "queue.h"
 
 /**
@@ -97,10 +97,16 @@ bool Dequeue(PQUEUE Q, int *val)
 {
     if (EmptyQueue)
     {
-        return false;
+        return FALSE;
     } else {
         *val = Q->pBase[Q->front];
         Q->front = (Q->front + 1) % Q->maxsize;
-        return true;
+        return TRUE;
     }
+}
+
+int main(int argc, char const *argv[])
+{
+    printf("hello world\n");
+    return 0;
 }
