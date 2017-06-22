@@ -52,3 +52,17 @@ bool FullQueue(PQUEUE Q)
     else
         return false;
 }
+
+/**
+ * Return queue is empty.
+ *
+ * @param  Q PQUEUE
+ * @return   bool
+ */
+bool EmptyQueue(PQUEUE Q)
+{
+    if (Q->front == Q->rear)
+        return true;
+    else
+        return false;
+}
