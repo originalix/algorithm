@@ -85,3 +85,22 @@ bool Enqueue(PQUEUE Q, int val)
         return true;
     }
 }
+
+/**
+ * Delete element in queue.
+ *
+ * @param  Q   PQUEUE
+ * @param  val ELEMENT
+ * @return     BOOL
+ */
+bool Dequeue(PQUEUE Q, int *val)
+{
+    if (EmptyQueue)
+    {
+        return false;
+    } else {
+        *val = Q->pBase[Q->front];
+        Q->front = (Q->front + 1) % Q->maxsize;
+        return true;
+    }
+}
