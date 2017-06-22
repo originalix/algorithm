@@ -8,4 +8,8 @@ typedef struct queue
     int maxsize;
 }QUEUE, *PQUEUE;
 
+void CreateQueue(PQUEUE Q, int maxsize);
+void TraverseQueue(PQUEUE Q);
+bool FullQueue(PQUEUE Q);
+bool EmptyQueue(PQUEUE Q);
 #endif
