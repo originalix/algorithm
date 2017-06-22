@@ -38,3 +38,17 @@ void TraverseQueue(PQUEUE Q)
     }
     printf("\n");
 }
+
+/**
+ * Check the queue size was full.
+ *
+ * @param  Q PQUEUE
+ * @return   bool
+ */
+bool FullQueue(PQUEUE Q)
+{
+    if (Q->front == (Q->rear + 1) % Q->maxsize)
+        return true;
+    else
+        return false;
+}
