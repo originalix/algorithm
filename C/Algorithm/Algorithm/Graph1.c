@@ -30,3 +30,9 @@ void CreateMGraph(MGraph *G)
         G->arc[j][i] = G->arc[i][j];  /* 因为是无向图，矩阵对称 */
     }
 }
+
+int main(int argc, char const *argv[]) {
+    MGraph *g;
+    CreateMGraph(g);
+    return 0;
+}
