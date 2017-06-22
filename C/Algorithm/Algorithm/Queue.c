@@ -66,3 +66,22 @@ bool EmptyQueue(PQUEUE Q)
     else
         return false;
 }
+
+/**
+ * insert element to Queue.
+ *
+ * @param  Q   PQUEUE
+ * @param  val element
+ * @return     bool
+ */
+bool Enqueue(PQUEUE Q, int val)
+{
+    if (FullQueue)
+    {
+        return false;
+    } else {
+        Q->pBase[Q->rear] = val;
+        Q->rear = (Q->rear + 1) % Q->maxsize;
+        return true;
+    }
+}
