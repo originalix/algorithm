@@ -5,6 +5,7 @@
 
 /**
  * Create a empty queue
+ *
  * @param Q       PQUEUE
  * @param maxsize int
  */
@@ -21,6 +22,11 @@ void CreateQueue(PQUEUE Q, int maxsize)
     Q->maxsize = maxsize;
 }
 
+/**
+ * Traverse Queue Print the stack element.
+ *
+ * @param Q PQUEUE
+ */
 void TraverseQueue(PQUEUE Q)
 {
     int i = Q->front;
