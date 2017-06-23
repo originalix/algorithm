@@ -115,5 +115,6 @@ int main(int argc, char const *argv[])
     CreateQueue(&queue, 10);
     TraverseQueue(&queue);
     printf("队列是否溢出 : %d\n", FullQueue(&queue));
+    printf("队列是否为空 : %d\n", EmptyQueue(&queue));
     return 0;
 }
