@@ -29,17 +29,17 @@ void CreateQueue(PQUEUE *Q, int maxsize)
  *
  * @param Q PQUEUE
  */
-// void TraverseQueue(PQUEUE Q)
-// {
-//     int i = Q->front;
-//     printf("队中的元素是:\n");
-//     while(i % Q->maxsize != Q->rear)
-//     {
-//         printf("%d", Q->pBase[i]);
-//         i++;
-//     }
-//     printf("\n");
-// }
+void TraverseQueue(PQUEUE *Q)
+{
+    int i = Q->front;
+    printf("队中的元素是:\n");
+    while(i % Q->maxsize != Q->rear)
+    {
+        printf("%d", Q->pBase[i]);
+        i++;
+    }
+    printf("\n");
+}
 
 // /**
 //  * Check the queue size was full.
@@ -113,6 +113,6 @@ int main(int argc, char const *argv[])
     printf("status %d\n", OK);
     PQUEUE queue;
     CreateQueue(&queue, 10);
-    // TraverseQueue(q);
+    TraverseQueue(&queue);
     return 0;
 }
