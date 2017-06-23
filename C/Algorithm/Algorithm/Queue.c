@@ -41,33 +41,33 @@ void TraverseQueue(PQUEUE *Q)
     printf("\n");
 }
 
-// /**
-//  * Check the queue size was full.
-//  *
-//  * @param  Q PQUEUE
-//  * @return   bool
-//  */
-// Status FullQueue(PQUEUE Q)
-// {
-//     if (Q->front == (Q->rear + 1) % Q->maxsize)
-//         return FALSE;
-//     else
-//         return TRUE;
-// }
+/**
+ * Check the queue size was full.
+ *
+ * @param  Q PQUEUE
+ * @return   bool
+ */
+Status FullQueue(PQUEUE *Q)
+{
+    if (Q->front == (Q->rear + 1) % Q->maxsize)
+        return FALSE;
+    else
+        return TRUE;
+}
 
-// /**
-//  * Return queue is empty.
-//  *
-//  * @param  Q PQUEUE
-//  * @return   bool
-//  */
-// Status EmptyQueue(PQUEUE Q)
-// {
-//     if (Q->front == Q->rear)
-//         return TRUE;
-//     else
-//         return FALSE;
-// }
+/**
+ * Return queue is empty.
+ *
+ * @param  Q PQUEUE
+ * @return   bool
+ */
+Status EmptyQueue(PQUEUE *Q)
+{
+    if (Q->front == Q->rear)
+        return TRUE;
+    else
+        return FALSE;
+}
 
 // /**
 //  * insert element to Queue.
@@ -114,5 +114,6 @@ int main(int argc, char const *argv[])
     PQUEUE queue;
     CreateQueue(&queue, 10);
     TraverseQueue(&queue);
+    printf("队列是否溢出 : %d\n", FullQueue(&queue));
     return 0;
 }
