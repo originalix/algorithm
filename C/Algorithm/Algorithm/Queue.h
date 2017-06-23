@@ -21,6 +21,6 @@ void TraverseQueue(PQUEUE *Q);
 Status FullQueue(PQUEUE *Q);
 Status EmptyQueue(PQUEUE *Q);
 Status Enqueue(PQUEUE *Q, int val);
-Status Dequeue(PQUEUE *Q, int *val);
+Status Dequeue(PQUEUE *Q);
 
 #endif

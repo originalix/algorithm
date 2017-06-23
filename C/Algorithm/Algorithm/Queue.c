@@ -21,7 +21,7 @@ void CreateQueue(PQUEUE *Q, int maxsize)
     Q->front = 0;
     Q->rear = 0;
     Q->maxsize = maxsize;
-    printf("创建队列成功 %d\n", Q->maxsize);
+    printf("创建队列成功 最大长度: %d\n", Q->maxsize);
 }
 
 /**
@@ -35,7 +35,7 @@ void TraverseQueue(PQUEUE *Q)
     printf("队中的元素是:\n");
     while(i % Q->maxsize != Q->rear)
     {
-        printf("%d", Q->pBase[i]);
+        printf(" %d = %d \n", i, Q->pBase[i]);
         i++;
     }
     printf("\n");
@@ -85,6 +85,7 @@ Status Enqueue(PQUEUE *Q, int val)
 {
     if (FullQueue(Q))
     {
+        printf("队列已满 插入失败\n");
         return FALSE;
     } else {
         Q->pBase[Q->rear] = val;
@@ -100,30 +101,32 @@ Status Enqueue(PQUEUE *Q, int val)
 //  * @param  val ELEMENT
 //  * @return     BOOL
 //  */
-// Status Dequeue(PQUEUE Q, int *val)
-// {
-//     if (EmptyQueue(Q))
-//     {
-//         return FALSE;
-//     } else {
-//         *val = Q->pBase[Q->front];
-//         Q->front = (Q->front + 1) % Q->maxsize;
-//         return TRUE;
-//     }
-// }
+Status Dequeue(PQUEUE *Q)
+{
+    if (EmptyQueue(Q))
+    {
+        return FALSE;
+    } else {
+        // *val = Q->pBase[Q->front];
+        Q->front = (Q->front + 1) % Q->maxsize;
+        return TRUE;
+    }
+}
 
 int main(int argc, char const *argv[])
 {
     printf("hello world\n");
     printf("status %d\n", OK);
     PQUEUE queue;
-    CreateQueue(&queue, 10);
-    printf("插入数据结果 %d\n", Enqueue(&queue, 100));
-    printf("插入数据结果 %d\n", Enqueue(&queue, 20));
-    printf("插入数据结果 %d\n", Enqueue(&queue, 1));
+    CreateQueue(&queue, 3);
+    Enqueue(&queue, 100);
+    Enqueue(&queue, 999);
+    Enqueue(&queue, 888);
+    Dequeue(&queue);
+    Enqueue(&queue, 666);
     printf("队列长度 : %d\n", getLength(queue));
-    TraverseQueue(&queue);
     printf("队列是否溢出 : %d\n", FullQueue(&queue));
     printf("队列是否为空 : %d\n", EmptyQueue(&queue));
+    TraverseQueue(&queue);
     return 0;
 }
