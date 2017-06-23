@@ -14,9 +14,9 @@ typedef struct queue
     int front;
     int rear;
     int maxsize;
-}QUEUE, *PQUEUE;
+}PQUEUE;
 
-void CreateQueue(PQUEUE Q, int maxsize);
+void CreateQueue(PQUEUE *Q, int maxsize);
 void TraverseQueue(PQUEUE Q);
 Status FullQueue(PQUEUE Q);
 Status EmptyQueue(PQUEUE Q);
