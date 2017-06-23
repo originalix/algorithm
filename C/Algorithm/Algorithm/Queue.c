@@ -50,9 +50,9 @@ void TraverseQueue(PQUEUE *Q)
 Status FullQueue(PQUEUE *Q)
 {
     if (Q->front == (Q->rear + 1) % Q->maxsize)
-        return FALSE;
-    else
         return TRUE;
+    else
+        return FALSE;
 }
 
 /**
@@ -118,9 +118,9 @@ int main(int argc, char const *argv[])
     printf("status %d\n", OK);
     PQUEUE queue;
     CreateQueue(&queue, 10);
-    Enqueue(&queue, 100);
-    Enqueue(&queue, 20);
-    Enqueue(&queue, 1);
+    printf("插入数据结果 %d\n", Enqueue(&queue, 100));
+    printf("插入数据结果 %d\n", Enqueue(&queue, 20));
+    printf("插入数据结果 %d\n", Enqueue(&queue, 1));
     printf("队列长度 : %d\n", getLength(queue));
     TraverseQueue(&queue);
     printf("队列是否溢出 : %d\n", FullQueue(&queue));
