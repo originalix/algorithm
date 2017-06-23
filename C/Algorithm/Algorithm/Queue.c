@@ -69,24 +69,29 @@ Status EmptyQueue(PQUEUE *Q)
         return FALSE;
 }
 
-// /**
-//  * insert element to Queue.
-//  *
-//  * @param  Q   PQUEUE
-//  * @param  val element
-//  * @return     bool
-//  */
-// Status Enqueue(PQUEUE Q, int val)
-// {
-//     if (FullQueue(Q))
-//     {
-//         return FALSE;
-//     } else {
-//         Q->pBase[Q->rear] = val;
-//         Q->rear = (Q->rear + 1) % Q->maxsize;
-//         return TRUE;
-//     }
-// }
+int getLength(PQUEUE Q)
+{
+    return (Q.rear - Q.front + Q.maxsize) % Q.maxsize;
+}
+
+/**
+ * insert element to Queue.
+ *
+ * @param  Q   PQUEUE
+ * @param  val element
+ * @return     bool
+ */
+Status Enqueue(PQUEUE *Q, int val)
+{
+    if (FullQueue(Q))
+    {
+        return FALSE;
+    } else {
+        Q->pBase[Q->rear] = val;
+        Q->rear = (Q->rear + 1) % Q->maxsize;
+        return TRUE;
+    }
+}
 
 // /**
 //  * Delete element in queue.
@@ -113,6 +118,10 @@ int main(int argc, char const *argv[])
     printf("status %d\n", OK);
     PQUEUE queue;
     CreateQueue(&queue, 10);
+    Enqueue(&queue, 100);
+    Enqueue(&queue, 20);
+    Enqueue(&queue, 1);
+    printf("队列长度 : %d\n", getLength(queue));
     TraverseQueue(&queue);
     printf("队列是否溢出 : %d\n", FullQueue(&queue));
     printf("队列是否为空 : %d\n", EmptyQueue(&queue));
