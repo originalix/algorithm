@@ -9,6 +9,15 @@ void swap(SqList *L, int i, int j)
     L->r[j] = temp;
 }
 
+void print(SqList L)
+{
+    int i;
+    for(i=1;i<L.length;i++)
+        printf("%d,",L.r[i]);
+    printf("%d",L.r[i]);
+    printf("\n");
+}
+
 void bubbleSort0(SqList *L)
 {
     int i, j;
@@ -22,4 +31,20 @@ void bubbleSort0(SqList *L)
             }
         }
     }
+}
+
+int main(int argc, char const *argv[])
+{
+    printf("Hello WSX\n");
+    int a[] = {10, 55, 66, 77, 3, 45, 23, 21, 50, 12};
+    SqList *L;
+    for (int i = 0; i < 9; i++)
+    {
+        L->r[i+1] = a[i];
+    }
+    L->length = 10;
+    printf("排序前\n");
+    // print(L);
+
+    return 0;
 }
