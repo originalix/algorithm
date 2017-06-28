@@ -37,14 +37,18 @@ int main(int argc, char const *argv[])
 {
     printf("Hello WSX\n");
     int a[] = {10, 55, 66, 77, 3, 45, 23, 21, 50, 12};
-    SqList *L;
+    SqList L;
     for (int i = 0; i < 9; i++)
     {
-        L->r[i+1] = a[i];
+        L.r[i+1] = a[i];
     }
-    L->length = 10;
+    L.length = 10;
     printf("排序前\n");
-    // print(L);
+    print(L);
+
+    printf("初级冒泡排序\n");
+    bubbleSort0(&L);
+    print(L);
 
     return 0;
 }
