@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "Sort.h"
 
+#define OK 1
+#define ERROR 0
+#define TRUE 1
+#define FALSE 0
+
+typedef int Status;
+
 void swap(SqList *L, int i, int j)
 {
     int temp = L->r[i];
@@ -52,9 +59,23 @@ void BubbleSort(SqList *L)
     }
 }
 
+/* 对顺序表L做冒泡排序（改进版本） */
 void BubbleSort2(SqList *L)
 {
-
+    int i, j;
+    Status flag=TRUE;
+    for (i = 1; i < L->length; i++)
+    {
+        flag = FALSE;
+        for (j=L->length - 1; j >= i; j--)
+        {
+            if (L->r[j] > L->r[j+1])
+            {
+                swap(L, j, j+1);
+                flag = TRUE;
+            }
+        }
+    }
 }
 
 int main(int argc, char const *argv[])
@@ -80,6 +101,8 @@ int main(int argc, char const *argv[])
     printf("冒泡排序:\n");
     BubbleSort(&l1);
     print(l1);
+
+
 
     return 0;
 }
