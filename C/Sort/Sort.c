@@ -102,7 +102,8 @@ int main(int argc, char const *argv[])
     BubbleSort(&l1);
     print(l1);
 
-
-
+    printf("改良版冒泡排序:\n");
+    BubbleSort2(&l2);
+    print(l2);
     return 0;
 }
