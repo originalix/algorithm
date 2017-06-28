@@ -33,6 +33,25 @@ void bubbleSort0(SqList *L)
     }
 }
 
+/**
+ * 对顺序表L做冒泡排序
+ * @param L SqList
+ */
+void BubbleSort(SqList *L)
+{
+    int i, j;
+    for (i=1; i < L->length; i++)
+    {
+        for (j = L->length - 1; j >= i; j--)
+        {
+            if (L->r[j] > L->r[j+1])
+            {
+                swap(L, j, j+1);
+            }
+        }
+    }
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello WSX\n");
