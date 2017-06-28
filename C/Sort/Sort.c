@@ -18,7 +18,7 @@ void print(SqList L)
     printf("\n");
 }
 
-void bubbleSort0(SqList *L)
+void BubbleSort0(SqList *L)
 {
     int i, j;
     for (i = 1; i < L->length; i++)
@@ -52,22 +52,34 @@ void BubbleSort(SqList *L)
     }
 }
 
+void BubbleSort2(SqList *L)
+{
+
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello WSX\n");
     int a[] = {10, 55, 66, 77, 3, 45, 23, 21, 50, 12};
     SqList L;
+    SqList l0,l1,l2,l3,l4,l5,l6,l7,l8,l9,l10;
     for (int i = 0; i < 9; i++)
     {
         L.r[i+1] = a[i];
     }
     L.length = 10;
+    l1=l2=l3=l4=l5=l6=l7=l8=l9=l10=L;
+
     printf("排序前\n");
     print(L);
 
-    printf("初级冒泡排序\n");
-    bubbleSort0(&L);
+    printf("初级冒泡排序:\n");
+    BubbleSort0(&L);
     print(L);
+
+    printf("冒泡排序:\n");
+    BubbleSort(&l1);
+    print(l1);
 
     return 0;
 }
