@@ -16,7 +16,7 @@ static int MaxSubSum(const int A[], int Left, int Right)
     MaxRightSum = MaxSubSum(A, Center + 1, Right);
 
     MaxLeftBorderSum = 0; LeftBorderSum = 0;
-    for (i = center; i >= Left; i--)
+    for (i = Center; i >= Left; i--)
     {
         LeftBorderSum += A[i];
         if (LeftBorderSum > MaxLeftBorderSum)
@@ -24,7 +24,7 @@ static int MaxSubSum(const int A[], int Left, int Right)
     }
 
     MaxRightBorderSum = 0; RightBorderSum = 0;
-    for (i = center + 1; i <= Right; i++)
+    for (i = Center + 1; i <= Right; i++)
     {
         RightBorderSum += A[i];
         if (RightBorderSum > MaxRightBorderSum)
@@ -32,5 +32,11 @@ static int MaxSubSum(const int A[], int Left, int Right)
     }
 
     /* 尚未完成max3 函数 */
+    return 0;
+}
+
+int main(int argc, char const *argv[])
+{
+    printf("Hello wsx\n");
     return 0;
 }
