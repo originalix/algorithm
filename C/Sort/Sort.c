@@ -94,6 +94,12 @@ void InsertSort(SqList *L)
     }
 }
 
+/* 对顺序表L做希尔排序 */
+void ShellSort(SqList *L)
+{
+
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello WSX\n");
