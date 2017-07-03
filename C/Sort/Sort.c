@@ -87,7 +87,7 @@ void InsertSort(SqList *L)
         if (L->r[i] < L->r[i-1])
         {
             L->r[0] = L->r[i];
-            for (j = i-1; L->r[j]->r[0]; j--)
+            for (j = i-1; L->r[j] > L->r[0]; j--)
                 L->r[j+1] = L->r[j];
             L->r[j+1] = L->r[0];
         }
@@ -121,5 +121,10 @@ int main(int argc, char const *argv[])
     printf("改良版冒泡排序:\n");
     BubbleSort2(&l2);
     print(l2);
+
+    printf("直接插入排序:\n");
+    InsertSort(&l4);
+    print(l4);
+
     return 0;
 }
