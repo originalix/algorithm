@@ -1,9 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 int MaxSubsequenceSum(const int A[], int N)
 {
     return MaxSubSum(A, 0, N-1);
 }
 
-static int MaxSubSum(const int A[], int Left, int Right)
+int MaxSubSum(const int A[], int Left, int Right)
 {
     int MaxLeftSum, MaxRightSum;
     int MaxLeftBorderSum, MaxRightBorderSum;
@@ -39,7 +42,7 @@ static int MaxSubSum(const int A[], int Left, int Right)
     return Max3(MaxLeftSum, MaxRightSum, MaxLeftBorderSum + MaxRightBorderSum);
 }
 
-static int Max3(int A, int B, int C)
+int Max3(int A, int B, int C)
 {
     return A > B ? A > C ? A : C : B > C ? B : C;
 }
@@ -47,7 +50,8 @@ static int Max3(int A, int B, int C)
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
-    int b = Max3(200, 9999, 20);
-    printf("b = %d\n", b);
+    int A[] = {4, -3, 5, -2, -1, 2, 6, -2};
+    int sum = MaxSubsequenceSum(A, 8);
+    printf("sum = %d\n", sum);
     return 0;
 }
