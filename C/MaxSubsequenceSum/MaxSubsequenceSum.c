@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* 分而治之 */
 int MaxSubsequenceSum(const int A[], int N)
 {
     return MaxSubSum(A, 0, N-1);
@@ -45,6 +46,12 @@ int MaxSubSum(const int A[], int Left, int Right)
 int Max3(int A, int B, int C)
 {
     return A > B ? A > C ? A : C : B > C ? B : C;
+}
+
+/* 联机算法 */
+int MaxSubsequenceSum1(const int A[], int N)
+{
+
 }
 
 int main(int argc, char const *argv[])
