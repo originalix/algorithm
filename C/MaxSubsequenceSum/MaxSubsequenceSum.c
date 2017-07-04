@@ -1,3 +1,8 @@
+int MaxSubsequenceSum(const int A[], int N)
+{
+    return MaxSubSum(A, 0, N-1);
+}
+
 static int MaxSubSum(const int A[], int Left, int Right)
 {
     int MaxLeftSum, MaxRightSum;
