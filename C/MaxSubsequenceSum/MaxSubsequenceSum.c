@@ -73,5 +73,8 @@ int main(int argc, char const *argv[])
     int A[] = {4, -3, 5, -2, -1, 2, 6, -2};
     int sum = MaxSubsequenceSum(A, 8);
     printf("sum = %d\n", sum);
+
+    int onlineSum = MaxSubsequenceSum1(A, 8);
+    printf("onlineSum = %d\n", onlineSum);
     return 0;
 }
