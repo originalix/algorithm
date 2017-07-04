@@ -51,7 +51,20 @@ int Max3(int A, int B, int C)
 /* 联机算法 */
 int MaxSubsequenceSum1(const int A[], int N)
 {
+    int ThisSum, MaxSum, j;
 
+    ThisSum = MaxSum = 0;
+
+    for (j = 0; j < N; j++)
+    {
+        ThisSum += A[j];
+
+        if (ThisSum > MaxSum)
+            MaxSum = ThisSum;
+        else if (ThisSum < 0)
+            ThisSum = 0;
+    }
+    return MaxSum;
 }
 
 int main(int argc, char const *argv[])
