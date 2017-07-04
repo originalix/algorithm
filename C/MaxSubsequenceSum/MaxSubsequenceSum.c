@@ -31,8 +31,7 @@ static int MaxSubSum(const int A[], int Left, int Right)
             MaxRightBorderSum = RightBorderSum;
     }
 
-    /* 尚未完成max3 函数 */
-    return 0;
+    return Max3(MaxLeftSum, MaxRightSum, MaxLeftBorderSum + MaxRightBorderSum);
 }
 
 static int Max3(int A, int B, int C)
