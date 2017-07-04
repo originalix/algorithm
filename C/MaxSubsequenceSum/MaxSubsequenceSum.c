@@ -35,8 +35,15 @@ static int MaxSubSum(const int A[], int Left, int Right)
     return 0;
 }
 
+static int Max3(int A, int B, int C)
+{
+    return A > B ? A > C ? A : C : B > C ? B : C;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
+    int b = Max3(200, 9999, 20);
+    printf("b = %d\n", b);
     return 0;
 }
