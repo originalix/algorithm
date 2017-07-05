@@ -25,5 +25,8 @@ int BinarySearch(const int A[], int X, int N)
 int main(int argc, char const *argv[])
 {
     printf("Hello WSX\n");
+    int A[] = {3, 12, 21, 33, 50, 99, 1024, 1201};
+    int result = BinarySearch(A, 1201, 8);
+    printf("result = %d\n", result);
     return 0;
 }
