@@ -42,5 +42,9 @@ int main(int argc, char const *argv[])
     int A[] = {3, 12, 21, 33, 50, 99, 1024, 1201};
     int result = BinarySearch(A, 1201, 8);
     printf("result = %d\n", result);
+
+    printf("欧几里得算法测试\n");
+    unsigned int mod = Gcd(30, 15);
+    printf("%d\n", mod);
     return 0;
 }
