@@ -97,17 +97,6 @@ void InsertSort(SqList *L)
 /* 对顺序表L做希尔排序 */
 void ShellSort(SqList *L)
 {
-    int i, j, k=0;
-    int increment = L->length;
-    do
-    {
-        increment = increment / 3 + 1;
-        for (i = increment + 1; )
-    }
-}
-
-void ShellSort(SqList *L)
-{
     int i, j, k = 0;
     int increment = L->length;
     do
