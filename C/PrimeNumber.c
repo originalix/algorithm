@@ -39,6 +39,10 @@ void PrimeQuick(int num)
         printf("Quick: %d不是素数\n", num);
 }
 
+/**
+ * 算法查找主要元素
+ */
+
 int main(int argc, char const *argv[])
 {
     // PrimeSimple(1000000);
