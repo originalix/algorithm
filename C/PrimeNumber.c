@@ -26,14 +26,14 @@ void PrimeSimple(int num)
 
 void PrimeQuick(int num)
 {
-    int i = 0;
+    int a = 0;
     int k = 0;
 
     k = (int)sqrt((double)num);
-    for (i = 2; i < k; i++)
+    for (int i = 2; i <= k; i++)
         if (num % i == 0)
-            break;
-    if (i > k)
+            a++;
+    if (a > 0)
         printf("Quick: %d是素数\n", num);
     else
         printf("Quick: %d不是素数\n", num);
@@ -41,8 +41,8 @@ void PrimeQuick(int num)
 
 int main(int argc, char const *argv[])
 {
-    PrimeSimple(6);
-    PrimeQuick(7);
+    // PrimeSimple(1000000);
+    PrimeQuick(1000000000);
     printf("Hello wsx\n");
     return 0;
 }
