@@ -41,6 +41,13 @@ void PrimeQuick(int num)
 
 /**
  * 算法查找主要元素
+ *
+ * A1 -> A2
+ * if true 添加A1 进B数组
+ * else 不操作
+ * next A3->A4
+ * 之后 递归 搜索B数组 条件一样
+ * 递归条件  比较到最后一组 返回
  */
 
 int main(int argc, char const *argv[])
