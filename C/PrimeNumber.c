@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int PrimeSimple(int num)
+void PrimeSimple(int num)
 {
     int a = 0;
 
@@ -13,23 +13,19 @@ int PrimeSimple(int num)
     for (int i = 2; i < num; i++)
     {
         if (num % i == 0)
-        {
             a++;
-        }
+            break;
     }
 
     if (a > 0)
-    {
-        return 1;
-    }
-
-    return 0;
+        printf("%d是素数。\n", num);
+    else
+        printf("%d不是素数。\n", num);
 }
 
 int main(int argc, char const *argv[])
 {
-    int result = PrimeSimple(3);
-    printf("素数结果 : %d\n", result);
+    PrimeSimple(6);
     printf("Hello wsx\n");
     return 0;
 }
