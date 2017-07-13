@@ -58,6 +58,34 @@ void PrimeQuick(int num)
 
 void MainElement(int A[], int size)
 {
+
+    // int B[size];
+    // int j = 0;
+
+    // for (int i = 1; i < size; i++)
+    // {
+    //     if (A[i - 1] == A[i]) {
+    //         B[j] = A[i];
+    //         j++;
+    //     }
+    //     i += 2;
+    // }
+
+    // printf("j = %d\n", j);
+
+    // for (int k = 0; k < j; k++)
+    //     printf("B[%d] = %d\n", k, B[k]);
+}
+
+int SelectedElement(int A[], int size)
+{
+    if (size < 1) {
+        return -1;
+    }
+    if (size == 1) {
+        return A[0];
+    }
+
     int B[size];
     int j = 0;
 
@@ -69,16 +97,7 @@ void MainElement(int A[], int size)
         }
         i += 2;
     }
-
-    printf("j = %d\n", j);
-
-    for (int k = 0; k < j; k++)
-        printf("B[%d] = %d\n", k, B[k]);
-}
-
-int SelectedElement(int A[], int size)
-{
-    return 0;
+    return SelectedElement(B, j);
 }
 
 int main(int argc, char const *argv[])
