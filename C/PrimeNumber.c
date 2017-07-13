@@ -58,11 +58,15 @@ void PrimeQuick(int num)
 
 int SelectedElement(int A[], int size)
 {
-    if (size < 1) {
-        return -1;
+    for (int i = 0; i < size; i++)
+    {
+        printf("A[%d] === %d\n", i, A[i]);
     }
     if (size == 1) {
         return A[0];
+    }
+    if (size < 1) {
+        return -1;
     }
 
     int B[size];
@@ -70,11 +74,11 @@ int SelectedElement(int A[], int size)
 
     for (int i = 1; i < size; i++)
     {
-        if (A[i - 1] == A[i]) {
+        if (A[i-1] == A[i]) {
             B[j] = A[i];
+            printf("B[%d] === %d\n", j, B[j]);
             j++;
         }
-        i += 2;
     }
     return SelectedElement(B, j);
 }
@@ -83,30 +87,14 @@ void MainElement(int A[], int size)
 {
     int i = SelectedElement(A, size);
     printf("i ==== %d\n", i);
-    // int B[size];
-    // int j = 0;
-
-    // for (int i = 1; i < size; i++)
-    // {
-    //     if (A[i - 1] == A[i]) {
-    //         B[j] = A[i];
-    //         j++;
-    //     }
-    //     i += 2;
-    // }
-
-    // printf("j = %d\n", j);
-
-    // for (int k = 0; k < j; k++)
-    //     printf("B[%d] = %d\n", k, B[k]);
 }
 
 int main(int argc, char const *argv[])
 {
     // PrimeSimple(1000000);
     // PrimeQuick(1000000000);
-    int A[6] = {3, 1, 6, 3, 0, 3};
-    MainElement(A, 6);
+    int A[7] = {3, 7, 3, 6, 3, 7, 3};
+    MainElement(A, 7);
     printf("Hello wsx\n");
     return 0;
 }
