@@ -48,11 +48,17 @@ void PrimeQuick(int num)
  * next A3->A4
  * 之后 递归 搜索B数组 条件一样
  * 递归条件  比较到最后一组 返回
+ *
+ * 递归
+ * if size < 1 return -1
+ * if size == 1 return int
+ * if size > 1 递归
+ *
  */
 
 void MainElement(int A[], int size)
 {
-    int B[100];
+    int B[size];
     int j = 0;
 
     for (int i = 1; i < size; i++)
@@ -68,6 +74,11 @@ void MainElement(int A[], int size)
 
     for (int k = 0; k < j; k++)
         printf("B[%d] = %d\n", k, B[k]);
+}
+
+int SelectedElement(int A[], int size)
+{
+    return 0;
 }
 
 int main(int argc, char const *argv[])
