@@ -57,11 +57,14 @@ void MainElement(int A[], int size)
 
     for (int i = 1; i < size; i++)
     {
-        if (A[i - 1] == A[i])
+        if (A[i - 1] == A[i]) {
             B[j] = A[i];
+            j++;
+        }
         i += 2;
-        j++;
     }
+
+    printf("j = %d\n", j);
 
     for (int k = 0; k < j; k++)
         printf("B[%d] = %d\n", k, B[k]);
@@ -71,7 +74,7 @@ int main(int argc, char const *argv[])
 {
     // PrimeSimple(1000000);
     // PrimeQuick(1000000000);
-    int A[6] = {3, 5, 6, 3, 5, 3};
+    int A[6] = {3, 3, 6, 3, 0, 3};
     MainElement(A, 6);
     printf("Hello wsx\n");
     return 0;
