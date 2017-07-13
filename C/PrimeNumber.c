@@ -89,6 +89,50 @@ void MainElement(int A[], int size)
     printf("i ==== %d\n", i);
 }
 
+void findMainElem(int *pData, int *B, int &N)
+{
+    if (1 == N)
+    {
+        if (B[N - 1] == B[N])
+        {
+            printf("MainElem: %d\n", B[N - 1]);
+        }
+        else
+        {
+            printf("Not Main Element Found!\n");
+        }
+
+        return;
+    }
+
+    int n = 0;
+    if (N % 2)
+    {
+        for (int i = 0; i < N - 1; i += 2)
+        {
+            if (pData[i] == pData[i + 1])
+            {
+                B[n++] = pData[i];
+            }
+        }
+        B[n++] = pData[N - 1];
+        N = n;
+    }
+    else
+    {
+        for (int i = 0; i < N - 1; i += 2)
+        {
+            if (pData[i] == pData[i + 1])
+            {
+                B[n++] = pData[i];
+            }
+        }
+        --n;
+        N = n;
+    }
+    findMainElem(B, B, N);
+}
+
 int main(int argc, char const *argv[])
 {
     // PrimeSimple(1000000);
