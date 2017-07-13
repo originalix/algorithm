@@ -89,7 +89,7 @@ void MainElement(int A[], int size)
     printf("i ==== %d\n", i);
 }
 
-void findMainElem(int *pData, int *B, int &N)
+void findMainElem(int *pData, int *B, int N)
 {
     if (1 == N)
     {
@@ -137,8 +137,10 @@ int main(int argc, char const *argv[])
 {
     // PrimeSimple(1000000);
     // PrimeQuick(1000000000);
-    int A[7] = {3, 7, 3, 6, 3, 7, 3};
-    MainElement(A, 7);
+    // MainElement(A, 7);
+    int A[9] = {4, 3, 4, 4, 2, 4, 2, 4};
+    int B[9];
+    findMainElem(A, B, 9);
     printf("Hello wsx\n");
     return 0;
 }
