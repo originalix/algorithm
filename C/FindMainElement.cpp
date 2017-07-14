@@ -6,7 +6,7 @@ void findMainElem(int *pData, int &N); // N为元素个数
 int main()
 {
     int N = 9;
-    int pData[9] = {4, 3, 4, 2, 3, 4, 2, 4, 4};
+    int pData[9] = {4, 3, 4, 2, 4, 3, 4, 2, 4};
     int B[9];
     findMainElem(pData, B, N);
     // int M = 9;
