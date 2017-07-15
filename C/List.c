@@ -3,6 +3,13 @@
 #include <string.h>
 #include "List.h"
 
+#define OK 1
+#define ERROR 0
+#define TRUE 1
+#define FALSE 0
+
+typedef int Status;
+
 struct Node
 {
     ElementType Element;
@@ -79,12 +86,15 @@ void print_list(List L)
     return;
 }
 
-int IsEmpty(List L)
+Status IsEmpty(List L)
 {
-    return L->Next == NULL;
+    if (L == NULL)
+        return TRUE;
+    else
+        return FALSE;
 }
 
-int IsLast(Position P, List L)
+Status IsLast(Position P, List L)
 {
     return P->Next == NULL;
 }
@@ -95,6 +105,8 @@ int main(int argc, char const *argv[])
     init_list(L);
     L = create_list();
     print_list(L);
+    int isEmpty = IsEmpty(L);
+    printf("链表是否为空: %d\n", isEmpty);
     printf("Hello wsx\n");
     return 0;
 }
