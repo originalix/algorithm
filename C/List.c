@@ -146,6 +146,21 @@ void Insert(ElementType X, List L, Position P)
     P->Next = TmpCell;
 }
 
+void DeleteList(List L)
+{
+    Position P, Tmp;
+
+    P = L->Next;
+    L->Next = NULL;
+
+    while(P != NULL)
+    {
+        Tmp = P->Next;
+        free(P);
+        P = Tmp;
+    }
+}
+
 int main(int argc, char const *argv[])
 {
     List L;
@@ -164,7 +179,8 @@ int main(int argc, char const *argv[])
         Insert(i, L, p);
     }
     Delete(21, L);
+    DeleteList(L);
     print_list(L);
-    printf("Hello wsx\n");
+    printf("Hello world\n");
     return 0;
 }
