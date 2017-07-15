@@ -134,6 +134,18 @@ Position FindPrevious(ElementType X, List L)
     return P;
 }
 
+void Insert(ElementType X, List L, Position P)
+{
+    Position TmpCell;
+
+    TmpCell = malloc(sizeof(struct Node));
+    if (TmpCell == NULL)
+        printf("Out of space!!!\n");
+    TmpCell->Element = X;
+    TmpCell->Next = P->Next;
+    P->Next = TmpCell;
+}
+
 int main(int argc, char const *argv[])
 {
     List L;
@@ -147,6 +159,10 @@ int main(int argc, char const *argv[])
         printf("没有找到21元素\n");
     else
         printf("查找21结果: %d\n", p->Element);
+    for (int i = 0; i < 10; i++)
+    {
+        Insert(i, L, p);
+    }
     Delete(21, L);
     print_list(L);
     printf("Hello wsx\n");
