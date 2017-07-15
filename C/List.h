@@ -4,6 +4,7 @@ struct Node;
 typedef struct Node *PtrToNode;
 typedef PtrToNode List;
 typedef PtrToNode Position;
+typedef int ElementType;
 
 List MakeEmpty(List L);
 int IsEmpty(List L);
