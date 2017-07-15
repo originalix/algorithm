@@ -62,6 +62,9 @@ List create_list()
 
 int main(int argc, char const *argv[])
 {
+    List L;
+    init_list(L);
+    create_list();
     printf("Hello wsx\n");
     return 0;
 }
