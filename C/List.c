@@ -60,11 +60,31 @@ List create_list()
     return L;
 }
 
+void print_list(List L)
+{
+    List p = L;
+    if (NULL == p)
+    {
+        printf("print_list: 链表为空!\n");
+        return;
+    }
+
+    printf("打印链表如下: \n");
+    while(p != NULL)
+    {
+        printf("%d, \n", p->Element);
+        p = p->Next;
+    }
+    printf("\n");
+    return;
+}
+
 int main(int argc, char const *argv[])
 {
     List L;
     init_list(L);
-    create_list();
+    L = create_list();
+    print_list(L);
     printf("Hello wsx\n");
     return 0;
 }
