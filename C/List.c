@@ -79,6 +79,16 @@ void print_list(List L)
     return;
 }
 
+int IsEmpty(List L)
+{
+    return L->Next == NULL;
+}
+
+int IsLast(Position P, List L)
+{
+    return P->Next == NULL;
+}
+
 int main(int argc, char const *argv[])
 {
     List L;
