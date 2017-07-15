@@ -110,6 +110,30 @@ Position Find(ElementType X, List L)
     return P;
 }
 
+void Delete(ElementType X, List L)
+{
+    Position P, TmpCell;
+
+    P = FindPrevious(X, L);
+
+    if (!IsLast(P, L))
+        TmpCell = P->Next;
+        P->Next = TmpCell->Next;
+        free(TmpCell);
+}
+
+Position FindPrevious(ElementType X, List L)
+{
+    Position P;
+
+    P = L;
+    while(P->Next != NULL && P->Next->Element != X)
+    {
+        P = P->Next;
+    }
+    return P;
+}
+
 int main(int argc, char const *argv[])
 {
     List L;
@@ -119,8 +143,12 @@ int main(int argc, char const *argv[])
     // int isEmpty = IsEmpty(L);
     // printf("链表是否为空: %d\n", isEmpty);
     Position p = Find(21, L);
-    printf("查找21结果: %d\n", p->Element);
-
+    if (p == NULL)
+        printf("没有找到21元素\n");
+    else
+        printf("查找21结果: %d\n", p->Element);
+    Delete(21, L);
+    print_list(L);
     printf("Hello wsx\n");
     return 0;
 }
