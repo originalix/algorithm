@@ -99,14 +99,28 @@ Status IsLast(Position P, List L)
     return P->Next == NULL;
 }
 
+Position Find(ElementType X, List L)
+{
+    Position P;
+    P = L->Next;
+    while(P != NULL && P->Element != X)
+    {
+        P = P->Next;
+    }
+    return P;
+}
+
 int main(int argc, char const *argv[])
 {
     List L;
     init_list(L);
     L = create_list();
     print_list(L);
-    int isEmpty = IsEmpty(L);
-    printf("链表是否为空: %d\n", isEmpty);
+    // int isEmpty = IsEmpty(L);
+    // printf("链表是否为空: %d\n", isEmpty);
+    Position p = Find(21, L);
+    printf("查找21结果: %d\n", p->Element);
+
     printf("Hello wsx\n");
     return 0;
 }
