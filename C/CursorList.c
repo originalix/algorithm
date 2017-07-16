@@ -38,6 +38,13 @@ static Position CursorAlloc(void)
     return P;
 }
 
+static void CursorFree(Position P)
+{
+    CursorSpace[P].Next = CursorSpace[0].Next;
+    CursorSpace[0].Next = P;
+}
+
+/* Return true if L is empty */
 Status IsEmpty(List L)
 {
     if (CursorSpace[L].Next == 0)
@@ -46,18 +53,14 @@ Status IsEmpty(List L)
         return FALSE;
 }
 
+/* Return true if P is the last position in list L */
+/* Parameter L is unused in this implementation */
 Status IsLast(Position P, List L)
 {
     if (CursorSpace[P].Next == 0)
         return TRUE;
     else
         return FALSE;
-}
-
-static void CursorFree(Position P)
-{
-    CursorSpace[P].Next = CursorSpace[0].Next;
-    CursorSpace[0].Next = P;
 }
 
 int main(int argc, char const *argv[])
