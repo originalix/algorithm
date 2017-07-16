@@ -8,7 +8,7 @@
 #define TRUE 1
 #define FALSE 0
 
-#define SpaceSize 100
+#define SpaceSize 10
 
 typedef int Status;
 
@@ -76,6 +76,8 @@ Position Find(ElementType X, List L)
     return P;
 }
 
+/* Delete first occurrence of X from a list */
+/* Assume use of a header node */
 void Delete(ElementType X, List L)
 {
     Position P, TmpCell;
@@ -87,6 +89,8 @@ void Delete(ElementType X, List L)
         CursorFree(TmpCell);
 }
 
+/* Find the front of the first X of The list */
+/* Return 0 if not found */
 Position FindPrevious(ElementType X, const List L)
 {
     Position P;
@@ -98,10 +102,46 @@ Position FindPrevious(ElementType X, const List L)
     return P;
 }
 
+void Insert(ElementType X, List L, Position P)
+{
+    Position TmpCell;
+
+    TmpCell = CursorAlloc();
+    if (TmpCell == 0)
+        printf("Out of space!\n");
+    CursorSpace[TmpCell].Element = X;
+    CursorSpace[TmpCell].Next = CursorSpace[P].Next;
+    CursorSpace[P].Next = TmpCell;
+}
+
+void print_list(List L)
+{
+    List p = L;
+    if (NULL == p)
+    {
+        printf("print_list: 链表为空!\n");
+        return;
+    }
+
+    Position P;
+
+    P = CursorSpace[L].Next;
+    while(P != NULL) {
+        printf("%d, \n", CursorSpace[P].Element);
+        P = CursorSpace[P].Next;
+    }
+    printf("\n");
+    return;
+}
+
 int main(int argc, char const *argv[])
 {
     InitCursorSpace();
     List L = CursorAlloc();
+    CursorSpace[L].Next = NULL;
+    Insert(1, L, L);
+    Insert(0, L, L);
+    print_list(L);
     printf("检查链表是否为空: %d\n", IsEmpty(L));
     printf("Hello Wsx\n");
     return 0;
