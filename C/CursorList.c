@@ -102,6 +102,9 @@ Position FindPrevious(ElementType X, const List L)
     return P;
 }
 
+/* Insert(after legal position P) */
+/* Header implementation assumed */
+/* Parameter L is unused in this implemention */
 void Insert(ElementType X, List L, Position P)
 {
     Position TmpCell;
