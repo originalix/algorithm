@@ -89,7 +89,13 @@ void Delete(ElementType X, List L)
 
 Position FindPrevious(ElementType X, const List L)
 {
-
+    Position P;
+    P = L;
+    while(P && CursorSpace[CursorSpace[P].Next].Element != X)
+    {
+        P = CursorSpace[P].Next;
+    }
+    return P;
 }
 
 int main(int argc, char const *argv[])
