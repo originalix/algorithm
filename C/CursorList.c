@@ -141,6 +141,16 @@ int main(int argc, char const *argv[])
     CursorSpace[L].Next = NULL;
     Insert(1, L, L);
     Insert(0, L, L);
+    Insert(21, L, L);
+    Insert(1201, L, L);
+    Position P;
+    P = Find(21, L);
+    if (P)
+        printf("找到元素: %d\n", CursorSpace[P].Element);
+    else
+        printf("未找到21元素\n");
+    Delete(0, L);
+    Delete(1, L);
     print_list(L);
     printf("检查链表是否为空: %d\n", IsEmpty(L));
     printf("Hello Wsx\n");
