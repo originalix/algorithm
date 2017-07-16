@@ -69,11 +69,27 @@ Position Find(ElementType X, List L)
 {
     Position P;
 
-    p = CursorSpace[L].Next;
+    P = CursorSpace[L].Next;
     while(P && CursorSpace[P].Element != X) {
         P = CursorSpace[P].Next;
     }
     return P;
+}
+
+void Delete(ElementType X, List L)
+{
+    Position P, TmpCell;
+
+    P = FindPrevious(X, L);
+    if (!IsLast(P, L))
+        TmpCell = CursorSpace[P].Next;
+        CursorSpace[P].Next = CursorSpace[TmpCell].Next;
+        CursorFree(TmpCell);
+}
+
+Position FindPrevious(ElementType X, const List L)
+{
+
 }
 
 int main(int argc, char const *argv[])
