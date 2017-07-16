@@ -36,6 +36,16 @@ Stack CreateStack()
     return S;
 }
 
+void MakeEmpty(Stack S)
+{
+    if (S == NULL)
+        printf("Must use CreateStack first\n");
+    else
+        while(!IsEmpty(S)) {
+            Pop(S);
+        }
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
