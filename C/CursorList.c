@@ -38,6 +38,22 @@ static Position CursorAlloc(void)
     return P;
 }
 
+Status IsEmpty(List L)
+{
+    if (CursorSpace[L].Next == 0)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+Status IsLast(Position P, List L)
+{
+    if (CursorSpace[P].Next == 0)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 static void CursorFree(Position P)
 {
     CursorSpace[P].Next = CursorSpace[0].Next;
@@ -47,6 +63,8 @@ static void CursorFree(Position P)
 int main(int argc, char const *argv[])
 {
     InitCursorSpace();
+    List L = CursorAlloc();
+    printf("检查链表是否为空: %d\n", IsEmpty(L));
     printf("Hello Wsx\n");
     return 0;
 }
