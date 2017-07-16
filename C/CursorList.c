@@ -20,8 +20,17 @@ struct Node
 
 struct Node CursorSpace[ SpaceSize ];
 
+/* initialize the CursorSpace */
+void InitCursorSpace()
+{
+    int i;
+    for(i = 0; i < SpaceSize; i++)
+        CursorSpace[i].Next = i == SpaceSize-1 ? 0 : i+1;
+}
+
 int main(int argc, char const *argv[])
 {
+    InitCursorSpace();
     printf("Hello Wsx\n");
     return 0;
 }
