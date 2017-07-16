@@ -7,7 +7,7 @@ int main()
 {
     int N = 9;
     int pData[9] = {4, 3, 4, 2, 4, 3, 4, 2, 4};
-    int B[9];
+    int B[9];w
     findMainElem(pData, B, N);
     // int M = 9;
     // int pData1[9] = {3, 3, 4, 2, 4, 4, 2, 4, 4};

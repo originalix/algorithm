@@ -63,6 +63,19 @@ Status IsLast(Position P, List L)
         return FALSE;
 }
 
+/* Return Position of X in L; 0 if not found */
+/* Uses a header node */
+Position Find(ElementType X, List L)
+{
+    Position P;
+
+    p = CursorSpace[L].Next;
+    while(P && CursorSpace[P].Element != X) {
+        P = CursorSpace[P].Next;
+    }
+    return P;
+}
+
 int main(int argc, char const *argv[])
 {
     InitCursorSpace();
