@@ -167,8 +167,8 @@ int main(int argc, char const *argv[])
     init_list(L);
     L = create_list();
     print_list(L);
-    // int isEmpty = IsEmpty(L);
-    // printf("链表是否为空: %d\n", isEmpty);
+    int isEmpty = IsEmpty(L);
+    printf("链表是否为空: %d\n", isEmpty);
     Position p = Find(21, L);
     if (p == NULL)
         printf("没有找到21元素\n");
