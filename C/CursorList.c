@@ -28,6 +28,22 @@ void InitCursorSpace()
         CursorSpace[i].Next = i == SpaceSize-1 ? 0 : i+1;
 }
 
+static Position CursorAlloc(void)
+{
+    Position P;
+
+    P = CursorSpace[0].Next;
+    CursorSpace[0].Next = CursorSpace[P].Next;
+
+    return P;
+}
+
+static void CursorFree(Position P)
+{
+    CursorSpace[P].Next = CursorSpace[0].Next;
+    CursorSpace[0].Next = P;
+}
+
 int main(int argc, char const *argv[])
 {
     InitCursorSpace();
