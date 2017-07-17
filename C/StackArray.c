@@ -42,6 +42,13 @@ Stack CreateStack(int MaxElements)
     return S;
 }
 
+void DisposeStack(Stack S)
+{
+    if (S != NULL)
+        free(S->Array);
+        free(S);
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
