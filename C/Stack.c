@@ -28,10 +28,10 @@ Stack CreateStack()
 {
     Stack S;
 
-    S = malloc(sizeof(struct Node));
+    S = ( Stack )malloc(sizeof( struct Node ));
     if (S == NULL)
         printf("Out of space!\n");
-    S->Next == NULL;
+    S->Next = NULL;
     MakeEmpty(S);
     return S;
 }
@@ -81,6 +81,11 @@ void Pop(Stack S)
 
 int main(int argc, char const *argv[])
 {
+    Stack S;
+    if(!(S = CreateStack()))
+        printf("Create stack failed.\n");
+    else
+        printf("Create stack success\n");
     printf("Hello wsx\n");
     return 0;
 }
