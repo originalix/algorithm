@@ -16,7 +16,7 @@ struct Node
     PtrToNode Next;
 };
 
-int IsEmpty(Stack S)
+Status IsEmpty(Stack S)
 {
     if (S->Next == NULL)
         return TRUE;
@@ -79,6 +79,15 @@ void Pop(Stack S)
         free(FirstCell);
 }
 
+void PrintStack(Stack S)
+{
+    PtrToNode P;
+    printf("打印栈中元素: \n");
+    for(P = S->Next; P != NULL; P = P->Next)
+        printf("%5d\n", P->Element);
+    printf("\n");
+}
+
 int main(int argc, char const *argv[])
 {
     Stack S;
@@ -86,6 +95,15 @@ int main(int argc, char const *argv[])
         printf("Create stack failed.\n");
     else
         printf("Create stack success\n");
+    if (IsEmpty(S) == TRUE)
+        printf("Stack is empty.\n");
+    else
+        printf("Stack is not empty.\n");
+    for (int i = 20; i < 30; i++)
+    {
+        Push(i, S);
+    }
+    PrintStack(S);
     printf("Hello wsx\n");
     return 0;
 }
