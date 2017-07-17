@@ -59,6 +59,26 @@ void Push(ElementType X, Stack S)
         S->Next = TmpCell;
 }
 
+ElementType Top(Stack S)
+{
+    if (!IsEmpty(S))
+        return S->Next->Element;
+    printf("Empty Stack!\n");
+    return 0; /* Return value used to avoid warning */
+}
+
+void Pop(Stack S)
+{
+    PtrToNode FirstCell;
+
+    if (IsEmpty(S))
+        printf("Empty Stack!\n");
+    else
+        FirstCell = S->Next;
+        S->Next = S->Next->Next;
+        free(FirstCell);
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
