@@ -115,7 +115,11 @@ int main(int argc, char const *argv[])
     Pop(S);
     Pop(S);
     PrintStack(S);
-
+    DisposeStack(S);
+    if (IsEmpty(S) == TRUE)
+        printf("Stack is empty.\n");
+    else
+        printf("Stack is not empty.\n");
     printf("Hello wsx\n");
     return 0;
 }
