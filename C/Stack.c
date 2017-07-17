@@ -46,6 +46,13 @@ void MakeEmpty(Stack S)
         }
 }
 
+void DisposeStack(Stack S)
+{
+    MakeEmpty(S);
+    free(S);
+    printf("Dispose Stack!\n");
+}
+
 void Push(ElementType X, Stack S)
 {
     PtrToNode TmpCell;
@@ -104,6 +111,11 @@ int main(int argc, char const *argv[])
         Push(i, S);
     }
     PrintStack(S);
+    printf("Top Element = %5d\n", Top(S));
+    Pop(S);
+    Pop(S);
+    PrintStack(S);
+
     printf("Hello wsx\n");
     return 0;
 }
