@@ -46,6 +46,19 @@ void MakeEmpty(Stack S)
         }
 }
 
+void Push(ElementType X, Stack S)
+{
+    PtrToNode TmpCell;
+
+    TmpCell = malloc(sizeof(struct Node));
+    if (TmpCell == NULL)
+        printf("Out of space!\n");
+    else
+        TmpCell->Element = X;
+        TmpCell->Next = S->Next;
+        S->Next = TmpCell;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
