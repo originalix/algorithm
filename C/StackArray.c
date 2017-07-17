@@ -20,6 +20,27 @@ struct StackRecord
     ElementType *Array;
 };
 
+Stack CreateStack(int MaxElements)
+{
+    Stack S;
+
+    if (MaxElements < MinStackSize)
+        printf("Stack size is too small\n");
+        exit(-1);
+
+    S = malloc( sizeof( struct StackRecord ) );
+    if (S == NULL)
+        printf("Out of space !!!\n");
+        exit(-1);
+    S->Array = malloc( sizeof( ElementType ) * MaxElements );
+    if (S->Array == NULL)
+        printf("Out of space !!!\n");
+        exit(-1);
+    S->Capacity = MaxElements;
+    MakeEmpty(S);
+
+    return S;
+}
 
 int main(int argc, char const *argv[])
 {
