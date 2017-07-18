@@ -86,6 +86,14 @@ void Pop(Stack S)
         S->TopOfStack--;
 }
 
+ElementType TopAndPop(Stack S)
+{
+    if (!IsEmpty(S))
+        return S->Array[S->TopOfStack--];
+    printf("Empty Stack.\n");
+    return 0; /* Return value used to avoid warning */
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
