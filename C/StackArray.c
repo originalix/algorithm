@@ -101,6 +101,14 @@ ElementType TopAndPop(Stack S)
     return 0; /* Return value used to avoid warning */
 }
 
+void PrintStack(Stack S)
+{
+    printf("打印栈中元素: \n");
+    for(int i = 0; i <= S->TopOfStack; i++)
+        printf("%5d\n", S->Array[i]);
+    printf("\n");
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
@@ -114,5 +122,12 @@ int main(int argc, char const *argv[])
         printf("Stack is empty.\n");
     else
         printf("Stack is not empty.\n");
+
+    Push(21, S);
+    Push(1201, S);
+    Push(2150, S);
+
+    PrintStack(S);
+
     return 0;
 }
