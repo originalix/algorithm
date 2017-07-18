@@ -70,6 +70,22 @@ void Push(ElementType X, Stack S)
         S->Array[++S->TopOfStack] = X;
 }
 
+ElementType Top(Stack S)
+{
+    if (!IsEmpty(S))
+        return S->Array[S->TopOfStack];
+    printf("Empty Stack.\n");
+    return 0;
+}
+
+void Pop(Stack S)
+{
+    if (IsEmpty(S))
+        printf("Empty Stack.\n");
+    else
+        S->TopOfStack--;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
