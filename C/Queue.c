@@ -27,6 +27,14 @@ Status IsEmpty(Queue Q)
         return FALSE;
 }
 
+Statuc IsFull(Queue Q)
+{
+    if ((Q->Rear + 1) % Q->Capacity == Q->Front)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
