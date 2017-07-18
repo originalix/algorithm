@@ -62,6 +62,14 @@ void MakeEmpty(Stack S)
     S->TopOfStack = EmptyTOS;
 }
 
+void Push(ElementType X, Stack S)
+{
+    if (IsFull(S))
+        printf("Full Stack.\n");
+    else
+        S->Array[++S->TopOfStack] = X;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
