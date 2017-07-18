@@ -54,6 +54,13 @@ Queue CreateQueue(int MaxElements)
     return Q;
 }
 
+void DisposeQueue(Queue Q)
+{
+    MakeEmpty(Q);
+    free(Q);
+    printf("Dispose Queue\n");
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
