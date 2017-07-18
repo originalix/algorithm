@@ -6,7 +6,7 @@ typedef int ElementType;
 
 int IsEmpty(Queue Q);
 int IsFull(Queue Q);
-Queue CreateQueue();
+Queue CreateQueue(int MaxElements);
 void DisposeQueue(Queue Q);
 void MakeEmpty(Queue Q);
 void Enqueue(ElementType X, Queue Q);

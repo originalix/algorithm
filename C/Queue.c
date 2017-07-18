@@ -10,6 +10,23 @@
 
 typedef int Status;
 
+struct QueueRecord
+{
+    int Capacity;
+    int Front;
+    int Rear;
+    int MaxSize;
+    ElementType *Array;
+}
+
+Status IsEmpty(Queue Q)
+{
+    if (Q->size == 0)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
