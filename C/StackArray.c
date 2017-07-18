@@ -49,6 +49,19 @@ void DisposeStack(Stack S)
         free(S);
 }
 
+Status IsEmpty(Stack S)
+{
+    if (S->TopOfStack == EmptyTOS)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+void MakeEmpty(Stack S)
+{
+    S->TopOfStack = EmptyTOS;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
