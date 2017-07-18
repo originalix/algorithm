@@ -82,7 +82,7 @@ ElementType Top(Stack S)
     if (!IsEmpty(S))
         return S->Array[S->TopOfStack];
     printf("Empty Stack.\n");
-    return 0;
+    return 0; /* Return value used to avoid warning */
 }
 
 void Pop(Stack S)
