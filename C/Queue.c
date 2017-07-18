@@ -61,8 +61,60 @@ void DisposeQueue(Queue Q)
     printf("Dispose Queue\n");
 }
 
+static int Succ( int Value, Queue Q )
+{
+    if (++Value == Q->Capacity)
+        Value = 0;
+    return Value;
+}
+
+void Enqueue(ElementType X, Queue Q)
+{
+    if (IsFull( Q ))
+        printf("Full Queue\n");
+    else
+        Q->Size++;
+        Q->Rear = Succ(Q->Rear, Q);
+        Q->Front = Succ(Q->Front, Q);
+        Q->Array[Q->Rear] = X;
+}
+
+void PrintQueue(Queue Q)
+{
+    if (IsEmpty(Q))
+        printf("Queue is empty\n");
+        return;
+
+    printf("遍历队列元素: \n");
+
+    int i = Q->Front;
+
+    while(i != Q->Rear) {
+        printf("%d\n", Q->Array[i+1]);
+        i++;
+        i = i % Q->Capacity;
+    }
+}
+
 int main(int argc, char const *argv[])
 {
+    Queue Q;
+
+    if(!(Q = CreateQueue(10)))
+        printf("Create queue failed.\n");
+    else
+        printf("Create queue success\n");
+
+    if (IsEmpty(Q) == TRUE)
+        printf("Queue is empty.\n");
+    else
+        printf("Queue is not empty.\n");
+
+    Enqueue(21, Q);
+    Enqueue(1201, Q);
+
+    PrintQueue(Q);
+
     printf("Hello wsx\n");
     return 0;
 }
