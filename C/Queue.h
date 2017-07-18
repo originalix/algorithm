@@ -2,6 +2,7 @@
 
 struct QueueRecord;
 typedef struct QueueRecord *Queue;
+typedef int ElementType;
 
 int IsEmpty(Queue Q);
 int IsFull(Queue Q);
