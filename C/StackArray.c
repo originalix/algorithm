@@ -129,5 +129,14 @@ int main(int argc, char const *argv[])
 
     PrintStack(S);
 
+    Pop(S);
+    PrintStack(S);
+
+    int top = Top(S);
+    printf("栈顶元素: %d \n", top);
+
+    DisposeStack(S);
+    PrintStack(S);
+
     return 0;
 }
