@@ -101,6 +101,25 @@ void Dequeue(Queue Q)
         Q->Front = Succ(Q->Front, Q);
 }
 
+ElementType FrontAndDequeue(Queue Q)
+{
+    ElementType Tmp;
+
+    if (IsEmpty(Q))
+    {
+        printf("Empty queue\n");
+        return 0;
+    }
+    else
+    {
+        Tmp = Q->Array[Q->Front];
+        Q->Size--;
+        Q->Front = Succ(Q->Front, Q);
+
+        return Tmp;
+    }
+}
+
 void PrintQueue(Queue Q)
 {
     if (IsEmpty(Q) > 0)
@@ -155,6 +174,10 @@ int main(int argc, char const *argv[])
     Dequeue(Q);
     Dequeue(Q);
     Dequeue(Q);
+    Enqueue(1201, Q);
+
+    int frontAndDequeue = FrontAndDequeue(Q);
+    printf("frontAndDequeue element = %d\n", frontAndDequeue);
 
     PrintQueue(Q);
 
