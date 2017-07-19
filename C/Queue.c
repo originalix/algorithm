@@ -57,6 +57,7 @@ Queue CreateQueue(int MaxElements)
 void DisposeQueue(Queue Q)
 {
     MakeEmpty(Q);
+    free(Q->Array);
     free(Q);
     printf("Dispose Queue\n");
 }
@@ -91,6 +92,15 @@ ElementType Front(Queue Q)
     }
 }
 
+void Dequeue(Queue Q)
+{
+    if (IsEmpty(Q))
+        printf("Empty queue\n");
+    else
+        Q->Size--;
+        Q->Front = Succ(Q->Front, Q);
+}
+
 void PrintQueue(Queue Q)
 {
     if (IsEmpty(Q) > 0)
@@ -103,7 +113,7 @@ void PrintQueue(Queue Q)
 
     int i = Q->Front;
     while(i != Q->Rear) {
-        printf("%d\n", Q->Array[i+1]);
+        printf("%d\n", Q->Array[i]);
         i++;
         i = i % Q->Capacity;
     }
@@ -133,12 +143,20 @@ int main(int argc, char const *argv[])
     Enqueue(21, Q);
     Enqueue(1201, Q);
     Enqueue(88, Q);
-    // Enqueue(1201, Q);
+    Enqueue(1201, Q);
 
     PrintQueue(Q);
 
     int front = Front(Q);
     printf("front element = %d\n", front);
+
+    Dequeue(Q);
+    Dequeue(Q);
+    Dequeue(Q);
+    Dequeue(Q);
+    Dequeue(Q);
+
+    PrintQueue(Q);
 
     printf("Hello wsx\n");
     return 0;
