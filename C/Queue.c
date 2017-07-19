@@ -176,6 +176,17 @@ int main(int argc, char const *argv[])
     Dequeue(Q);
     Enqueue(1201, Q);
 
+    Enqueue(1201, Q);
+    Enqueue(21, Q);
+    Enqueue(1201, Q);
+    Enqueue(21, Q);
+    Enqueue(1201, Q);
+    Enqueue(88, Q);
+    Enqueue(1201, Q);
+    Dequeue(Q);
+    Dequeue(Q);
+    Dequeue(Q);
+
     int frontAndDequeue = FrontAndDequeue(Q);
     printf("frontAndDequeue element = %d\n", frontAndDequeue);
 
