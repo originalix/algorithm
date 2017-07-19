@@ -75,25 +75,26 @@ void Enqueue(ElementType X, Queue Q)
     else
         Q->Size++;
         Q->Rear = Succ(Q->Rear, Q);
-        Q->Front = Succ(Q->Front, Q);
         Q->Array[Q->Rear] = X;
 }
 
 void PrintQueue(Queue Q)
 {
-    if (IsEmpty(Q))
-        printf("Queue is empty\n");
+    if (IsEmpty(Q) > 0)
+    {
+        printf("Queue is empty.....\n");
         return;
+    }
 
     printf("遍历队列元素: \n");
 
     int i = Q->Front;
-
     while(i != Q->Rear) {
         printf("%d\n", Q->Array[i+1]);
         i++;
         i = i % Q->Capacity;
     }
+    return;
 }
 
 int main(int argc, char const *argv[])
@@ -112,6 +113,17 @@ int main(int argc, char const *argv[])
 
     Enqueue(21, Q);
     Enqueue(1201, Q);
+    Enqueue(21, Q);
+    Enqueue(1201, Q);
+    Enqueue(21, Q);
+    Enqueue(1201, Q);
+    Enqueue(21, Q);
+    Enqueue(1201, Q);
+    Enqueue(21, Q);
+    // Enqueue(1201, Q);
+
+
+
 
     PrintQueue(Q);
 
