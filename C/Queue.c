@@ -38,7 +38,7 @@ Status IsFull(Queue Q)
 void MakeEmpty(Queue Q)
 {
     Q->Size = 0;
-    Q->Front = 0;
+    Q->Front = 1;
     Q->Rear = 0;
 }
 
@@ -76,6 +76,19 @@ void Enqueue(ElementType X, Queue Q)
         Q->Size++;
         Q->Rear = Succ(Q->Rear, Q);
         Q->Array[Q->Rear] = X;
+}
+
+ElementType Front(Queue Q)
+{
+    if (IsEmpty(Q))
+    {
+        printf("Queue is empty.\n");
+        return 0;
+    }
+    else
+    {
+        return Q->Array[Q->Front];
+    }
 }
 
 void PrintQueue(Queue Q)
@@ -119,13 +132,13 @@ int main(int argc, char const *argv[])
     Enqueue(1201, Q);
     Enqueue(21, Q);
     Enqueue(1201, Q);
-    Enqueue(21, Q);
+    Enqueue(88, Q);
     // Enqueue(1201, Q);
 
-
-
-
     PrintQueue(Q);
+
+    int front = Front(Q);
+    printf("front element = %d\n", front);
 
     printf("Hello wsx\n");
     return 0;
