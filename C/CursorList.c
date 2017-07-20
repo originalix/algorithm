@@ -156,6 +156,6 @@ int main(int argc, char const *argv[])
     Delete(1, L);
     print_list(L);
     printf("检查链表是否为空: %d\n", IsEmpty(L));
-    printf("Hello Wsx\n");
+    printf("Hello World\n");
     return 0;
 }
