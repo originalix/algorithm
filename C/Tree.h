@@ -3,6 +3,7 @@
 struct TreeNode;
 typedef struct TreeNode *Position;
 typedef struct TreeNode *SearchTree;
+typedef int ElementType;
 
 SearchTree MakeEmpty( SearchTree T );
 Position Find( ElementType X, SearchTree T );
