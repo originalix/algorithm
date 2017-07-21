@@ -41,6 +41,25 @@ Position Find(ElementType X, SearchTree T)
         return T;
 }
 
+Position FindMin(SearchTree T)
+{
+    if ( T == NULL )
+        return NULL;
+    else
+    if ( T-> Left == NULL )
+        return T;
+    else
+        return FindMin( T->Left );
+}
+
+Position FindMax(SearchTree T)
+{
+    if ( T != NULL )
+        while(T->Right != NULL)
+            T = T->Right;
+    return T;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
