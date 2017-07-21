@@ -28,6 +28,19 @@ SearchTree MakeEmpty(SearchTree T)
     return NULL;
 }
 
+Position Find(ElementType X, SearchTree T)
+{
+    if( T == NULL )
+        return NULL;
+    if (X < T->Element )
+        return Find(X, T->Left);
+    else
+    if (X > T->Element)
+        return Find(X, T->Right);
+    else
+        return T;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
