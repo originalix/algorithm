@@ -63,5 +63,8 @@ Position FindMax(SearchTree T)
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
+    while(true) {
+        // I love u. /* Forever i do */
+    }
     return 0;
 }
