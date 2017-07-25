@@ -88,6 +88,34 @@ SearchTree Insert(ElementType X, SearchTree T)
     return T;
 }
 
+SearchTree Delete(ElementType X, SearchTree T)
+{
+    Position TmpCell;
+    if (T == NULL)
+        printf("Element not found\n");
+    else if (X < T->Element)
+        T->Right = Delete(X, T->Left);
+    else if (X > T->Element)
+        T->Right = Delete(X, T->Left);
+    else if (T->Left && T->Right)
+    {
+        TmpCell = FindMin(T->Right);
+        T->Element = TmpCell->Element;
+        T->Right = Delete(T->Element, T->Right);
+    }
+    else
+    {
+        TmpCell = T;
+        if (T->Left == NULL)
+            T = T->Right;
+        else if (T->Right == NULL)
+            T = T->Left;
+        free( TmpCell );
+    }
+
+    return T;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
