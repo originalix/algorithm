@@ -74,17 +74,12 @@ SearchTree Insert(ElementType X, SearchTree T)
             T->Left = T->Right = NULL;
         }
     }
-    else
-    {
-        if (X < T->Element)
-            T->Left = Insert(X, T->Left);
-        else
-        {
-            if (X > T->Element)
-                T->Right = Insert(X, T->Right);
-            /* Else X is in the tree already; we'll do nothing */
-        }
-    }
+    else if (X < T->Element)
+        T->Left = Insert(X, T->Left);
+    else if (X > T->Element)
+        T->Right = Insert(X, T->Right);
+    /* Else X is in the tree already; we'll do nothing */
+
     return T;
 }
 
