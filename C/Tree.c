@@ -60,6 +60,32 @@ Position FindMax(SearchTree T)
     return T;
 }
 
+SearchTree Insert(ElementType X, SearchTree T)
+{
+    if (T == NULL)
+    {
+        T = malloc(sizeof( struct TreeNode ));
+        if ( T == NULL )
+            printf("Out of space!!!\n");
+        else
+        {
+            T->Element = X;
+            T->Left = T->Right = NULL;
+        }
+    }
+    else
+    {
+        if (X < T->Element)
+            T->Left = Insert(X, T->Left);
+        else
+        {
+            if (X > T->Element)
+                T->Right = Insert(X, T->Right);
+        }
+    }
+    return T;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
