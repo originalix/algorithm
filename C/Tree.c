@@ -64,6 +64,7 @@ SearchTree Insert(ElementType X, SearchTree T)
 {
     if (T == NULL)
     {
+        /* Create and return a one-node tree */
         T = malloc(sizeof( struct TreeNode ));
         if ( T == NULL )
             printf("Out of space!!!\n");
@@ -81,6 +82,7 @@ SearchTree Insert(ElementType X, SearchTree T)
         {
             if (X > T->Element)
                 T->Right = Insert(X, T->Right);
+            /* Else X is in the tree already; we'll do nothing */
         }
     }
     return T;
