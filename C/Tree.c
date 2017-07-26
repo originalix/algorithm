@@ -88,20 +88,21 @@ SearchTree Delete(ElementType X, SearchTree T)
     Position TmpCell;
     if (T == NULL)
         printf("Element not found\n");
-    else if (X < T->Element)
+    else if (X < T->Element) /* Go left */
         T->Right = Delete(X, T->Left);
-    else if (X > T->Element)
+    else if (X > T->Element) /* Go Right */
         T->Right = Delete(X, T->Left);
-    else if (T->Left && T->Right)
+    else if (T->Left && T->Right) /* Two Children */
     {
+        /* Replace with smallest in right subtree */
         TmpCell = FindMin(T->Right);
         T->Element = TmpCell->Element;
         T->Right = Delete(T->Element, T->Right);
     }
-    else
+    else /* One or zero children */
     {
         TmpCell = T;
-        if (T->Left == NULL)
+        if (T->Left == NULL) /* Also handles 0 children */
             T = T->Right;
         else if (T->Right == NULL)
             T = T->Left;
