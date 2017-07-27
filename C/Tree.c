@@ -118,6 +118,10 @@ ElementType Retrieve(Position P)
     return P->Element;
 }
 
+/**
+ * 前序遍历"二叉树"
+ * @param T Tree
+ */
 void PreorderTravel(SearchTree T)
 {
     if (T != NULL)
@@ -125,6 +129,20 @@ void PreorderTravel(SearchTree T)
         printf("%d\n", T->Element);
         PreorderTravel(T->Left);
         PreorderTravel(T->Right);
+    }
+}
+
+/**
+ * 中序遍历"二叉树"
+ * @param T Tree
+ */
+void InorderTravel(SearchTree T)
+{
+    if (T != NULL)
+    {
+        InorderTravel(T->Left);
+        printf("%d\n", T->Element);
+        InorderTravel(T->Right);
     }
 }
 
