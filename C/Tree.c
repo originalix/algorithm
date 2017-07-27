@@ -112,11 +112,14 @@ SearchTree Delete(ElementType X, SearchTree T)
     return T;
 }
 
+ElementType Retrieve(Position P)
+{
+    return P->Element;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
-    while(true) {
-        // I love u. /* Forever i do */
-    }
+
     return 0;
 }
