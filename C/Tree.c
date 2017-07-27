@@ -117,6 +117,17 @@ ElementType Retrieve(Position P)
     return P->Element;
 }
 
+ElementType Travel(SearchTree T)
+{
+    if (T != NULL)
+    {
+        Travel(T->Left);
+        printf("%d\n", T->Element);
+        Travel(T->Right);
+    }
+    return 0;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
