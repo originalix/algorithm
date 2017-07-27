@@ -64,6 +64,7 @@ SearchTree Insert(ElementType X, SearchTree T)
 {
     if (T == NULL)
     {
+
         /* Create and return a one-node tree */
         T = malloc(sizeof( struct TreeNode ));
         if ( T == NULL )
@@ -117,20 +118,28 @@ ElementType Retrieve(Position P)
     return P->Element;
 }
 
-ElementType Travel(SearchTree T)
+void PreorderTravel(SearchTree T)
 {
     if (T != NULL)
     {
-        Travel(T->Left);
         printf("%d\n", T->Element);
-        Travel(T->Right);
+        PreorderTravel(T->Left);
+        PreorderTravel(T->Right);
     }
-    return 0;
 }
 
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
+    SearchTree T;
+    MakeEmpty(T);
+
+    T = Insert(21, T);
+    T = Insert(2150, T);
+    T = Insert(127, T);
+    T = Insert(121, T);
+
+    PreorderTravel(T);
 
     return 0;
 }
