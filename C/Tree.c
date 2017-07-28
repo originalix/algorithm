@@ -197,5 +197,8 @@ int main(int argc, char const *argv[])
     printf("后序遍历二叉树: \n");
     PostorderTravel(T);
 
+    printf("最大值: %d\n", FindMax(T)->Element);
+    printf("最小值: %d\n", FindMin(T)->Element);
+
     return 0;
 }
