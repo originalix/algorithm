@@ -160,6 +160,20 @@ void PostorderTravel(SearchTree T)
     }
 }
 
+void PrintTree(SearchTree T, ElementType Element, int direction)
+{
+    if (T != NULL)
+    {
+        if (direction == 0)
+            printf("%2d is root\n", T->Element);
+        else
+            printf("%2d is %2d's %6s child\n", T->Element, Element, direction == 1 ? "right" : "left");
+
+        PrintTree(T->Left, T->Element, -1);
+        PrintTree(T->Right, T->Element, 1);
+    }
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
@@ -171,7 +185,17 @@ int main(int argc, char const *argv[])
     T = Insert(127, T);
     T = Insert(121, T);
 
+    printf("树的详细信息: \n");
+    PrintTree(T, T->Element, 0);
+
+    printf("前序遍历二叉树: \n");
     PreorderTravel(T);
+
+    printf("中序遍历二叉树: \n");
+    InorderTravel(T);
+
+    printf("后序遍历二叉树: \n");
+    PostorderTravel(T);
 
     return 0;
 }
