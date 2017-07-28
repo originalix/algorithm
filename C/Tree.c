@@ -146,6 +146,20 @@ void InorderTravel(SearchTree T)
     }
 }
 
+/**
+ * 后序遍历二叉树
+ * @param T Tree
+ */
+void PostorderTravel(SearchTree T)
+{
+    if (T != NULL)
+    {
+        PostorderTravel(T->Left);
+        PostorderTravel(T->Right);
+        printf("%d\n", T->Element);
+    }
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
