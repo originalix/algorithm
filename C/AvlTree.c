@@ -18,6 +18,19 @@ struct AvlNode
     int Height;
 }
 
+/**
+ * 计算Avl节点高度
+ * @param  P 节点P
+ * @return 树高
+ */
+static int Height(Position P)
+{
+    if (P == NULL)
+        return -1;
+    else
+        return P->Height;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello Wsx\n");
