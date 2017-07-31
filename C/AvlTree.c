@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Tree.h"
+#include "AvlTree.h"
 
 #define OK 1
 #define ERROR 0
@@ -16,7 +16,7 @@ struct AvlNode
     AvlTree Left;
     AvlTree Right;
     int Height;
-}
+};
 
 /**
  * 计算Avl节点高度
@@ -31,24 +31,39 @@ static int Height(Position P)
         return P->Height;
 }
 
+static int Max(int a, int b)
+{
+    return a > b ? a : b;
+}
+
 /* 向左单旋 */
 static Position SingleRotateWithLeft(Position K2)
 {
     Position K1;
 
-    K1 = K2->Right;
+    K1 = K2->Left;
     K2->Left = K1->Right;
     K1->Right = K2;
 
-    K2->Height = Max(Height(K2->Left), Height(k2->Right)) + 1;
-    K1->Height = Max(Height(K1->Left), k2->Height) + 1;
+    K2->Height = Max(Height(K2->Left), Height(K2->Right)) + 1;
+    K1->Height = Max(Height(K1->Left), K2->Height) + 1;
 
     return K1; /* New Root */
 }
 
-static int Max(int a, int b)
+/* 向右单旋  */
+static Position SingleRotateWithRight(Position K2)
 {
-    return a > b ? a : b;
+    Position K1;
+
+    K1 = K2->Right;
+    K2->Right = K1->Left;
+    K1->Left = K2;
+
+    K2->Height = K2->Height = Max(Height(K2->Left), Height(K2->Right)) + 1;
+    K1->Height = Max(K2->Height, Height(K1->Right)) + 1;
+
+    return K1; /*New root */
 }
 
 int main(int argc, char const *argv[])
