@@ -10,6 +10,14 @@
 
 typedef int Status;
 
+struct AvlNode
+{
+    ElementType Element;
+    AvlTree Left;
+    AvlTree Right;
+    int Height;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello Wsx\n");
