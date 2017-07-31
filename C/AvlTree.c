@@ -46,6 +46,11 @@ static Position SingleRotateWithLeft(Position K2)
     return K1; /* New Root */
 }
 
+static int Max(int a, int b)
+{
+    return a > b ? a : b;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello Wsx\n");
