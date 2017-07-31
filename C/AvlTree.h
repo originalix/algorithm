@@ -3,6 +3,7 @@
 struct AvlNode;
 typedef struct AvlNode *Position;
 typedef struct AvlNode *AvlTree;
+typedef int ElementType;
 
 AvlTree MakeEmpty( AvlTree T );
 Position Find( ElementType X, AvlTree T );
