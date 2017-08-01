@@ -145,6 +145,17 @@ Position Find(ElementType X, AvlTree T)
         return T;
 }
 
+/* search the min element in AvlTree*/
+Position FindMin(AvlTree T)
+{
+    if (T == NULL)
+        return NULL;
+    else if (T->Left == NULL)
+        return T;
+    else
+        return FindMin(T->Left);
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello Wsx\n");
