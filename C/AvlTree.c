@@ -214,6 +214,21 @@ void PostorderTravel(AvlTree T)
     }
 }
 
+/* 打印二叉树信息 */
+void PrintTree(AvlTree T, ElementType Element, int direction)
+{
+    if (T != NULL)
+    {
+        if (direction == 0)
+            printf("%2d is root\n", T->Element);
+        else
+            printf("%2d is %2d's %6s child\n", T->Element, Element, direction == 1 ? "right" : "left");
+
+        PrintTree(T->Left, T->Element, -1);
+        PrintTree(T->Right, T->Element, 1);
+    }
+}
+
 
 int main(int argc, char const *argv[])
 {
