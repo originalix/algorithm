@@ -132,6 +132,19 @@ AvlTree Insert(ElementType X, AvlTree T)
     return T;
 }
 
+/* 查找X元素所在的位置 */
+Position Find(ElementType X, AvlTree T)
+{
+    if (T == NULL)
+        return NULL;
+    if (X < T->Element)
+        return Find(X, T->Left);
+    else if (X > T->Element)
+        return Find(X, T->Right);
+    else
+        return T;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello Wsx\n");
