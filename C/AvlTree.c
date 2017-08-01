@@ -66,6 +66,16 @@ static Position SingleRotateWithRight(Position K2)
     return K1; /*New root */
 }
 
+/* 向左双旋 */
+static Position DoubleRotateWithLeft(Position K3)
+{
+    /* Rotate between K1 and K2 */
+    K3->Left = SingleRotateWithRight(K3->Left);
+
+    /* Rotate between K3 and K2 */
+    return SingleRotateWithLeft(K3);
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello Wsx\n");
