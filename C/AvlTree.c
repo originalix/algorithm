@@ -76,6 +76,13 @@ static Position DoubleRotateWithLeft(Position K3)
     return SingleRotateWithLeft(K3);
 }
 
+static Position DoubleRotateWithRight(Positon K3)
+{
+    K3->Right = SingleRotateWithLeft(K3->Right);
+
+    return SingleRotateWithRight(K3);
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello Wsx\n");
