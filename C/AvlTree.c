@@ -200,6 +200,20 @@ void InorderTravel(AvlTree T)
     }
 }
 
+/**
+ * 后序遍历二叉树
+ * @param T Tree
+ */
+void PostorderTravel(AvlTree T)
+{
+    if (T != NULL)
+    {
+        PostorderTravel(T->Left);
+        PostorderTravel(T->Right);
+        printf("%d\n", T->Element);
+    }
+}
+
 
 int main(int argc, char const *argv[])
 {
