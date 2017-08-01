@@ -186,6 +186,21 @@ void PreorderTravel(AvlTree T)
     }
 }
 
+/**
+ * 中序遍历"二叉树"
+ * @param T Tree
+ */
+void InorderTravel(AvlTree T)
+{
+    if (T != NULL)
+    {
+        InorderTravel(T->Left);
+        printf("%d\n", T->Element);
+        InorderTravel(T->Right);
+    }
+}
+
+
 int main(int argc, char const *argv[])
 {
     printf("Hello Wsx\n");
