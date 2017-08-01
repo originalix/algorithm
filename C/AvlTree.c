@@ -18,6 +18,17 @@ struct AvlNode
     int Height;
 };
 
+AvlTree MakeEmpty(AvlTree T)
+{
+    if (T != NULL)
+    {
+        MakeEmpty(T->Left);
+        MakeEmpty(T->Right);
+        free(T);
+    }
+    return NULL;
+}
+
 /**
  * 计算Avl节点高度
  * @param  P 节点P
@@ -60,7 +71,7 @@ static Position SingleRotateWithRight(Position K2)
     K2->Right = K1->Left;
     K1->Left = K2;
 
-    K2->Height = K2->Height = Max(Height(K2->Left), Height(K2->Right)) + 1;
+    K2->Height = Max(Height(K2->Left), Height(K2->Right)) + 1;
     K1->Height = Max(K2->Height, Height(K1->Right)) + 1;
 
     return K1; /*New root */
@@ -77,7 +88,7 @@ static Position DoubleRotateWithLeft(Position K3)
 }
 
 /* 向右双旋 */
-static Position DoubleRotateWithRight(Positon K3)
+static Position DoubleRotateWithRight(Position K3)
 {
     K3->Right = SingleRotateWithLeft(K3->Right);
 
@@ -98,8 +109,7 @@ AvlTree Insert(ElementType X, AvlTree T)
             T->Left = T->Right = NULL;
         }
     }
-    else
-    if (X < T->Element)
+    else if (X < T->Element) /* 左子树插入新节点 */
     {
         T->Left = Insert(X, T->Left);
         if (Height(T->Left) - Height(T->Right) == 2)
@@ -108,8 +118,7 @@ AvlTree Insert(ElementType X, AvlTree T)
             else
                 T = DoubleRotateWithLeft(T);
     }
-    else
-    if (X > T->Element)
+    else if (X > T->Element) /* 右子树插入新节点 */
     {
         T->Right = Insert(X, T->Right);
         if (Height(T->Right) - Height(T->Left) == 2)
