@@ -167,6 +167,25 @@ Position FindMax(AvlTree T)
         return FindMax(T->Right);
 }
 
+ElementType Retrieve(Position P)
+{
+    return P->Element;
+}
+
+/**
+ * 前序遍历"二叉树"
+ * @param T Tree
+ */
+void PreorderTravel(AvlTree T)
+{
+    if (T != NULL)
+    {
+        printf("%d\n", T->Element);
+        PreorderTravel(T->Left);
+        PreorderTravel(T->Right);
+    }
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello Wsx\n");
