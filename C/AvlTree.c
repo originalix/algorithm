@@ -76,11 +76,51 @@ static Position DoubleRotateWithLeft(Position K3)
     return SingleRotateWithLeft(K3);
 }
 
+/* 向右双旋 */
 static Position DoubleRotateWithRight(Positon K3)
 {
     K3->Right = SingleRotateWithLeft(K3->Right);
 
     return SingleRotateWithRight(K3);
+}
+
+AvlTree Insert(ElementType X, AvlTree T)
+{
+    if (T == NULL)
+    {
+        T = malloc( sizeof( struct AvlNode ) );
+        if (T == NULL)
+            printf("Out of space!!!\n");
+        else
+        {
+            T->Element = X;
+            T->Height = 0;
+            T->Left = T->Right = NULL;
+        }
+    }
+    else
+    if (X < T->Element)
+    {
+        T->Left = Insert(X, T->Left);
+        if (Height(T->Left) - Height(T->Right) == 2)
+            if (X < T->Left->Element)
+                T = SingleRotateWithLeft(T);
+            else
+                T = DoubleRotateWithLeft(T);
+    }
+    else
+    if (X > T->Element)
+    {
+        T->Right = Insert(X, T->Right);
+        if (Height(T->Right) - Height(T->Left) == 2)
+            if (X > T->Right->Element)
+                T = SingleRotateWithRight(T);
+            else
+                T = DoubleRotateWithRight(T);
+    }
+    /* Else X is in the tree alredy; we'll do nothing */
+    T->Height = Max(Height(T->Left), Height(T->Right)) + 1;
+    return T;
 }
 
 int main(int argc, char const *argv[])
