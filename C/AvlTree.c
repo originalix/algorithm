@@ -156,6 +156,17 @@ Position FindMin(AvlTree T)
         return FindMin(T->Left);
 }
 
+/* search the max element in AvlTree */
+Position FindMax(AvlTree T)
+{
+    if (T == NULL)
+        return NULL;
+    else if (T->Right == NULL)
+        return T;
+    else
+        return FindMax(T->Right);
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello Wsx\n");
