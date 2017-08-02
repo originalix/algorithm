@@ -132,6 +132,32 @@ AvlTree Insert(ElementType X, AvlTree T)
     return T;
 }
 
+AvlTree Delete(ElementType X, AvlTree T)
+{
+    Position TmpCell;
+     if(T == NULL) {
+        printf("没找到该元素，无法删除！\n");
+        return NULL;
+     }
+     else if (X < T->Element)
+         T->Left = Delete(X, T->Left);
+     else if (X > T->Element)
+         T->Right = Delete(X, T->Right);
+     else if(T->Left && T->Right) { //要删除的树左右都有儿子
+         TmpCell = FindMin(T->Right);   //用该结点右儿子上最小结点替换该结点，然后与只有一个儿子的操作方法相同
+         T->Element = TmpCell->Element;
+         T->Right = Delete(T->Element, T->Right);
+     }else{
+         TmpCell = T;        //要删除的结点只有一个儿子
+         if(T->Left == NULL)
+             T = T->Right;
+         else if(T->Right == NULL)
+             T = T->Left;
+         free(TmpCell);
+     }
+     return T;
+}
+
 /* 查找X元素所在的位置 */
 Position Find(ElementType X, AvlTree T)
 {
@@ -169,7 +195,9 @@ Position FindMax(AvlTree T)
 
 ElementType Retrieve(Position P)
 {
-    return P->Element;
+    if(P != NULL)
+        return P->Element;
+    return -1;
 }
 
 /**
@@ -262,5 +290,10 @@ int main(int argc, char const *argv[])
 
     printf("最大值: %d\n", FindMax(T)->Element);
     printf("最小值: %d\n", FindMin(T)->Element);
+
+    Delete(50, T);
+    printf("树的详细信息: \n");
+    PrintTree(T, T->Element, 0);
+
     return 0;
 }
