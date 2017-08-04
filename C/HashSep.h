@@ -4,6 +4,7 @@ struct ListNode;
 typedef struct ListNode *Position;
 struct HashTbl;
 typedef struct HashTbl *HashTable;
+typedef int ElementType;
 
 HashTable InitializeTable(int TableSize);
 void DestroyTable(HashTable H);
