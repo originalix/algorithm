@@ -39,6 +39,22 @@ Index HashSimple(const char *Key, int TableSize)
     return HashVal % TableSize;
 }
 
+/* 另一种不太好的散列函数 */
+Index HashNotGood(const char *Key, int TableSize)
+{
+    return (Key[0] + 27 * Key[1] + 729 * Key[2]) % TableSize;
+}
+
+/* 一个好的散列函数 */
+Index Hash(const char *Key, int TableSize)
+{
+    unsigned int HashVal = 0;
+    while(*Key != '\0')
+    {
+        HashVal = (HashVal << 5) + *Key++;
+    }
+    return HashVal % TableSize;
+}
 
 /* 判断是否是素数 */
 int IsPrime(int num)
