@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 #include "HashSep.h"
 
 #define OK 1
@@ -11,12 +12,13 @@
 #define MinTableSize 5
 
 typedef int Status;
+typedef unsigned int Index;
 
 struct ListNode
 {
     ElementType Element;
     Position Next;
-}
+};
 
 typedef Position List;
 
@@ -39,7 +41,7 @@ int IsPrime(int num)
     return 1;
 }
 
-/* 取散列表大小的下一个素数 */
+/* 取散列表大小为当前大小的下一个素数 */
 int NextPrime(int TableSize)
 {
     while(1)
@@ -72,7 +74,7 @@ HashTable InitializeTable(int TableSize)
         printf("Out of space\n");
     for(i = 0; i < H->TableSize; i++)
     {
-        H->TableSize[i] = malloc(sizeof(struct ListNode));
+        H->TheLists[i] = malloc(sizeof(struct ListNode));
         if (H->TheLists[i] == NULL)
             printf("Out of Space!!!\n");
         else
@@ -80,6 +82,21 @@ HashTable InitializeTable(int TableSize)
     }
 
     return H;
+}
+
+/* 散列表中的查找操作 */
+Position Find(ElementType Key, HashTable H)
+{
+    Position P;
+    List L;
+
+    L = H->TheLists[Hash(Key, H->TableSize)];
+    P = L->Next;
+    while(P != NULL && P->Element != Key) {
+        P = P->Next;
+    }
+
+    return P;
 }
 
 int main(int argc, char const *argv[])
