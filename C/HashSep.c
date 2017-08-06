@@ -10,6 +10,20 @@
 
 typedef int Status;
 
+struct ListNode
+{
+    ElementType Element;
+    Position Next;
+}
+
+typedef Position List;
+
+struct HashTbl
+{
+    int TableSize;
+    List *TheLists;
+};
+
 int main(int argc, char const *argv[])
 {
     printf("Hello WSX\n");
