@@ -56,6 +56,11 @@ Index Hash(const char *Key, int TableSize)
     return HashVal % TableSize;
 }
 
+Index HashInt(ElementType Key, int TableSize)
+{
+    return Key % TableSize;
+}
+
 /* 判断是否是素数 */
 int IsPrime(int num)
 {
@@ -118,13 +123,33 @@ Position Find(ElementType Key, HashTable H)
     Position P;
     List L;
 
-    L = H->TheLists[Hash(Key, H->TableSize)];
+    L = H->TheLists[HashInt(Key, H->TableSize)];
     P = L->Next;
     while(P != NULL && P->Element != Key) {
         P = P->Next;
     }
 
     return P;
+}
+
+void Insert(ElementType Key, HashTable H)
+{
+    Position Pos, NewCell;
+    List L;
+    Pos = Find(Key, H);
+    if (Pos == NULL)
+    {
+        NewCell = malloc(sizeof(struct ListNode));
+        if (NewCell == NULL)
+            printf("Out of space!!!\n");
+        else
+        {
+            L = H->TheLists[HashInt(Key, H->TableSize)];
+            NewCell->Next = L->Next;
+            NewCell->Element = Key;
+            L->Next = NewCell;
+        }
+    }
 }
 
 int main(int argc, char const *argv[])
