@@ -208,6 +208,7 @@ int main(int argc, char const *argv[])
     else
         printf("找到 %d\n", P->Element);
 
+    DestroyTable(H);
 
     return 0;
 }
