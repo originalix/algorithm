@@ -28,6 +28,18 @@ struct HashTbl
     List *TheLists;
 };
 
+/* 一个简单的散列函数 */
+Index HashSimple(const char *Key, int TableSize)
+{
+    unsigned int HashVal = 0;
+    while(*Key != '\0')
+    {
+        HashVal += *Key++;
+    }
+    return HashVal % TableSize;
+}
+
+
 /* 判断是否是素数 */
 int IsPrime(int num)
 {
