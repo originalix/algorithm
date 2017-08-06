@@ -125,9 +125,9 @@ void DestroyTable(HashTable H)
     for (i = 0; i < H->TableSize; i++)
     {
         h = H->TheLists[i];
-        p = h->next;
+        p = h->Next;
         while(p) {
-            q = p->next;
+            q = p->Next;
             if (!q)
             {
                 free(p);
@@ -178,8 +178,36 @@ void Insert(ElementType Key, HashTable H)
     }
 }
 
+ElementType Retrieve(Position P)
+{
+    return P->Element;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello WSX\n");
+
+    HashTable H;
+    Position P;
+    H = InitializeTable(10);
+
+    Insert(0, H);
+    Insert(21, H);
+    Insert(50, H);
+    Insert(1201, H);
+    Insert(2150, H);
+    Insert(520, H);
+    Insert(121, H);
+    Insert(7, H);
+    Insert(24, H);
+    Insert(8, H);
+
+    P = Find(81, H);
+    if (P == NULL)
+        printf("没有找到81\n");
+    else
+        printf("找到 %d\n", P->Element);
+
+
     return 0;
 }
