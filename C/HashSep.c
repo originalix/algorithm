@@ -117,6 +117,31 @@ HashTable InitializeTable(int TableSize)
     return H;
 }
 
+/* 销毁散列表 */
+void DestroyTable(HashTable H)
+{
+    Position h, p, q;
+    int i;
+    for (i = 0; i < H->TableSize; i++)
+    {
+        h = H->TheLists[i];
+        p = h->next;
+        while(p) {
+            q = p->next;
+            if (!q)
+            {
+                free(p);
+                p = NULL;
+            }
+            else
+            {
+                free(p);
+                p = q;
+            }
+        }
+    }
+}
+
 /* 散列表中的查找操作 */
 Position Find(ElementType Key, HashTable H)
 {
@@ -132,6 +157,7 @@ Position Find(ElementType Key, HashTable H)
     return P;
 }
 
+/* 散列表插入操作 */
 void Insert(ElementType Key, HashTable H)
 {
     Position Pos, NewCell;
