@@ -26,6 +26,31 @@ struct HashTbl
     List *TheLists;
 };
 
+/* 判断是否是素数 */
+int IsPrime(int num)
+{
+    if (num == 1) return 0;
+    int i;
+    for (i = 2; i <= sqrt(num); i++)
+    {
+        if (num % i == 0)
+            return 0;
+    }
+    return 1;
+}
+
+/* 取散列表大小的下一个素数 */
+int NextPrime(int TableSize)
+{
+    while(1)
+    {
+        if (IsPrime(TableSize))
+            return TableSize;
+        else
+            TableSize++;
+    }
+}
+
 HashTable InitializeTable(int TableSize)
 {
     HashTable H;
