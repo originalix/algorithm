@@ -5,6 +5,7 @@ typedef Index Position;
 
 struct HashTbl;
 typedef struct HashTbl *HashTable;
+typedef int ElementType;
 
 HashTable InitializeTable(int TableSize);
 void DestroyTable(HashTable H);
@@ -13,4 +14,6 @@ void Insert(ElementType Key, HashTable H);
 ElementType Retrieve(Position P, HashTable H);
 HashTable Rehash(HashTable H);
 
-#endif
+/* Routines such as Delete and MakeEmpty are omitted */
+
+#endif /*_HashQuad_H */
