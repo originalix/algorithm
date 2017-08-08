@@ -103,7 +103,16 @@ Position Find(ElementType Key, HashTable H)
     return CurrentPos;
 }
 
-
+void Insert(ElementType Key, HashTable H)
+{
+    Position Pos;
+    Pos = Find(Key, H);
+    if (H->TheCells[Pos].Info != Legitimate)
+    {
+        H->TheCells[Pos].Info = Legitimate;
+        H->TheCells[Pos].Element = Key;
+    }
+}
 
 int main(int argc, char const *argv[])
 {
