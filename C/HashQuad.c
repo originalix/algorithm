@@ -85,6 +85,11 @@ HashTable InitializeTable(int TableSize)
     return H;
 }
 
+static Index Hash(ElementType Key, int TableSize)
+{
+    return Key % TableSize;
+}
+
 Position Find(ElementType Key, HashTable H)
 {
     Position CurrentPos;
