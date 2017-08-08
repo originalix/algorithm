@@ -66,14 +66,14 @@ HashTable InitializeTable(int TableSize)
     int i;
 
     if (TableSize < MinTableSize)
+    {
         printf("Table Size too small \n");
         return NULL;
-
+    }
     H = malloc( sizeof( struct HashTbl ) );
     if (H == NULL)
         printf("Out of Space\n");
     H->TableSize = NextPrime(TableSize);
-
     H->TheCells = malloc( sizeof( Cell ) * H->TableSize );
     if (H->TheCells == NULL)
         printf("Out of space\n");
@@ -85,7 +85,16 @@ HashTable InitializeTable(int TableSize)
     return H;
 }
 
-static Index Hash(ElementType Key, int TableSize)
+void DestroyTable(HashTable H)
+{
+    if (H != NULL)
+    {
+        free(H->TheCells);
+        free(H);
+    }
+}
+
+Index  Hash(ElementType Key , int TableSize)
 {
     return Key % TableSize;
 }
@@ -122,5 +131,23 @@ void Insert(ElementType Key, HashTable H)
 int main(int argc, char const *argv[])
 {
     printf("Hello Wsx\n");
+    HashTable H;
+    Position P;
+    int i;
+    int arr[] = {89, 18, 49, 58, 69};
+    H = InitializeTable(10);
+    Insert(21, H);
+    for (i = 0; i < 5; i++)
+    {
+        Insert(arr[i], H);
+    }
+
+    for (i = 0; i < H->TableSize; i++)
+    {
+        if (H->TheCells[i].Info == Legitimate)
+            printf("%d\n", H->TheCells[i].Element);
+        else
+            printf("*\n");
+    }
     return 0;
 }
