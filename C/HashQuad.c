@@ -174,5 +174,17 @@ int main(int argc, char const *argv[])
             printf("*\n");
     }
 
+    H = Rehash(H);
+
+    printf("ReHash : -> \n");
+
+    for (i = 0; i < H->TableSize; i++)
+    {
+        if (H->TheCells[i].Info == Legitimate)
+            printf("%d\n", H->TheCells[i].Element);
+        else
+            printf("*\n");
+    }
+
     return 0;
 }
