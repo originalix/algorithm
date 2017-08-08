@@ -31,7 +31,7 @@ typedef struct HashEntry Cell;
 struct HashTbl
 {
     int TableSize;
-    Cell *TheCells
+    Cell *TheCells;
 };
 
 /* 判断是否是素数 */
@@ -79,10 +79,28 @@ HashTable InitializeTable(int TableSize)
         printf("Out of space\n");
 
     for(i = 0; i < H->TableSize; i++) {
-        H->TheCells[i].info = Empty;
+        H->TheCells[i].Info = Empty;
     }
 
     return H;
+}
+
+Position Find(ElementType Key, HashTable H)
+{
+    Position CurrentPos;
+    int CollisionNum;
+
+    CollisionNum = 0;
+    CurrentPos = Hash(Key, H->TableSize);
+    while(H->TheCells[CurrentPos].Info != Empty &&
+          H->TheCells[CurrentPos].Element != Key)
+    {
+        CurrentPos += 2 * ++CollisionNum - 1;
+        if (CurrentPos >= H->TableSize)
+            CurrentPos -= H->TableSize;
+    }
+
+    return CurrentPos;
 }
 
 
