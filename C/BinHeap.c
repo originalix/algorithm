@@ -54,6 +54,14 @@ Status IsFull(PriorityQueue H)
         return FALSE;
 }
 
+Status IsEmpty(PriorityQueue H)
+{
+    if (H->Size == 0)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 void Insert( ElementType X, PriorityQueue H )
 {
     int i;
@@ -69,6 +77,36 @@ void Insert( ElementType X, PriorityQueue H )
     }
 
     H->Elements[i] = X;
+}
+
+ElementType DeleteMin(PriorityQueue H)
+{
+    int i, Child;
+    ElementType MinElement, LastElement;
+
+    if(IsEmpty(H))
+    {
+        printf("Priority queue is empty\n");
+        return H->Elements[0];
+    }
+    MinElement = H->Elements[1];
+    LastElement = H->Elements[H->Size--];
+
+    for (i = 0; i * 2 <= H->Size; i = Child)
+    {
+        Child = i * 2;
+        if (Child != H->Size && H->Elements[Child + 1] < H->Elements[Child])
+        {
+            Child++;
+        }
+        if (LastElement > H->Elements[Child])
+            H->Elements[i] = H->Elements[Child];
+        else
+            break;
+    }
+
+    H->Elements[i] = LastElement;
+    return MinElement;
 }
 
 int main(int argc, char const *argv[])
