@@ -46,6 +46,23 @@ PriorityQueue Initialize(int MaxElements)
     return H;
 }
 
+void Insert( ElementType X, PriorityQueue H )
+{
+    int i;
+    if (IsFull(H))
+    {
+        printf("Priority queue is full\n");
+        return;
+    }
+
+    for (i = ++H->Size; H->Elements[i / 2] < X; i /= 2)
+    {
+        H->Elements[i] = H->Elements[i / 2];
+    }
+
+    H->Elements[i] = X;
+}
+
 int main(int argc, char const *argv[])
 {
     printf("Hello wsx\n");
