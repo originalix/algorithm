@@ -46,6 +46,14 @@ PriorityQueue Initialize(int MaxElements)
     return H;
 }
 
+Status IsFull(PriorityQueue H)
+{
+    if (H->Capacity == H->Size++)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 void Insert( ElementType X, PriorityQueue H )
 {
     int i;
