@@ -2,15 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-void sortIntegers(int A[])
-{
-
-}
-
 int main(int argc, char const *argv[])
 {
-    int[] arr = {3, 4, 1, 5, 2};
-
 
 
     return 0;
