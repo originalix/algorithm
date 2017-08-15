@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Student.h"
 
 using namespace std;
 
@@ -36,6 +37,12 @@ int main() {
     for (int i = 0; i < 4; i++) {
         cout << c[i] << " ";
         cout << endl;
+    }
+
+    Student d[4] = {{"D", 90}, {"wsx", 99}, {"lix", 21}, "xxx", 89};
+    selectionSort(d, 4);
+    for (int i = 0; i < 4; i++) {
+        cout << d[i];
     }
 
     cout << "Hello Wsx" << endl;

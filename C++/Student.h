@@ -12,7 +12,7 @@ struct Student
     int score;
 
     bool operator<(const Student& otherStudent) {
-        return score < otherStudent.score;
+        return score > otherStudent.score;
     }
 
     friend ostream& operator<<(ostream &os, Student &student) {
