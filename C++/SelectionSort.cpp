@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Student.h"
+#include "SortTestHelper.h"
 
 using namespace std;
 
@@ -18,32 +19,9 @@ void selectionSort(T arr[], int n) {
 }
 
 int main() {
-    int a[10] = {1, 34, 21, 1250, 21, 5021, 1201, 33, 121, 210};
-    selectionSort(a, 10);
-    for (int i = 0; i < 10; i++) {
-        cout << a[i] << " ";
-        cout << endl;
-    }
-
-    float b[4] = {2.1, 21.50, 12.01, 52.21};
-    selectionSort(b, 4);
-    for (int i = 0; i < 4; i++) {
-        cout << b[i] << " ";
-        cout << endl;
-    }
-
-    string c[4] = {"W", "S", "X", "x"};
-    selectionSort(c, 4);
-    for (int i = 0; i < 4; i++) {
-        cout << c[i] << " ";
-        cout << endl;
-    }
-
-    Student d[4] = {{"D", 90}, {"wsx", 99}, {"lix", 21}, "xxx", 89};
-    selectionSort(d, 4);
-    for (int i = 0; i < 4; i++) {
-        cout << d[i];
-    }
+    int n = 10000;
+    int *arr = SortTestHelper::generateRandomArray(n, 0, n);
+    SortTestHelper::testSort("Selection Sort", selectionSort, arr, n);
 
     cout << "Hello Wsx" << endl;
     return 0;

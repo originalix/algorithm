@@ -32,8 +32,10 @@ namespace SortTestHelper {
     template<typename T>
     bool isSorted(T arr[], int n) {
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n -1 ; i++)
             if (arr[i] > arr[i + 1]) {
+                cout << arr[i] << " ? " << arr[i + 1] << endl;
+                cout << "排序错误" <<endl;
                 return false;
             }
         return true;
@@ -46,6 +48,7 @@ namespace SortTestHelper {
         sort(arr, n);
         clock_t endTime = clock();
 
+        assert( isSorted(arr, n) );
         cout << sortName << " : " << double(endTime - startTime) / CLOCKS_PER_SEC << " s" << endl;
     }
 }
