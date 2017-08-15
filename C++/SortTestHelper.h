@@ -19,6 +19,15 @@ namespace SortTestHelper {
             arr[i] = rand() % (RangeR - RangeL + 1) + RangeL;
         return arr;
     }
+
+    template<typename T>
+    void printArray(T arr[], int n) {
+        for (int i = 0; i < n; i++)
+            cout << arr[i] << " ";
+        cout << endl;
+
+        return;
+    }
 }
 
 #endif //SORTTESTHELPER_H
