@@ -30,6 +30,14 @@ int main() {
         cout << b[i] << " ";
         cout << endl;
     }
+
+    string c[4] = {"W", "S", "X", "x"};
+    selectionSort(c, 4);
+    for (int i = 0; i < 4; i++) {
+        cout << c[i] << " ";
+        cout << endl;
+    }
+
     cout << "Hello Wsx" << endl;
     return 0;
 }
