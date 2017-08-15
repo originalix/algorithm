@@ -10,6 +10,10 @@ using namespace std;
 /* 返回p,使得arr[l...p-1] < arr[p]; arr[p+1...r] > arr[p] */
 template <typename T>
 int __partition(T arr[], int l, int r) {
+
+    /* 优化点2: 使用随机元素 作用 针对近乎有序的数组 */
+    swap(arr[l], arr[rand()%(r-l+1)+l]);
+
     T v = arr[l];
 
     // arr[l+1...j] < v; arr[j+1...r] > v
@@ -29,7 +33,13 @@ int __partition(T arr[], int l, int r) {
 /* 对arr[l...r]部分进行快速排序 */
 template <typename T>
 void __quickSort(T arr[], int l, int r) {
-    if (l >= r) {
+    // if (l >= r) {
+    //     return;
+    // }
+
+    /* 优化点1： 小于16个数据时 改用插入排序 */
+    if (r - l <= 15) {
+        insertionSort(arr, l, r);
         return;
     }
 
@@ -44,9 +54,9 @@ void quickSort(T arr[], int n) {
 }
 
 int main() {
-    int n = 50000;
+    int n = 1000000;
     cout << "Test for Random Array, size = " << n << ", Random range [0, " << n << "]" << endl;
-    int *arr1 = SortTestHelper::generateRandomArray(n, 0, n);
+    int *arr1 = SortTestHelper::generateRandomArray(n, 0, 10);
     int *arr2 = SortTestHelper::copyIntArray(arr1, n);
     int *arr3 = SortTestHelper::copyIntArray(arr2, n);
     int *arr4 = SortTestHelper::copyIntArray(arr3, n);
