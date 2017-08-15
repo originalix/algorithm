@@ -1,8 +1,10 @@
 #include <iostream>
 #include "SortTestHelper.h"
+#include "SelectionSort.h"
 
 using namespace std;
 
+/* 插入排序 */
 template<typename T>
 void insertionSort(T arr[], int n) {
 
@@ -17,8 +19,10 @@ void insertionSort(T arr[], int n) {
 int main() {
     int n = 10000;
     int *arr = SortTestHelper::generateRandomArray(n, 0, n);
+    int *arr2 = SortTestHelper::copyIntArray(arr, n);
 
-
+    SortTestHelper::testSort("Insertion Sort", insertionSort, arr, n);
+    SortTestHelper::testSort("Selection Sort", selectionSort, arr2, n);
 
     delete[] arr;
     cout << "Hello Wsx" << endl;
