@@ -4,6 +4,9 @@
 
 using namespace std;
 
+/**
+ * 选择排序
+ */
 template <typename T>
 void selectionSort(T arr[], int n) {
     for (int i = 0; i < n; i++) {
@@ -19,7 +22,7 @@ void selectionSort(T arr[], int n) {
 }
 
 int main() {
-    int n = 10000;
+    int n = 100000;
     int *arr = SortTestHelper::generateRandomArray(n, 0, n);
     SortTestHelper::testSort("Selection Sort", selectionSort, arr, n);
 
