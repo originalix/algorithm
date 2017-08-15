@@ -2,7 +2,8 @@
 
 using namespace std;
 
-void selectionSort(int arr[], int n) {
+template <typename T>
+void selectionSort(T arr[], int n) {
     for (int i = 0; i < n; i++) {
 
         // 寻找[i, n]区间里最小值
@@ -23,6 +24,12 @@ int main() {
         cout << endl;
     }
 
+    float b[4] = {2.1, 21.50, 12.01, 52.21};
+    selectionSort(b, 4);
+    for (int i = 0; i < 4; i++) {
+        cout << b[i] << " ";
+        cout << endl;
+    }
     cout << "Hello Wsx" << endl;
     return 0;
 }
