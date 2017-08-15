@@ -21,13 +21,11 @@ void insertionSort(T arr[], int n) {
 
 int main() {
     int n = 10000;
-    int *arr = SortTestHelper::generateRandomArray(n, 0, n);
+    int *arr = SortTestHelper::generateNearlyOrderedArray(n, 10);
     int *arr2 = SortTestHelper::copyIntArray(arr, n);
 
     SortTestHelper::testSort("Insertion Sort", insertionSort, arr, n);
-    SortTestHelper::printArray(arr, n);
     SortTestHelper::testSort("Selection Sort", selectionSort, arr2, n);
-    SortTestHelper::printArray(arr2, n);
 
     delete[] arr;
     cout << "Hello Wsx" << endl;
