@@ -10,14 +10,17 @@ void insertionSort(T arr[], int n) {
 
     for (int i = 1; i < n; i++) {
         // 寻找元素arr[i]合适的插入位置
+        T e = arr[i];
+        int j;
         for (int j = i; j > 0 && arr[j] < arr[j-1]; j--) {
-            swap(arr[j], arr[j-1]);
+            arr[j] = arr[j-1];
         }
+        arr[j] = e;
     }
 }
 
 int main() {
-    int n = 10000;
+    int n = 100000;
     int *arr = SortTestHelper::generateRandomArray(n, 0, n);
     int *arr2 = SortTestHelper::copyIntArray(arr, n);
 
