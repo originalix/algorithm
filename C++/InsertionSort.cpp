@@ -1,4 +1,6 @@
 #include <iostream>
+#include <ctime>
+#include <cassert>
 #include "SortTestHelper.h"
 #include "SelectionSort.h"
 
@@ -19,8 +21,21 @@ void insertionSort(T arr[], int n) {
     }
 }
 
+template<typename T>
+void insertionSort(T arr[], int l, int r) {
+    int n = r - l + 1;
+    for (int i = l; i <= r; i++) {
+        T e = arr[i - l];
+        int j;
+        for (j = i; j > 0 && arr[j-l-1] > e; j--) {
+            arr[j-l] = arr[j-l-1];
+        }
+        arr[j-l] = e;
+    }
+}
+
 int main() {
-    int n = 10000;
+    int n = 100000;
     int *arr = SortTestHelper::generateNearlyOrderedArray(n, 10);
     int *arr2 = SortTestHelper::copyIntArray(arr, n);
 
@@ -28,6 +43,8 @@ int main() {
     SortTestHelper::testSort("Selection Sort", selectionSort, arr2, n);
 
     delete[] arr;
+    delete[] arr2;
+
     cout << "Hello Wsx" << endl;
     return 0;
 }
