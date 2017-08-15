@@ -6,8 +6,6 @@
 
 using namespace std;
 
-
-
 int main() {
     int n = 50000;
     cout << "Test for Random Array, size = " << n << ", Random range [0, " << n << "]" << endl;
