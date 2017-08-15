@@ -1,5 +1,4 @@
 #include <iostream>
-#include "SortTestHelper.h"
 
 using namespace std;
 
