@@ -14,7 +14,7 @@ void __quickSort3Ways(T arr[], int l, int r) {
         return;
     }
 
-    swap(arr[l], arr[rand()%(r-l+1)-l]);
+    swap(arr[l], arr[rand()%(r-l+1)+l]);
     T v = arr[l];
 
     int lt = l;  // arr[l+1...lt] < v
@@ -47,19 +47,19 @@ void quickSort3Ways(T arr[], int n) {
 }
 
 int main() {
-    int n = 100;
+    int n = 500000;
     cout << "Test for Random Array, size = " << n << ", Random range [0, " << n << "]" << endl;
-    int *arr1 = SortTestHelper::generateRandomArray(n, 0, n);
+    int *arr1 = SortTestHelper::generateRandomArray(n, 0, 10);
     int *arr2 = SortTestHelper::copyIntArray(arr1, n);
     int *arr3 = SortTestHelper::copyIntArray(arr2, n);
     int *arr4 = SortTestHelper::copyIntArray(arr3, n);
     int *arr5 = SortTestHelper::copyIntArray(arr4, n);
 
     // SortTestHelper::testSort("Insertion Sort", insertionSort, arr1, n);
-    // SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
-    // SortTestHelper::testSort("Merge Sort Bottom UP", mergeSortBU, arr3, n);
-    // SortTestHelper::testSort("Quick Sort", quickSort, arr4, n);
-    // SortTestHelper::testSort("Quick Sort2", quickSort2, arr1, n);
+    SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
+    SortTestHelper::testSort("Merge Sort Bottom UP", mergeSortBU, arr3, n);
+    SortTestHelper::testSort("Quick Sort", quickSort, arr4, n);
+    SortTestHelper::testSort("Quick Sort2", quickSort2, arr1, n);
     SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr5, n);
 
     delete[] arr1;
@@ -80,11 +80,11 @@ int main() {
     arr5 = SortTestHelper::copyIntArray(arr4, n);
 
     // SortTestHelper::testSort("Insertion Sort", insertionSort, arr1, n);
-    // SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
-    // SortTestHelper::testSort("Merge Sort Bottom UP", mergeSortBU, arr3, n);
-    // SortTestHelper::testSort("Quick Sort", quickSort, arr4, n);
-    // SortTestHelper::testSort("Quick Sort2", quickSort2, arr1, n);
-    // SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr5, n);
+    SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
+    SortTestHelper::testSort("Merge Sort Bottom UP", mergeSortBU, arr3, n);
+    SortTestHelper::testSort("Quick Sort", quickSort, arr4, n);
+    SortTestHelper::testSort("Quick Sort2", quickSort2, arr1, n);
+    SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr5, n);
 
     delete[] arr1;
     delete[] arr2;
