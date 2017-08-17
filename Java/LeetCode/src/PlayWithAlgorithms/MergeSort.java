@@ -12,7 +12,8 @@ public class MergeSort {
     }
 
     private static void sort(Comparable[] arr, int l, int r) {
-        if (l >= r) {
+        if (r - l <= 15) {
+            InsertionSort.sort(arr, l, r);
             return;
         }
 
