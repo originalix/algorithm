@@ -4,50 +4,24 @@
 #include "InsertionSort.h"
 #include "MergeSort.h"
 #include "QuickSort.h"
+#include "Heap.h"
 
 using namespace std;
 
-template <typename T>
-void __quickSort3Ways(T arr[], int l, int r) {
-    if (r - l <= 15) {
-        insertionSort(arr, l, r);
-        return;
+template<typename T>
+void heapSort1(T arr[], int n) {
+    MaxHeap<T> maxheap = MaxHeap<T>(n);
+    for (int i = 0; i < n; i++) {
+        maxheap.insert(arr[i]);
     }
 
-    swap(arr[l], arr[rand()%(r-l+1)+l]);
-    T v = arr[l];
-
-    int lt = l;  // arr[l+1...lt] < v
-    int gt = r + 1;  //arr[gt...r] > v
-    int i = l + 1; // arr[lt+1...i) == v
-
-    while(i < gt) {
-         if (arr[i] < v) { // arr[i] < v
-            swap(arr[i], arr[lt+1]);
-            lt++;
-            i++;
-         }
-         else if (arr[i] > v) { // arr[i] > v
-            swap(arr[i], arr[gt-1]);
-            gt--;
-         }
-         else { // arr[i] == v
-            i++;
-         }
+    for (int i = n - 1; i >= 0; i--) {
+        arr[i] = maxheap.extractMax();
     }
-
-    swap(arr[l], arr[lt]);
-    __quickSort3Ways(arr, l, lt-1);
-    __quickSort3Ways(arr, gt, r);
-}
-
-template <typename T>
-void quickSort3Ways(T arr[], int n) {
-    __quickSort3Ways(arr, 0, n-1);
 }
 
 int main() {
-    int n = 500000;
+    int n = 1000000;
     cout << "Test for Random Array, size = " << n << ", Random range [0, " << n << "]" << endl;
     int *arr1 = SortTestHelper::generateRandomArray(n, 0, 10);
     int *arr2 = SortTestHelper::copyIntArray(arr1, n);
@@ -58,9 +32,10 @@ int main() {
     // SortTestHelper::testSort("Insertion Sort", insertionSort, arr1, n);
     SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
     SortTestHelper::testSort("Merge Sort Bottom UP", mergeSortBU, arr3, n);
-    SortTestHelper::testSort("Quick Sort", quickSort, arr4, n);
+    // SortTestHelper::testSort("Quick Sort", quickSort, arr4, n);
     SortTestHelper::testSort("Quick Sort2", quickSort2, arr1, n);
     SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr5, n);
+    SortTestHelper::testSort("heapSort1", heapSort1, arr4, n);
 
     delete[] arr1;
     delete[] arr2;
@@ -82,9 +57,10 @@ int main() {
     // SortTestHelper::testSort("Insertion Sort", insertionSort, arr1, n);
     SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
     SortTestHelper::testSort("Merge Sort Bottom UP", mergeSortBU, arr3, n);
-    SortTestHelper::testSort("Quick Sort", quickSort, arr4, n);
+    // SortTestHelper::testSort("Quick Sort", quickSort, arr4, n);
     SortTestHelper::testSort("Quick Sort2", quickSort2, arr1, n);
     SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr5, n);
+    SortTestHelper::testSort("heapSort1", heapSort1, arr4, n);
 
     delete[] arr1;
     delete[] arr2;
