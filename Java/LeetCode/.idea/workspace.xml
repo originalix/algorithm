@@ -29,8 +29,8 @@
       <file leaf-file-name="InsertionSort.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/InsertionSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+            <state relative-caret-position="418">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -86,6 +86,7 @@
         <option value="$PROJECT_DIR$/src/LeetCode/MoveZeroes_283.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/SortColors_75.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/SelectionSort.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/InsertionSort.java" />
       </list>
     </option>
   </component>
@@ -618,12 +619,12 @@
       <option name="presentableId" value="Default" />
       <updated>1502891401769</updated>
       <workItem from="1502891403144" duration="898000" />
-      <workItem from="1502956845312" duration="1744000" />
+      <workItem from="1502956845312" duration="2399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2642000" />
+    <option name="totallyTimeSpent" value="3297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -727,8 +728,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/InsertionSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="418">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding />
         </state>
       </provider>
