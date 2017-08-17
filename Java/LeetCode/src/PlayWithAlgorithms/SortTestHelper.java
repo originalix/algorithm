@@ -1,5 +1,7 @@
 package PlayWithAlgorithms;
 
+import java.lang.reflect.Method;
+
 /**
  * Created by Lix on 2017/8/17.
  */
@@ -40,5 +42,22 @@ public class SortTestHelper {
         return true;
     }
 
-    
+    public static void testSort(String sortClassName, Comparable[] arr) {
+        try {
+            Class sortClass = Class.forName(sortClassName);
+            Method sortMethod = sortClass.getMethod("sort", new Class[]{Comparable[].class});
+            Object[] params = new Object[]{arr};
+
+            long startTime = System.currentTimeMillis();
+
+            sortMethod.invoke(null, params);
+            long endTime = System.currentTimeMillis();
+
+            assert isSorted(arr);
+
+            System.out.println(sortClass.getSimpleName() + " : " + (endTime - startTime) + "ms");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
