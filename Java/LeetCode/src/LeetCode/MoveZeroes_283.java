@@ -5,12 +5,15 @@ package LeetCode;
  */
 public class MoveZeroes_283 {
 
-    public void moveZeros(int[] nums) {
+    public void moveZeroes(int[] nums) {
         int k = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
-                swap(nums, i, k);
-                k++;
+                if (k != i) {
+                    swap (nums, i, k++);
+                } else {
+                    k++;
+                }
             }
         }
     }
