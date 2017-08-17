@@ -25,6 +25,26 @@ public class MergeSort {
     }
 
     private static void merge(Comparable[] arr, int l, int mid, int r) {
-        
+        Comparable[] aux = new Comparable[r-l+1];
+        for (int i = l; i <= r; i++) {
+            aux[i-l] = arr[i];
+        }
+
+        int i = l, j = mid + 1;
+        for (int k = l; k <= r; k++) {
+            if (i > mid) {
+                arr[k] = aux[j-l];
+                j++;
+            } else if (j > r) {
+                arr[k] = aux[i - l];
+                i++;
+            } else if (aux[i-l].compareTo( aux[j-l] ) < 0) {
+                arr[k] = aux[i-l];
+                i++;
+            } else {
+                arr[k] = aux[j-l];
+                j++;
+            }
+        }
     }
 }
