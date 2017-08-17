@@ -7,7 +7,7 @@ public class InsertionSort {
 
     private InsertionSort() {}
 
-    public void sort(Comparable[] arr) {
+    public static void sort(Comparable[] arr) {
         for (int i = 0; i < arr.length; i++) {
             Comparable e = arr[i];
             int j = i;
