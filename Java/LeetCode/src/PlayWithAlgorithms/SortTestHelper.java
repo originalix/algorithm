@@ -18,4 +18,27 @@ public class SortTestHelper {
         }
         return arr;
     }
+
+    /* 打印arr数组的所有内容 */
+    public static void printArray(Object arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print( arr[i] );
+            System.out.print(' ');
+        }
+        System.out.println();
+
+        return;
+    }
+
+    /* 判断arr数组是否有序 */
+    public static boolean isSorted(Comparable[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            if ( arr[i].compareTo( arr[i+1] ) > 0 ) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    
 }
