@@ -17,4 +17,16 @@ public class InsertionSort {
             arr[j] = e;
         }
     }
+
+    public static void sort(Comparable[] arr, int l, int r) {
+        int n = r - l + 1;
+        for (int i = l; i <= r; i++) {
+            Comparable e = arr[i];
+            int j;
+            for (j = 1; j > l && arr[j-1].compareTo( e ) > 0; j++) {
+                arr[j] = arr[j-1];
+            }
+            arr[j] = e;
+        }
+    }
 }
