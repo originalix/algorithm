@@ -51,6 +51,7 @@ public class SortTestHelper {
             long startTime = System.currentTimeMillis();
 
             sortMethod.invoke(null, params);
+
             long endTime = System.currentTimeMillis();
 
             assert isSorted(arr);
