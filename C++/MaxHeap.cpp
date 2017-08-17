@@ -23,7 +23,7 @@ private:
     }
 
     void shiftDown( int k ) {
-        while (2*k < count) {
+        while (2*k <= count) {
             int j = 2 * k;
             if (j + 1 <= count && data[j] < data[j+1])
                 j += 1;
@@ -172,10 +172,14 @@ int main() {
     cout << maxheap.size() << endl;
 
     srand(time(NULL));
-    for (int i = 0; i < 75; i++)
+    for (int i = 0; i < 15; i++)
         maxheap.insert( rand()%100 );
 
-    maxheap.testPrint();
+    // maxheap.testPrint();
+
+    while( !maxheap.isEmpty() )
+        cout << maxheap.extractMax() << " ";
+    cout << endl;
 
     cout << "Hello wsx" << endl;
     return 0;
