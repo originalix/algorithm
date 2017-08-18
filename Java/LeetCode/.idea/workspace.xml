@@ -28,7 +28,7 @@
       <file leaf-file-name="SelectionSort.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/SelectionSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
+            <state relative-caret-position="471">
               <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
@@ -48,8 +48,8 @@
       <file leaf-file-name="MaxHeap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/MaxHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="823">
+              <caret line="105" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
                 <element signature="e#412#413#0" expanded="true" />
                 <element signature="e#440#441#0" expanded="true" />
@@ -84,9 +84,11 @@
       <file leaf-file-name="HeapSort1.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/HeapSort1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-              <folding />
+            <state relative-caret-position="418">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding>
+                <element signature="e#248#260#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,6 +128,7 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/InsertionSort.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/MaxHeap.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/HeapSort1.java" />
       </list>
     </option>
   </component>
@@ -705,12 +708,12 @@
       <workItem from="1502891403144" duration="898000" />
       <workItem from="1502956845312" duration="4208000" />
       <workItem from="1502970809613" duration="3635000" />
-      <workItem from="1503023844021" duration="2359000" />
+      <workItem from="1503023844021" duration="2548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11100000" />
+    <option name="totallyTimeSpent" value="11289000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -847,6 +850,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2310">
           <caret line="128" column="35" lean-forward="false" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -887,6 +891,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="128" column="35" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -902,14 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="56" column="33" lean-forward="false" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/SelectionSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -930,17 +927,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/MaxHeap.java">
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/MergeSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#1870#1879#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="911">
+          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -952,19 +943,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/MergeSort.java">
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/SelectionSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="911">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        <state relative-caret-position="471">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/MaxHeap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="823">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#1870#1879#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/HeapSort1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="418">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="e#248#260#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
