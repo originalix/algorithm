@@ -25,16 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SelectionSort.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/SelectionSort.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,15 +88,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuickSort2Ways.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuickSort2Ways.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/QuickSort2Ways.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="43" column="76" lean-forward="false" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+            <state relative-caret-position="440">
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding>
                 <element signature="e#179#180#0" expanded="true" />
                 <element signature="e#221#222#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuickSort3Ways.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/QuickSort3Ways.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,6 +160,7 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/QuickSort.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/QuickSort2Ways.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/QuickSort3Ways.java" />
       </list>
     </option>
   </component>
@@ -784,12 +785,12 @@
       <workItem from="1502956845312" duration="4208000" />
       <workItem from="1502970809613" duration="3635000" />
       <workItem from="1503023844021" duration="4258000" />
-      <workItem from="1503035430886" duration="3952000" />
+      <workItem from="1503035430886" duration="4121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16951000" />
+    <option name="totallyTimeSpent" value="17120000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1130,12 +1131,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/QuickSort2Ways.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="43" column="76" lean-forward="false" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+        <state relative-caret-position="440">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding>
             <element signature="e#179#180#0" expanded="true" />
             <element signature="e#221#222#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/QuickSort3Ways.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
