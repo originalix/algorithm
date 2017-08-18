@@ -24,8 +24,9 @@ private:
 
     void shiftDown( int k ) {
         while (2*k <= count) {
-            int j = 2 * k;
+            int j = 2 * k; // 在此轮循环中,data[k]和data[j]交换位置
             if (j + 1 <= count && data[j] < data[j+1])
+                // data[j] 是 data[2*k]和data[2*k+1]中的最大值
                 j += 1;
             if (data[k] > data[j])
                 break;
@@ -35,6 +36,7 @@ private:
     }
 
 public:
+    // 构造函数, 构造一个空堆, 可容纳capacity个元素
     MaxHeap(int capacity) {
         data = new Item[capacity + 1];
         count = 0;
@@ -55,14 +57,17 @@ public:
         delete[] data;
     }
 
+    // 返回堆中的元素个数
     int size() {
         return count;
     }
 
+    // 返回一个布尔值, 表示堆中是否为空
     bool isEmpty() {
         return count == 0;
     }
 
+    // 像最大堆中插入一个新的元素 item
     void insert(Item item) {
         assert(count + 1 <= capacity);
         data[ count + 1 ] = item;
@@ -70,6 +75,7 @@ public:
         shiftUp( count );
     }
 
+    // 从最大堆中取出堆顶元素, 即堆中所存储的最大数据
     Item extractMax() {
         assert(count > 0);
 
@@ -81,5 +87,11 @@ public:
         shiftDown( 1 );
 
         return ret;
+    }
+
+    // 获取最大堆中的堆顶元素
+    Item getMax(){
+        assert( count > 0 );
+        return data[1];
     }
 };
