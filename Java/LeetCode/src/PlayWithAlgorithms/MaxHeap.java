@@ -79,4 +79,28 @@ public class MaxHeap<Item extends Comparable> {
             k = j;
         }
     }
+
+    //测试MaxHeap
+    public static void main(String[] args) {
+        MaxHeap<Integer> maxHeap = new MaxHeap<Integer>(50);
+        int N = 50;
+        int M = 100;
+        for (int i = 0; i < N; i++) {
+            maxHeap.insert( new Integer((int) (Math.random() * M)) );
+        }
+
+        Integer[] arr = new Integer[N];
+        // 将maxHeap中的数据使用extractMax()取出来
+        // 取出来的顺序应该是从大到小排序的
+        for (int i = 0; i < N; i++) {
+            arr[i] = maxHeap.extractMax();
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+        // 确保arr数组是从大到小排序的
+        for (int i = 1; i < N; i++) {
+            assert arr[i-1] >= arr[i];
+        }
+    }
 }
