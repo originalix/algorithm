@@ -11,19 +11,23 @@ public class QuickSort3Ways {
         sort(arr, 0, arr.length - 1);
     }
 
+    // 递归使用快速排序,对arr[l...r]的范围进行排序
     private static void sort(Comparable[] arr, int l, int r) {
+
+        // 对于小规模数组, 使用插入排序
         if (r - l <= 15) {
             InsertionSort.sort(arr, l, r);
             return;
         }
 
+        // 随机在arr[l...r]的范围中, 选择一个数值作为标定点pivot
         swap(arr, l, (int) ((Math.random() * (r-l+1)) + l));
 
         Comparable v = arr[l];
 
-        int lt = l;
-        int gt = r + 1;
-        int i = l + 1;
+        int lt = l; // arr[l+1...lt] < v
+        int gt = r + 1; // arr[gt...r] > v
+        int i = l + 1; // arr[lt+1...i) == v
 
         while (i < gt) {
             if (arr[i].compareTo( v ) < 0) {
