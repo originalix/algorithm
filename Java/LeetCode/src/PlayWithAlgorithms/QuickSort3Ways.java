@@ -49,4 +49,27 @@ public class QuickSort3Ways {
         arr[i] = arr[j];
         arr[j] = t;
     }
+
+    public static void main(String[] args) {
+        int N = 1000000;
+
+        // 测试1 一般性测试
+        System.out.println("Test for random array, size = " + N + " , random range [0, " + N + "]");
+
+        Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, N);
+
+        SortTestHelper.testSort("PlayWithAlgorithms.QuickSort3Ways", arr1);
+
+        int swapTimes = 100;
+        assert swapTimes >= 0;
+
+        // 测试2 近乎有序数组
+        System.out.println("Test for nearly ordered array, size = " + N + " , swap time = " + swapTimes);
+
+        arr1 = SortTestHelper.generateNearlyOrderedArray(N, swapTimes);
+
+        SortTestHelper.testSort("PlayWithAlgorithms.QuickSort3Ways", arr1);
+
+        return;
+    }
 }
