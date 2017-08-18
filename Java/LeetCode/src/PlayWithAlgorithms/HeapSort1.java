@@ -18,4 +18,12 @@ public class HeapSort1 {
             arr[i] = maxHeap.extractMax();
         }
     }
+
+    public static void main(String[] args) {
+        int N = 1000000;
+        Integer[] arr = SortTestHelper.generateRandomArray(N, 0, N);
+        SortTestHelper.testSort("PlayWithAlgorithms.HeapSort1", arr);
+
+        return;
+    }
 }
