@@ -21,6 +21,23 @@ public class QuickSort {
     }
 
     private static int partition(Comparable[] arr, int l, int r) {
-        
+        Comparable v = arr[l];
+
+        // arr[l+1...j] < v; arr[j+1...r] > v
+        int j = l;
+        for (int i = l + 1; i <= r; i++) {
+            if (arr[i].compareTo( v ) < 0) {
+                swap(arr, j+1, i);
+                j++;
+            }
+        }
+        swap(arr, l, j);
+        return j;
+    }
+
+    private static void swap(Object[] arr, int i, int j) {
+        Object t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
     }
 }
