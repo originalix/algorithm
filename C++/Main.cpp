@@ -11,7 +11,7 @@ using namespace std;
 template<typename T>
 void __shiftDown(T arr[], int n, int k) {
     while (2*k+1 < n) {
-        int j = 2 * k + 1; // 在此轮循环中,arr[k]和arr[j]交换位置
+        int j = 2*k+1; // 在此轮循环中,arr[k]和arr[j]交换位置
         if (j + 1 < n && arr[j] < arr[j+1])
             // data[j] 是 data[2*k]和data[2*k+1]中的最大值
             j += 1;
@@ -24,7 +24,7 @@ void __shiftDown(T arr[], int n, int k) {
 
 template<typename T>
 void heapSort(T arr[], int n) {
-    for (int i = (n-1) / 2; i >= 0; i++) {
+    for (int i = (n-1) / 2; i >= 0; i--) {
         __shiftDown(arr, n, i);
     }
 
@@ -43,6 +43,7 @@ int main() {
     int *arr4 = SortTestHelper::copyIntArray(arr3, n);
     int *arr5 = SortTestHelper::copyIntArray(arr4, n);
     int *arr6 = SortTestHelper::copyIntArray(arr5, n);
+    int *arr7 = SortTestHelper::copyIntArray(arr6, n);
 
     // SortTestHelper::testSort("Insertion Sort", insertionSort, arr1, n);
     SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
@@ -52,6 +53,7 @@ int main() {
     SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr5, n);
     SortTestHelper::testSort("heapSort1", heapSort1, arr4, n);
     SortTestHelper::testSort("heapSort2", heapSort2, arr6, n);
+    SortTestHelper::testSort("heapSort3", heapSort3, arr7, n);
 
     delete[] arr1;
     delete[] arr2;
@@ -70,6 +72,7 @@ int main() {
     arr4 = SortTestHelper::copyIntArray(arr3, n);
     arr5 = SortTestHelper::copyIntArray(arr4, n);
     arr6 = SortTestHelper::copyIntArray(arr5, n);
+    arr7 = SortTestHelper::copyIntArray(arr6, n);
 
     // SortTestHelper::testSort("Insertion Sort", insertionSort, arr1, n);
     SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
@@ -79,6 +82,7 @@ int main() {
     SortTestHelper::testSort("Quick Sort 3 Ways", quickSort3Ways, arr5, n);
     SortTestHelper::testSort("heapSort1", heapSort1, arr4, n);
     SortTestHelper::testSort("heapSort2", heapSort2, arr6, n);
+    SortTestHelper::testSort("heapSort3", heapSort3, arr7, n);
 
     delete[] arr1;
     delete[] arr2;
