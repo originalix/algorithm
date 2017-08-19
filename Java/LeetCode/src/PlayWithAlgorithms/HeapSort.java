@@ -19,13 +19,13 @@ public class HeapSort {
     }
 
     private static void shiftDown(Comparable[] arr, int n, int k) {
-        while ( 2*k-1 < n) {
-            int j = 2 * k - 1;
-            if (j < j + 1 && arr[j].compareTo( arr[j+1] ) < 0) {
+        while ( 2*k+1 < n) {
+            int j = 2 * k + 1;
+            if (j + 1 < n && arr[j].compareTo( arr[j+1] ) < 0) {
                 j += 1;
             }
 
-            if (arr[k].compareTo( arr[j] ) > 0) {
+            if (arr[k].compareTo( arr[j] ) >= 0) {
                 break;
             }
 
@@ -39,5 +39,13 @@ public class HeapSort {
         Object t = arr[i];
         arr[j] = arr[i];
         arr[i] = t;
+    }
+
+    public static void main(String[] args) {
+        int N = 1000000;
+        Integer[] arr = SortTestHelper.generateRandomArray(N, 0, N);
+        SortTestHelper.testSort("PlayWithAlgorithms.HeapSort", arr);
+
+        return;
     }
 }
