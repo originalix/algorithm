@@ -97,6 +97,34 @@ public:
         return ret;
     }
 
+    int extractMaxIndex() {
+        assert( count > 0 );
+        int ret = indexes[1] - 1;
+        swap( indexes[1], indexes[count] );
+        count--;
+        shiftDown(1);
+        return ret;
+    }
+
+    Item getItem( int i ) {
+        return data[i + 1];
+    }
+
+    void change( int i, Item newItem ) {
+        i += 1;
+        data[i] = newItem;
+
+        // 找到indexes[j] = i, j 表示 data[i]在堆中的位置
+        // 之后shiftUp(j), 再shiftDown(j)
+        for ( int j = 1; j <= count; j++ ) {
+            if (indexes[j] == i) {
+                shiftUp(j);
+                shiftDown(j);
+                return;
+            }
+        }
+    }
+
     // 获取最大堆中的堆顶元素
     Item getMax(){
         assert( count > 0 );
