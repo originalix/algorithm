@@ -15,7 +15,7 @@ public class IndexMaxHeapSort {
 
         assert indexMaxHeap.testIndexes();
 
-        for (int i = arr.length; i >= 0; i--) {
+        for (int i = arr.length - 1; i >= 0; i--) {
             arr[i] = indexMaxHeap.extractMax();
         }
     }
