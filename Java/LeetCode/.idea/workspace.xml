@@ -25,17 +25,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexMaxHeap.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexMaxHeap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMaxHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="116" column="41" lean-forward="false" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="41" />
+            <state relative-caret-position="-2472">
+              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
               <folding>
                 <element signature="e#795#796#0" expanded="true" />
                 <element signature="e#823#824#0" expanded="true" />
                 <element signature="e#882#883#0" expanded="true" />
                 <element signature="e#915#916#0" expanded="true" />
                 <element signature="e#4531#4540#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexMaxHeapSort.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMaxHeapSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <folding>
+                <element signature="e#249#261#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,6 +95,7 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/QuickSort3Ways.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/HeapSort.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMaxHeap.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMaxHeapSort.java" />
       </list>
     </option>
   </component>
@@ -708,12 +721,12 @@
       <workItem from="1502970809613" duration="3635000" />
       <workItem from="1503023844021" duration="4258000" />
       <workItem from="1503035430886" duration="4880000" />
-      <workItem from="1503124187768" duration="4518000" />
+      <workItem from="1503124187768" duration="4711000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22397000" />
+    <option name="totallyTimeSpent" value="22590000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1153,14 +1166,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMaxHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="116" column="41" lean-forward="false" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="41" />
+        <state relative-caret-position="-2472">
+          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
           <folding>
             <element signature="e#795#796#0" expanded="true" />
             <element signature="e#823#824#0" expanded="true" />
             <element signature="e#882#883#0" expanded="true" />
             <element signature="e#915#916#0" expanded="true" />
             <element signature="e#4531#4540#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMaxHeapSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="e#249#261#0" expanded="true" />
           </folding>
         </state>
       </provider>
