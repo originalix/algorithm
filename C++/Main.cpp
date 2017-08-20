@@ -18,5 +18,43 @@ void binarySearch(T arr[], int n, int target) {
     return -1;
 }
 
+template<typename Key, typename Value>
+class BST {
+
+private:
+    struct Node {
+        Key key,
+        Value value,
+        int left,
+        int right,
+
+        Node(Key key, Value value) {
+            this->key = key;
+            this->value = value;
+            this->left = this->right = NULL;
+        }
+
+        Node *root;
+        int count;
+    };
+public:
+    BST() {
+        root = NULL;
+        count = 0;
+    }
+
+    ~BST() {
+        // TODO:
+    }
+
+    int size() {
+        return count;
+    }
+
+    int isEmpty() {
+        return count == 0;
+    }
+};
+
 int main() {
 }
