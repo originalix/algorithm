@@ -159,4 +159,47 @@ public:
         assert( count > 0 );
         return data[1];
     }
+
+    // 测试索引堆中的索引数组index和反向数组reverse
+    // 注意:这个测试在向堆中插入元素以后, 不进行extract操作有效
+    bool testIndexesAndReverseIndexes(){
+
+        int *copyIndexes = new int[count+1];
+        int *copyReverseIndexes = new int[count+1];
+
+        for( int i = 0 ; i <= count ; i ++ ){
+            copyIndexes[i] = indexes[i];
+            copyReverseIndexes[i] = reverse[i];
+        }
+
+        copyIndexes[0] = copyReverseIndexes[0] = 0;
+        std::sort(copyIndexes, copyIndexes + count + 1);
+        std::sort(copyReverseIndexes, copyReverseIndexes + count + 1);
+
+        // 在对索引堆中的索引和反向索引进行排序后,
+        // 两个数组都应该正好是1...count这count个索引
+        bool res = true;
+        for( int i = 1 ; i <= count ; i ++ )
+            if( copyIndexes[i-1] + 1 != copyIndexes[i] ||
+                    copyReverseIndexes[i-1] + 1 != copyReverseIndexes[i] ){
+                res = false;
+                break;
+            }
+
+        delete[] copyIndexes;
+        delete[] copyReverseIndexes;
+
+        if( !res ){
+            cout<<"Error!"<<endl;
+            return false;
+        }
+
+        for( int i = 1 ; i <= count ; i ++ )
+            if( reverse[ indexes[i] ] != i ){
+                cout<<"Error 2"<<endl;
+                return false;
+            }
+
+        return true;
+    }
 };
