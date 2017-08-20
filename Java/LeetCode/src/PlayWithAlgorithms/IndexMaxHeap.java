@@ -5,14 +5,17 @@ import java.util.Arrays;
 /**
  * Created by Lix on 2017/8/20.
  */
+
+// 最大索引堆
 public class IndexMaxHeap<Item extends Comparable> {
 
-    protected Item[] data;
-    protected int[] indexes;
-    protected int[] reverse;
+    protected Item[] data;    // 最大索引堆中的数据
+    protected int[] indexes;  // 最大索引堆中的索引, indexes[x] = i 表示索引i在x的位置
+    protected int[] reverse;  // 最大索引堆中的反向索引, reverse[i] = x 表示索引i在x的位置
     protected int count;
     protected int capacity;
 
+    // 构造函数, 构造一个空堆, 可容纳capacity个元素
     public IndexMaxHeap(int capacity) {
         data = (Item[]) new Comparable[capacity + 1];
         indexes = new int[capacity + 1];
@@ -24,18 +27,23 @@ public class IndexMaxHeap<Item extends Comparable> {
         this.capacity = capacity;
     }
 
+    // 返回索引堆中的元素个数
     public int size() {
         return count;
     }
 
+    // 返回一个布尔值, 表示索引堆中是否为空
     public boolean isEmpty() {
         return count == 0;
     }
 
+    // 向最大索引堆中插入一个新的元素, 新元素的索引为i, 元素为item
+    // 传入的i对用户而言,是从0索引的
     public void insert(int i, Item item) {
         assert (count + 1 <= capacity);
         assert (i + 1 >= 1 && i + 1 <= capacity);
 
+        // 再插入一个新元素前,还需要保证索引i所在的位置是没有元素的。
         assert ( !contain(i) );
 
         i += 1;
@@ -47,6 +55,7 @@ public class IndexMaxHeap<Item extends Comparable> {
         shiftUp( count );
     }
 
+    // 从最大索引堆中取出堆顶元素, 即索引堆中所存储的最大数据
     public Item extractMax() {
         assert (count > 0);
 
@@ -61,6 +70,7 @@ public class IndexMaxHeap<Item extends Comparable> {
         return ret;
     }
 
+    // 从最大索引堆中取出堆顶元素的索引
     int extractMaxIndex() {
         assert (count > 0);
 
@@ -73,6 +83,7 @@ public class IndexMaxHeap<Item extends Comparable> {
         return ret;
     }
 
+    // 看索引i所在的位置是否存在元素
     private boolean contain(int i) {
         assert (i + 1 >= 1 && i + 1 <= capacity);
         return reverse[i+1] != 0;
@@ -101,6 +112,9 @@ public class IndexMaxHeap<Item extends Comparable> {
         }
     }
 
+    // 交换索引堆中的索引i和j
+    // 由于有了反向索引reverse数组，
+    // indexes数组发生改变以后， 相应的就需要维护reverse数组
     private void swap(int[] arr, int i, int j) {
         int t = arr[i];
         arr[i] = arr[j];
@@ -110,11 +124,13 @@ public class IndexMaxHeap<Item extends Comparable> {
         reverse[ indexes[j] ] = j;
     }
 
+    // 获取最大索引堆中索引为i的元素
     public Item getItem(int i) {
         assert (contain(i));
         return data[i + 1];
     }
 
+    // 将最大索引堆中索引为i的元素修改为newItem
     public void change(int i, Item newItem) {
         assert(contain(i));
 
@@ -126,6 +142,7 @@ public class IndexMaxHeap<Item extends Comparable> {
         shiftDown(j);
     }
 
+    // 获取最大索引堆中的堆顶元素
     Item getMax() {
         assert (count > 0);
         return data[1];
@@ -167,7 +184,13 @@ public class IndexMaxHeap<Item extends Comparable> {
     }
 
     public static void main(String[] args) {
-        
+        int N = 1000000;
+        IndexMaxHeap<Integer> indexMaxHeap = new IndexMaxHeap<Integer>(N);
+        for (int i = 0; i < N; i++) {
+            indexMaxHeap.insert(i, (int) (Math.random() * N));
+        }
+
+        assert indexMaxHeap.testIndexes();
     }
 
 }
