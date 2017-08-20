@@ -33,6 +33,7 @@ int main() {
     int *arr5 = SortTestHelper::copyIntArray(arr4, n);
     int *arr6 = SortTestHelper::copyIntArray(arr5, n);
     int *arr7 = SortTestHelper::copyIntArray(arr6, n);
+    int *arr8 = SortTestHelper::copyIntArray(arr7, n);
 
     // SortTestHelper::testSort("Insertion Sort", insertionSort, arr1, n);
     SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
@@ -43,6 +44,7 @@ int main() {
     SortTestHelper::testSort("heapSort1", heapSort1, arr4, n);
     SortTestHelper::testSort("heapSort2", heapSort2, arr6, n);
     SortTestHelper::testSort("heapSort3", heapSort3, arr7, n);
+    SortTestHelper::testSort("Heap Sort using Index-Max-Heap", heapSortUsingIndexMaxHeap, arr8, n);
 
     delete[] arr1;
     delete[] arr2;
@@ -51,6 +53,7 @@ int main() {
     delete[] arr5;
     delete[] arr6;
     delete[] arr7;
+    delete[] arr8;
 
     cout<<endl;
 
@@ -64,6 +67,7 @@ int main() {
     arr5 = SortTestHelper::copyIntArray(arr4, n);
     arr6 = SortTestHelper::copyIntArray(arr5, n);
     arr7 = SortTestHelper::copyIntArray(arr6, n);
+    arr8 = SortTestHelper::copyIntArray(arr7, n);
 
     // SortTestHelper::testSort("Insertion Sort", insertionSort, arr1, n);
     SortTestHelper::testSort("Merge Sort", mergeSort, arr2, n);
@@ -74,6 +78,7 @@ int main() {
     SortTestHelper::testSort("heapSort1", heapSort1, arr4, n);
     SortTestHelper::testSort("heapSort2", heapSort2, arr6, n);
     SortTestHelper::testSort("heapSort3", heapSort3, arr7, n);
+    SortTestHelper::testSort("Heap Sort using Index-Max-Heap", heapSortUsingIndexMaxHeap, arr8, n);
 
     delete[] arr1;
     delete[] arr2;
@@ -82,6 +87,7 @@ int main() {
     delete[] arr5;
     delete[] arr6;
     delete[] arr7;
+    delete[] arr8;
 
     cout << "Hello Wsx" << endl;
 }
