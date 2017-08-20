@@ -3,6 +3,9 @@ package PlayWithAlgorithms;
 /**
  * Created by Lix on 2017/8/20.
  */
+
+// 使用最大索引堆进行堆排序, 来验证我们的最大索引堆的正确性
+// 最大索引堆的主要作用不是用于排序, 我们在这里使用排序只是为了验证我们的最大索引堆实现的正确性
 public class IndexMaxHeapSort {
 
     private IndexMaxHeapSort() {}
