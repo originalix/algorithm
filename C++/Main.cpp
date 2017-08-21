@@ -73,6 +73,9 @@ public:
     void preOrder() {
         preOrder(root);
     }
+    void inOrder() {
+        inOrder(root);
+    }
 
 private:
     Node* insert(Node *node, Key key, Value value) {
@@ -119,6 +122,14 @@ private:
             cout << node->key << endl;
             preOrder(node->left);
             preOrder(node->right);
+        }
+    }
+
+    void inOrder(Node *node) {
+        if (node != NULL) {
+            inOrder(node->left);
+            cout << node->key << endl;
+            inOrder(node->right);
         }
     }
 };
