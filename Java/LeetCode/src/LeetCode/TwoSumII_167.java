@@ -25,7 +25,7 @@ public class TwoSumII_167 {
 
         return arr;
     }
-    
+
     // 167号题目的暴力解法
     public int[] twoSum1(int[] numbers, int target) {
         int[] result = new int[2];
