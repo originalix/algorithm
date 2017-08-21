@@ -63,8 +63,8 @@
       <file leaf-file-name="SortColors_75.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/SortColors_75.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="707">
-              <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="394">
+              <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -739,12 +739,12 @@
       <workItem from="1503023844021" duration="4258000" />
       <workItem from="1503035430886" duration="4880000" />
       <workItem from="1503124187768" duration="5316000" />
-      <workItem from="1503301504066" duration="359000" />
+      <workItem from="1503301504066" duration="783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23554000" />
+    <option name="totallyTimeSpent" value="23978000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -876,8 +876,8 @@
         <state relative-caret-position="1300">
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="86" selection-end-column="15" />
           <folding>
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#179#180#0" expanded="false" />
+            <element signature="e#221#222#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1134,8 +1134,8 @@
         <state relative-caret-position="442">
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="86" selection-end-column="15" />
           <folding>
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#179#180#0" expanded="false" />
+            <element signature="e#221#222#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1211,8 +1211,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/SortColors_75.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="394">
+          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
           <folding />
         </state>
       </provider>
