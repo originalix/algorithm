@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include <string>
+#include "FileOps.h"
 
 using namespace std;
 
@@ -95,7 +98,7 @@ private:
     }
 
     Value* search(Node *node, Key key) {
-        
+
         if (node == NULL)
             return NULL;
 
@@ -110,4 +113,32 @@ private:
 
 int main() {
 
+    //使用圣经作为我们的测试用例
+    string filename = "bible.txt";
+    vector<string> words;
+    if (FileOps::readFile(filename, words)) {
+        cout << "There are totally" << words.size() << "words in" << filename << endl;
+        cout << endl;
+
+        time_t startTime = clock();
+
+        BST<string, int>bst = BST<string, int>();
+        for (vector<string>::iterator iter = words.begin(); iter != words.end(); iter++) {
+            int *res = bst.search(*iter);
+            if (res == NULL)
+                bst.insert(*iter, 1);
+            else
+                (*res)++;
+        }
+
+        if (bst.contain("god"))
+            cout << "'god' : " << *bst.search("god") << endl;
+        else
+            cout << "No word 'god' in " << filename << endl;
+        
+        time_t endTime = clock();
+
+        cout << "BST, time: " << double(endTime - startTime) / CLOCKS_PER_SEC << "s." << endl;
+        cout << endl;
+    }
 }
