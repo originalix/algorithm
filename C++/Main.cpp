@@ -3,7 +3,7 @@
 using namespace std;
 
 template<typename T>
-void binarySearch(T arr[], int n, int target) {
+int binarySearch(T arr[], int n, int target) {
     int l = 0, r = n - 1;
     while(l <= r) {
         int mid = l + (r - l) / 2;
@@ -23,20 +23,20 @@ class BST {
 
 private:
     struct Node {
-        Key key,
-        Value value,
-        int left,
-        int right,
+        Key key;
+        Value value;
+        Node *left;
+        Node *right;
 
         Node(Key key, Value value) {
             this->key = key;
             this->value = value;
             this->left = this->right = NULL;
         }
-
-        Node *root;
-        int count;
     };
+    Node *root;
+    int count;
+
 public:
     BST() {
         root = NULL;
