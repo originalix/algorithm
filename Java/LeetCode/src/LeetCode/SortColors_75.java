@@ -30,4 +30,15 @@ public class SortColors_75 {
             nums[i] = 2;
         }
     }
+
+
+    public static void sortColors1(int[] nums) {
+        // nums[0...zero] ---> 0
+        // nums[zero+1 ... two - 1] ---> 1
+        // nums[two...n-1] ---> 2
+
+        int zero = -1;
+        int i = 0;
+        int two = nums.length;
+    }
 }
