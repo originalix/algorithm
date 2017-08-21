@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 #include <string>
 #include "FileOps.h"
 
@@ -79,6 +80,24 @@ public:
 
     void postOrder() {
         postOrder(root);
+    }
+
+    void levelOrder() {
+        queue<Node*> q;
+        
+        q.push( root );
+
+        while ( !q.empty() ) {
+            Node *node = q.front();
+            q.pop();
+
+            cout << node->key << endl;
+
+            if (node->left)
+                q.push( node->left );
+            if (node->right)
+                q.push( node->right );
+        }
     }
 
 private:
