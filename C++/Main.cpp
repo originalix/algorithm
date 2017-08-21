@@ -47,7 +47,7 @@ public:
     }
 
     ~BST() {
-        // TODO:
+        destroy(root);
     }
 
     int size() {
@@ -121,7 +121,7 @@ private:
             return search(node->right, key);
     }
 
-    void preOrder(Node *node) {
+    void preOrder(Node* node) {
         if (node != NULL) {
             cout << node->key << endl;
             preOrder(node->left);
@@ -129,7 +129,7 @@ private:
         }
     }
 
-    void inOrder(Node *node) {
+    void inOrder(Node* node) {
         if (node != NULL) {
             inOrder(node->left);
             cout << node->key << endl;
@@ -137,11 +137,21 @@ private:
         }
     }
 
-    void postOrder(Node *node) {
+    void postOrder(Node* node) {
         if (node != NULL) {
             postOrder(node->left);
             postOrder(node->right);
             cout << node->key << endl;
+        }
+    }
+
+    void destroy(Node* node) {
+        if (node != NULL) {
+            destroy(node->left);
+            destroy(node->right);
+
+            delete node;
+            count--;
         }
     }
 };
