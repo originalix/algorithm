@@ -70,6 +70,10 @@ public:
         return search(root, key);
     }
 
+    void preOrder() {
+        preOrder(root);
+    }
+
 private:
     Node* insert(Node *node, Key key, Value value) {
         if (node == NULL) {
@@ -108,6 +112,14 @@ private:
             return search(node->left, key);
         else
             return search(node->right, key);
+    }
+
+    void preOrder(Node *node) {
+        if (node != NULL) {
+            cout << node->key << endl;
+            preOrder(node->left);
+            preOrder(node->right);
+        }
     }
 };
 
