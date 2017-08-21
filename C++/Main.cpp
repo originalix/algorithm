@@ -77,6 +77,10 @@ public:
         inOrder(root);
     }
 
+    void postOrder() {
+        postOrder(root);
+    }
+
 private:
     Node* insert(Node *node, Key key, Value value) {
         if (node == NULL) {
@@ -130,6 +134,14 @@ private:
             inOrder(node->left);
             cout << node->key << endl;
             inOrder(node->right);
+        }
+    }
+
+    void postOrder(Node *node) {
+        if (node != NULL) {
+            postOrder(node->left);
+            postOrder(node->right);
+            cout << node->key << endl;
         }
     }
 };
