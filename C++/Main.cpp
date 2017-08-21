@@ -117,7 +117,7 @@ int main() {
     string filename = "bible.txt";
     vector<string> words;
     if (FileOps::readFile(filename, words)) {
-        cout << "There are totally" << words.size() << "words in" << filename << endl;
+        cout << "There are totally " << words.size() << " words in" << filename << endl;
         cout << endl;
 
         time_t startTime = clock();
