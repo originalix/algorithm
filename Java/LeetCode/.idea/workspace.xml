@@ -60,11 +60,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SortColors_75.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SortColors_75.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/SortColors_75.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+            <state relative-caret-position="434">
+              <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoveZeroes_283.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LeetCode/MoveZeroes_283.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,7 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LeetCode/MoveZeroes_283.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/SelectionSort.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/MergeSort.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/InsertionSort.java" />
@@ -113,6 +122,7 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMaxHeapSort.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/SortColors_75.java" />
+        <option value="$PROJECT_DIR$/src/LeetCode/MoveZeroes_283.java" />
       </list>
     </option>
   </component>
@@ -739,12 +749,12 @@
       <workItem from="1503023844021" duration="4258000" />
       <workItem from="1503035430886" duration="4880000" />
       <workItem from="1503124187768" duration="5316000" />
-      <workItem from="1503301504066" duration="783000" />
+      <workItem from="1503301504066" duration="1812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23978000" />
+    <option name="totallyTimeSpent" value="25007000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1081,14 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LeetCode/MoveZeroes_283.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/SelectionSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -1211,8 +1213,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/SortColors_75.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        <state relative-caret-position="434">
+          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LeetCode/MoveZeroes_283.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>

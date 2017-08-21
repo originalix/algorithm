@@ -25,6 +25,5 @@ public class MoveZeroes_283 {
     }
 
     public static void main(String[] args) {
-
     }
 }
