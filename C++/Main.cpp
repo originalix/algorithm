@@ -103,7 +103,7 @@ private:
             return NULL;
 
         if (key == node->key)
-            return node->value;
+            return &(node->value);
         else if (key < node->key)
             return search(node->left, key);
         else
