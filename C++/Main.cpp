@@ -100,6 +100,18 @@ public:
         }
     }
 
+    Key minimum() {
+        assert (count != 0);
+        Node *minNode = minimum( root );
+        return minNode->key;
+    }
+
+    Key maximum() {
+        assert (count != 0);
+        Node *maxNode = maximum( root );
+        return maxNode->key;
+    }
+
 private:
     Node* insert(Node *node, Key key, Value value) {
         if (node == NULL) {
@@ -172,6 +184,18 @@ private:
             delete node;
             count--;
         }
+    }
+
+    Node* minimum(Node* node) {
+        if (node->left == NULL)
+            return node;
+        return minium(node->left);
+    }
+
+    Node* maximum(Node* node) {
+        if (node->right == NULL)
+            return node;
+        return maximum(node->right);
     }
 };
 
