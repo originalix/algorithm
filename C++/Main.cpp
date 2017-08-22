@@ -112,6 +112,11 @@ public:
         return maxNode->key;
     }
 
+    void removeMin() {
+        if (root)
+            root = removeMin( root );
+    }
+
 private:
     Node* insert(Node *node, Key key, Value value) {
         if (node == NULL) {
@@ -196,6 +201,17 @@ private:
         if (node->right == NULL)
             return node;
         return maximum(node->right);
+    }
+
+    Node* removeMin(Node* node) {
+        if (node->left == NULL) {
+            Node *node = node->right;
+            delete node;
+            count--;
+            return node->right;
+        }
+        node->left = removeMin(node->left);
+        return node;
     }
 };
 
