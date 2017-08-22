@@ -6,9 +6,9 @@ package LeetCode;
 public class MinimumSize_209 {
 
     public int minSubArrayLen(int s, int[] nums) {
-        int l = 0, r = 1;
+        int l = -1, r = 0;
         int ret = 0;
-        int sum = nums[l];
+        int sum = 0;
 
         while (l < r) {
 
@@ -20,7 +20,7 @@ public class MinimumSize_209 {
                 sum += nums[r++];
             } else {
                 ret = saveRet(ret, l, r);
-                sum -= nums[l++];
+                sum -= nums[++l];
             }
         }
 
