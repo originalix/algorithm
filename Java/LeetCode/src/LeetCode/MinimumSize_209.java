@@ -11,7 +11,9 @@ public class MinimumSize_209 {
         int sum = 0;
 
         while (l < r) {
-
+            if (nums.length < 1) {
+                break;
+            }
             if (r > nums.length - 1) {
                 r = nums.length - 1;
             }
@@ -19,7 +21,7 @@ public class MinimumSize_209 {
             if (sum < s) {
                 sum += nums[r++];
             } else {
-                ret = saveRet(ret, l, r);
+                ret = saveRet(ret, l+1, r);
                 sum -= nums[++l];
             }
         }
@@ -38,7 +40,7 @@ public class MinimumSize_209 {
     public static void main(String[] args) {
         int[] arr = new int[] {2,3,1,2,4,3};
         MinimumSize_209 min209 = new MinimumSize_209();
-        int a = min209.minSubArrayLen(7, arr);
+        int a = min209.minSubArrayLen(4, arr);
         System.out.println(a);
     }
 }
