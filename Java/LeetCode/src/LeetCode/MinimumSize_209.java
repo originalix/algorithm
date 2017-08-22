@@ -8,8 +8,14 @@ public class MinimumSize_209 {
     public int minSubArrayLen(int s, int[] nums) {
         int l = 0, r = 1;
         int ret = 0;
-        for (int i = 0; i < nums.length - 1; i++) {
-            int sum = 0;
+        int sum = nums[l];
+
+        while (l < r) {
+
+            if (r > nums.length - 1) {
+                r = nums.length - 1;
+            }
+
             if (sum < s) {
                 sum += nums[r++];
             } else {
@@ -23,6 +29,9 @@ public class MinimumSize_209 {
 
     private int saveRet(int ret, int l, int r) {
         assert (r >= l);
+        if (ret == 0) {
+            return (r - l + 1);
+        }
         return (r - l + 1) > ret ? ret : (r - l + 1);
     }
 
