@@ -6,35 +6,42 @@ package LeetCode;
 public class MinimumSize_209 {
 
     public int minSubArrayLen(int s, int[] nums) {
-        int l = -1, r = 0;
+        int l = 0, r = 0;
         int ret = 0;
         int sum = 0;
 
-        while (l < r) {
-            if (nums.length < 1) {
-                break;
-            }
-            if (r > nums.length - 1) {
+        if (nums.length == 0) {
+            return ret;
+        }
+
+        while (l <= r) {
+            if (r >= nums.length - 1) {
                 r = nums.length - 1;
             }
-
             if (sum < s) {
                 sum += nums[r++];
             } else {
-                ret = saveRet(ret, l+1, r);
-                sum -= nums[++l];
+                ret = saveRet(ret, l++, r);
             }
         }
 
         return ret;
     }
 
-    private int saveRet(int ret, int l, int r) {
+    private int saveRet(int oldRet, int l, int r) {
         assert (r >= l);
-        if (ret == 0) {
-            return (r - l + 1);
+        int newResult = r - l + 1;
+        return min(oldRet, newResult);
+    }
+
+    private int min(int oldRet, int newRet) {
+        if (oldRet == 0) {
+            return newRet;
         }
-        return (r - l + 1) > ret ? ret : (r - l + 1);
+        if (newRet < oldRet) {
+            return newRet;
+        }
+        return oldRet;
     }
 
     public static void main(String[] args) {
