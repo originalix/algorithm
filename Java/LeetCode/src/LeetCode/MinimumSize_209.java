@@ -21,7 +21,8 @@ public class MinimumSize_209 {
             if (sum < s) {
                 sum += nums[r++];
             } else {
-                ret = saveRet(ret, l++, r);
+                ret = saveRet(ret, l, r);
+                sum -= nums[l++];
             }
         }
 
@@ -30,6 +31,9 @@ public class MinimumSize_209 {
 
     private int saveRet(int oldRet, int l, int r) {
         assert (r >= l);
+        if (l == r) {
+            return oldRet;
+        }
         int newResult = r - l + 1;
         return min(oldRet, newResult);
     }
