@@ -142,4 +142,17 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
         return minimum(node.left);
     }
+
+    public Key maximum() {
+        assert count != 0;
+        Node maxNode = maximum(root);
+        return maxNode.key;
+    }
+
+    private Node maximum(Node node) {
+        if (node.right == null) {
+            return node;
+        }
+        return maximum(node.right);
+    }
 }
