@@ -30,5 +30,22 @@ public class Main {
         }
 
         System.out.println();
+
+        for(int i = 0 ; i < N ; i ++){
+            Integer key = new Integer((int)(Math.random()*M));
+            // 为了后续测试方便,这里value值取和key值一样
+            bst.insert(key, key);
+        }
+        // 注意, 由于随机生成的数据有重复, 所以bst中的数据数量大概率是小于n的
+
+        // 测试 removeMax
+        // 输出的元素应该是从大到小排列的
+        System.out.println("Test removeMax: ");
+        while( !bst.isEmpty() ){
+            System.out.print("max: " + bst.maximum() + " , ");
+            bst.removeMax();
+            System.out.println("After removeMax, size = " + bst.size() );
+        }
+        
     }
 }
