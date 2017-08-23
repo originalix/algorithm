@@ -1,5 +1,7 @@
 package LeetCode;
 
+import java.util.LinkedList;
+
 /**
  * Created by Lix on 2017/8/23.
  */
@@ -142,6 +144,24 @@ public class BST<Key extends Comparable<Key>, Value> {
             postOrder(node.left);
             postOrder(node.right);
             System.out.print(node.key + " ");
+        }
+    }
+
+    // 二分搜索树的层序遍历
+    public void levelOrder() {
+        LinkedList<Node> q = new LinkedList<Node>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            Node node = q.remove();
+
+            System.out.println(node.key);
+
+            if (node.left != null) {
+                q.add(node.left);
+            }
+            if (node.right != null) {
+                q.add(node.right);
+            }
         }
     }
 
