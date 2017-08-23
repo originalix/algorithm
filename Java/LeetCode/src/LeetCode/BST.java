@@ -71,4 +71,26 @@ public class BST<Key extends Comparable<Key>, Value> {
             return contain(node.right, key);
         }
     }
+
+    public Value search(Key key) throws Exception {
+        Value value =  search(root, key);
+        if (value == null) {
+            throw new Exception("找不到value");
+        }
+        return value;
+    }
+
+    private Value search(Node node, Key key) {
+        if (node == null) {
+            return null;
+        }
+
+        if (key.compareTo(node.key) == 0) {
+            return node.value;
+        } else if (key.compareTo(node.key) < 0) {
+            return search(node.left, key);
+        } else {
+            return search(node.right, key);
+        }
+    }
 }
