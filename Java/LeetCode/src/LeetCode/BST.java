@@ -33,4 +33,24 @@ public class BST<Key extends Comparable<Key>, Value> {
         return count == 0;
     }
 
+    public void insert(Key key, Value value) {
+        root = insert(root, key, value);
+    }
+
+    private Node insert(Node node, Key key, Value value) {
+        if (node == null) {
+            count++;
+            return new Node(key, value);
+        }
+
+        if (key.compareTo(node.key) == 0) {
+            node.value = value;
+        } else if (key.compareTo(node.key) < 0) {
+            node.left = insert(node.left, key, value);
+        } else {
+            node.right = insert(node.right, key, value);
+        }
+        
+        return node;
+    }
 }
