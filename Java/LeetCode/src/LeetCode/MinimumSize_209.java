@@ -19,11 +19,14 @@ public class MinimumSize_209 {
                 r = nums.length - 1;
             }
             if (sum < s) {
-                sum += nums[r++];
-            } else {
+                sum += nums[r];
+            }
+            if (sum >= s) {
                 ret = saveRet(ret, l, r);
                 sum -= nums[l++];
+                continue;
             }
+            r++;
         }
 
         return ret;
@@ -31,7 +34,7 @@ public class MinimumSize_209 {
 
     private int saveRet(int oldRet, int l, int r) {
         assert (r >= l);
-        if (l == r) {
+        if (l == r && l == 0 && r == 0) {
             return oldRet;
         }
         int newResult = r - l + 1;
@@ -49,7 +52,7 @@ public class MinimumSize_209 {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[] {2,3,1,2,4,3};
+        int[] arr = new int[] {1, 4, 4};
         MinimumSize_209 min209 = new MinimumSize_209();
         int a = min209.minSubArrayLen(4, arr);
         System.out.println(a);
