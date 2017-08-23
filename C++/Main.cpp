@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <ctime>
 #include <string>
 #include "FileOps.h"
 
@@ -217,32 +218,23 @@ private:
 
 int main() {
 
-    //使用圣经作为我们的测试用例
-    string filename = "bible.txt";
-    vector<string> words;
-    if (FileOps::readFile(filename, words)) {
-        cout << "There are totally " << words.size() << " words in" << filename << endl;
-        cout << endl;
+    srand(time(NULL));
+    BST<int, int> bst = BST<int, int>();
 
-        time_t startTime = clock();
+    // 取N个取值范围在[0...M)的随机数放进二叉搜索树中
+    int N = 10;
+    int M = 100;
+    for (int i = 0; i < N; i++) {
+        int key = rand() % M;
+        int value = key;
 
-        BST<string, int>bst = BST<string, int>();
-        for (vector<string>::iterator iter = words.begin(); iter != words.end(); iter++) {
-            int *res = bst.search(*iter);
-            if (res == NULL)
-                bst.insert(*iter, 1);
-            else
-                (*res)++;
-        }
-
-        if (bst.contain("god"))
-            cout << "'god' : " << *bst.search("god") << endl;
-        else
-            cout << "No word 'god' in " << filename << endl;
-        
-        time_t endTime = clock();
-
-        cout << "BST, time: " << double(endTime - startTime) / CLOCKS_PER_SEC << "s." << endl;
-        cout << endl;
+        cout << key << " " << endl;
+        bst.insert(key, value);
+        cout << "size : " << bst.size() << endl;
     }
+    cout << endl;
+    
+    cout << "total size : " << bst.size() << endl;
+
+    cout << "Hello wsx" << endl;
 }
