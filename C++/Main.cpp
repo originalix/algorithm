@@ -56,7 +56,7 @@ public:
         return count;
     }
 
-    int isEmpty() {
+    bool isEmpty() {
         return count == 0;
     }
 

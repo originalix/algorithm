@@ -20,5 +20,17 @@ public class BST<Key extends Comparable<Key>, Value> {
     private Node root;
     private int count;
 
-    
+    public BST() {
+        root = null;
+        count = 0;
+    }
+
+    public int size() {
+        return count;
+    }
+
+    public boolean isEmpty() {
+        return count == 0;
+    }
+
 }
