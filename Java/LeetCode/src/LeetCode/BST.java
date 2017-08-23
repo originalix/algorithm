@@ -129,4 +129,17 @@ public class BST<Key extends Comparable<Key>, Value> {
             System.out.print(node.key + " ");
         }
     }
+
+    public Key minimum() {
+        assert count != 0;
+        Node minNode = minimum(root);
+        return minNode.key;
+    }
+
+    private Node minimum(Node node) {
+        if (node.left == null) {
+            return node;
+        }
+        return minimum(node.left);
+    }
 }
