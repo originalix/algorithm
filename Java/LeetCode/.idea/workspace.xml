@@ -28,7 +28,7 @@
       <file leaf-file-name="MinimumSize_209.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/MinimumSize_209.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="180">
               <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
               <folding />
             </state>
@@ -38,24 +38,9 @@
       <file leaf-file-name="BST.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/BST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="827">
-              <caret line="157" column="1" lean-forward="true" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
-              <folding>
-                <element signature="e#541#542#0" expanded="true" />
-                <element signature="e#569#570#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-                <element signature="e#634#635#0" expanded="true" />
-                <element signature="e#682#683#0" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#1222#1223#0" expanded="true" />
-                <element signature="e#1263#1264#0" expanded="true" />
-                <element signature="e#2214#2215#0" expanded="true" />
-                <element signature="e#2244#2245#0" expanded="true" />
-                <element signature="e#2470#2471#0" expanded="true" />
-                <element signature="e#2499#2500#0" expanded="true" />
-                <element signature="e#2724#2725#0" expanded="true" />
-                <element signature="e#2755#2756#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="794">
+              <caret line="171" column="20" lean-forward="true" selection-start-line="171" selection-start-column="20" selection-end-line="171" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -176,9 +161,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -725,12 +710,13 @@
       <workItem from="1503301504066" duration="2575000" />
       <workItem from="1503391083346" duration="4225000" />
       <workItem from="1503412226319" duration="3307000" />
-      <workItem from="1503480500073" duration="1860000" />
+      <workItem from="1503480500073" duration="1888000" />
+      <workItem from="1503490788737" duration="433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35162000" />
+    <option name="totallyTimeSpent" value="35623000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1156,7 +1142,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/MinimumSize_209.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="180">
           <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding />
         </state>
@@ -1164,24 +1150,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/BST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="157" column="1" lean-forward="true" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
-          <folding>
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#1222#1223#0" expanded="true" />
-            <element signature="e#1263#1264#0" expanded="true" />
-            <element signature="e#2214#2215#0" expanded="true" />
-            <element signature="e#2244#2245#0" expanded="true" />
-            <element signature="e#2470#2471#0" expanded="true" />
-            <element signature="e#2499#2500#0" expanded="true" />
-            <element signature="e#2724#2725#0" expanded="true" />
-            <element signature="e#2755#2756#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="794">
+          <caret line="171" column="20" lean-forward="true" selection-start-line="171" selection-start-column="20" selection-end-line="171" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

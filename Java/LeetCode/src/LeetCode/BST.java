@@ -155,4 +155,20 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
         return maximum(node.right);
     }
+
+    public void removeMin() {
+        if (root != null) {
+            root = removeMin(root);
+        }
+    }
+
+    private Node removeMin(Node node) {
+        if (node.left == null) {
+            Node rightNode = node.right;
+            count--;
+            return rightNode;
+        }
+        node.left = removeMin(node.left);
+        return node;
+    }
 }

@@ -206,10 +206,10 @@ private:
 
     Node* removeMin(Node* node) {
         if (node->left == NULL) {
-            Node *node = node->right;
+            Node *rightNode = node->right;
             delete node;
             count--;
-            return node->right;
+            return rightNode;
         }
         node->left = removeMin(node->left);
         return node;
