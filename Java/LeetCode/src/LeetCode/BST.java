@@ -46,6 +46,8 @@ public class BST<Key extends Comparable<Key>, Value> {
         root = insert(root, key, value);
     }
 
+    // 向以node为根的二分搜索树中, 插入节点(key, value), 使用递归算法
+    // 返回插入新节点后的二分搜索树的根
     private Node insert(Node node, Key key, Value value) {
         if (node == null) {
             count++;
@@ -68,6 +70,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         return contain(root, key);
     }
 
+    // 查看以node为根的二分搜索树中是否包含键值为key的节点, 使用递归算法
     private boolean contain(Node node, Key key) {
         if (node == null) {
             return false;
@@ -84,13 +87,11 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     // 在二分搜索树中搜索键key所对应的值。如果这个值不存在, 则返回null
     public Value search(Key key) throws Exception {
-        Value value =  search(root, key);
-        if (value == null) {
-            throw new Exception("找不到value");
-        }
-        return value;
+        return search(root, key);
     }
 
+    // 在以node为根的二分搜索树中查找key所对应的value, 递归算法
+    // 若value不存在, 则返回NULL
     private Value search(Node node, Key key) {
         if (node == null) {
             return null;
@@ -186,6 +187,23 @@ public class BST<Key extends Comparable<Key>, Value> {
             return rightNode;
         }
         node.left = removeMin(node.left);
+        return node;
+    }
+
+    // 从二分搜索树中删除最大值所在节点
+    public void removeMax() {
+        if (root != null) {
+            root = removeMax(root);
+        }
+    }
+
+    private Node removeMax(Node node) {
+        if (node.right == null) {
+            Node leftNode = node.left;
+            count--;
+            return leftNode;
+        }
+        node.right = removeMax(node.right);
         return node;
     }
 }
