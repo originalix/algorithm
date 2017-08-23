@@ -19,6 +19,8 @@ public class Main {
             bst.insert(key, key);
         }
 
+        System.out.println("now tree size is : " + bst.size());
+
         System.out.println("Test removeMin: ");
 
         while( !bst.isEmpty() ){
@@ -28,7 +30,5 @@ public class Main {
         }
 
         System.out.println();
-
-        
     }
 }
