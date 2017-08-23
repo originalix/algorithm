@@ -3,7 +3,12 @@ package LeetCode;
 /**
  * Created by Lix on 2017/8/23.
  */
+
+// 二分搜索树
+// 由于Key需要能够进行比较，所以需要extends Comparable<Key>
 public class BST<Key extends Comparable<Key>, Value> {
+
+    // 树中的节点为私有的类, 外界不需要了解二分搜索树节点的具体实现
     private class Node {
         private Key key;
         private Value value;
@@ -17,22 +22,26 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
-    private Node root;
-    private int count;
+    private Node root;  // 根节点
+    private int count;  // 树种的节点个数
 
+    // 构造函数, 默认构造一棵空二分搜索树
     public BST() {
         root = null;
         count = 0;
     }
 
+    // 返回二分搜索树的节点个数
     public int size() {
         return count;
     }
 
+    // 返回二分搜索树是否为空
     public boolean isEmpty() {
         return count == 0;
     }
 
+    // 向二分搜索树中插入一个新的(key, value)数据对
     public void insert(Key key, Value value) {
         root = insert(root, key, value);
     }
@@ -54,6 +63,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         return node;
     }
 
+    // 查看二分搜索树中是否存在键key
     public boolean contain(Key key) {
         return contain(root, key);
     }
@@ -72,6 +82,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
+    // 在二分搜索树中搜索键key所对应的值。如果这个值不存在, 则返回null
     public Value search(Key key) throws Exception {
         Value value =  search(root, key);
         if (value == null) {
@@ -94,6 +105,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
+    // 二分搜索树的前序遍历
     public void preOrder() {
         preOrder(root);
     }
@@ -106,6 +118,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
+    // 二分搜索树的中序遍历
     public void inOrder() {
         inOrder(root);
     }
@@ -118,6 +131,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
+    // 二分搜索树的后序遍历
     public void postOrder() {
         postOrder(root);
     }
@@ -130,6 +144,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
+    // 寻找二分搜索树的最小的键值
     public Key minimum() {
         assert count != 0;
         Node minNode = minimum(root);
@@ -143,6 +158,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         return minimum(node.left);
     }
 
+    // 寻找二分搜索树的最大的键值
     public Key maximum() {
         assert count != 0;
         Node maxNode = maximum(root);
@@ -156,6 +172,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         return maximum(node.right);
     }
 
+    // 从二分搜索树中删除最小值所在节点
     public void removeMin() {
         if (root != null) {
             root = removeMin(root);
