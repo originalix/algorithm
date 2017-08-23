@@ -93,4 +93,40 @@ public class BST<Key extends Comparable<Key>, Value> {
             return search(node.right, key);
         }
     }
+
+    public void preOrder() {
+        preOrder(root);
+    }
+
+    private void preOrder(Node node) {
+        if (node != null) {
+            System.out.print(node.key + " ");
+            preOrder(node.left);
+            preOrder(node.right);
+        }
+    }
+
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    private void inOrder(Node node) {
+        if (node != null) {
+            inOrder(node.left);
+            System.out.print(node.key + " ");
+            inOrder(node.right);
+        }
+    }
+
+    public void postOrder() {
+        postOrder(root);
+    }
+
+    private void postOrder(Node node) {
+        if (node != null) {
+            postOrder(node.left);
+            postOrder(node.right);
+            System.out.print(node.key + " ");
+        }
+    }
 }
