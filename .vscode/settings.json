@@ -3,6 +3,8 @@
         "iterator": "cpp",
         "string": "cpp",
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "deque": "cpp",
+        "ostream": "cpp"
     }
 }

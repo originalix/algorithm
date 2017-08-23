@@ -6,6 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "args": [],
+            "program": "${fileDirname}/${fileBasename}.exe",
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
