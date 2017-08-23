@@ -50,7 +50,25 @@ public class BST<Key extends Comparable<Key>, Value> {
         } else {
             node.right = insert(node.right, key, value);
         }
-        
+
         return node;
+    }
+
+    public boolean contain(Key key) {
+        return contain(root, key);
+    }
+
+    private boolean contain(Node node, Key key) {
+        if (node == null) {
+            return false;
+        }
+
+        if (key.compareTo(node.key) == 0) {
+            return true;
+        } else if (key.compareTo(node.key) < 0) {
+            return contain(node.left, key);
+        } else {
+            return contain(node.right, key);
+        }
     }
 }
