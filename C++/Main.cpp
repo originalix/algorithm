@@ -228,13 +228,31 @@ int main() {
         int key = rand() % M;
         int value = key;
 
-        cout << key << " " << endl;
+        cout << key << " ";
         bst.insert(key, value);
-        cout << "size : " << bst.size() << endl;
     }
     cout << endl;
     
+    
+    cout << "Hello wsx" << endl;
+
+    // 测试二叉搜索树的size
     cout << "total size : " << bst.size() << endl;
 
-    cout << "Hello wsx" << endl;
+    // 测试二分搜索树的前序遍历 preOrder
+    cout << "preOrder : " << endl;
+    bst.preOrder();
+    cout << endl;
+
+    // 测试二分搜索树的中序遍历 inOrder
+    cout<<"inOrder: "<<endl;
+    bst.inOrder();
+    cout<<endl;
+
+    // 测试二分搜索树的后序遍历 postOrder
+    cout<<"postOrder: "<<endl;
+    bst.postOrder();
+    cout<<endl;
+
+    return 0;
 }
