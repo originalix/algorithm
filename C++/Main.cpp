@@ -27,6 +27,7 @@ template<typename Key, typename Value>
 class BST {
 
 private:
+    // 树中的节点为私有的结构体, 外界不需要了解二分搜索树节点的具体实现
     struct Node {
         Key key;
         Value value;
@@ -39,50 +40,62 @@ private:
             this->left = this->right = NULL;
         }
     };
-    Node *root;
-    int count;
+    Node *root;  // 根节点
+    int count;   // 树中的节点个数
 
 public:
+    // 构造函数, 默认构造一棵空二分搜索树
     BST() {
         root = NULL;
         count = 0;
     }
 
+    // 析构函数, 释放二分搜索树的所有空间
     ~BST() {
         destroy(root);
     }
 
+    // 返回二分搜索树的节点个数
     int size() {
         return count;
     }
 
+    // 返回二分搜索树是否为空
     bool isEmpty() {
         return count == 0;
     }
 
+    // 向二分搜索树中插入一个新的(key, value)数据对
     void insert(Key key, Value value) {
         root = insert(root, key, value);
     }
 
+    // 查看二分搜索树中是否存在键key
     bool contain(Key key) {
         return contain(root, key);
     }
 
+    // 在二分搜索树中搜索键key所对应的值，如果这个值不存在，则返回null
     Value* search(Key key) {
         return search(root, key);
     }
 
+    // 二分搜索树的前序遍历
     void preOrder() {
         preOrder(root);
     }
+
+    // 二分搜索树的中序遍历
     void inOrder() {
         inOrder(root);
     }
 
+    // 二分搜索树的后序遍历 
     void postOrder() {
         postOrder(root);
     }
 
+    // 二分搜索树的层序遍历
     void levelOrder() {
         queue<Node*> q;
         
@@ -101,18 +114,21 @@ public:
         }
     }
 
+    // 寻找二分搜索树的最小的键值
     Key minimum() {
         assert (count != 0);
         Node *minNode = minimum( root );
         return minNode->key;
     }
 
+    // 寻找二分搜索树的最大的键值
     Key maximum() {
         assert (count != 0);
         Node *maxNode = maximum( root );
         return maxNode->key;
     }
 
+    // 从二分搜索树中删除最小值所在节点
     void removeMin() {
         if (root)
             root = removeMin( root );

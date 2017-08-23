@@ -36,6 +36,7 @@ public class Main {
             // 为了后续测试方便,这里value值取和key值一样
             bst.insert(key, key);
         }
+
         // 注意, 由于随机生成的数据有重复, 所以bst中的数据数量大概率是小于n的
 
         // 测试 removeMax
@@ -46,6 +47,6 @@ public class Main {
             bst.removeMax();
             System.out.println("After removeMax, size = " + bst.size() );
         }
-        
+
     }
 }
