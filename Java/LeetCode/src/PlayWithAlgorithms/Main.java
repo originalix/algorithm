@@ -44,5 +44,26 @@ public class Main {
             System.out.println("After removeMax, size = " + bst.size() );
         }
 
+        for(int i = 0 ; i < N ; i ++){
+            Integer key = new Integer((int)(Math.random()*N));
+            // 为了后续测试方便,这里value值取和key值一样
+            bst.insert(key, key);
+        }
+
+        // order数组中存放[0...n)的所有元素
+        Integer order[] = new Integer[N];
+        for( int i = 0 ; i < N ; i ++ ) {
+            order[i] = new Integer(i);
+        }
+
+        // 乱序删除[0...n)范围里的所有元素
+        for( int i = 0 ; i < N ; i ++ )
+            if( bst.contain( order[i] )){
+                bst.remove( order[i] );
+                System.out.println("After remove " + order[i] + " size = " + bst.size() );
+            }
+
+        // 最终整个二分搜索树应该为空
+        System.out.println( bst.size() );
     }
 }
