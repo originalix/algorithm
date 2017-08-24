@@ -228,7 +228,7 @@ private:
     Node* minimum(Node* node) {
         if (node->left == NULL)
             return node;
-        return minium(node->left);
+        return minimum(node->left);
     }
 
     Node* maximum(Node* node) {
@@ -285,7 +285,7 @@ private:
                 return leftNode;
             }
 
-            Node* successor = new Node(minimum(node));
+            Node* successor = new Node(minimum(node->right));
             count++;
 
             successor->right = removeMin(node);
@@ -296,6 +296,14 @@ private:
             return successor;
         }
     }
+
+    void shuffle( int arr[], int n ) {
+        srand( time(NULL) );
+        for (int i = n-1; i >= 0; i--) {
+            int x = rand()%(i+1);
+            swap(arr[i], arr[x]);
+        }
+    }
 };
 
 int main() {
@@ -304,8 +312,8 @@ int main() {
     BST<int, int> bst = BST<int, int>();
 
     // 取N个取值范围在[0...M)的随机数放进二叉搜索树中
-    int N = 10;
-    int M = 100;
+    int N = 10000;
+    int M = 10000;
     for (int i = 0; i < N; i++) {
         int key = rand() % M;
         int value = key;
@@ -335,6 +343,22 @@ int main() {
     cout<<"postOrder: "<<endl;
     bst.postOrder();
     cout<<endl;
+
+    int order[N];
+    for (int i = 0; i < N; i++) {
+        order[i] = i;
+    }
+
+    // shuffle(order, N);
+
+    for (int i = 0; i < N; i++) {
+        if (bst.contain( order[i] )) {
+            bst.remove( order[i] );
+            cout << "After remove " << order[i] << " size = " << bst.size() << endl; 
+        }
+    }
+
+    cout << bst.size() << endl;
 
     return 0;
 }
