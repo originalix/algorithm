@@ -35,24 +35,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BST.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LeetCode/BST.java">
+      <file leaf-file-name="BST.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/BST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2800">
-              <caret line="154" column="35" lean-forward="false" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="1089">
+              <caret line="273" column="12" lean-forward="false" selection-start-line="273" selection-start-column="12" selection-end-line="273" selection-end-column="12" />
+              <folding>
+                <element signature="e#5397#5398#0" expanded="true" />
+                <element signature="e#5437#5438#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="827">
-              <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="880">
+              <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,6 +94,7 @@
         <option value="$PROJECT_DIR$/src/LeetCode/MinimumSize_209.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/BST.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/BST.java" />
       </list>
     </option>
   </component>
@@ -262,7 +264,7 @@
     <configuration default="false" name="MinimumSize_209" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="LeetCode.*" />
+          <option name="PATTERN" value="PlayWithAlgorithms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -279,10 +281,10 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="MinimumSize_209 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="MinimumSize_209" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="LeetCode.*" />
+          <option name="PATTERN" value="PlayWithAlgorithms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -691,13 +693,13 @@
       <item index="1" class="java.lang.String" itemvalue="Application.HeapSort" />
       <item index="2" class="java.lang.String" itemvalue="Application.IndexMaxHeap" />
       <item index="3" class="java.lang.String" itemvalue="Application.MinimumSize_209" />
-      <item index="4" class="java.lang.String" itemvalue="Application.MinimumSize_209 (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MinimumSize_209" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
         <item index="1" class="java.lang.String" itemvalue="Application.MinimumSize_209" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MinimumSize_209 (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MinimumSize_209" />
         <item index="3" class="java.lang.String" itemvalue="Application.IndexMaxHeap" />
         <item index="4" class="java.lang.String" itemvalue="Application.HeapSort" />
       </list>
@@ -724,12 +726,12 @@
       <workItem from="1503412226319" duration="3307000" />
       <workItem from="1503480500073" duration="1888000" />
       <workItem from="1503490788737" duration="2282000" />
-      <workItem from="1503577291143" duration="12000" />
+      <workItem from="1503577291143" duration="1396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37484000" />
+    <option name="totallyTimeSpent" value="38868000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -742,6 +744,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="23" width="1775" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -867,9 +870,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -935,9 +936,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -974,9 +973,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,20 +1155,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LeetCode/BST.java">
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2800">
-          <caret line="154" column="35" lean-forward="false" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="35" />
+        <state relative-caret-position="880">
+          <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/BST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        <state relative-caret-position="1089">
+          <caret line="273" column="12" lean-forward="false" selection-start-line="273" selection-start-column="12" selection-end-line="273" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#5397#5398#0" expanded="true" />
+            <element signature="e#5437#5438#0" expanded="true" />
           </folding>
         </state>
       </provider>

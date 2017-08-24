@@ -1,4 +1,4 @@
-package LeetCode;
+package PlayWithAlgorithms;
 
 import java.util.LinkedList;
 
@@ -21,6 +21,13 @@ public class BST<Key extends Comparable<Key>, Value> {
             this.key = key;
             this.value = value;
             this.left = this.right = null;
+        }
+
+        Node(Node node) {
+            this.key = node.key;
+            this.value = node.value;
+            this.left = node.left;
+            this.right = node.right;
         }
     }
 
@@ -226,4 +233,47 @@ public class BST<Key extends Comparable<Key>, Value> {
         node.right = removeMax(node.right);
         return node;
     }
+
+    public void remove(Key key) {
+        root = remove(root, key);
+    }
+
+    private Node remove(Node node, Key key) {
+        if (node == null) {
+            return null;
+        }
+
+        if (key.compareTo(node.key) < 0) {
+
+            node.left = remove(node.left, key);
+            return node;
+        } else if (key.compareTo(node.key) > 0) {
+
+            node.right = remove(node.right, key);
+            return node;
+        } else {
+
+            if (node.left == null) {
+                Node rightNode = node.right;
+                count--;
+                return rightNode;
+            }
+
+            if (node.right == null) {
+                Node leftNode = node.left;
+                count--;
+                return leftNode;
+            }
+
+            Node successor = new Node(minimum(node.right));
+            count++;
+
+            successor.right = removeMin(node);
+            successor.left = node.left;
+            count--;
+            
+            return successor;
+        }
+    }
+
 }
