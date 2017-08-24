@@ -134,6 +134,12 @@ public:
             root = removeMin( root );
     }
 
+    // 从二分搜索树中删除最大值所在节点
+    void removeMax() {
+        if (root)
+            root = removeMax( root );
+    }
+
 private:
     Node* insert(Node *node, Key key, Value value) {
         if (node == NULL) {
@@ -228,6 +234,17 @@ private:
             return rightNode;
         }
         node->left = removeMin(node->left);
+        return node;
+    }
+
+    Node* removeMax(Node* node) {
+        if (node->right == NULL) {
+            Node *leftNode = node->left;
+            delete node;
+            count--;
+            return leftNode;
+        }
+        node->right = removeMax(node->right);
         return node;
     }
 };
