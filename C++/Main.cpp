@@ -26,6 +26,10 @@ public:
         assert( p >= 0 && p < count);
         return id[p];
     }
+
+    bool isConnected(int p, int q) {
+        return find(p) == find(q);
+    }
 };
 
 int main() {
