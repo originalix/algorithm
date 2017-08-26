@@ -14,4 +14,9 @@ public class UnionFInd {
             id[i] = i;
         }
     }
+
+    public int find(int p) {
+        assert (p >= 0 && p < count);
+        return id[p];
+    }
 }
