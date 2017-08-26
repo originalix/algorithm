@@ -19,4 +19,8 @@ public class UnionFInd {
         assert (p >= 0 && p < count);
         return id[p];
     }
+
+    public boolean isConnected(int p, int q) {
+        return find(p) == find(q);
+    }
 }
