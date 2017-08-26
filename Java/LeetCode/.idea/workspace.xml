@@ -61,8 +61,8 @@
       <file leaf-file-name="UnionFInd.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFInd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="520">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="e#409#410#0" expanded="true" />
                 <element signature="e#450#451#0" expanded="true" />
@@ -720,12 +720,12 @@
       <workItem from="1503490788737" duration="2282000" />
       <workItem from="1503577291143" duration="1759000" />
       <workItem from="1503645077723" duration="105000" />
-      <workItem from="1503714855624" duration="353000" />
+      <workItem from="1503714855624" duration="580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39689000" />
+    <option name="totallyTimeSpent" value="39916000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1163,8 +1163,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFInd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="520">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="e#409#410#0" expanded="true" />
             <element signature="e#450#451#0" expanded="true" />
