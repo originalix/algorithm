@@ -23,4 +23,19 @@ public class UnionFInd {
     public boolean isConnected(int p, int q) {
         return find(p) == find(q);
     }
+
+    public void unionElements(int p, int q) {
+        int pID = find(p);
+        int qID = find(q);
+
+        if (pID == qID) {
+            return;
+        }
+
+        for (int i = 0; i < count; i++) {
+            if (id[i] == pID) {
+                id[i] = qID;
+            }
+        }
+    }
 }
