@@ -21,5 +21,12 @@ namespace UF2 {
         ~UnionFind2() {
             delete[] parent;
         }
-};
+        
+        int find( int p ) {
+            assert( p >= 0 && p < count );
+            while (parent[p] != p)
+                p = parent[p];
+            return p;
+        }
+    };
 }
