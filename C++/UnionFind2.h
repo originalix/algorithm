@@ -4,13 +4,13 @@
 using namespace std;
 
 namespace UF2 {
-    class UnionFind2 {
+    class UnionFind {
     private:
         int* parent;
         int count;
 
     public:
-        UnionFind2( int count ) {
+        UnionFind( int count ) {
             parent = new int[count];
             this->count = count;
             for (int i = 0; i < count; i++) {
@@ -18,7 +18,7 @@ namespace UF2 {
             }
         }
 
-        ~UnionFind2() {
+        ~UnionFind() {
             delete[] parent;
         }
         
