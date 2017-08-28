@@ -19,5 +19,18 @@ namespace UF3 {
                     sz[i] = 1;
                 }
             }
+
+            ~UnionFind() {
+                delete[] parent;
+                delete[] sz;
+            }
+
+            int find( int p ) {
+                assert( p >= 0 && p < count);
+                while (parent[p] != p)
+                    p = parent[p];
+                
+                return p;
+            }
     };
 }
