@@ -5,6 +5,8 @@ package PlayWithAlgorithms;
  */
 public class Main {
     public static void main(String[] args) {
-        
+        int n = 10000;
+
+        UnionFindTestHelper.testUF1(n);
     }
 }
