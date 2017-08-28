@@ -3,12 +3,12 @@ package PlayWithAlgorithms;
 /**
  * Created by Lix on 2017/8/26.
  */
-public class UnionFInd {
+public class UnionFInd1 {
 
     private int[] id;
     private int count;
 
-    public UnionFInd(int n) {
+    public UnionFInd1(int n) {
         count = n;
         for (int i = 0; i < n; i++) {
             id[i] = i;
