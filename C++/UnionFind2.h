@@ -18,5 +18,8 @@ namespace UF2 {
             }
         }
 
+        ~UnionFind2() {
+            delete[] parent;
+        }
 };
 }
