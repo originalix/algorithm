@@ -5,12 +5,12 @@ package PlayWithAlgorithms;
  */
 
 //我们的第一版union-Find
-public class UnionFInd1 {
+public class UnionFind1 {
 
     private int[] id; // 我们的第一版Union-Find 本质就是一个数组
     private int count; // 数据个数
 
-    public UnionFInd1(int n) {
+    public UnionFind1(int n) {
         count = n;
         id = new int[n];
 
