@@ -28,5 +28,19 @@ namespace UF2 {
                 p = parent[p];
             return p;
         }
+
+        bool isConnected( int p, int q ) {
+            return find(p) == find(q);
+        }
+
+        void unionElements( int p, int q ) {
+            int pRoot = find(p);
+            int qRoot = find(q);
+
+            if (pRoot == qRoot)
+                return;
+            
+            parent[pRoot] = qRoot;
+        }
     };
 }
