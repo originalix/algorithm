@@ -27,6 +27,15 @@ namespace UF4 {
                 delete[] rank;
             }
 
+            int find( int p ) {
+                assert( p >= 0 && p < count );
+                return parent[p];
+            }
+
+            bool isConnected( int p, int q ) {
+                return parent[p] == parent[q];
+            }
+
             
     };
 }
