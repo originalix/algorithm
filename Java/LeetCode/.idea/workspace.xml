@@ -25,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -35,11 +35,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="UnionFind5.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding>
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#703#704#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UnionFind4.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+            <state relative-caret-position="574">
+              <caret line="51" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
               <folding>
                 <element signature="e#617#618#0" expanded="true" />
                 <element signature="e#658#659#0" expanded="true" />
@@ -51,7 +64,7 @@
       <file leaf-file-name="UnionFind1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
+            <state relative-caret-position="314">
               <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
               <folding />
             </state>
@@ -84,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UnionFindTestHelper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UnionFindTestHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFindTestHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="594">
@@ -137,6 +150,7 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind4.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFindTestHelper.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind5.java" />
       </list>
     </option>
   </component>
@@ -752,12 +766,12 @@
       <workItem from="1503714855624" duration="580000" />
       <workItem from="1503839417616" duration="198000" />
       <workItem from="1503888296184" duration="2466000" />
-      <workItem from="1503986711009" duration="1465000" />
+      <workItem from="1503986711009" duration="1542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44045000" />
+    <option name="totallyTimeSpent" value="44122000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -828,13 +842,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/QuickSort2Ways.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="86" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/QuickSort3Ways.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -1167,14 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFindTestHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="100" column="31" lean-forward="false" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -1186,18 +1185,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind1.java">
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+        <state relative-caret-position="300">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        <state relative-caret-position="574">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
           <folding>
             <element signature="e#617#618#0" expanded="true" />
             <element signature="e#658#659#0" expanded="true" />
@@ -1205,10 +1215,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="314">
+          <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFindTestHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="100" column="31" lean-forward="false" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
           <folding />
         </state>
       </provider>
