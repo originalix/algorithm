@@ -11,5 +11,6 @@ public class Main {
 //        UnionFindTestHelper.testUF2(n);
         UnionFindTestHelper.testUF3(n);
         UnionFindTestHelper.testUF4(n);
+        UnionFindTestHelper.testUF5(n);
     }
 }

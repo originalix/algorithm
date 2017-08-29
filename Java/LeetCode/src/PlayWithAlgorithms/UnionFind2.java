@@ -5,6 +5,8 @@ package PlayWithAlgorithms;
  */
 public class UnionFind2 {
 
+    // 我们的第二版Union-Find, 使用一个数组构建一棵指向父节点的树
+    // parent[i]表示第一个元素所指向的父节点
     private int[] parent;
     private int count;
 
@@ -20,6 +22,8 @@ public class UnionFind2 {
     public int find(int p) {
         assert (p >= 0 && p < count);
 
+        // 不断去查询自己的父亲节点, 直到到达根节点
+        // 根节点的特点: parent[p] == p
         while (parent[p] != p) {
             p = parent[p];
         }

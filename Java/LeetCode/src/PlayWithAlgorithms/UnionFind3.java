@@ -4,8 +4,8 @@ package PlayWithAlgorithms;
  * Created by Lix on 2017/8/29.
  */
 public class UnionFind3 {
-    private int[] parent;
-    private int[] sz;
+    private int[] parent; // parent[i]表示第一个元素所指向的父节点
+    private int[] sz; // sz[i]表示以i为根的集合中元素个数
     private int count;
 
     public UnionFind3(int count) {
@@ -41,6 +41,8 @@ public class UnionFind3 {
             return;
         }
 
+        // 根据两个元素所在树的元素个数不同判断合并方向
+        // 将元素个数少的集合合并到元素个数多的集合上
         if (sz[pRoot] < sz[qRoot]) {
             parent[pRoot] = qRoot;
             sz[qRoot] += sz[pRoot];
