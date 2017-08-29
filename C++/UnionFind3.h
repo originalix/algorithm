@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cassert>
 
+// 第三版Union-Find 使用sz数组优化
 namespace UF3 {
     class UnionFind {
         private:
