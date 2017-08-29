@@ -29,13 +29,32 @@ namespace UF4 {
 
             int find( int p ) {
                 assert( p >= 0 && p < count );
-                return parent[p];
+                while (parent[p] != p) {
+                    p = parent[p];
+                }
+
+                return p;
             }
 
             bool isConnected( int p, int q ) {
                 return parent[p] == parent[q];
             }
 
-            
+            void UnionElements( int p, int q ) {
+                int pRoot = find(p);
+                int qRoot = find(q);
+
+                if (pRoot == qRoot)
+                    return;
+                
+                if (rank[pRoot] < rank[qRoot]) {
+                    parent[pRoot] = qRoot;
+                } else if (rank[qRoot] < rank[pRoot]) {
+                    parent[qRoot] = pRoot;
+                } else {
+                    parent[pRoot] = qRoot;
+                    rank[qRoot] += rank[pRoot];
+                }
+            }
     };
 }
