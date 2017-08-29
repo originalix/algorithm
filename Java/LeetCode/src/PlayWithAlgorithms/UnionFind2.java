@@ -20,7 +20,7 @@ public class UnionFind2 {
     public int find(int p) {
         assert (p >= 0 && p < count);
 
-        while (p != parent[p]) {
+        while (parent[p] != p) {
             p = parent[p];
         }
 
