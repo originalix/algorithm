@@ -32,5 +32,25 @@ namespace UF3 {
                 
                 return p;
             }
+
+            bool isConnected( int p, int q ) {
+                return find(p) == find(q);
+            }
+
+            void unionElements( int p, int q ) {
+                int pRoot = find(p);
+                int qRoot = find(q);
+
+                if (pRoot == qRoot)
+                    return;
+                
+                if (sz[pRoot] < sz[qRoot]) {
+                    parent[pRoot] = qRoot;
+                    sz[qRoot] += sz[pRoot];
+                } else {
+                    parent[qRoot] = pRoot;
+                    sz[pRoot] += sz[qRoot];
+                }
+            }
     };
 }
