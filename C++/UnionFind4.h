@@ -21,5 +21,12 @@ namespace UF4 {
                     rank[i] = 1;
                 }
             }
+
+            ~UnionFind() {
+                delete[] parent;
+                delete[] rank;
+            }
+
+            
     };
 }
