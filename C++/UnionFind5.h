@@ -22,5 +22,42 @@ namespace UF5 {
                     rank[i] = 1;
                 }
             }
+
+            ~UnionFind() {
+                delete[] rank;
+                delete[] parent;
+            }
+
+            int find( int p ) {
+                assert( p >= 0 && p < count );
+                while ( p != parent[p] ) {
+                    parent[p] = parent[ parent[p] ];
+                    p = parent[p];
+                }
+
+                return p;
+            }
+
+            bool isConnected( int p, int q ) {
+                return find(p) == find(q);
+            }
+
+            void unionElements( int p, int q ) {
+                int pRoot = find(p);
+                int qRoot = find(q);
+
+                if (pRoot == qRoot)
+                    return;
+                
+                if (rank[pRoot] < rank[qRoot]) {
+                    parent[pRoot] = qRoot;
+                } else if (rank[qRoot] < rank[pRoot]) {
+                    parent[qRoot] = pRoot;
+                } else {
+                    parent[pRoot] = qRoot;
+                    rank[qRoot] += 1;
+                }
+                
+            }
     };
 }
