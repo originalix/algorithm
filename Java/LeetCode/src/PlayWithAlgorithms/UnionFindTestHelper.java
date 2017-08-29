@@ -28,4 +28,28 @@ public class UnionFindTestHelper {
 
         System.out.println("UF1, " + 2*n + "ops, " + (endTime - startTime) + "ms");
     }
+
+    public static void testUF2(int n ) {
+        UnionFind2 uf = new UnionFind2(n);
+
+        long startTime = System.currentTimeMillis();
+
+        for (int i = 0; i < n; i++) {
+            int a = (int) (Math.random() * n);
+            int b = (int) (Math.random() * n);
+
+            uf.unionElements(a, b);
+        }
+
+        for (int i = 0; i < n; i++) {
+            int a = (int) (Math.random() * n);
+            int b = (int) (Math.random() * n);
+
+            uf.isConnected(a, b);
+        }
+
+        long endTime = System.currentTimeMillis();
+
+        System.out.println("UF2, " + 2*n + "ops, " + (endTime - startTime) + "ms");
+    }
 }
