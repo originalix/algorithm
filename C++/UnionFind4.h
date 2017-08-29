@@ -40,7 +40,7 @@ namespace UF4 {
                 return parent[p] == parent[q];
             }
 
-            void UnionElements( int p, int q ) {
+            void unionElements( int p, int q ) {
                 int pRoot = find(p);
                 int qRoot = find(q);
 
@@ -53,7 +53,7 @@ namespace UF4 {
                     parent[qRoot] = pRoot;
                 } else {
                     parent[pRoot] = qRoot;
-                    rank[qRoot] += rank[pRoot];
+                    rank[qRoot] += 1;
                 }
             }
     };
