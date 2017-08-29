@@ -61,9 +61,12 @@
       <file leaf-file-name="UnionFind3.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="911">
+              <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+              <folding>
+                <element signature="e#582#583#0" expanded="true" />
+                <element signature="e#623#624#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,6 +122,7 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind2.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFindTestHelper.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind3.java" />
       </list>
     </option>
   </component>
@@ -734,12 +738,12 @@
       <workItem from="1503714855624" duration="580000" />
       <workItem from="1503839417616" duration="198000" />
       <workItem from="1503888296184" duration="2466000" />
-      <workItem from="1503986711009" duration="941000" />
+      <workItem from="1503986711009" duration="1082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43521000" />
+    <option name="totallyTimeSpent" value="43662000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1182,9 +1186,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="911">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding>
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
