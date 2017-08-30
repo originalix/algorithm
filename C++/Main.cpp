@@ -22,9 +22,9 @@ int main() {
 
     for (int v = 0; v < N; v++) {
         cout << v << " : ";
-        SparseGraph::AdjIterator adj(g1, v);
+        SparseGraph::adjIterator adj(g1, v);
         for (int w = adj.begin(); !adj.end(); w = adj.next()) {
-            cout << w << " ";
+            cout << w << " "; 
         }
         cout << endl;
     }

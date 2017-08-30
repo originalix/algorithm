@@ -56,14 +56,14 @@ public:
         return false;
     }
 
-    class AdjIterator {
+    class adjIterator {
     private:
         SparseGraph &G;
         int v;
         int index;
     
     public:
-        AdjIterator(SparseGraph &graph, int v): G(graph) {
+        adjIterator(SparseGraph &graph, int v): G(graph) {
             this->v = v;
             this->index = 0;
         }

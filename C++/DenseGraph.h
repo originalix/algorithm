@@ -52,4 +52,29 @@ public:
 
         return g[v][w];
     }
+
+    class adjIterator {
+    private:
+        DenseGraph &G;
+        int v;
+        int index;
+
+    public:
+        adjIterator( DenseGraph &graph, int v ): G(graph) {
+            this->v = v;
+            this->index = 0;
+        }
+
+        int begin() {
+
+        }
+
+        int next() {
+
+        }
+
+        bool end() {
+            
+        }
+    };
 };
