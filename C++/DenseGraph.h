@@ -62,19 +62,25 @@ public:
     public:
         adjIterator( DenseGraph &graph, int v ): G(graph) {
             this->v = v;
-            this->index = 0;
+            this->index = -1;
         }
 
         int begin() {
-
+            index = -1;
+            return next();
         }
 
         int next() {
+            for (index += 1; index < G.V(); index++) {
+                if (G.g[v][index])
+                    return index;
+            }
 
+            return -1;
         }
 
         bool end() {
-            
+            return index >= G.V();
         }
     };
 };
