@@ -24,8 +24,8 @@ public class DenseGraph {
         g = new boolean[n][n];
     }
 
-    public int V() { return n }; // 返回图中节点数
-    public int E() { return m }; // 返回途中边数
+    public int V() { return n; } // 返回图中节点数
+    public int E() { return m; } // 返回途中边数
 
     // 向图中添加一个边
     public void addEdge(int v, int w) {
