@@ -67,5 +67,23 @@ public:
             this->v = v;
             this->index = 0;
         }
+
+        int begin() {
+            index = 0;
+            if ( G.g[v].size() )
+                return G.g[v][index];
+            return -1;
+        }
+
+        int next() {
+            index++;
+            if ( index < G.g[v].size() )
+                return G.g[v][index];
+            return -1;
+        }
+
+        int end() {
+            return index >= G.g[v].size();
+        }
     };
 };
