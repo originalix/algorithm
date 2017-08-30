@@ -21,4 +21,18 @@ public class DenseGraph {
 
     public int V() { return n };
     public int E() { return m };
+
+    public void addEdge(int v, int w) {
+       assert v >= 0 && v < n;
+       assert w >= 0 && w < n;
+
+       g[v][w] = true;
+
+       if (!directed) {
+           g[w][v] = true;
+       }
+
+       m++;
+    }
+    
 }
