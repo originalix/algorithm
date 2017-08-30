@@ -37,7 +37,7 @@ int main() {
     DenseGraph g2(N, false);
     for (int i = 0; i < M; i++) {
         int a = rand() % N;
-        int b = rand() % M;
+        int b = rand() % N;
 
         g2.addEdge(a, b);
     }

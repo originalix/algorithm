@@ -10,6 +10,8 @@
         "algorithm": "cpp",
         "bitset": "cpp",
         "chrono": "cpp",
-        "cassert": "cpp"
+        "cassert": "cpp",
+        "__split_buffer": "cpp",
+        "initializer_list": "cpp"
     }
 }
