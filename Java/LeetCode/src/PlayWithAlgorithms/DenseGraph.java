@@ -18,5 +18,7 @@ public class DenseGraph {
         this.directed = directed;
         g = new boolean[n][n];
     }
-    
+
+    public int V() { return n };
+    public int E() { return m };
 }
