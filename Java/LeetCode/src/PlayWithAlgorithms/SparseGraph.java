@@ -35,4 +35,17 @@ public class SparseGraph {
 
         m++;
     }
+
+    public boolean hasEdge(int v, int w) {
+        assert v >= 0 && v < n;
+        assert w >= 0 && w < n;
+
+        for (int i = 0; i < g[v].size(); i++) {
+            if (g[v].elementAt(i) == w) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
