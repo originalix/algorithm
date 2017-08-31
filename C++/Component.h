@@ -21,7 +21,7 @@ private:
                 dfs(i);
         }
     }
-    
+
 public:
     Component(Graph &graph): G(graph) {
 
@@ -46,5 +46,17 @@ public:
     ~Component() {
         delete[] visited;
         delete[] id;
+    }
+
+    int count() {
+        return ccount;
+    }
+
+    // 查询点v与点w是否联通
+    bool isConnected( int v, int w ) {
+        assert( v >= 0 && v < G.V() );
+        assert( w >= 0 && w < G.V() );
+
+        return id[v] == id[w];
     }
 };
