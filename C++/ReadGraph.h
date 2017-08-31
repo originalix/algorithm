@@ -23,7 +23,7 @@ public:
         stringstream ss(line);
         ss>>V>>E;
 
-        assert( V == graph() );
+        assert( V == graph.V() );
 
         // 读取每一条边的信息
         for (int i = 0; i < E; i++) {
