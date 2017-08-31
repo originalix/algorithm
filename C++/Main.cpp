@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     cout << "Hello wsx" << endl;
 
-    string filename = "textG1.txt";
+    string filename = "testG1.txt";
     SparseGraph g1(13, false);
     ReadGraph<SparseGraph> readGraph1( g1, filename );
     cout << "test G1 in Sparse Graph:" << endl;
