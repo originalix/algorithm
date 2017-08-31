@@ -14,6 +14,18 @@ private:
     bool* visited;
     int* from;
 
+    // 图的深度优先遍历
+    void dfs( int v ) {
+        visited[v] = true;
+
+        typename Graph::adjIterator adj(G, v);
+        for (int i = adj.begin(); !adj.end(); i = adj.next()) {
+            if (!visited[i]) {
+                from[i] = v;
+                dfs(i);
+            }
+        }
+    } 
 public:
     Path(Graph &graph, int s): G(graph) {
         assert( s >= 0 && s < G.V() );
