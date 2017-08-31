@@ -62,24 +62,36 @@ public:
         }
     }
 
+    // 领边迭代器，传入一个图和一个顶点
+    // 迭代在这个图和这个顶点向连的所有顶点
     class adjIterator {
     private:
-        DenseGraph &G;
+        DenseGraph &G;  // 图G的引用
         int v;
         int index;
 
     public:
+        // 构造函数
         adjIterator( DenseGraph &graph, int v ): G(graph) {
+            assert(v >= 0 && v < G.n);
             this->v = v;
-            this->index = -1;
+            this->index = -1; // 索引从-1开始，因为每次遍历都需要调用一次next()
         }
 
+        ~adjIterator() {}
+
+        // 返回图G中与顶点v相连接的第一个顶点
         int begin() {
+
+            // 索引从-1开始, 因为每次遍历都需要调用一次next()
             index = -1;
             return next();
         }
 
+        // 返回图G中与顶点v相连接的下一个顶点
         int next() {
+
+            // 从当前index开始向后搜索, 直到找到一个g[v][index]为true
             for (index += 1; index < G.V(); index++) {
                 if (G.g[v][index])
                     return index;
@@ -88,6 +100,7 @@ public:
             return -1;
         }
 
+        // 查看是否已经迭代完了图G中与顶点v相连接的所有顶点
         bool end() {
             return index >= G.V();
         }
