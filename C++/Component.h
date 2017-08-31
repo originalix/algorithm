@@ -11,6 +11,17 @@ private:
     int ccount;
     int* id;
 
+    // 图的深度优先遍历
+    void dfs( int v ) {
+        visited[v] = true;
+        id[v] = ccount;
+        typename Graph::adjIterator adj(G, v);
+        for (int i = adj.begin(); !adj.end(); i = adj.next()) {
+            if (!visited[i])
+                dfs(i);
+        }
+    }
+    
 public:
     Component(Graph &graph): G(graph) {
 
@@ -30,5 +41,10 @@ public:
                 ccount++;
             }
         }
+    }
+
+    ~Component() {
+        delete[] visited;
+        delete[] id;
     }
 };
