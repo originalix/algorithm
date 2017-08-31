@@ -29,6 +29,26 @@ int main() {
 
     cout << endl;
 
+    filename = "testG2.txt";
+    SparseGraph g3(7, false);
+    ReadGraph<SparseGraph> readGraph3( g3, filename );
+    Component<SparseGraph> component3(g3);
+    cout << "test G2 in Sparse Graph:" << endl;
+    cout<<"TestG2.txt, Component Count: "<<component3.count()<<endl;
+
+    g3.show();
+
+    cout << endl;
+
+    DenseGraph g4(7, false);
+    ReadGraph<DenseGraph> readGraph4( g4, filename );
+    Component<DenseGraph> component4(g4);
+    cout << "test G2 in Dense Graph:" << endl;
+    cout<<"TestG1.txt, Component Count: "<<component4.count()<<endl;
+    g2.show();
+
+    cout << endl;
+
     return 0;
 }
  
