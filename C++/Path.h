@@ -70,4 +70,18 @@ public:
             stack.pop();
         }
     }
+
+    void showPath( int w ) { 
+        assert( hasPath(w) );
+
+        vector<int> vec;
+        path(w, vec);
+        for (int i = 0; i < vec.size(); i++) {
+            cout << vec[i];
+            if (i == vec.size() - 1)
+                cout << endl;
+            else
+                cout << " -> ";
+        }
+    }
 };
