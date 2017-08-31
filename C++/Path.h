@@ -26,6 +26,7 @@ private:
             }
         }
     } 
+
 public:
     Path(Graph &graph, int s): G(graph) {
         assert( s >= 0 && s < G.V() );
@@ -46,5 +47,27 @@ public:
     ~Path() {
         delete[] visited;
         delete[] from;
+    }
+
+    bool hasPath( int w ) {
+        assert( w >= 0 && w < G.V() );
+        return visited[w];
+    }
+
+    void path( int w, vector<int> &vec ) {
+        assert( hasPath(w) );
+        stack<int> stack;
+
+        int p = w;
+        while (p != -1) {
+            stack.push(p);
+            p = from[p];
+        }
+
+        vec.clear();
+        while ( !stack.empty() ) {
+            vec.push_back( stack.top() );
+            stack.pop();
+        }
     }
 };
