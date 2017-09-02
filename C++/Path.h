@@ -5,14 +5,15 @@
 
 using namespace std;
 
+// 路径查询
 template<typename Graph>
 class Path {
 
 private:
-    Graph &G;
-    int s;
-    bool* visited;
-    int* from;
+    Graph &G; // 图的引用
+    int s;    // 起始点
+    bool* visited; // 记录dfs的过程中节点是否被访问
+    int* from; // 记录路径，from[i]表示查找的路径上i的上一个节点
 
     // 图的深度优先遍历
     void dfs( int v ) {
