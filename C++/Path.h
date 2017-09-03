@@ -29,7 +29,10 @@ private:
     } 
 
 public:
+    // 构造函数、寻路算法、寻找图graph从s点到其他点的路径
     Path(Graph &graph, int s): G(graph) {
+
+        // 算法初始化
         assert( s >= 0 && s < G.V() );
 
         visited = new bool[G.V()];
@@ -41,30 +44,36 @@ public:
         }
 
         this->s = s;
+
         // 寻路算法
         dfs(s);
     }
 
+    // 析构函数
     ~Path() {
         delete[] visited;
         delete[] from;
     }
 
+    // 查询从s点到w点是否有路径
     bool hasPath( int w ) {
         assert( w >= 0 && w < G.V() );
         return visited[w];
     }
 
+    // 查询s点到w点的路径，存放在vec中
     void path( int w, vector<int> &vec ) {
         assert( hasPath(w) );
-        stack<int> stack;
 
+        stack<int> stack;
+        // 通过from数组逆向查找到从s到w的路径，存放在栈中
         int p = w;
         while (p != -1) {
             stack.push(p);
             p = from[p];
         }
 
+        // 从栈中依次取出元素，获得顺序从s到w的路径
         vec.clear();
         while ( !stack.empty() ) {
             vec.push_back( stack.top() );
@@ -72,6 +81,7 @@ public:
         }
     }
 
+    // 打印从s点到w点的路径
     void showPath( int w ) { 
         assert( hasPath(w) );
 
