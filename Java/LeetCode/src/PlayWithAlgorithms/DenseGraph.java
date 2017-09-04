@@ -1,5 +1,7 @@
 package PlayWithAlgorithms;
 
+import java.util.Vector;
+
 /**
  * Created by Lix on 2017/8/30.
  */
@@ -51,5 +53,18 @@ public class DenseGraph {
         assert w >= 0 && w < n;
 
         return g[v][w];
+    }
+
+    // 返回图中一个顶点的所有领边
+    // 由于java使用引用机制，返回一个Vector不会带来额外开销
+    public Iterable<Integer> adj(int v) {
+        assert( v >= 0 && v < n );
+        Vector<Integer> adjV = new Vector<Integer>();
+        for (int i = 0; i < n; i++) {
+            if (g[v][i]) {
+                adjV.add(i);
+            }
+        }
+        return adjV;
     }
 }
