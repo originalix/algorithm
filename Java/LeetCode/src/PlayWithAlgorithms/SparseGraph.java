@@ -55,4 +55,9 @@ public class SparseGraph {
 
         return false;
     }
+
+    public Iterable<Integer> adj(int v) {
+        assert( v >= 0 && v < n );
+        return g[v];
+    }
 }
