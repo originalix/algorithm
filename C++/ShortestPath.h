@@ -91,5 +91,10 @@ public:
             else
                 cout << " -> ";
         }
-    } 
+    }
+
+    int length( int w ) {
+        assert ( w >= 0 && w < G.V() );
+        return ord[w];
+    }
 };
