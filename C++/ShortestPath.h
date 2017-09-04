@@ -50,4 +50,33 @@ public:
             }
         }
     }
+
+    ~ShortestPath() {
+        delete[] visited;
+        delete[] from;
+        delete[] ord;
+    }
+
+    bool hasPath( int w ) {
+        assert( w >= 0 && w < G.V() );
+        return visited[w];
+    }
+
+    void path( int w, vector<int> &vec ) {
+        assert ( w >= 0 && w < G.V() );
+
+        stack<int> s;
+
+        int p = w;
+        while ( p != -1 ) {
+            s.push(p);
+            p = from[p];
+        } 
+
+        vec.clear();
+        while ( !s.empty() ) {
+            vec.push_back( s.top() );
+            s.pop();
+        }
+    }
 };
