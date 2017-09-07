@@ -50,7 +50,7 @@ public class ReadGraph {
 
         try {
             File file = new File(filename);
-            if (file.exists()) {
+            if (file.getAbsoluteFile().exists()) {
                 FileInputStream fis = new FileInputStream(file);
                 scanner = new Scanner(new BufferedInputStream(fis), "UTF-8");
                 scanner.useLocale(Locale.ENGLISH);
