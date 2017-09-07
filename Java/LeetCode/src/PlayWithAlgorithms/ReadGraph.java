@@ -55,7 +55,7 @@ public class ReadGraph {
                 scanner = new Scanner(new BufferedInputStream(fis), "UTF-8");
                 scanner.useLocale(Locale.ENGLISH);
             } else {
-                throw new IllegalArgumentException(filename + "doesn't exist.");
+                throw new IllegalArgumentException(filename + " doesn't exist.");
             }
         } catch (IOException ioe) {
             throw new IllegalArgumentException("Could not open " + filename, ioe);
