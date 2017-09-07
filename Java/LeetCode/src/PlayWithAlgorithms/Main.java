@@ -8,53 +8,19 @@ import java.io.File;
 public class Main {
 
     public static void main(String[] args) {
-//        String filename = "testG1.txt";
-//        SparseGraph g1 = new SparseGraph(13, false);
-//        ReadGraph readGraph1 = new ReadGraph(g1, filename);
-//        System.out.println("test G1 in Sparse Graph");
-//        g1.show();
-//
-//        System.out.println();
-//
-//        DenseGraph g2 = new DenseGraph(13, false);
-//        ReadGraph readGraph2 = new ReadGraph(g2, filename);
-//        System.out.println("test G1 in Dense Graph");
-//        g2.show();
-//
-//        System.out.println();
+        String filename = "testG1.txt";
+        SparseGraph g1 = new SparseGraph(13, false);
+        ReadGraph readGraph1 = new ReadGraph(g1, filename);
+        System.out.println("test G1 in Sparse Graph");
+        g1.show();
 
-        File f = null;
-        boolean bool = false;
+        System.out.println();
 
-        try{
-            // create new files
-            f = new File("test.txt");
+        DenseGraph g2 = new DenseGraph(13, false);
+        ReadGraph readGraph2 = new ReadGraph(g2, filename);
+        System.out.println("test G1 in Dense Graph");
+        g2.show();
 
-            // create new file in the system
-            f.createNewFile();
-
-            // tests if file exists
-            bool = f.exists();
-
-            // prints
-            System.out.println("File exists: "+bool);
-
-            if(bool == true)
-            {
-                // delete() invoked
-//                f.delete();
-                System.out.println("delete() invoked");
-            }
-
-            // tests if file exists
-            bool = f.exists();
-
-            // prints
-            System.out.print("File exists: "+bool);
-
-        }catch(Exception e){
-            // if any error occurs
-            e.printStackTrace();
-        }
+        System.out.println();
     }
 }
