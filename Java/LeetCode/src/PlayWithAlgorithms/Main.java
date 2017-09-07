@@ -5,7 +5,6 @@ package PlayWithAlgorithms;
  */
 public class Main {
 
-    // 对比UF1, UF2, UF3, UF4和UF5的时间性能
     public static void main(String[] args) {
 
     }
