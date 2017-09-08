@@ -27,4 +27,14 @@ public class Components {
             }
         }
     }
+
+    private void dfs(int v) {
+        visited[v] = true;
+        id[v] = ccount;
+        for (int i: G.adj(v)) {
+            if (!visited[i]) {
+                dfs(i);
+            }
+        }
+    }
 }
