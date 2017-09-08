@@ -28,8 +28,8 @@
       <file leaf-file-name="Components.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Components.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -84,6 +84,7 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/SparseGraph.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/ReadGraph.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Components.java" />
       </list>
     </option>
   </component>
@@ -707,12 +708,12 @@
       <workItem from="1504562048087" duration="40000" />
       <workItem from="1504766688267" duration="2365000" />
       <workItem from="1504826721978" duration="2100000" />
-      <workItem from="1504848537532" duration="606000" />
+      <workItem from="1504848537532" duration="697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53038000" />
+    <option name="totallyTimeSpent" value="53129000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1142,8 +1143,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Components.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
           <folding />
         </state>
       </provider>
