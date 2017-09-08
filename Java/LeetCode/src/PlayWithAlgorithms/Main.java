@@ -22,5 +22,20 @@ public class Main {
         g2.show();
 
         System.out.println();
+
+        filename = "testG2.txt";
+        SparseGraph g3 = new SparseGraph(7, false);
+        ReadGraph readGraph3 = new ReadGraph(g3, filename);
+        System.out.println("test G2 in Sparse Graph");
+        g3.show();
+
+        System.out.println();
+
+        DenseGraph g4 = new DenseGraph(7, false);
+        ReadGraph readGraph4 = new ReadGraph(g4, filename);
+        System.out.println("test G2 in Dense Graph");
+        g4.show();
+
+        System.out.println();
     }
 }
