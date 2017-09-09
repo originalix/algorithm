@@ -1,5 +1,8 @@
 package PlayWithAlgorithms;
 
+import java.util.Stack;
+import java.util.Vector;
+
 /**
  * Created by Lix on 2017/9/9.
  */
@@ -36,5 +39,28 @@ public class Path {
                 dfs(i);
             }
         }
+    }
+
+    public boolean hasPath(int w) {
+        assert w >= 0 && w < G.V();
+        return visited[w];
+    }
+
+    Vector<Integer> Path(int w) {
+        assert(hasPath(w));
+
+        Stack<Integer> stack = new Stack<Integer>();
+        int p = w;
+        while (p != -1) {
+            stack.push(p);
+            p = from[p];
+        }
+
+        Vector<Integer> vec = new Vector<Integer>();
+        while (!stack.isEmpty()) {
+            vec.add(stack.pop());
+        }
+
+        return vec;
     }
 }

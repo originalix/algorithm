@@ -41,9 +41,13 @@
       <file leaf-file-name="Path.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Path.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="545">
+              <caret line="63" column="8" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1047#1056#0" expanded="true" />
+                <element signature="e#1208#1217#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -733,12 +737,12 @@
       <workItem from="1504766688267" duration="2365000" />
       <workItem from="1504826721978" duration="2100000" />
       <workItem from="1504848537532" duration="1114000" />
-      <workItem from="1504960269192" duration="1689000" />
+      <workItem from="1504960269192" duration="2142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55235000" />
+    <option name="totallyTimeSpent" value="55688000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1170,9 +1174,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Path.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="545">
+          <caret line="63" column="8" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1047#1056#0" expanded="true" />
+            <element signature="e#1208#1217#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
