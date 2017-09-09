@@ -3,12 +3,14 @@ package PlayWithAlgorithms;
 /**
  * Created by Lix on 2017/9/8.
  */
+
+// 求无权图的联通分量
 public class Components {
 
-    private Graph G;
-    private boolean[] visited;
-    private int ccount;
-    private int[] id;
+    private Graph G;  // 图的引用
+    private boolean[] visited; // 记录dfs的过程中节点是否被访问
+    private int ccount;  // 记录联通分量个数
+    private int[] id;  // 每个节点所对应的联通分量的标记
 
     public Components(Graph graph) {
         this.G = graph;
