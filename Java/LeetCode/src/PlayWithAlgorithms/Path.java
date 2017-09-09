@@ -50,12 +50,13 @@ public class Path {
         }
     }
 
-
+    // 查询从s点到w点是否存在路径
     public boolean hasPath(int w) {
         assert w >= 0 && w < G.V();
         return visited[w];
     }
 
+    // 查询点s到点w的路径，存放在vec中
     public Vector<Integer> path(int w) {
         assert(hasPath(w));
 
@@ -74,6 +75,7 @@ public class Path {
         return vec;
     }
 
+    // 打印出从点s到点w的路径
     public void showPath(int w) {
         assert (hasPath(w));
 
