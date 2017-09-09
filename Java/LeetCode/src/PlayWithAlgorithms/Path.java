@@ -13,6 +13,11 @@ public class Path {
     private boolean[] visited;  // 记录dfs的过程中节点是否被访问
     private int[] from;  // 记录路径，from[i]表示查找的路径上i的上一个节点
 
+    /**
+     * 构造函数，寻路算法，寻找图graph从点s到其他点的路径
+     * @param graph graph
+     * @param s 寻路起始点s
+     */
     public Path(Graph graph, int s) {
         assert s >= 0 && s < graph.V();
 
@@ -30,6 +35,10 @@ public class Path {
         dfs(s);
     }
 
+    /**
+     * 深度优先遍历
+     * @param v 从v点开始深度优先遍历
+     */
     private void dfs(int v) {
         visited[v] = true;
 
@@ -40,6 +49,7 @@ public class Path {
             }
         }
     }
+
 
     public boolean hasPath(int w) {
         assert w >= 0 && w < G.V();
