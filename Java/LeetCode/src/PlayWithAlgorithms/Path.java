@@ -46,7 +46,7 @@ public class Path {
         return visited[w];
     }
 
-    Vector<Integer> Path(int w) {
+    public Vector<Integer> path(int w) {
         assert(hasPath(w));
 
         Stack<Integer> stack = new Stack<Integer>();
@@ -62,5 +62,19 @@ public class Path {
         }
 
         return vec;
+    }
+
+    public void showPath(int w) {
+        assert (hasPath(w));
+
+        Vector<Integer> vec = path(w);
+        for (int i = 0; i < vec.size(); i++) {
+            System.out.print(vec.elementAt(i));
+            if (i == vec.size() - 1) {
+                System.out.println();
+            } else {
+                System.out.print(" -> ");
+            }
+        }
     }
 }
