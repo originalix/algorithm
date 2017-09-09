@@ -25,7 +25,5 @@ public class Main {
         g2.show();
 
         System.out.println();
-
-
     }
 }
