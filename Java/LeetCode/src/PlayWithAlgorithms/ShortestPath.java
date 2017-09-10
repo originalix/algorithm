@@ -1,5 +1,8 @@
 package PlayWithAlgorithms;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Created by Lix on 2017/9/10.
  */
@@ -10,4 +13,37 @@ public class ShortestPath {
     private boolean[] visited;
     private int[] from;
     private int[] ord;
+
+    public ShortestPath(Graph graph, int s) {
+        assert s >= 0 && s < graph.V();
+        this.G = graph;
+        this.s = s;
+
+        visited = new boolean[G.V()];
+        from = new int[G.V()];
+        ord = new int[G.V()];
+
+        for (int i = 0; i < G.V(); i++) {
+            visited[i] = false;
+            from[i] = -1;
+            ord[i] = -1;
+        }
+
+        LinkedList<Integer> q = new LinkedList<Integer>();
+
+        q.push( s );
+        visited[s] = true;
+        ord[s] = 0;
+        while (!q.isEmpty()) {
+            int v = q.pop();
+            for (int i : G.adj(v)) {
+                if (!visited[i]) {
+                    q.push(i);
+                    visited[i] = true;
+                    from[i] = v;
+                    ord[i] = ord[v] + 1;
+                }
+            }
+        }
+    }
 }

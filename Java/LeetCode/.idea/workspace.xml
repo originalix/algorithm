@@ -53,9 +53,12 @@
       <file leaf-file-name="ShortestPath.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/ShortestPath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="760">
+              <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#684#693#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,6 +124,7 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Components.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Path.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/ShortestPath.java" />
       </list>
     </option>
   </component>
@@ -746,12 +750,12 @@
       <workItem from="1504826721978" duration="2100000" />
       <workItem from="1504848537532" duration="1114000" />
       <workItem from="1504960269192" duration="3472000" />
-      <workItem from="1505046856954" duration="222000" />
+      <workItem from="1505046856954" duration="1041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57240000" />
+    <option name="totallyTimeSpent" value="58059000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1186,9 +1190,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/ShortestPath.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="760">
+          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#684#693#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
