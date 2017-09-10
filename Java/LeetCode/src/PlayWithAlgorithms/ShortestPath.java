@@ -2,6 +2,8 @@ package PlayWithAlgorithms;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
+import java.util.Vector;
 
 /**
  * Created by Lix on 2017/9/10.
@@ -45,5 +47,27 @@ public class ShortestPath {
                 }
             }
         }
+    }
+
+    public boolean hasPath(int w) {
+        assert w >= 0 && w < G.V();
+        return visited[w];
+    }
+
+    public Vector<Integer> path(int w) {
+        assert w >= 0 && w < G.V();
+        Stack<Integer> s = new Stack<Integer>();
+
+        int p = w;
+        while (p != -1) {
+            s.push(p);
+            p = from[p];
+        }
+
+        Vector<Integer> vec = new Vector<Integer>();
+        while (!s.isEmpty()) {
+            vec.add(s.pop());
+        }
+        return vec;
     }
 }

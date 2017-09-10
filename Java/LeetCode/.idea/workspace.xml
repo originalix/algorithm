@@ -41,10 +41,12 @@
       <file leaf-file-name="Path.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Path.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
+            <state relative-caret-position="-494">
               <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1261#1270#0" expanded="true" />
+                <element signature="e#1422#1431#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,11 +55,11 @@
       <file leaf-file-name="ShortestPath.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/ShortestPath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+            <state relative-caret-position="869">
+              <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#684#693#0" expanded="true" />
+                <element signature="e#709#718#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -750,12 +752,12 @@
       <workItem from="1504826721978" duration="2100000" />
       <workItem from="1504848537532" duration="1114000" />
       <workItem from="1504960269192" duration="3472000" />
-      <workItem from="1505046856954" duration="1041000" />
+      <workItem from="1505046856954" duration="1767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58059000" />
+    <option name="totallyTimeSpent" value="58785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1180,21 +1182,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Path.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
+        <state relative-caret-position="-494">
           <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1261#1270#0" expanded="true" />
+            <element signature="e#1422#1431#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/ShortestPath.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        <state relative-caret-position="869">
+          <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#684#693#0" expanded="true" />
+            <element signature="e#709#718#0" expanded="true" />
           </folding>
         </state>
       </provider>
