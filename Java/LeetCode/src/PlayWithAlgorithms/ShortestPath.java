@@ -70,4 +70,17 @@ public class ShortestPath {
         }
         return vec;
     }
+
+    public void showPath(int w) {
+        assert w >= 0 && w < G.V();
+        Vector<Integer> vec = path(w);
+        for (int i = 0; i < vec.size(); i++) {
+            System.out.print(vec.elementAt(i));
+            if (i == vec.size() - 1) {
+                System.out.println();
+            } else {
+                System.out.print(" -> ");
+            }
+        }
+    }
 }
