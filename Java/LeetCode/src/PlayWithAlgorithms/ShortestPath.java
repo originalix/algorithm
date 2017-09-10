@@ -83,4 +83,9 @@ public class ShortestPath {
             }
         }
     }
+
+    public int length(int w) {
+        assert w >= 0 && w < G.V();
+        return ord[w];
+    }
 }

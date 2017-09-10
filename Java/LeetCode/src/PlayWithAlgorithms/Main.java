@@ -17,8 +17,12 @@ public class Main {
 
         System.out.println();
 
-        Path path = new Path(g1, 0);
-        System.out.println("Path from 0 to 6 : ");
-        path.showPath(6);
+        Path dfs = new Path(g1, 0);
+        System.out.println("DFS Path from 0 to 6 : ");
+        dfs.showPath(6);
+
+        ShortestPath bfs = new ShortestPath(g1, 0);
+        System.out.println("BFS Path from 0 to 6 : ");
+        bfs.showPath(6);
     }
 }
