@@ -81,21 +81,21 @@ public:
             this->index = 0;
         }
 
-        int begin() {
+        Edge<Weight>* begin() {
             index = 0;
             if ( G.g[v].size() )
                 return G.g[v][index];
-            return -1;
+            return NULL;
         }
 
-        int next() {
-            index++;
+        Edge<Weight>* next() {
+            index += 1;
             if ( index < G.g[v].size() )
                 return G.g[v][index];
-            return -1;
+            return NULL;
         }
 
-        int end() {
+        Edge<Weight>* end() {
             return index >= G.g[v].size();
         }
     };

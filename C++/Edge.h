@@ -1,3 +1,6 @@
+#ifndef INC_01_WEIGHTED_GRAPH_EDGE_H
+#define INC_01_WEIGHTED_GRAPH_EDGE_H
+
 #include <iostream>
 #include <cassert>
 
@@ -54,3 +57,5 @@ public:
         return weight == e.wt();
     }
 };
+
+#endif //INC_01_WEIGHTED_GRAPH_EDGE_H
