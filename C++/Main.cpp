@@ -1,10 +1,8 @@
 #include <iostream>
-#include <iomainip>
+#include <iomanip>
 #include "SparseGraph.h"
 #include "DenseGraph.h"
 #include "ReadGraph.h"
-#include "Path.h"
-#include "ShortestPath.h"
 
 using namespace std;
 
@@ -13,7 +11,9 @@ int main() {
     cout << "Hello wsx" << endl;
     
     string filename = "testG3.txt";
+
     int V = 8;
+
     cout << fixed << setprecision(2);
 
     DenseGraph<double> g1 = DenseGraph<double>(V, false);
