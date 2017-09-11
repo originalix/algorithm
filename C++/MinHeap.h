@@ -45,14 +45,17 @@ public:
         delete[] data;
     }
 
+    // 返回堆中的元素个数
     int size() {
         return count;
     }
 
+    // 返回一个布尔值，表示堆中是否为空
     bool isEmpty() {
         return count == 0;
     }
 
+    // 向最小堆中插入一个新的元素
     void insert(Item item) {
         assert (count + 1 <= capacity);
         data[count+1] = item;
@@ -60,6 +63,7 @@ public:
         count++;
     }
 
+    // 从最小堆中取出堆顶元素，即堆中所存储的最小数据
     Item extractMin() {
         assert( count > 0 );
         Item ret = data[1];
@@ -67,6 +71,12 @@ public:
         count--;
         shiftDown(1);
         return ret;
+    }
+
+    // 获取最小堆的堆顶元素
+    Item getMin() {
+        assert( count > 0 );
+        return data[1];
     }
 };
 
