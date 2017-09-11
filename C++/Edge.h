@@ -1,5 +1,5 @@
-#ifndef INC_01_WEIGHTED_GRAPH_EDGE_H
-#define INC_01_WEIGHTED_GRAPH_EDGE_H
+#ifndef EDGE_H
+#define EDGE_H
 
 #include <iostream>
 #include <cassert>
@@ -58,4 +58,4 @@ public:
     }
 };
 
-#endif //INC_01_WEIGHTED_GRAPH_EDGE_H
+#endif //EDGE_H
