@@ -1,15 +1,17 @@
 #include <iostream>
 #include <cassert>
 #include <vector>
+#include "Edge.h"
 
 using namespace std;
 
 // 稠密图 — 邻接矩阵
+template <typename Weight>
 class DenseGraph {
 private:
     int n, m;  // 节点数和边数
     bool directed; // 是否为有向图
-    vector< vector<bool> > g;  // 图的具体数据
+    vector< vector <Edge<Weight> *> > g;  // 图的具体数据
 
 public:
     // 构造函数
@@ -17,15 +19,16 @@ public:
         this->n = n;
         this->m = 0; // 初始化没有任何边
         this->directed = directed;
-
-        for (int i = 0; i < n; i++) {
-            // g初始化为n*n的布尔矩阵，每一个g[i][j]均为false,表示没有任何边
-            g.push_back( vector<bool>(n, false) );
-        }
+        // g初始化为n*n的矩阵, 每一个g[i][j]指向一个边的信息, 初始化为NULL
+        g = vector< vector<Edge<Weight> *> >(n, vector<Edge<Weight> *>(n, NULL));
     }
 
     ~DenseGraph() {
-
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++)
+                if (g[i][j] != NULL)
+                    delete g[i][j];
+        }
     }
 
     int V() { return n; } // 返回节点个数
