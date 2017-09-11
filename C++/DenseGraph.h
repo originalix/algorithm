@@ -57,14 +57,17 @@ public:
         assert( v >= 0 && v < n );
         assert( w >= 0 && w < n );
 
-        return g[v][w];
+        return g[v][w] != NULL;
     }
 
     // 显示图的信息
     void show() {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++)
-                cout << g[i][j] << "\t";
+                if ( g[i][j] )
+                    cout << g[i][j]->wt() << "\t";
+                else
+                    cout << "NULL\t";    
             cout << endl;
         }
     }
