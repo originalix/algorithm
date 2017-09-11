@@ -91,7 +91,7 @@ public:
         ~adjIterator() {}
 
         // 返回图G中与顶点v相连接的第一个顶点
-        int begin() {
+        Edge<Weight>* begin() {
 
             // 索引从-1开始, 因为每次遍历都需要调用一次next()
             index = -1;
@@ -99,15 +99,15 @@ public:
         }
 
         // 返回图G中与顶点v相连接的下一个顶点
-        int next() {
+        Edge<Weight>* next() {
 
             // 从当前index开始向后搜索, 直到找到一个g[v][index]为true
             for (index += 1; index < G.V(); index++) {
                 if (G.g[v][index])
-                    return index;
+                    return G.g[v][index];
             }
 
-            return -1;
+            return NULL;
         }
 
         // 查看是否已经迭代完了图G中与顶点v相连接的所有顶点
