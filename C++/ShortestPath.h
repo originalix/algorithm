@@ -19,7 +19,7 @@ private:
 
 public:
     // 构造函数，寻找无权图graph从s点到其他点的最短路径
-    ShortestPath( Graph &graph, int s ): G(graph) {
+    ShortestP7ath( Graph &graph, int s ): G(graph) {
 
         // 算法初始化
         assert ( s >= 0 && s < graph.V() );
