@@ -44,6 +44,30 @@ public:
     ~MinHeap() {
         delete[] data;
     }
+
+    int size() {
+        return count;
+    }
+
+    bool isEmpty() {
+        return count == 0;
+    }
+
+    void insert(Item item) {
+        assert (count + 1 <= capacity);
+        data[count+1] = item;
+        shiftUp(count+1);
+        count++;
+    }
+
+    Item extractMin() {
+        assert( count > 0 );
+        Item ret = data[1];
+        swap( data[1], data[count] );
+        count--;
+        shiftDown(1);
+        return ret;
+    }
 };
 
 #endif
