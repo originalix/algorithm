@@ -15,4 +15,12 @@ public:
         this->b = b;
         this->weight = weight;
     }
+
+    Edge() {}
+
+    ~Edge() {}
+
+    int v() { return a; }
+    int w() { return b; }
+    Weight wt() { return weight; }
 };
