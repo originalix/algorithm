@@ -23,4 +23,13 @@ public:
     int v() { return a; }
     int w() { return b; }
     Weight wt() { return weight; }
+
+    int other( int x ) {
+        assert( x == a || x == b);
+        return x == a ? b : a;
+    }
+
+    friend ostream& operator<<(ostream &os, const Edge &e) {
+        os << e.a << "-" << e.b << ": " << e.weight;
+    }
 };
