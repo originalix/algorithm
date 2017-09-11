@@ -35,16 +35,20 @@ public:
     int E() { return m; } // 返回边的个数
 
     // 向图中添加一个边
-    void addEdge( int v, int w ) {
+    void addEdge( int v, int w, Weight weight ) {
         assert( v >= 0 && v < n);
         assert( w >= 0 && w < n);
 
-        if ( hasEdge(v, w) )
-            return;
+        if ( hasEdge(v, w) ) {
+            delete g[v][w];
+            if (v != w && !directed)
+                delete g[w][v];
+            m--;
+        }
         
-        g[v][w] = true;
-        if (!directed)
-            g[w][v] = true;
+        g[v][w] = new Edge<Weight>(v, w, weight);
+        if (v != w && !directed)
+            g[w][v] = new Edge<Weight>(w, v, weight);
         m++;
     }
 
