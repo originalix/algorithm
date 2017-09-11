@@ -40,6 +40,22 @@ public:
         count = 0;
         this->capacity = capacity;
     }
+    
+    // 构造函数, 通过一个给定数组创建一个最小堆
+    // 该构造堆的过程, 时间复杂度为O(n)
+    MinHeap(Item arr[], int n) {
+        data = new Item[n + 1];
+        capacity = n;
+
+        for (int i = 0; i < n; i++) {
+            data[i+1] = arr[i];
+        }
+        count = n;
+
+        for (int i = count / 2; i >= 1; i--) {
+            shiftDown(i);
+        }
+    }
 
     ~MinHeap() {
         delete[] data;
