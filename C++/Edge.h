@@ -31,5 +31,26 @@ public:
 
     friend ostream& operator<<(ostream &os, const Edge &e) {
         os << e.a << "-" << e.b << ": " << e.weight;
+        return os;
+    }
+
+    bool operator<(Edge<Weight>& e) {
+        return weight < e.wt();
+    }
+
+    bool operator<=(Edge<Weight>& e) {
+        return weight <= e.wt();
+    }
+
+    bool operator>(Edge<Weight>& e) {
+        return weight > e.wt();
+    }
+
+    bool operator>=(Edge<Weight>& e) {
+        return weight >= e.wt();
+    }
+
+    bool operator==(Edge<Weight>& e) {
+        return weight == e.wt();
     }
 };
