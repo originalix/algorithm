@@ -12,21 +12,14 @@ int main() {
     
     cout << "Hello wsx" << endl;
     
-    string filename = "testG2.txt";
-    SparseGraph g = SparseGraph(7, false);
-    ReadGraph<SparseGraph> readGraph(g, filename);
-    g.show();
+    string filename = "testG3.txt";
+    int V = 8;
+    cout << fixed << setprecision(2);
+
+    DenseGraph<double> g1 = DenseGraph<double>(V, false);
+    ReadGraph<DenseGraph<double>, double> readGraph1(g1, filename);
+    g1.show();
     cout << endl;
-
-    // 比较使用深度优先遍历和广度优先遍历获得路径的不同
-    // 广度优先遍历获得的是无权图的最短路径
-    Path<SparseGraph> dfs(g, 0);
-    cout << "DFS : " << endl;
-    dfs.showPath(6);
-
-    ShortestPath<SparseGraph> bfs(g, 0);
-    cout << "BFS : ";
-    bfs.showPath(6);    
     
     return 0;
 }
