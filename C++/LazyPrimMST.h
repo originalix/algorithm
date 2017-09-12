@@ -25,4 +25,32 @@ private:
                 pq.insert(*e);
         }
     }
+
+public:
+    LazyPrimMST(Graph &graph):G(graph), pq(MinHeap< Edge<Weight> >(graph.E())) {
+        marked = new bool[G.V()];
+        for (int i = 0; i < G.V(); i++) {
+            marked[i] = false;
+        }
+        mst.clear();
+
+        visit(0);
+
+        while( !pq.isEmpty() ) {
+            Edge<Weight> e = pq.extractMin();
+            if ( marked[e.v()] == marked[e.w()] )
+                continue;
+            mst.push_back( e );
+
+            if ( !marked[e.v()] )
+                visit( e.v() );
+            else
+                visit( e.w() );
+        }
+
+        mstWeight = mst[0].wt();
+        for (int i = 1; i < mst.size(); i++) {
+            mstWeight += mst[i].wt();
+        }
+    }
 };
