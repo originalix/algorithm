@@ -22,14 +22,14 @@ int main() {
     g.show();
     cout << endl;
 
-    // cout << "Test Lazy Prim MST:" << endl;
-    // LazyPrimMST<SparseGraph<double>, double> lazyPrimMST(g);
-    // vector< Edge<double> > mst = lazyPrimMST.mstEdges();
-    // for (int i = 0; i < mst.size(); i++) {
-    //     cout << mst[i] << endl;
-    // }
-    // cout << "The MST weight is : " << lazyPrimMST.result() << endl;
-    // cout << endl;
+    cout << "Test Lazy Prim MST:" << endl;
+    LazyPrimMST<SparseGraph<double>, double> lazyPrimMST(g);
+    vector< Edge<double> > mst = lazyPrimMST.mstEdges();
+    for (int i = 0; i < mst.size(); i++) {
+        cout << mst[i] << endl;
+    }
+    cout << "The MST weight is : " << lazyPrimMST.result() << endl;
+    cout << endl;
 
     return 0;
 }

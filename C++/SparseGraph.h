@@ -95,7 +95,7 @@ public:
             return NULL;
         }
 
-        Edge<Weight>* end() {
+        bool end() {
             return index >= G.g[v].size();
         }
     };
