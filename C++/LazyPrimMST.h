@@ -53,4 +53,16 @@ public:
             mstWeight += mst[i].wt();
         }
     }
+
+    ~LazyPrimMST() {
+        delete[] marked;
+    }
+
+    vector< Edge<Weight> > mstEdges() {
+        return mst;
+    }
+
+    Weight result() {
+        return mstWeight;
+    }
 };
