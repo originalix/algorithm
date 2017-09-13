@@ -69,6 +69,8 @@ public:
         return count == 0;
     }
 
+    // 向最小索引堆中插入一个新的元素, 新元素的索引为i, 元素为item
+    // 传入的i对用户而言,是从0索引的
     void insert( int index, Item item ) {
         assert( count + 1 <= capacity );
         assert( index + 1 >= 1 && index + 1 <= capacity);
@@ -81,8 +83,59 @@ public:
         shiftUp(count);
     }
 
+    // 从最小索引堆中取出堆顶元素, 即索引堆中所存储的最小数据
     Item extracMin() {
         assert (count > 0);
         Item ret = data[ indexes[1] ];
+        swap( indexes[1], indexes[count] );
+        reverse[ indexes[cout] ] = 0;
+        reverse[ indexes[1] ] = 1;
+        count--;
+        shiftDown(1);
+        return ret;
+    }
+
+    // 从最小索引堆中取出堆顶元素的索引
+    int extractMinIndex() {
+        assert (count > 0 );
+        int ret = indexes[1] - 1;
+        swap( indexes[1], indexes[count] );
+        reverse[ indexes[count] ] = 0;
+        reverse[ indexes[1] ] = 1;
+        count--;
+        shiftDown(1);
+        return ret;
+    }
+
+    // 获取最小索引堆中的堆顶元素
+    Item getMin() {
+        assert (count > 0);
+        return data[ indexes[1] ];
+    }
+
+    // 获取最小索引堆中的堆顶元素的索引
+    int getMinIndex() {
+        assert ( cout > 0 );
+        return indexes[1] - 1;
+    }
+
+    // 看索引i所在的位置是否存在元素
+    bool contain( int index ) {
+        return reverse[index+1] != 0;
+    }
+
+    // 获取最小索引堆中索引为i的元素
+    Item getItem( int index ) {
+        assert( contain(index) );
+        return data[ index+1 ];
+    }
+
+    // 将最小索引堆中索引为i的元素修改为newItem
+    void change( int index, Item newItem ) {
+        assert( contain(index) );
+        index += 1;
+        data[index] = newItem;
+        shiftUp( reverse[index] );
+        shiftDown( reverse[index] );
     }
 };
