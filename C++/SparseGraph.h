@@ -35,11 +35,13 @@ public:
     int V() { return n; } // 返回节点的个数
     int E() { return m; } // 返回边的个数
 
-    // 向图中添加一个边
+    // 向图中添加一个边,权值为weight
     void addEdge( int v, int w, Weight weight ) {
         assert(v >= 0 && v < n);
         assert(w >= 0 && w < n);
 
+        // 注意，由于在邻接表的情况，查找是否有重边需要遍历整个链表
+        // 我们的程序允许重边的出现  
         g[v].push_back(new Edge<Weight>(v, w, weight));
         if ( v != w && !directed)
             g[w].push_back(new Edge<Weight>(w, v, weight));
@@ -69,6 +71,8 @@ public:
         }
     }
 
+    // 邻边迭代器, 传入一个图和一个顶点,
+    // 迭代在这个图中和这个顶点向连的所有边
     class adjIterator {
     private:
         SparseGraph &G;

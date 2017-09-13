@@ -65,14 +65,17 @@ public:
         }
     }
 
+    // 析构函数
     ~LazyPrimMST() {
         delete[] marked;
     }
 
+    // 返回最小生成树的所有边
     vector< Edge<Weight> > mstEdges() {
         return mst;
     }
 
+    // 返回最小生成树的权值
     Weight result() {
         return mstWeight;
     }
