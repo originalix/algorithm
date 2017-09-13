@@ -14,6 +14,7 @@ private:
     int count;     // 最小索引堆当前元素个数
     int capacity;  // 最小索引堆的空间大小
 
+    // 索引堆中, 数据之间的比较根据data的大小进行比较, 但实际操作的是索引
     void shiftUp( int k ) {
         while ( k > 1 && data[indexes[k/2]] > data[indexes[k]]) {
             swap( indexes[k/2], indexes[k]);
@@ -23,6 +24,7 @@ private:
         }
     }
 
+    // 索引堆中, 数据之间的比较根据data的大小进行比较, 但实际操作的是索引
     void shiftDown( int k ) {
         while ( 2*k <= count ) {
             int j = 2*k;
@@ -39,5 +41,31 @@ private:
         }
     }
 
+public:
+    IndexMinHeap( int capacity ) {
+        data = new Item[capacity + 1];
+        indexes = new int[capacity + 1];
+        reverse = new int[capacity + 1];
 
+        for (int i = 0; i <= capacity; i++) {
+            reverse[i] = 0;
+        }
+
+        count = 0;
+        this->capacity = capacity;
+    }
+
+    ~IndexMinHeap() {
+        delete[] data;
+        delete[] indexes;
+        delete[] reverse;
+    }
+
+    int size() {
+        return count;
+    }
+
+    bool isEmpty() {
+        return count == 0;
+    }
 };
