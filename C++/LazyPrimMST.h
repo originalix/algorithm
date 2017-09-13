@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// 使用Prim算法求图的最小生成树
 template <typename Graph, typename Weight>
 class LazyPrimMST {
 private:
@@ -15,6 +16,7 @@ private:
     vector< Edge<Weight> > mst;  // 最小生成树所包含的所有边 
     Weight mstWeight;            // 最小生成树的权值
 
+    // 访问节点v
     void visit( int v ) {
         assert( !marked[v] );
         marked[v] = true;
@@ -27,27 +29,36 @@ private:
     }
 
 public:
+    // 构造函数，使用Prim算法求图的最小生成树
     LazyPrimMST(Graph &graph):G(graph), pq(MinHeap< Edge<Weight> >(graph.E())) {
+
+        // 算法初始化
         marked = new bool[G.V()];
         for (int i = 0; i < G.V(); i++) {
             marked[i] = false;
         }
         mst.clear();
 
+        // Lazy Prim
         visit(0);
 
         while( !pq.isEmpty() ) {
+            // 使用最小堆找出已经访问的边中权值最小的边
             Edge<Weight> e = pq.extractMin();
+            // 如果这条边的两端都已经访问过了，则扔掉这条边
             if ( marked[e.v()] == marked[e.w()] )
                 continue;
+            // 否则，这条边则应该存在最小生成树中
             mst.push_back( e );
 
+            // 访问这条边连接的还没有被访问过的节点
             if ( !marked[e.v()] )
                 visit( e.v() );
             else
                 visit( e.w() );
         }
 
+        // 计算最小生成树的权值
         mstWeight = mst[0].wt();
         for (int i = 1; i < mst.size(); i++) {
             mstWeight += mst[i].wt();
