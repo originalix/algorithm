@@ -68,4 +68,21 @@ public:
     bool isEmpty() {
         return count == 0;
     }
+
+    void insert( int index, Item item ) {
+        assert( count + 1 <= capacity );
+        assert( index + 1 >= 1 && index + 1 <= capacity);
+
+        index += 1;
+        data[index] = item;
+        indexes[ count + 1] = index;
+        reverse[ index ] = count + 1;
+        count++;
+        shiftUp(count);
+    }
+
+    Item extracMin() {
+        assert (count > 0);
+        Item ret = data[ indexes[1] ];
+    }
 };
