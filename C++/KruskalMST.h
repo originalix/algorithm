@@ -37,4 +37,14 @@ public:
             mstWeight += mst[i].wt();
         }
     }
+
+    ~KruskalMST() {}
+
+    vector< Edge<Weight> > mstEdges() {
+        return mst;
+    }
+
+    Weight result() {
+        return mstWeight;
+    }
 };
