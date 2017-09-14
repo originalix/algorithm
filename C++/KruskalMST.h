@@ -8,5 +8,12 @@ using namespace std;
 
 template <typename Graph, typename Weight>
 class KruskalMST {
+private:
+    vector< Edge<Weight> > mst;
+    Weight mstWeight;
 
+public:
+    KruskalMST(Graph &graph) {
+        
+    }
 };
