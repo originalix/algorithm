@@ -44,5 +44,30 @@ int main() {
 
     cout << endl;
 
+    clock_t startTime, endTime;
+
+    cout << "Test Lazy Prim MST: " << endl;
+
+    startTime = clock();
+    LazyPrimMST<SparseGraph<double>, double> lazyPrimMST(g1);
+    endTime = clock();
+    cout<<"Test for G1: "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<" s."<<endl;
+
+    startTime = clock();
+    LazyPrimMST<SparseGraph<double>, double> lazyPrimMST2(g2);
+    endTime = clock();
+    cout<<"Test for G2: "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<" s."<<endl;
+
+    startTime = clock();
+    LazyPrimMST<SparseGraph<double>, double> lazyPrimMST3(g3);
+    endTime = clock();
+    cout<<"Test for G3: "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<" s."<<endl;
+
+    startTime = clock();
+    LazyPrimMST<SparseGraph<double>, double> lazyPrimMST4(g4);
+    endTime = clock();
+    cout<<"Test for G4: "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<" s."<<endl;    
+    
+
     return 0;
 }
