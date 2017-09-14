@@ -59,7 +59,7 @@ public:
         }
 
         mstWeight = mst[0].wt();
-        for (int i = 0; i < mst.size(); i++) {
+        for (int i = 1; i < mst.size(); i++) {
             mstWeight += mst[i].wt();
         }
     }
