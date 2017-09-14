@@ -36,4 +36,31 @@ private:
             }
         }
     }
+
+public:
+    // 构造函数，使用Prim算法求图的最小生成树
+    PrimMST(Graph &graph):G(graph), ipq(IndexMinHeap<double>(graph.V())) {
+
+        assert( graph.E() >= 1 );
+
+        marked = new bool[G.V()];
+        for (int i = 0; i < G.V(); i++) {
+            marked[i] = false;
+            edgeTo.push_back(NULL);
+        }
+        mst.clear();
+
+        visit(0);
+        while( !ipq.isEmpty() ) {
+            int v = ipq.extractMinIndex();
+            assert ( edgeTo[v] );
+            mst.push_back( *edgeTo[v] );
+            visit( v );
+        }
+
+        mstWeight = mst[0].wt();
+        for (int i = 0; i < mst.size(); i++) {
+            mstWeight += mst[i].wt();
+        }
+    }
 };
