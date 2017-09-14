@@ -23,7 +23,7 @@ public:
             }
         }
 
-        UF5::UnionFind uf = UnionFind(graph.V());
+        UF5::UnionFind uf = UF5::UnionFind(graph.V());
         while( !pq.isEmpty() ) {
             Edge<Weight> e = pq.extractMin();
             if ( uf.isConnected(e.v(), e.w()) )
@@ -33,7 +33,7 @@ public:
         }
 
         mstWeight = mst[0].wt();
-        for (int i = 0; i < mst.size(); i++) {
+        for (int i = 1; i < mst.size(); i++) {
             mstWeight += mst[i].wt();
         }
     }
