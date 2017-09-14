@@ -63,4 +63,16 @@ public:
             mstWeight += mst[i].wt();
         }
     }
+
+    ~PrimMST() {
+        delete[] marked;
+    }
+
+    vector< Edge<Weight> > mstEdges() {
+        return mst;
+    }
+
+    Weight result() {
+        return mstWeight;
+    }
 };
