@@ -68,6 +68,32 @@ int main() {
     endTime = clock();
     cout<<"Test for G4: "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<" s."<<endl;    
     
+    cout << endl;
+
+    // Test Prim MST
+    cout<<"Test Prim MST:"<<endl;
+    
+    startTime = clock();
+    PrimMST<SparseGraph<double>, double> PrimMST1(g1);
+    endTime = clock();
+    cout<<"Test for G1: "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<" s."<<endl;
+
+    startTime = clock();
+    PrimMST<SparseGraph<double>, double> PrimMST2(g2);
+    endTime = clock();
+    cout<<"Test for G2: "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<" s."<<endl;
+
+    startTime = clock();
+    PrimMST<SparseGraph<double>, double> PrimMST3(g3);
+    endTime = clock();
+    cout<<"Test for G3: "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<" s."<<endl;
+
+    startTime = clock();
+    PrimMST<SparseGraph<double>, double> PrimMST4(g4);
+    endTime = clock();
+    cout<<"Test for G4: "<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<" s."<<endl;
+
+    cout<<endl;
 
     return 0;
 }
