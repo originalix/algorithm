@@ -3,6 +3,24 @@ package PlayWithAlgorithms;
 /**
  * Created by Lix on 2017/9/15.
  */
-public class Edge {
+public class Edge <Weight extends Comparable> {
+    private int a;
+    private int b;
+    private Weight weight;
 
+    public Edge(int a, int b, Weight weight) {
+        this.a = a;
+        this.b = b;
+        this.weight = weight;
+    }
+
+    public Edge() { }
+
+    public int v() {
+        return a;
+    }
+
+    public int w() {
+        return b;
+    }
 }
