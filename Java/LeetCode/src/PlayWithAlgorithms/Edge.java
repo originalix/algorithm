@@ -23,4 +23,13 @@ public class Edge <Weight extends Comparable> {
     public int w() {
         return b;
     }
+
+    public Weight wt() {
+        return weight;
+    }
+
+    public int other(int x) {
+        assert (x == a || x == b);
+        return x == a ? b : a;
+    }
 }
