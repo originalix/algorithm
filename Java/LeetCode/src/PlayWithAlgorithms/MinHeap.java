@@ -14,6 +14,18 @@ public class MinHeap<Item extends Comparable> {
         this.capacity = capacity;
     }
 
+    public MinHeap(Item arr[], int n) {
+        data = (Item[]) new Comparable[n + 1];
+        capacity = n;
+        for (int i = 0; i < n; i++) {
+            data[i+1] = arr[i];
+        }
+        count = n;
+        for (int i = count / 2; i >= 1; i--) {
+            shiftDwon(i);
+        }
+    }
+
     public int size() {
         return count;
     }
@@ -36,6 +48,11 @@ public class MinHeap<Item extends Comparable> {
         count--;
         shiftDwon(1);
         return ret;
+    }
+
+    public Item getMin() {
+        assert (count > 0);
+        return data[1];
     }
 
     private void shiftUp(int k) {
