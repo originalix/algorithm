@@ -77,9 +77,11 @@
       <file leaf-file-name="DenseWeightedGraph.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/DenseWeightedGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1520">
+              <caret line="76" column="34" lean-forward="true" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+              <folding>
+                <element signature="e#1931#1945#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -805,12 +807,12 @@
       <workItem from="1505110731014" duration="77000" />
       <workItem from="1505443823467" duration="2966000" />
       <workItem from="1505556750114" duration="462000" />
-      <workItem from="1505557296301" duration="2697000" />
+      <workItem from="1505557296301" duration="2891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65605000" />
+    <option name="totallyTimeSpent" value="65799000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1260,9 +1262,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/DenseWeightedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1520">
+          <caret line="76" column="34" lean-forward="true" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+          <folding>
+            <element signature="e#1931#1945#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
