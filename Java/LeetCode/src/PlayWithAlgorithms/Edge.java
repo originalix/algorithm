@@ -14,7 +14,11 @@ public class Edge <Weight extends Comparable> {
         this.weight = weight;
     }
 
-    public Edge() { }
+    public Edge(Edge<Weight> e) {
+        this.a = e.a;
+        this.b = e.b;
+        this.weight = e.weight;
+    }
 
     public int v() {
         return a;
@@ -31,5 +35,28 @@ public class Edge <Weight extends Comparable> {
     public int other(int x) {
         assert (x == a || x == b);
         return x == a ? b : a;
+    }
+
+    /**
+     * 输出边的信息
+     * @return String
+     */
+    public String toString() {
+        return "" + a + "-" + b + ": " + weight;
+    }
+
+    /**
+     * 边之间的比较
+     * @param that 另一个边
+     * @return Int
+     */
+    public int compareTo(Edge that) {
+        if (weight.compareTo(that.wt()) < 0) {
+            return -1;
+        } else if (weight.compareTo(that.w()) > 0) {
+            return +1;
+        } else {
+            return 0;
+        }
     }
 }
