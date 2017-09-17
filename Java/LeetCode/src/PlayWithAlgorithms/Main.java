@@ -8,21 +8,20 @@ import java.io.File;
 public class Main {
 
     public static void main(String[] args) {
-        String filename = "testG2.txt";
-        SparseGraph g1 = new SparseGraph(7, false);
-        ReadGraph readGraph1 = new ReadGraph(g1, filename);
-        Components components1 = new Components(g1);
-        System.out.println("TestG2.txt in Sparse Graph, Components count is " + components1.count());
+        // 使用两种图的存储方式读取testG1.txt文件
+        String filename = "testWeightG1.txt";
+        SparseWeightedGraph<Double> g1 = new SparseWeightedGraph<Double>(8, false);
+        ReadWeightedGraph readGraph1 = new ReadWeightedGraph(g1, filename);
+        System.out.println("test G1 in Sparse Weighted Graph:");
         g1.show();
 
         System.out.println();
 
-        Path dfs = new Path(g1, 0);
-        System.out.println("DFS Path from 0 to 6 : ");
-        dfs.showPath(6);
+        DenseWeightedGraph<Double> g2 = new DenseWeightedGraph<Double>(8, false);
+        ReadWeightedGraph readGraph2 = new ReadWeightedGraph(g2 , filename );
+        System.out.println("test G1 in Dense Graph:");
+        g2.show();
 
-        ShortestPath bfs = new ShortestPath(g1, 0);
-        System.out.println("BFS Path from 0 to 6 : ");
-        bfs.showPath(6);
+        System.out.println();
     }
 }
