@@ -20,6 +20,7 @@ public class DenseWeightedGraph<Weight extends Number & Comparable> implements W
         this.directed = directed;
         // g初始化为n*n的布尔矩阵，每一个g[i][j]null，表示没有任何边
         // false为boolean型变量的默认值
+        g = new Edge[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 g[i][j] = null;
