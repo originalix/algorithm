@@ -43,8 +43,8 @@
       <file leaf-file-name="LazyPrimMST.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/LazyPrimMST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="620">
+              <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -769,12 +769,12 @@
       <workItem from="1505110731014" duration="77000" />
       <workItem from="1505443823467" duration="2966000" />
       <workItem from="1505556750114" duration="462000" />
-      <workItem from="1505557296301" duration="8009000" />
+      <workItem from="1505557296301" duration="8297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70917000" />
+    <option name="totallyTimeSpent" value="71205000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1233,8 +1233,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/LazyPrimMST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="620">
+          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
           <folding />
         </state>
       </provider>
