@@ -29,10 +29,33 @@ public class MinHeap<Item extends Comparable> {
         shiftUp(count);
     }
 
+    public Item extractMin() {
+        assert (count > 0);
+        Item ret = data[1];
+        swap(1, count);
+        count--;
+        shiftDwon(1);
+        return ret;
+    }
+
     private void shiftUp(int k) {
         while (k > 1 && (data[k/2].compareTo(data[k]) > 0)) {
             swap(k/2, k);
             k /= 2;
+        }
+    }
+
+    private void shiftDwon(int k) {
+        while (2*k <= count) {
+            int j = 2*k;
+            if (j+1 <= count && (data[j+1].compareTo(data[j]) < 0)) {
+                j++;
+            }
+            if (data[k].compareTo(data[j]) <= 0) {
+                break;
+            }
+            swap(k, j);
+            k = j;
         }
     }
 
