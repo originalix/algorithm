@@ -3,7 +3,7 @@ package PlayWithAlgorithms;
 /**
  * Created by Lix on 2017/9/15.
  */
-public class Edge <Weight extends Comparable> {
+public class Edge <Weight extends Comparable> implements Comparable {
     private int a;
     private int b;
     private Weight weight;
