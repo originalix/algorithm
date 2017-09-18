@@ -58,32 +58,6 @@ public class PrimMST<Weight extends Number & Comparable> {
         }
     }
 
-//    void visit(int v){
-//
-//        assert !marked[v];
-//        marked[v] = true;
-//
-//        // 将和节点v相连接的未访问的另一端点, 和与之相连接的边, 放入最小堆中
-//        for( Object item : G.adj(v) ){
-//            Edge<Weight> e = (Edge<Weight>)item;
-//            int w = e.other(v);
-//            // 如果边的另一端点未被访问
-//            if( !marked[w] ){
-//                // 如果从没有考虑过这个端点, 直接将这个端点和与之相连接的边加入索引堆
-//                if( edgeTo[w] == null ){
-//                    edgeTo[w] = e;
-//                    ipq.insert(w, e.wt());
-//                }
-//                // 如果曾经考虑这个端点, 但现在的边比之前考虑的边更短, 则进行替换
-//                else if( e.wt().compareTo(edgeTo[w].wt()) < 0 ){
-//                    edgeTo[w] = e;
-//                    ipq.change(w, e.wt());
-//                }
-//            }
-//        }
-//
-//    }
-
     Vector<Edge<Weight>> mstEdges() {
         return mst;
     }

@@ -17,7 +17,7 @@ public class IndexMinHeap<Item extends Comparable> {
         reverse = new int[capacity + 1];
 
         for (int i = 0; i <= capacity; i++) {
-            reverse[i] = -1;
+            reverse[i] = 0;
         }
         count = 0;
         this.capacity = capacity;
@@ -51,7 +51,7 @@ public class IndexMinHeap<Item extends Comparable> {
 
         Item ret = data[indexes[1]];
         swapIndexes(1, count);
-        reverse[indexes[count]] = -1;
+        reverse[indexes[count]] = 0;
         count--;
         shiftDown(1);
 
@@ -62,7 +62,7 @@ public class IndexMinHeap<Item extends Comparable> {
         assert count > 0;
         int ret = indexes[1] - 1;
         swapIndexes(1, count);
-        reverse[indexes[count]] = -1;
+        reverse[indexes[count]] = 0;
         count--;
         shiftDown(1);
         return ret;
@@ -80,7 +80,7 @@ public class IndexMinHeap<Item extends Comparable> {
 
     private boolean contain(int i) {
         assert i + 1 >= 1 && i + 1 <= capacity;
-        return reverse[i + 1] != -1;
+        return reverse[i + 1] != 0;
     }
 
     public Item getItem(int i) {
@@ -108,7 +108,7 @@ public class IndexMinHeap<Item extends Comparable> {
         while (2*k <= count) {
             int j = 2*k;
             if (j+1 <= count && ( data[indexes[j+1]].compareTo( data[indexes[j]] ) < 0 )) {
-                j += 1;
+                j++;
             }
             if (data[indexes[k]].compareTo( data[indexes[j]] ) <= 0) {
                 break;
@@ -121,7 +121,7 @@ public class IndexMinHeap<Item extends Comparable> {
     private void swapIndexes(int i, int j) {
         int t = indexes[i];
         indexes[i] = indexes[j];
-        indexes[i] = t;
+        indexes[j] = t;
 
         reverse[indexes[i]] = i;
         reverse[indexes[j]] = j;
