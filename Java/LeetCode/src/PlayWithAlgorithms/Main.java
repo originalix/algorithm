@@ -26,5 +26,12 @@ public class Main {
         System.out.println("The MST Weight is: " + lazyPrimMST.result());
 
         // Test Prim MST
+        System.out.println("Test Prim MST: ");
+        PrimMST<Double> primMST = new PrimMST<Double>(g);
+        Vector<Edge<Double>> mst1 = primMST.mstEdges();
+        for (int i = 0; i < mst1.size(); i++) {
+            System.out.println(mst1.elementAt(i));
+        }
+        System.out.println("The MST Weight is " + primMST.result());
     }
 }

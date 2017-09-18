@@ -44,19 +44,45 @@ public class PrimMST<Weight extends Number & Comparable> {
         marked[v] = true;
 
         for (Object item : G.adj(v)) {
-            Edge<Weight> e = (Edge<Weight>) item;
+            Edge<Weight> e = (Edge<Weight>)item;
             int w = e.other(v);
             if (!marked[w]) {
                 if (edgeTo[w] == null) {
                     edgeTo[w] = e;
                     ipq.insert(w, e.wt());
+                } else if (e.wt().compareTo(edgeTo[w].wt()) < 0) {
+                    edgeTo[w] = e;
+                    ipq.change(w, e.wt());
                 }
-            } else if (e.wt().compareTo(edgeTo[w].wt()) < 0) {
-                edgeTo[w] = e;
-                ipq.change(w, e.wt());
             }
         }
     }
+
+//    void visit(int v){
+//
+//        assert !marked[v];
+//        marked[v] = true;
+//
+//        // 将和节点v相连接的未访问的另一端点, 和与之相连接的边, 放入最小堆中
+//        for( Object item : G.adj(v) ){
+//            Edge<Weight> e = (Edge<Weight>)item;
+//            int w = e.other(v);
+//            // 如果边的另一端点未被访问
+//            if( !marked[w] ){
+//                // 如果从没有考虑过这个端点, 直接将这个端点和与之相连接的边加入索引堆
+//                if( edgeTo[w] == null ){
+//                    edgeTo[w] = e;
+//                    ipq.insert(w, e.wt());
+//                }
+//                // 如果曾经考虑这个端点, 但现在的边比之前考虑的边更短, 则进行替换
+//                else if( e.wt().compareTo(edgeTo[w].wt()) < 0 ){
+//                    edgeTo[w] = e;
+//                    ipq.change(w, e.wt());
+//                }
+//            }
+//        }
+//
+//    }
 
     Vector<Edge<Weight>> mstEdges() {
         return mst;
@@ -64,5 +90,25 @@ public class PrimMST<Weight extends Number & Comparable> {
 
     Number result() {
         return mstWeight;
+    }
+
+    // 测试 Prim
+    public static void main(String[] args) {
+
+        String filename = "testWeightG1.txt";
+        int V = 8;
+
+        SparseWeightedGraph<Double> g = new SparseWeightedGraph<Double>(V, false);
+        ReadWeightedGraph readGraph = new ReadWeightedGraph(g, filename);
+
+        // Test Prim MST
+        System.out.println("Test Prim MST:");
+        PrimMST<Double> primMST = new PrimMST<Double>(g);
+        Vector<Edge<Double>> mst = primMST.mstEdges();
+        for( int i = 0 ; i < mst.size() ; i ++ )
+            System.out.println(mst.elementAt(i));
+        System.out.println("The MST weight is: " + primMST.result());
+
+        System.out.println();
     }
 }
