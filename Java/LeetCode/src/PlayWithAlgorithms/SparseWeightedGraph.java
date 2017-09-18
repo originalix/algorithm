@@ -5,6 +5,8 @@ import java.util.Vector;
 /**
  * Created by Lix on 2017/9/17.
  */
+
+// 稀疏图 - 邻接表
 public class SparseWeightedGraph<Weight extends Number & Comparable> implements WeightedGraph {
     private int n; // 节点数
     private int m; // 边数
@@ -66,6 +68,8 @@ public class SparseWeightedGraph<Weight extends Number & Comparable> implements 
         }
     }
 
+    // 返回图中一个顶点的所有邻边
+    // 由于java使用引用机制，返回一个Vector不会带来额外开销,
     public Iterable<Edge<Weight>> adj(int v) {
         assert( v >= 0 && v < n );
         return g[v];

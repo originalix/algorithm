@@ -34,13 +34,6 @@ public class UnionFind5 {
 
         return p;
 
-
-//        if ( p != parent[p]) {
-//            parent[p] = find(parent[p]);
-//        }
-//
-//        return parent[p];
-
     }
 
     public boolean isConnected(int p, int q) {

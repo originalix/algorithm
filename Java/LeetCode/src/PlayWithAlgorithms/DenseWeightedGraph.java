@@ -5,6 +5,8 @@ import java.util.Vector;
 /**
  * Created by Lix on 2017/9/17.
  */
+
+// 稠密图 - 邻接矩阵
 public class DenseWeightedGraph<Weight extends Number & Comparable> implements WeightedGraph {
     private int n; //节点数
     private int m; // 边数
