@@ -40,14 +40,33 @@ public class Main {
 
         System.out.println();
 
-//        // Test Lazy Prim MST
-//        System.out.println("Test lazy prim mst: ");
-//        LazyPrimMST<Double> lazyPrimMST = new LazyPrimMST<Double>(g);
-//        Vector<Edge<Double>> mst = lazyPrimMST.mstEdges();
-//        for (int i = 0; i < mst.size(); i++) {
-//            System.out.println(mst.elementAt(i));
-//        }
-//        System.out.println("The MST Weight is: " + lazyPrimMST.result());
+        long startTime, endTime;
+
+//         Test Lazy Prim MST
+        System.out.println("Test lazy prim mst: ");
+        startTime = System.currentTimeMillis();
+        LazyPrimMST<Double> lazyPrimMST1 = new LazyPrimMST<Double>(g1);
+        endTime = System.currentTimeMillis();
+        System.out.println("The MST Weight is: " + lazyPrimMST1.result());
+        System.out.println("Test for G1: " + (endTime - startTime) + "ms. ");
+
+        startTime = System.currentTimeMillis();
+        LazyPrimMST<Double> lazyPrimMST2 = new LazyPrimMST<Double>(g2);
+        endTime = System.currentTimeMillis();
+        System.out.println("The MST Weight is: " + lazyPrimMST2.result());
+        System.out.println("Test for G2: " + (endTime - startTime) + "ms. ");
+
+        startTime = System.currentTimeMillis();
+        LazyPrimMST<Double> lazyPrimMST3 = new LazyPrimMST<Double>(g3);
+        endTime = System.currentTimeMillis();
+        System.out.println("The MST Weight is: " + lazyPrimMST3.result());
+        System.out.println("Test for G3: " + (endTime - startTime) + "ms. ");
+
+        startTime = System.currentTimeMillis();
+        LazyPrimMST<Double> lazyPrimMST4 = new LazyPrimMST<Double>(g4);
+        endTime = System.currentTimeMillis();
+        System.out.println("The MST Weight is: " + lazyPrimMST4.result());
+        System.out.println("Test for G4: " + (endTime - startTime) + "ms. ");
 //
 //        // Test Prim MST
 //        System.out.println("Test Prim MST: ");
