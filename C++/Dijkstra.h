@@ -31,4 +31,26 @@ public:
 
         //dijkstra
     }
+
+    ~Dijkstra() {
+        delete[] distTo;
+        delete[] marked;
+        delete from[0];
+    }
+
+    Weight shortestPathTo( int w ) {
+        assert( w >= 0 && w < G.V() );
+        assert( hasPathTo(w) );
+        return distTo[w];
+    }
+
+    bool hasPathTo( int w ) {
+        assert( w >= 0 && w < G.V() );
+        return marked[w];
+    }
+
+    void shortestPath( int w, vector< Edge<Weight> > &vec ) {
+        
+    }
+
 };
