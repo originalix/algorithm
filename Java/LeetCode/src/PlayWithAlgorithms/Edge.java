@@ -3,7 +3,7 @@ package PlayWithAlgorithms;
 /**
  * Created by Lix on 2017/9/15.
  */
-public class Edge <Weight extends Comparable> implements Comparable {
+public class Edge <Weight extends Comparable> implements Comparable<Edge<Weight>> {
     private int a;
     private int b;
     private Weight weight;
@@ -53,7 +53,7 @@ public class Edge <Weight extends Comparable> implements Comparable {
     public int compareTo(Edge that) {
         if (weight.compareTo(that.wt()) < 0) {
             return -1;
-        } else if (weight.compareTo(that.w()) > 0) {
+        } else if (weight.compareTo(that.wt()) > 0) {
             return +1;
         } else {
             return 0;

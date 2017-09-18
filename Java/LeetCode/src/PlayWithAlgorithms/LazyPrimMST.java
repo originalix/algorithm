@@ -49,4 +49,12 @@ public class LazyPrimMST<Weight extends Number & Comparable> {
             }
         }
     }
+
+    Vector<Edge<Weight>> mstEdges() {
+        return mst;
+    }
+
+    Number result() {
+        return mstWeight;
+    }
 }
