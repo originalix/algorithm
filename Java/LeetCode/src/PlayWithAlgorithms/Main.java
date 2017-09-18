@@ -24,5 +24,7 @@ public class Main {
             System.out.println(mst.elementAt(i));
         }
         System.out.println("The MST Weight is: " + lazyPrimMST.result());
+
+        // Test Prim MST
     }
 }

@@ -40,7 +40,7 @@ public class PrimMST<Weight extends Number & Comparable> {
     }
 
     private void visit(int v) {
-        assert (!marked[i]);
+        assert (!marked[v]);
         marked[v] = true;
 
         for (Object item : G.adj(v)) {
@@ -56,5 +56,13 @@ public class PrimMST<Weight extends Number & Comparable> {
                 ipq.change(w, e.wt());
             }
         }
+    }
+
+    Vector<Edge<Weight>> mstEdges() {
+        return mst;
+    }
+
+    Number result() {
+        return mstWeight;
     }
 }
