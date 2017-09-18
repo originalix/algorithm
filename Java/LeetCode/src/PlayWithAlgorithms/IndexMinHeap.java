@@ -126,4 +126,18 @@ public class IndexMinHeap<Item extends Comparable> {
         reverse[indexes[i]] = i;
         reverse[indexes[j]] = j;
     }
+
+    // 测试 IndexMinHeap
+    public static void main(String[] args) {
+
+        int N = 1000000;
+        IndexMinHeap<Integer> indexMinHeap = new IndexMinHeap<Integer>(N);
+        for( int i = 0 ; i < N ; i ++ ) {
+            indexMinHeap.insert( i , (int)(Math.random()*N) );
+        }
+
+        for( int i = 0 ; i < N ; i ++ ) {
+            System.out.println(indexMinHeap.extractMin());
+        }
+    }
 }
