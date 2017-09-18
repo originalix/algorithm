@@ -46,6 +46,18 @@ public class IndexMinHeap<Item extends Comparable> {
         shiftUp(count);
     }
 
+    public int extractMinIndex() {
+        assert count > 0;
+
+        int ret = indexes[1] - 1;
+        swapIndexes(1, count);
+        reverse[indexes[count]] = -1;
+        count--;
+        shiftDown(1);
+
+        return ret;
+    }
+
     private boolean contain(int i) {
         assert i + 1 >= 1 && i + 1 <= capacity;
         return reverse[i + 1] != -1;
@@ -55,6 +67,20 @@ public class IndexMinHeap<Item extends Comparable> {
         while (k > 1 && ( data[indexes[k/2]].compareTo( data[indexes[k]] ) > 0 )) {
             swap(k, k/2);
             k /= 2;
+        }
+    }
+
+    private void shiftDown(int k) {
+        while (2*k <= count) {
+            int j = 2*k;
+            if (j+1 <= count && ( data[indexes[j+1]].compareTo( data[indexes[j]] ) < 0 )) {
+                j += 1;
+            }
+            if (data[indexes[k]].compareTo( data[indexes[j]] ) <= 0) {
+                break;
+            }
+            swapIndexes(k, j);
+            k = j;
         }
     }
 
