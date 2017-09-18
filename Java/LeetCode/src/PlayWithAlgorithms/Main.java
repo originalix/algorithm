@@ -47,25 +47,21 @@ public class Main {
         startTime = System.currentTimeMillis();
         LazyPrimMST<Double> lazyPrimMST1 = new LazyPrimMST<Double>(g1);
         endTime = System.currentTimeMillis();
-        System.out.println("The MST Weight is: " + lazyPrimMST1.result());
         System.out.println("Test for G1: " + (endTime - startTime) + "ms. ");
 
         startTime = System.currentTimeMillis();
         LazyPrimMST<Double> lazyPrimMST2 = new LazyPrimMST<Double>(g2);
         endTime = System.currentTimeMillis();
-        System.out.println("The MST Weight is: " + lazyPrimMST2.result());
         System.out.println("Test for G2: " + (endTime - startTime) + "ms. ");
 
         startTime = System.currentTimeMillis();
         LazyPrimMST<Double> lazyPrimMST3 = new LazyPrimMST<Double>(g3);
         endTime = System.currentTimeMillis();
-        System.out.println("The MST Weight is: " + lazyPrimMST3.result());
         System.out.println("Test for G3: " + (endTime - startTime) + "ms. ");
 
         startTime = System.currentTimeMillis();
         LazyPrimMST<Double> lazyPrimMST4 = new LazyPrimMST<Double>(g4);
         endTime = System.currentTimeMillis();
-        System.out.println("The MST Weight is: " + lazyPrimMST4.result());
         System.out.println("Test for G4: " + (endTime - startTime) + "ms. ");
 
         System.out.println();
@@ -76,26 +72,47 @@ public class Main {
         startTime = System.currentTimeMillis();
         PrimMST<Double> primMST1 = new PrimMST<Double>(g1);
         endTime = System.currentTimeMillis();
-        System.out.println("The MST Weight is: " + primMST1.result());
         System.out.println("Test for G1: " + (endTime - startTime) + "ms. ");
 
         startTime = System.currentTimeMillis();
         PrimMST<Double> primMST2 = new PrimMST<Double>(g2);
         endTime = System.currentTimeMillis();
-        System.out.println("The MST Weight is: " + primMST2.result());
         System.out.println("Test for G2: " + (endTime - startTime) + "ms. ");
 
         startTime = System.currentTimeMillis();
         PrimMST<Double> primMST3 = new PrimMST<Double>(g3);
         endTime = System.currentTimeMillis();
-        System.out.println("The MST Weight is: " + primMST3.result());
         System.out.println("Test for G3: " + (endTime - startTime) + "ms. ");
 
         startTime = System.currentTimeMillis();
         PrimMST<Double> primMST4 = new PrimMST<Double>(g4);
         endTime = System.currentTimeMillis();
-        System.out.println("The MST Weight is: " + primMST4.result());
         System.out.println("Test for G4: " + (endTime - startTime) + "ms. ");
+
+        System.out.println();
+
+        // Test Kruskal MST
+        System.out.println("Test Kruskal MST:");
+
+        startTime = System.currentTimeMillis();
+        KruskalMST<Double> kruskalMST1 = new KruskalMST<Double>(g1);
+        endTime = System.currentTimeMillis();
+        System.out.println("Test for G1: " + (endTime-startTime) + "ms.");
+
+        startTime = System.currentTimeMillis();
+        KruskalMST<Double> kruskalMST2 = new KruskalMST<Double>(g2);
+        endTime = System.currentTimeMillis();
+        System.out.println("Test for G2: " + (endTime-startTime) + "ms.");
+
+        startTime = System.currentTimeMillis();
+        KruskalMST<Double> kruskalMST3 = new KruskalMST<Double>(g3);
+        endTime = System.currentTimeMillis();
+        System.out.println("Test for G3: " + (endTime-startTime) + "ms.");
+
+        startTime = System.currentTimeMillis();
+        KruskalMST<Double> kruskalMST4 = new KruskalMST<Double>(g4);
+        endTime = System.currentTimeMillis();
+        System.out.println("Test for G4: " + (endTime-startTime) + "ms.");
 
         System.out.println();
     }

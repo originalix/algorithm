@@ -92,21 +92,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+            <state relative-caret-position="726">
+              <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1656#1664#0" expanded="true" />
-                <element signature="e#1976#1984#0" expanded="true" />
-                <element signature="e#2296#2304#0" expanded="true" />
-                <element signature="e#2616#2624#0" expanded="true" />
-                <element signature="e#3028#3036#0" expanded="true" />
-                <element signature="e#3332#3340#0" expanded="true" />
-                <element signature="e#3636#3644#0" expanded="true" />
-                <element signature="e#3940#3948#0" expanded="true" />
+                <element signature="e#1901#1909#0" expanded="true" />
+                <element signature="e#2146#2154#0" expanded="true" />
+                <element signature="e#2391#2399#0" expanded="true" />
+                <element signature="e#2728#2736#0" expanded="true" />
+                <element signature="e#2961#2969#0" expanded="true" />
+                <element signature="e#3194#3202#0" expanded="true" />
+                <element signature="e#3427#3435#0" expanded="true" />
+                <element signature="e#3778#3786#0" expanded="true" />
+                <element signature="e#4017#4025#0" expanded="true" />
+                <element signature="e#4256#4264#0" expanded="true" />
+                <element signature="e#4495#4503#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,7 +126,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KruskalMST.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KruskalMST.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="293">
@@ -214,8 +218,8 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMaxHeap.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMinHeap.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/PrimMST.java" />
-        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
       </list>
     </option>
   </component>
@@ -340,7 +344,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.KruskalMST">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -837,8 +841,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.KruskalMST" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.KruskalMST" />
         <item index="2" class="java.lang.String" itemvalue="Application.PrimMST" />
         <item index="3" class="java.lang.String" itemvalue="Application.IndexMinHeap" />
         <item index="4" class="java.lang.String" itemvalue="Application.IndexMaxHeap" />
@@ -886,12 +890,12 @@
       <workItem from="1505557296301" duration="9154000" />
       <workItem from="1505697742236" duration="203000" />
       <workItem from="1505698008875" duration="5099000" />
-      <workItem from="1505714350668" duration="3969000" />
+      <workItem from="1505714350668" duration="4095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81333000" />
+    <option name="totallyTimeSpent" value="81459000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1334,24 +1338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1656#1664#0" expanded="true" />
-            <element signature="e#1976#1984#0" expanded="true" />
-            <element signature="e#2296#2304#0" expanded="true" />
-            <element signature="e#2616#2624#0" expanded="true" />
-            <element signature="e#3028#3036#0" expanded="true" />
-            <element signature="e#3332#3340#0" expanded="true" />
-            <element signature="e#3636#3644#0" expanded="true" />
-            <element signature="e#3940#3948#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind5.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -1380,6 +1366,28 @@
             <element signature="e#1322#1323#0" expanded="true" />
             <element signature="e#1518#1526#0" expanded="true" />
             <element signature="e#1736#1744#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1656#1664#0" expanded="true" />
+            <element signature="e#1901#1909#0" expanded="true" />
+            <element signature="e#2146#2154#0" expanded="true" />
+            <element signature="e#2391#2399#0" expanded="true" />
+            <element signature="e#2728#2736#0" expanded="true" />
+            <element signature="e#2961#2969#0" expanded="true" />
+            <element signature="e#3194#3202#0" expanded="true" />
+            <element signature="e#3427#3435#0" expanded="true" />
+            <element signature="e#3778#3786#0" expanded="true" />
+            <element signature="e#4017#4025#0" expanded="true" />
+            <element signature="e#4256#4264#0" expanded="true" />
+            <element signature="e#4495#4503#0" expanded="true" />
           </folding>
         </state>
       </provider>
