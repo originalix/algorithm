@@ -50,7 +50,23 @@ public:
     }
 
     void shortestPath( int w, vector< Edge<Weight> > &vec ) {
-        
+        assert( w >= 0 && w < G.V() );
+        assert( hasPathTo(w) );
+
+        stack<Edge<Weight>*> s;
+        Edge<Weight> *e = from[w];
+        while(e->v() != this->s) {
+            s.push(e);
+            e = from[e->v()];
+        }
+
+        s.push(e);
+
+        while( !s.empty() ) {
+            e = s.top();
+            vec.push_back(*e);
+            s.pop();
+        }
     }
 
 };
