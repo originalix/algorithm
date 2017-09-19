@@ -25,21 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexMinHeap.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMinHeap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="119" column="44" lean-forward="false" selection-start-line="119" selection-start-column="44" selection-end-line="119" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LazyPrimMST.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LazyPrimMST.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/LazyPrimMST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+            <state relative-caret-position="667">
+              <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -125,7 +115,6 @@
         <option value="$PROJECT_DIR$/testWeightG4.txt" />
         <option value="$PROJECT_DIR$/testWeightG1.txt" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/MinHeap.java" />
-        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/LazyPrimMST.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMaxHeap.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/PrimMST.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java" />
@@ -135,6 +124,7 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/SparseWeightedGraph.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Edge.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMinHeap.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/LazyPrimMST.java" />
       </list>
     </option>
   </component>
@@ -806,12 +796,12 @@
       <workItem from="1505697742236" duration="203000" />
       <workItem from="1505698008875" duration="5099000" />
       <workItem from="1505714350668" duration="4679000" />
-      <workItem from="1505787796996" duration="758000" />
+      <workItem from="1505787796996" duration="1759000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82801000" />
+    <option name="totallyTimeSpent" value="83802000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1249,14 +1239,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/LazyPrimMST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMaxHeap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -1267,8 +1249,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMinHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="119" column="44" lean-forward="false" selection-start-line="119" selection-start-column="44" selection-end-line="119" selection-end-column="44" />
+        <state relative-caret-position="764">
+          <caret line="128" column="35" lean-forward="true" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/LazyPrimMST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
           <folding />
         </state>
       </provider>
