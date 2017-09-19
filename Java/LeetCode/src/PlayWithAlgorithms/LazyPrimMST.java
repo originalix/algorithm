@@ -5,6 +5,8 @@ import java.util.Vector;
 /**
  * Created by Lix on 2017/9/18.
  */
+
+// 使用Prim算法求图的最小生成树
 public class LazyPrimMST<Weight extends Number & Comparable> {
 
     private WeightedGraph<Weight> G;    // 图的引用
