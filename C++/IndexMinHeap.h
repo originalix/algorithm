@@ -1,3 +1,6 @@
+#ifndef INDEX_MIN_HEAP
+#define INDEX_MIN_HEAP
+
 #include <iostream>
 #include <algorithm>
 #include <cassert>
@@ -139,3 +142,5 @@ public:
         shiftDown( reverse[index] );
     }
 };
+
+#endif

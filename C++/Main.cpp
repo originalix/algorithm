@@ -6,6 +6,7 @@
 #include "LazyPrimMST.h"
 #include "PrimMST.h"
 #include "KruskalMST.h"
+#include "Dijkstra.h"
 
 using namespace std;
 
@@ -13,46 +14,29 @@ int main() {
     
     cout << "Hello wsx" << endl;
     
-    string filename = "testG3.txt";
+    string filename = "testShortestG1.txt";
 
-    int V = 8;
+    int V = 5;
 
-    cout << fixed << setprecision(2);
+    // cout << fixed << setprecision(2);
 
-    SparseGraph<double> g = SparseGraph<double>(V, false);
-    ReadGraph<SparseGraph<double>, double> readGraph2(g, filename);
-    g.show();
-    cout << endl;
+    SparseGraph<int> g = SparseGraph<int>(V, true);
+    ReadGraph<SparseGraph<int>, int> readGraph(g, filename);
+    
+    cout << "Test Dijkstra: " << endl << endl;
 
-    // Test Lazy Prim MST
-    cout << "Test Lazy Prim MST:" << endl;
-    LazyPrimMST<SparseGraph<double>, double> lazyPrimMST(g);
-    vector< Edge<double> > mst = lazyPrimMST.mstEdges();
-    for (int i = 0; i < mst.size(); i++) {
-        cout << mst[i] << endl;
+    Dijkstra<SparseGraph<int>, int> dij(g, 0);
+
+    for (int i = 0; i < V; i++) {
+        if ( dij.hasPathTo(i) ) {
+            cout << "Shortest Path to" << i << " : " << dij.shortestPathTo(i) << endl;
+            dij.showPath(i);
+        } else {
+            cout << "No Path to " << i << endl;
+        }
+
+        cout << "---------------" << endl;
     }
-    cout << "The MST weight is : " << lazyPrimMST.result() << endl;
-    cout << endl;
-
-    // Test Prim MST
-    cout << "Test Prim MST: " << endl;
-    PrimMST<SparseGraph<double>, double> primMST(g);
-    mst = primMST.mstEdges();
-    for (int i = 0; i < mst.size(); i++) {
-        cout << mst[i] << endl;
-    }
-    cout << "The MST weight is : " << primMST.result() << endl;
-    cout << endl;
-
-    // Test Kruskal MST
-    cout << "Test Kruskal MST: " << endl;
-    KruskalMST<SparseGraph<double>, double> kruskalMST(g);
-    mst = kruskalMST.mstEdges();
-    for (int i = 0; i < mst.size(); i++) {
-        cout << mst[i] << endl;
-    }
-    cout << "The MST weight is : " << kruskalMST.result() << endl;
-    cout << endl;
 
     return 0;
 }
