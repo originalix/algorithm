@@ -25,35 +25,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LazyPrimMST.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/LazyPrimMST.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrimMST.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/PrimMST.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#1987#1995#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KruskalMST.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="KruskalMST.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="666">
+              <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
               <folding>
-                <element signature="e#361#375#0" expanded="true" />
+                <element signature="e#487#501#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,8 +94,6 @@
         <option value="$PROJECT_DIR$/testWeightG1.txt" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/MinHeap.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMaxHeap.java" />
-        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/PrimMST.java" />
-        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind5.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/DenseWeightedGraph.java" />
@@ -125,6 +101,8 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Edge.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMinHeap.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/LazyPrimMST.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/PrimMST.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java" />
       </list>
     </option>
   </component>
@@ -796,12 +774,12 @@
       <workItem from="1505697742236" duration="203000" />
       <workItem from="1505698008875" duration="5099000" />
       <workItem from="1505714350668" duration="4679000" />
-      <workItem from="1505787796996" duration="2092000" />
+      <workItem from="1505787796996" duration="2507000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84135000" />
+    <option name="totallyTimeSpent" value="84550000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1201,16 +1179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="e#361#375#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind5.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -1245,6 +1213,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/PrimMST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1794">
+          <caret line="80" column="17" lean-forward="false" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+          <folding>
+            <element signature="e#2580#2588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/LazyPrimMST.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1253,12 +1231,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/PrimMST.java">
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="666">
+          <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
           <folding>
-            <element signature="e#1987#1995#0" expanded="true" />
+            <element signature="e#487#501#0" expanded="true" />
           </folding>
         </state>
       </provider>
