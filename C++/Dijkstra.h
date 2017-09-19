@@ -30,6 +30,30 @@ public:
         IndexMinHeap<Weight> ipq(G.V());
 
         //dijkstra
+        distTo[s] = Weight();
+        from[s] = new Edge<Weight>(s, s, 0);
+        ipq.insert(s, distTo[s]);
+        marked[s] = true;
+        while( !ipq.isEmpty() ) {
+            int v = ipq.extractMinIndex();
+
+            marked[v] = true;
+            typename Graph::adjIterator adj(G, v);
+            for ( Edge<Weight> *e = adj.begin(); !adj.end(); e = adj.next() ) {
+                int w = e->other(v);
+
+                if ( !marked[w] ) {
+                    if ( from[w] == NULL || distTo[v] + e->wt() < distTo[w] ) {
+                        distTo[w] = distTo[v] + e->wt();
+                        from[w] = e;
+                        if ( ipq.contain(w) )
+                            ipq.change( w, distTo[w] );
+                        else
+                            ipq.insert( w, distTo[w] );
+                    }
+                }
+            }
+        }
     }
 
     ~Dijkstra() {
