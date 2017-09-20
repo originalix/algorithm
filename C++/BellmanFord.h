@@ -60,4 +60,18 @@ public:
             s.pop();
         }
     }
+
+    void showPath( int w ) {
+        assert( w >= 0 && w < G.V() );
+        assert( !hasNegativeCycle );
+        assert( hasPathTo(w) );
+
+        vector< Edge<Weight> > vec;
+        shortestPath( w, vec );
+        for (int i = 0; i < vec.size(); i++) {
+            cout << vec[i].v() << " -> ";
+            if ( i == vec.size() - 1 )
+                cout << vec[i].w() << endl;
+        }
+    }
 };
