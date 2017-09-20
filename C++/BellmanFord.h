@@ -24,7 +24,7 @@ private:
                 }
             }
         }
-        
+
         return false;
     }
 
@@ -90,7 +90,7 @@ public:
 
         while( !s.empty() ) {
             e = s.top();
-            vec.push_back(e);
+            vec.push_back( *e );
             s.pop();
         }
     }
