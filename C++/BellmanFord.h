@@ -25,4 +25,19 @@ public:
         delete from[s];
     }
 
+    bool negativeCycle() {
+        return hasNegativeCycle;
+    }
+
+    Weight shortestPathTo( int w ) {
+        assert( w >= 0 && w < G.V() );
+        assert( !hasNegativeCycle );
+        assert( hasPathTo(w) );
+        return distTo[w];
+    }
+
+    bool hasPathTo( int w ) {
+        assert( w >= 0 && w < G.V() );
+        return from[w] != NULL;
+    }
 };
