@@ -28,8 +28,8 @@
       <file leaf-file-name="KruskalMST.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state relative-caret-position="460">
+              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding>
                 <element signature="e#487#501#0" expanded="true" />
               </folding>
@@ -774,12 +774,12 @@
       <workItem from="1505697742236" duration="203000" />
       <workItem from="1505698008875" duration="5099000" />
       <workItem from="1505714350668" duration="4679000" />
-      <workItem from="1505787796996" duration="2507000" />
+      <workItem from="1505787796996" duration="3129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84550000" />
+    <option name="totallyTimeSpent" value="85172000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1233,8 +1233,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        <state relative-caret-position="460">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
           <folding>
             <element signature="e#487#501#0" expanded="true" />
           </folding>
