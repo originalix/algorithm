@@ -37,6 +37,7 @@
         "limits": "cpp",
         "memory": "cpp",
         "sstream": "cpp",
-        "streambuf": "cpp"
+        "streambuf": "cpp",
+        "__locale": "cpp"
     }
 }

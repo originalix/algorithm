@@ -15,9 +15,43 @@ private:
 
     bool hasNegativeCycle;
 
+    bool detectNegativeCycle() {
+        for (int i = 0; i < G.V(); i++) {
+            typename Graph::adjIterator adj(G, i);
+            for (Edge<Weight>* e = adj.begin(); !adj.end(); e = adj.next()) {
+                if ( from[e->v()] && ( !from[e->w()] || distTo[e->v()] + e->wt() < distTo[e->w()] ) ) {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
+    }
+
 public:
     BellmanFord(Graph &graph, int s):G(graph) {
+        this->s = s;
+        distTo = new Weight[G.V()];
+        for (int i = 0; i < G.V(); i++) {
+            from.push_back(NULL);
+        }
 
+        distTo[s] = Weight();
+        from[s] = new Edge<Weight>(s, s, 0);
+
+        for (int pass = 1; pass < G.V(); pass++) {
+            for (int i = 0; i < G.V(); i++) {
+                typename Graph::adjIterator adj(G, i);
+                for (Edge<Weight>* e = adj.begin(); !adj.end(); e = adj.next()) {
+                    if ( from[e->v()] && ( !from[e->w()] || distTo[e->v()] + e->wt() < distTo[e->w()] ) ) {
+                        distTo[e->w()] = distTo[e->v()] + e->wt();
+                        from[e->w()] = e;
+                    }
+                }
+            }
+        }
+
+        hasNegativeCycle = detectNegativeCycle();
     }
 
     ~BellmanFord() {
