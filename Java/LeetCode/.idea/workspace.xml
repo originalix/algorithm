@@ -42,9 +42,13 @@
       <file leaf-file-name="Dijkstra.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Dijkstra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="826">
+              <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#730#744#0" expanded="true" />
+                <element signature="e#944#958#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -788,12 +792,12 @@
       <workItem from="1505698008875" duration="5099000" />
       <workItem from="1505714350668" duration="4679000" />
       <workItem from="1505787796996" duration="3129000" />
-      <workItem from="1505982930402" duration="761000" />
+      <workItem from="1505982930402" duration="1064000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85933000" />
+    <option name="totallyTimeSpent" value="86236000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1252,9 +1256,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Dijkstra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="826">
+          <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#730#744#0" expanded="true" />
+            <element signature="e#944#958#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
