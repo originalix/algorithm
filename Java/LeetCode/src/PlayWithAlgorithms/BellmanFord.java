@@ -11,5 +11,20 @@ public class BellmanFord<Weight extends Number & Comparable> {
 
     private boolean hasNegativeCycle;
 
+    public boolean negativeCycle() {
+        return hasNegativeCycle;
+    }
+
+    public Number shortestPathTo( int w ) {
+        assert w >= 0 && w < G.V();
+        assert( !hasNegativeCycle );
+        assert( hasPathTo(w) );
+        return distTo[w];
+    }
+
+    private boolean hasPathTo( int w ) {
+        assert w >= 0 && w < G.V();
+        return from[w] != null;
+    }
 
 }
