@@ -19,6 +19,7 @@ public class BellmanFord<Weight extends Number & Comparable> {
         this.s = s;
 
         distTo = new Number[G.V()];
+        from = new Edge[G.V()];
         for (int i = 0; i < G.V(); i++) {
             from[i] = null;
         }
@@ -63,7 +64,7 @@ public class BellmanFord<Weight extends Number & Comparable> {
         return distTo[w];
     }
 
-    private boolean hasPathTo( int w ) {
+    public boolean hasPathTo( int w ) {
         assert w >= 0 && w < G.V();
         return from[w] != null;
     }
