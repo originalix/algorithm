@@ -52,4 +52,18 @@ public class BellmanFord<Weight extends Number & Comparable> {
 
         return vec;
     }
+
+    public void showPath(int w) {
+        assert w >= 0 && w < G.V();
+        assert (!hasNegativeCycle);
+        assert hasPathTo(w);
+
+        Vector<Edge<Weight>> vec = shortestPath(w);
+        for (int i = 0; i < vec.size(); i++) {
+            System.out.print(vec.elementAt(i).v() + " -> ");
+            if (i == vec.size() - 1) {
+                System.out.println(vec.elementAt(i).w());
+            }
+        }
+    }
 }
