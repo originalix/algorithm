@@ -13,6 +13,48 @@ public class Dijkstra<Weight extends Number & Comparable> {
     private boolean[] marked;
     private Edge<Weight>[] from;
 
+    Dijkstra(WeightedGraph G, int s) {
+        assert s >= 0 && s < G.V();
+        this.s = s;
+        distTo = new Number[G.V()];
+        marked = new boolean[G.V()];
+        from = new Edge[G.V()];
+
+        for (int i = 0; i < G.V(); i++) {
+            distTo[i] = 0.0;
+            marked[i] = false;
+            from[i] = null;
+        }
+
+        IndexMinHeap<Weight> ipq = new IndexMinHeap<Weight>(G.V());
+
+        distTo[s] = 0.0;
+        from[s] = new Edge<Weight>(s, s, (Weight)(Number)(0.0));
+        ipq.insert(s, (Weight) distTo[s]);
+        marked[s] = true;
+
+        while (!ipq.isEmpty()) {
+            int v = ipq.extractMinIndex();
+            marked[v] = true;
+
+            for (Object item : G.adj(v)) {
+                Edge<Weight> e = (Edge<Weight>) item;
+                int w = e.other(v);
+                if (!marked[w]) {
+                    if (from[w] == null || distTo[v].doubleValue() + e.wt().doubleValue() < distTo[w].doubleValue()) {
+                        distTo[w] = distTo[v].doubleValue() + e.wt().doubleValue();
+                        from[w] = e;
+                        if ( ipq.contain(w) ) {
+                            ipq.change(w, (Weight) distTo[w]);
+                        } else {
+                            ipq.insert(w, (Weight) distTo[w]);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public Number shortestPathTo(int w) {
         assert w >= 0 && w < G.V();
         assert hasPathTo(w);
