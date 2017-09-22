@@ -9,7 +9,8 @@ import java.util.Vector;
 public class Main {
 
     public static void main(String[] args) {
-        String filename = "test_negative_G1.txt";
+//        String filename = "test_negative_G1.txt";
+        String filename = "test_negative_circle.txt";
         int V = 5;
 
         SparseWeightedGraph<Integer> g = new SparseWeightedGraph<Integer>(V, true);
