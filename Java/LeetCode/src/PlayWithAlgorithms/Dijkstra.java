@@ -61,7 +61,7 @@ public class Dijkstra<Weight extends Number & Comparable> {
         return distTo[w];
     }
 
-    private boolean hasPathTo(int w) {
+    public boolean hasPathTo(int w) {
         assert w >= 0 && w < G.V();
         return marked[w];
     }
@@ -86,5 +86,19 @@ public class Dijkstra<Weight extends Number & Comparable> {
         }
 
         return res;
+    }
+
+    // 打印出从s点到w点的路径
+    public void showPath(int w){
+
+        assert w >= 0 && w < G.V();
+        assert hasPathTo(w);
+
+        Vector<Edge<Weight>> path =  shortestPath(w);
+        for( int i = 0 ; i < path.size() ; i ++ ){
+            System.out.print( path.elementAt(i).v() + " -> ");
+            if( i == path.size()-1 )
+                System.out.println(path.elementAt(i).w());
+        }
     }
 }
