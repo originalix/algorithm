@@ -1,5 +1,8 @@
 package PlayWithAlgorithms;
 
+import java.util.Stack;
+import java.util.Vector;
+
 /**
  * Created by Lix on 2017/9/22.
  */
@@ -26,5 +29,27 @@ public class BellmanFord<Weight extends Number & Comparable> {
         assert w >= 0 && w < G.V();
         return from[w] != null;
     }
+    
+    public Vector<Edge<Weight>> shortestPath(int w ) {
+        assert w >= 0 && w < G.V();
+        assert (!hasNegativeCycle);
+        assert (hasPathTo(w));
 
+        Stack<Edge<Weight>> s = new Stack<Edge<Weight>>();
+        Edge<Weight> e = from[w];
+        while (e.v() != this.s) {
+            s.push(e);
+            e = from[e.v()];
+        }
+
+        s.push(e);
+
+        Vector<Edge<Weight>> vec = new Vector<Edge<Weight>>();
+        while (!s.isEmpty()) {
+            e = s.pop();
+            vec.add(e);
+        }
+
+        return vec;
+    }
 }
