@@ -13,9 +13,10 @@ public class Dijkstra<Weight extends Number & Comparable> {
     private boolean[] marked;
     private Edge<Weight>[] from;
 
-    Dijkstra(WeightedGraph G, int s) {
+    Dijkstra(WeightedGraph graph, int s) {
         assert s >= 0 && s < G.V();
         this.s = s;
+        this.G = graph;
         distTo = new Number[G.V()];
         marked = new boolean[G.V()];
         from = new Edge[G.V()];

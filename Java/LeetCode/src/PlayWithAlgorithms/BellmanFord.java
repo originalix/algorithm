@@ -14,6 +14,44 @@ public class BellmanFord<Weight extends Number & Comparable> {
 
     private boolean hasNegativeCycle;
 
+    public BellmanFord(WeightedGraph graph, int s) {
+        this.G = graph;
+        this.s = s;
+
+        distTo = new Number[G.V()];
+        for (int i = 0; i < G.V(); i++) {
+            from[i] = null;
+        }
+        distTo[s] = 0.0;
+        from[s] = new Edge<Weight>(s, s, (Weight)(Number) 0.0);
+
+        for (int pass = 1; pass < G.V(); pass++) {
+            for (int i = 0; i < G.V(); i++) {
+                for (Object item : G.adj(i)) {
+                    Edge<Weight> e = (Edge<Weight>) item;
+                    if (from[e.v()] != null && ( from[e.w()] == null || distTo[e.v()].doubleValue() + e.wt().doubleValue() < distTo[e.w()].doubleValue())) {
+                        distTo[e.w()] = distTo[e.v()].doubleValue() + e.wt().doubleValue();
+                        from[e.w()] = e;
+                    }
+                }
+            }
+        }
+
+        hasNegativeCycle = detectNegativeCycle();
+    }
+
+    private boolean detectNegativeCycle() {
+        for (int i = 0; i < G.V(); i++) {
+            for (Object item : G.adj(i)) {
+                Edge<Weight> e = (Edge<Weight>) item;
+                if (from[e.v()] != null && ( from[e.w()] == null || distTo[e.v()].doubleValue() + e.wt().doubleValue() < distTo[e.w()].doubleValue())) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     public boolean negativeCycle() {
         return hasNegativeCycle;
     }

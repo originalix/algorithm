@@ -38,13 +38,13 @@
       <file leaf-file-name="Dijkstra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Dijkstra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="30" />
+            <state relative-caret-position="255">
+              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#713#721#0" expanded="true" />
-                <element signature="e#2118#2132#0" expanded="true" />
-                <element signature="e#2332#2346#0" expanded="true" />
+                <element signature="e#741#749#0" expanded="true" />
+                <element signature="e#2146#2160#0" expanded="true" />
+                <element signature="e#2360#2374#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,14 +53,14 @@
       <file leaf-file-name="BellmanFord.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/BellmanFord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1340">
-              <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="826">
+              <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#367#368#0" expanded="true" />
-                <element signature="e#406#407#0" expanded="true" />
-                <element signature="e#911#925#0" expanded="true" />
-                <element signature="e#1125#1139#0" expanded="true" />
+                <element signature="e#1725#1726#0" expanded="true" />
+                <element signature="e#1764#1765#0" expanded="true" />
+                <element signature="e#2269#2283#0" expanded="true" />
+                <element signature="e#2483#2497#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,8 +181,8 @@
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/IndexMinHeap.java" />
         <option value="$PROJECT_DIR$/testShortestG1.txt" />
-        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Dijkstra.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Dijkstra.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/BellmanFord.java" />
       </list>
     </option>
@@ -857,12 +857,12 @@
       <workItem from="1505714350668" duration="4679000" />
       <workItem from="1505787796996" duration="3129000" />
       <workItem from="1505982930402" duration="1322000" />
-      <workItem from="1506041780663" duration="3931000" />
+      <workItem from="1506041780663" duration="4395000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90425000" />
+    <option name="totallyTimeSpent" value="90889000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1319,27 +1319,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Dijkstra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="30" />
+        <state relative-caret-position="255">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#713#721#0" expanded="true" />
-            <element signature="e#2118#2132#0" expanded="true" />
-            <element signature="e#2332#2346#0" expanded="true" />
+            <element signature="e#741#749#0" expanded="true" />
+            <element signature="e#2146#2160#0" expanded="true" />
+            <element signature="e#2360#2374#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/BellmanFord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1340">
-          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+        <state relative-caret-position="826">
+          <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#911#925#0" expanded="true" />
-            <element signature="e#1125#1139#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1764#1765#0" expanded="true" />
+            <element signature="e#2269#2283#0" expanded="true" />
+            <element signature="e#2483#2497#0" expanded="true" />
           </folding>
         </state>
       </provider>
