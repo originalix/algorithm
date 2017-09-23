@@ -6,12 +6,15 @@ import java.util.Vector;
 /**
  * Created by Lix on 2017/9/21.
  */
+
+// Dijkstr算法求最短路径
 public class Dijkstra<Weight extends Number & Comparable> {
-    private WeightedGraph G;
-    private int s;
-    private Number[] distTo;
-    private boolean[] marked;
-    private Edge<Weight>[] from;
+
+    private WeightedGraph G;      // 图的引用
+    private int s;                // 起始点
+    private Number[] distTo;      // distTo[i]存储从起始点s到点i的最短路径长度
+    private boolean[] marked;     // 标记数组，在算法运行过程中标记节点是否被访问
+    private Edge<Weight>[] from;  // 可以用来恢复整个最短路径
 
     Dijkstra(WeightedGraph graph, int s) {
         assert s >= 0 && s < G.V();
