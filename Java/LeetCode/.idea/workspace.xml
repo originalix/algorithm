@@ -35,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dijkstra.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Dijkstra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Dijkstra.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="62">
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BellmanFord.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BellmanFord.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/BellmanFord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="399">
+              <caret line="120" column="19" lean-forward="false" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -173,9 +173,9 @@
         <option value="$PROJECT_DIR$/testShortestG1.txt" />
         <option value="$PROJECT_DIR$/test_negative_G1.txt" />
         <option value="$PROJECT_DIR$/test_negative_circle.txt" />
-        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/BellmanFord.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Dijkstra.java" />
+        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/BellmanFord.java" />
       </list>
     </option>
   </component>
@@ -850,12 +850,12 @@
       <workItem from="1505982930402" duration="1322000" />
       <workItem from="1506041780663" duration="4803000" />
       <workItem from="1506148834593" duration="740000" />
-      <workItem from="1506254697539" duration="433000" />
+      <workItem from="1506254697539" duration="979000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92470000" />
+    <option name="totallyTimeSpent" value="93016000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1290,14 +1290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/BellmanFord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1326,6 +1318,14 @@
             <element signature="e#2704#2718#0" expanded="true" />
             <element signature="e#2952#2966#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/BellmanFord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="120" column="19" lean-forward="false" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
