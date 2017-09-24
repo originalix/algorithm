@@ -7,7 +7,7 @@ import java.util.Vector;
  * Created by Lix on 2017/9/21.
  */
 
-// Dijkstr算法求最短路径
+// Dijkstra算法求最短路径
 public class Dijkstra<Weight extends Number & Comparable> {
 
     private WeightedGraph G;      // 图的引用
@@ -16,13 +16,14 @@ public class Dijkstra<Weight extends Number & Comparable> {
     private boolean[] marked;     // 标记数组，在算法运行过程中标记节点是否被访问
     private Edge<Weight>[] from;  // 可以用来恢复整个最短路径
 
+    // 构造函数，使用Dijkstra算法求最短路径
     Dijkstra(WeightedGraph graph, int s) {
+
+        // 算法初始化
+        this.G = graph;
         assert s >= 0 && s < G.V();
         this.s = s;
-        this.G = graph;
-        distTo = new Number[G.V()];
-        marked = new boolean[G.V()];
-        from = new Edge[G.V()];
+        distTo = new Number[G.V()];[;]
 
         for (int i = 0; i < G.V(); i++) {
             distTo[i] = 0.0;
@@ -30,6 +31,7 @@ public class Dijkstra<Weight extends Number & Comparable> {
             from[i] = null;
         }
 
+        // 使用索引堆记录当前找到的每个到达顶点的最短距离`                                                                         iikkkkkk
         IndexMinHeap<Weight> ipq = new IndexMinHeap<Weight>(G.V());
 
         distTo[s] = 0.0;
