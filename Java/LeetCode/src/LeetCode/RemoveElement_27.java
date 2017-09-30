@@ -11,31 +11,32 @@ public class RemoveElement_27 {
         int swapIndex = nums.length - 1;
 
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == val && swapIndex >= 0) {
-                if (nums[swapIndex] == val) {
-                    swapIndex -= 1;
-                }
-                if (swapIndex >= 0) {
-                    swap(nums, i, swapIndex);
-                    elementCount += 1;
-                    swapIndex -= 1;
-                }
+            if (nums[i] == val) {
+                elementCount += 1;
             }
         }
 
         if (elementCount == 0) {
             return nums.length;
         }
+
+
         for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == val) {
+                while (nums[swapIndex] == val && swapIndex > i) {
+                    swapIndex -= 1;
+                }
+                swap(nums, i, swapIndex);
+            }
             System.out.println("now array["+ i +"] is like : " + nums[i]);
         }
         return nums.length - elementCount;
     }
 
     private static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        int temp = arr[j];
+        arr[j] = arr[i];
+        arr[i] = temp;
     }
 
     public static void main(String[] args) {
