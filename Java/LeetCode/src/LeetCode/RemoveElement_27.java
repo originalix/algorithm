@@ -39,12 +39,24 @@ public class RemoveElement_27 {
         arr[i] = temp;
     }
 
+    public static int removeElement2(int[] nums, int val) {
+        int begin = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {
+                nums[begin++] = nums[i];
+            }
+        }
+
+        return begin;
+    }
+
     public static void main(String[] args) {
 
         int[] nums = {3, 2, 2, 3};
         int val = 3;
 
-        int result = removeElement(nums, val);
+//        int result = removeElement(nums, val);
+        int result = removeElement2(nums, val);
         System.out.println("result is : " + result);
     }
 }
