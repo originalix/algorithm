@@ -28,7 +28,7 @@ public class SearchInsertPosition_35 {
 
     public static void main(String[] args) {
         int[] nums = new int[]{1, 3, 5, 6};
-        int target = 8;
+        int target = 9;
         int result = searchInsert(nums, target);
         System.out.println("result is : " + result);
     }
