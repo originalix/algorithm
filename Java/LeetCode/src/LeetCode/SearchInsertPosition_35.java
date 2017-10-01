@@ -14,18 +14,21 @@ public class SearchInsertPosition_35 {
             if (nums[mid] == target) {
                 return mid;
             } else if (nums[mid] < target) {
-                right = mid;
-            } else {
-                left = mid;
+                left = mid + 1;
+            } else if (nums[mid] > target) {
+                right = mid - 1;
             }
         }
 
+        if (nums[mid] < target) {
+            mid += 1;
+        }
         return mid;
     }
 
     public static void main(String[] args) {
         int[] nums = new int[]{1, 3, 5, 6};
-        int target = 5;
+        int target = 8;
         int result = searchInsert(nums, target);
         System.out.println("result is : " + result);
     }
