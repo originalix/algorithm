@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/src/LeetCode/MaximumSubarray_53.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="440">
-              <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+              <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -801,12 +801,12 @@
       <workItem from="1506552853171" duration="1080000" />
       <workItem from="1506676739907" duration="1493000" />
       <workItem from="1506686376536" duration="2147000" />
-      <workItem from="1506743954068" duration="4014000" />
+      <workItem from="1506743954068" duration="4521000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102028000" />
+    <option name="totallyTimeSpent" value="102535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1285,7 +1285,7 @@
     <entry file="file://$PROJECT_DIR$/src/LeetCode/MaximumSubarray_53.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding />
         </state>
       </provider>
