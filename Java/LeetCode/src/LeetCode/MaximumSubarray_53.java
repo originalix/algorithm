@@ -18,4 +18,10 @@ public class MaximumSubarray_53 {
         }
         return maxSum;
     }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{-1,2,-3,-4,-5,-6};
+        int maxSum = maxSubArray(nums);
+        System.out.println("max sum is : " + maxSum);
+    }
 }
