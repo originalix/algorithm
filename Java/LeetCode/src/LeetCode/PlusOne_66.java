@@ -11,8 +11,13 @@ public class PlusOne_66 {
     private static void plusAll() {
 //        int[] nums = new int[]{1, 0, 2, 4};
         int nums = 1024;
-        for (int i = 0; i < 4; i++) {
-            int a = nums % (i * 10);
+
+        // 1
+        // 0
+        // 2
+        // 4
+        for (int i = 1; i <= 4; i++) {
+            int a = nums % 10000;
             System.out.println("now a = " + a);
         }
     }
