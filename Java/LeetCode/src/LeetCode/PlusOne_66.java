@@ -16,10 +16,19 @@ public class PlusOne_66 {
         // 0
         // 2
         // 4
-        for (int i = 1; i <= 4; i++) {
-            int a = nums % 10000;
-            System.out.println("now a = " + a);
-        }
+//        for (int i = 1; i <= 4; i++) {
+//            int a = nums % 10000;
+//            System.out.println("now a = " + a);
+//        }
+
+        int a = nums / 1000;
+        System.out.println("now a = " + a);
+        int b = nums / 100;
+        System.out.println("now b = " + b);
+        int c = nums / 10;
+        System.out.println("now c = " + c);
+        int d = nums / 1;
+        System.out.println("now d = " + d);
     }
 
     public static void main(String[] args) {
