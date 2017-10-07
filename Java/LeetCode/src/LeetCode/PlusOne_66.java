@@ -12,7 +12,7 @@ public class PlusOne_66 {
                 return digits;
             }
 
-            digits[n-1] = 0;
+            digits[i] = 0;
         }
 
         int[] newNumber = new int[n+1];
@@ -21,7 +21,7 @@ public class PlusOne_66 {
     }
 
     public static void main(String[] args) {
-        int[] nums = plusOne(new int[]{1, 2, 3});
+        int[] nums = plusOne(new int[]{9, 9, 9});
         for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i]);
         }
