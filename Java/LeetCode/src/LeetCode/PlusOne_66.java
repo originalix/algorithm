@@ -29,6 +29,13 @@ public class PlusOne_66 {
         System.out.println("now c = " + c);
         int d = nums / 1;
         System.out.println("now d = " + d);
+
+        int e = b % a;
+        int f = c % b;
+        int g = d % c;
+        System.out.println("now e = " + e);
+        System.out.println("now f = " + f);
+        System.out.println("now g = " + g);
     }
 
     public static void main(String[] args) {
