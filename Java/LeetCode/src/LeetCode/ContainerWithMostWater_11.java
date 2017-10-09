@@ -12,7 +12,10 @@ public class ContainerWithMostWater_11 {
     // 注意点，构建坐标，存水的面积计算
     public static int maxArea(int[] height) {
         for (int i = 0; i < height.length; i++) {
-            System.out.println("第" + i + "个坐标: " + "(" + i + "," + height[i] + ")");
+//            System.out.println("第" + i + "个坐标: " + "(" + i + "," + height[i] + ")");
+            for (int j = 0; j < height.length; j++) {
+                System.out.println("当前比较的两个坐标: " + "(" + i + "," + height[i] + ") -> " + "(" + j + "," + height[j] + ")");
+            }
         }
         return 0;
     }
