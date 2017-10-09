@@ -38,8 +38,8 @@
       <file leaf-file-name="PlusOne_66.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/PlusOne_66.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="26" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="340">
+              <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -823,12 +823,12 @@
       <workItem from="1506686376536" duration="2147000" />
       <workItem from="1506743954068" duration="5658000" />
       <workItem from="1507207068887" duration="1034000" />
-      <workItem from="1507207361352" duration="2437000" />
+      <workItem from="1507207361352" duration="2540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107143000" />
+    <option name="totallyTimeSpent" value="107246000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1306,8 +1306,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/PlusOne_66.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="340">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding />
         </state>
       </provider>
