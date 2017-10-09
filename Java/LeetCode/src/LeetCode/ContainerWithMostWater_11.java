@@ -14,12 +14,18 @@ public class ContainerWithMostWater_11 {
         int maxArea = -999;
         for (int i = 0; i < height.length; i++) {
 //            System.out.println("第" + i + "个坐标: " + "(" + i + "," + height[i] + ")");
-            for (int j = 0; j < height.length; j++) {
+            for (int j = i; j < height.length; j++) {
                 if (j == i) {
                     continue;
                 }
-                int Width = i > j ? i- j : j - i;
-                int areaHeight = height[i] < height[j] ? height[i] : height[j];
+                int Width = j - i;
+
+                int areaHeight;
+                if (height[i] < height[j]) {
+                    areaHeight = height[i];
+                } else {
+                    areaHeight = height[j];
+                }
 
                 System.out.println("当前比较的两个坐标: " + "(" + i + "," + height[i] + ") -> " + "(" + j + "," + height[j] + ")");
                 System.out.println("当前面积的宽: " + Width + " 高 : " + areaHeight);
