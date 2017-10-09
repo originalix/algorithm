@@ -11,7 +11,14 @@ public class ContainerWithMostWater_11 {
     // 返回最大的面积
     // 注意点，构建坐标，存水的面积计算
     public static int maxArea(int[] height) {
-
+        for (int i = 0; i < height.length; i++) {
+            System.out.println("第" + i + "个坐标: " + "(" + i + "," + height[i] + ")");
+        }
         return 0;
+    }
+
+    public static void main(String[] args) {
+        int[] height = new int[]{1, 3, 2};
+        int a = maxArea(height);
     }
 }
