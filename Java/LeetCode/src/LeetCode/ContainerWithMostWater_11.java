@@ -10,6 +10,8 @@ public class ContainerWithMostWater_11 {
     // 使用O( logN^2 )的时间复杂度 暴力的对比 记录最大的面积
     // 返回最大的面积
     // 注意点，构建坐标，存水的面积计算
+    // [left ... right]
+    // |              |
     public static int maxArea(int[] height) {
         int maxArea = -999;
         for (int i = 0; i < height.length; i++) {
@@ -38,9 +40,31 @@ public class ContainerWithMostWater_11 {
         return maxArea;
     }
 
+    // 思路：对撞指针
+    // 时间复杂度 O(N) ， 循环条件 (left < right)
+    // 如果height[left] < height[right]
+    // left ++ ; else right--;
+    public static int greatMaxArea(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int maxArea = -999;
+
+        while (left < right) {
+            maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right - left));
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return maxArea;
+    }
+
     public static void main(String[] args) {
         int[] height = new int[]{1, 3, 2};
-        int a = maxArea(height);
-        System.out.println("最大面积为: " + a);
+//        int a = maxArea(height);
+        int b = greatMaxArea(height);
+        System.out.println("最大面积为: " + b);
     }
 }
