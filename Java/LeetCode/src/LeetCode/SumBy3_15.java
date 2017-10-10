@@ -21,12 +21,23 @@ public class SumBy3_15 {
 
 //                    System.out.println("now a = " + nums[i] + ", b = " + nums[j] + ", c = " + nums[k]);
                     if (nums[i] + nums[j] + nums[k] == 0) {
+
                         List<Integer> answer = new ArrayList<Integer>();
                         answer.add(nums[i]);
                         answer.add(nums[j]);
                         answer.add(nums[k]);
 
-                        result.add(answer);
+                        boolean isRepeat = false;
+                        for (int e = 0; e < result.size(); e++) {
+                            List<Integer> item = result.get(e);
+                            if ( item.contains(nums[i]) && item.contains(nums[j]) && item.contains(nums[k]) ) {
+                                isRepeat = true;
+                            }
+                        }
+
+                        if (!isRepeat) {
+                            result.add(answer);
+                        }
                     }
                 }
             }
