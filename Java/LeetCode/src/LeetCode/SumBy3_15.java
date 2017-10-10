@@ -27,6 +27,8 @@ public class SumBy3_15 {
                         answer.add(nums[j]);
                         answer.add(nums[k]);
 
+                        System.out.println("all answer : " + answer);
+
                         boolean isRepeat = false;
                         for (int e = 0; e < result.size(); e++) {
                             List<Integer> item = result.get(e);
@@ -47,7 +49,7 @@ public class SumBy3_15 {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{-1, 0, 1, 2, -1, -4};
+        int[] nums = new int[]{-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
         List<List<Integer>> result = threeSum(nums);
         for (int i = 0; i < result.size(); i++) {
             System.out.println(result.get(i));
