@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class SumBy3_15 {
     // 思路：暴力解法
-    public List<List<Integer>> threeSum(int[] nums) {
+    public static List<List<Integer>> threeSum(int[] nums) {
         int a = 0;
         int b = 1;
         int c = 2;
@@ -18,11 +18,11 @@ public class SumBy3_15 {
         for (int i = a; i < nums.length; i++) {
             for (int j = b; j < nums.length; j++) {
                 for (int k = c; k < nums.length; k++) {
-                    if (a + b + c == 0) {
+                    if (nums[i] + nums[j] + nums[k] == 0) {
                         List<Integer> answer = new ArrayList<Integer>();
-                        answer.add(a);
-                        answer.add(b);
-                        answer.add(c);
+                        answer.add(nums[i]);
+                        answer.add(nums[j]);
+                        answer.add(nums[k]);
 
                         result.add(answer);
                     }
@@ -31,5 +31,13 @@ public class SumBy3_15 {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{-1, 0, 1, 2, -1, -4};
+        List<List<Integer>> result = threeSum(nums);
+        for (int i = 0; i < result.size(); i++) {
+            System.out.println(result.get(i));
+        }
     }
 }

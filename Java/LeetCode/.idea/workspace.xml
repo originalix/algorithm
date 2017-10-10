@@ -92,9 +92,13 @@
       <file leaf-file-name="SumBy3_15.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/SumBy3_15.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="351">
+              <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#321#336#0" expanded="true" />
+                <element signature="e#785#794#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -316,27 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ContainerWithMostWater_11">
-    <configuration default="false" name="RemoveElement_27" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="LeetCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="LeetCode.RemoveElement_27" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="LeetCode" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.SumBy3_15">
     <configuration default="false" name="SearchInsertPosition_35" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -405,6 +389,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="LeetCode.ContainerWithMostWater_11" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="LeetCode" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SumBy3_15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="LeetCode.SumBy3_15" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -805,19 +809,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.RemoveElement_27" />
-      <item index="1" class="java.lang.String" itemvalue="Application.SearchInsertPosition_35" />
-      <item index="2" class="java.lang.String" itemvalue="Application.MaximumSubarray_53" />
-      <item index="3" class="java.lang.String" itemvalue="Application.PlusOne_66" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ContainerWithMostWater_11" />
+      <item index="0" class="java.lang.String" itemvalue="Application.SearchInsertPosition_35" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MaximumSubarray_53" />
+      <item index="2" class="java.lang.String" itemvalue="Application.PlusOne_66" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ContainerWithMostWater_11" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SumBy3_15" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ContainerWithMostWater_11" />
-        <item index="1" class="java.lang.String" itemvalue="Application.PlusOne_66" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MaximumSubarray_53" />
-        <item index="3" class="java.lang.String" itemvalue="Application.SearchInsertPosition_35" />
-        <item index="4" class="java.lang.String" itemvalue="Application.RemoveElement_27" />
+        <item index="0" class="java.lang.String" itemvalue="Application.SumBy3_15" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ContainerWithMostWater_11" />
+        <item index="2" class="java.lang.String" itemvalue="Application.PlusOne_66" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MaximumSubarray_53" />
+        <item index="4" class="java.lang.String" itemvalue="Application.SearchInsertPosition_35" />
       </list>
     </recent_temporary>
   </component>
@@ -875,12 +879,12 @@
       <workItem from="1507207068887" duration="1034000" />
       <workItem from="1507207361352" duration="2540000" />
       <workItem from="1507555697240" duration="2550000" />
-      <workItem from="1507633226607" duration="2749000" />
+      <workItem from="1507633226607" duration="3328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112545000" />
+    <option name="totallyTimeSpent" value="113124000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -916,7 +920,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36787564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5060423" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -954,7 +958,7 @@
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="35" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1343,9 +1347,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/SumBy3_15.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="351">
+          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#321#336#0" expanded="true" />
+            <element signature="e#785#794#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
