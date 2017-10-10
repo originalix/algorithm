@@ -50,7 +50,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1580">
               <caret line="83" column="5" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="83" selection-end-column="5" />
-              <folding />
+              <folding>
+                <element signature="e#2288#2289#0" expanded="false" />
+                <element signature="e#2314#2315#0" expanded="false" />
+                <element signature="e#2355#2356#0" expanded="false" />
+                <element signature="e#2387#2388#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,7 +65,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="740">
               <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="e#513#514#0" expanded="false" />
+                <element signature="e#537#538#0" expanded="false" />
+                <element signature="e#571#572#0" expanded="false" />
+                <element signature="e#595#596#0" expanded="false" />
+                <element signature="e#633#634#0" expanded="false" />
+                <element signature="e#662#663#0" expanded="false" />
+                <element signature="e#879#880#0" expanded="false" />
+                <element signature="e#934#935#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,8 +92,8 @@
       <file leaf-file-name="SumBy3_15.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/SumBy3_15.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+            <state relative-caret-position="46">
+              <caret line="39" column="19" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="39" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -864,12 +878,12 @@
       <workItem from="1507207361352" duration="2540000" />
       <workItem from="1507555697240" duration="2550000" />
       <workItem from="1507633226607" duration="6555000" />
-      <workItem from="1507676479979" duration="390000" />
+      <workItem from="1507676479979" duration="1001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116741000" />
+    <option name="totallyTimeSpent" value="117352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -894,7 +908,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42996743" sideWeight="0.5022779" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.626943" sideWeight="0.4977221" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.626943" sideWeight="0.4977221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48911917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -944,12 +958,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/LeetCode/SumBy3_15.java</url>
-          <line>15</line>
+          <line>39</line>
           <properties />
-          <option name="timeStamp" value="41" />
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="42" />
+      <option name="time" value="47" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1294,7 +1308,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1580">
           <caret line="83" column="5" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="83" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#2288#2289#0" expanded="false" />
+            <element signature="e#2314#2315#0" expanded="false" />
+            <element signature="e#2355#2356#0" expanded="false" />
+            <element signature="e#2387#2388#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1302,7 +1321,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="740">
           <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#513#514#0" expanded="false" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#571#572#0" expanded="false" />
+            <element signature="e#595#596#0" expanded="false" />
+            <element signature="e#633#634#0" expanded="false" />
+            <element signature="e#662#663#0" expanded="false" />
+            <element signature="e#879#880#0" expanded="false" />
+            <element signature="e#934#935#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1324,8 +1352,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/SumBy3_15.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+        <state relative-caret-position="46">
+          <caret line="39" column="19" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="39" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
