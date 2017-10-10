@@ -5,7 +5,28 @@ package LeetCode;
  */
 public class ContainerWithMostWater_11 {
 
-    // 思路分析：
+    // 思路：对撞指针
+    // 时间复杂度 O(N) ， 循环条件 (left < right)
+    // 如果height[left] < height[right]
+    // left ++ ; else right--;
+    public static int greatMaxArea(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int maxArea = -999;
+
+        while (left < right) {
+            maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right - left));
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return maxArea;
+    }
+
+    // 思路分析： 暴力解法
     // 构建成坐标点
     // 使用O( logN^2 )的时间复杂度 暴力的对比 记录最大的面积
     // 返回最大的面积
@@ -37,27 +58,6 @@ public class ContainerWithMostWater_11 {
                 }
             }
         }
-        return maxArea;
-    }
-
-    // 思路：对撞指针
-    // 时间复杂度 O(N) ， 循环条件 (left < right)
-    // 如果height[left] < height[right]
-    // left ++ ; else right--;
-    public static int greatMaxArea(int[] height) {
-        int left = 0;
-        int right = height.length - 1;
-        int maxArea = -999;
-
-        while (left < right) {
-            maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right - left));
-            if (height[left] < height[right]) {
-                left++;
-            } else {
-                right--;
-            }
-        }
-
         return maxArea;
     }
 
