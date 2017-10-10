@@ -32,8 +32,13 @@ public class SumBy3_15 {
                         boolean isRepeat = false;
                         for (int e = 0; e < result.size(); e++) {
                             List<Integer> item = result.get(e);
-                            if ( item.contains(nums[i]) && item.contains(nums[j]) && item.contains(nums[k]) ) {
+                            boolean test = item.indexOf(nums[i]) == item.indexOf(nums[j]) && item.indexOf(nums[i]) == item.indexOf(nums[k]);
+
+                            if ( item.contains(nums[i]) && item.contains(nums[j]) && item.contains(nums[k])) {
                                 isRepeat = true;
+                                if (test) {
+                                    isRepeat = false;
+                                }
                             }
                         }
 
@@ -49,7 +54,7 @@ public class SumBy3_15 {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
+        int[] nums = new int[]{0,0,0,0};
         List<List<Integer>> result = threeSum(nums);
         for (int i = 0; i < result.size(); i++) {
             System.out.println(result.get(i));
