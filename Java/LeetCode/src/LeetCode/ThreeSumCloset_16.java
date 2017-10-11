@@ -17,12 +17,8 @@ public class ThreeSumCloset_16 {
 
             int lo = i+1, hi = nums.length - 1, sum = target - nums[i];
             while (lo < hi) {
-                if ( Math.abs(nums[lo] + nums[hi] + nums[i] - target) < Math.abs(target - cloestRes) ) {
+                if ( Math.abs(nums[lo] + nums[hi] + nums[i] - target) <= Math.abs(target - cloestRes) ) {
                     cloestRes = nums[lo] + nums[hi] + nums[i];
-                } else if (Math.abs(nums[lo] + nums[hi] + nums[i] - target) == Math.abs(target - cloestRes)) {
-                    if (Math.abs(nums[lo] + nums[hi] + nums[i] - target) < Math.abs(cloestRes - target)) {
-                        cloestRes = nums[lo] + nums[hi] + nums[i];
-                    }
                 }
                 if (nums[lo] + nums[hi] == sum) {
                     return target;
