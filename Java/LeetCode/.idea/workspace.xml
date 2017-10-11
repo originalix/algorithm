@@ -104,8 +104,8 @@
       <file leaf-file-name="ThreeSumCloset_16.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/ThreeSumCloset_16.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            <state relative-caret-position="483">
+              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -903,12 +903,12 @@
       <workItem from="1507555697240" duration="2550000" />
       <workItem from="1507633226607" duration="6555000" />
       <workItem from="1507676479979" duration="2383000" />
-      <workItem from="1507725355307" duration="2878000" />
+      <workItem from="1507725355307" duration="4641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121612000" />
+    <option name="totallyTimeSpent" value="123375000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -980,18 +980,6 @@
           <line>38</line>
           <properties />
           <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LeetCode/ThreeSumCloset_16.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LeetCode/ThreeSumCloset_16.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="49" />
@@ -1388,8 +1376,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/ThreeSumCloset_16.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="483">
+          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
