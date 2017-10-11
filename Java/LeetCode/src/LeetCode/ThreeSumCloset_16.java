@@ -17,9 +17,9 @@ public class ThreeSumCloset_16 {
 
             int lo = i+1, hi = nums.length - 1, sum = target - nums[i];
             while (lo < hi) {
-                if ( Math.abs(nums[lo] + nums[hi] + nums[i] - target) < Math.abs(cloestRes) ) {
+                if ( Math.abs(nums[lo] + nums[hi] + nums[i] - target) < Math.abs(target - cloestRes) ) {
                     cloestRes = nums[lo] + nums[hi] + nums[i];
-                } else if (Math.abs(nums[lo] + nums[hi] + nums[i] - target) == Math.abs(cloestRes)) {
+                } else if (Math.abs(nums[lo] + nums[hi] + nums[i] - target) == Math.abs(target - cloestRes)) {
                     if (Math.abs(nums[lo] + nums[hi] + nums[i] - target) < Math.abs(cloestRes - target)) {
                         cloestRes = nums[lo] + nums[hi] + nums[i];
                     }
@@ -38,8 +38,8 @@ public class ThreeSumCloset_16 {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{-1, 2, 1, -4};
-        int cloest = threeSumClosest(nums, 2);
+        int[] nums = new int[]{-1 ,2 ,1 ,-4};
+        int cloest = threeSumClosest(nums, 1);
         System.out.println("cloest is : " + cloest);
     }
 }
