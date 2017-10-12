@@ -35,14 +35,14 @@ public class FourSum_18 {
                         answer.add(nums[hi]);
                         res.add(answer);
 
-                        while (lo < hi && nums[lo] == nums[lo++]) {
+                        lo++; hi--;
+                        while (lo < hi && nums[lo] == nums[lo - 1]) {
                             lo++;
                         }
 
-                        while (lo < hi && nums[hi] == nums[hi--]) {
+                        while (lo < hi && nums[hi] == nums[hi + 1]) {
                             hi--;
                         }
-                        lo++; hi--;
                     } else if (sum < target) {
                         lo++;
                     } else {
@@ -55,7 +55,7 @@ public class FourSum_18 {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 0, -1, 0, -2, 2};
+        int[] nums = new int[]{-3,-2,-1,0,0,1,2,3};
         List<List<Integer>> res = fourSum(nums, 0);
         for (int i = 0; i < res.size(); i++) {
             System.out.println(res.get(i));
