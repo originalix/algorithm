@@ -40,9 +40,12 @@
       <file leaf-file-name="FourSum_18.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/FourSum_18.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="500">
+              <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#305#320#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -806,12 +809,12 @@
       <workItem from="1507633226607" duration="6555000" />
       <workItem from="1507676479979" duration="2383000" />
       <workItem from="1507725355307" duration="5584000" />
-      <workItem from="1507810749656" duration="291000" />
+      <workItem from="1507810749656" duration="590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124609000" />
+    <option name="totallyTimeSpent" value="124908000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1257,7 +1260,7 @@
         <state relative-caret-position="20">
           <caret line="1182" column="0" lean-forward="false" selection-start-line="1182" selection-start-column="0" selection-end-line="1182" selection-end-column="0" />
           <folding>
-            <element signature="e#46266#46267#0" expanded="true" />
+            <element signature="e#46266#46267#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1282,9 +1285,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/FourSum_18.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="500">
+          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#305#320#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

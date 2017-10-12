@@ -13,6 +13,43 @@ public class FourSum_18 {
 
         List<List<Integer>> res = new LinkedList<List<Integer>>();
 
+        for (int i = 0; i < nums.length - 3; i++) {
+            if (i != 0 && nums[i - 1] == nums[i]) {
+                continue;
+            }
+
+            for (int j = i + 1; j < nums.length - 2; j++) {
+                if ( j != i+1 && nums[j - 1] == nums[j] ) {
+                    continue;
+                }
+
+                int lo = j + 1, hi = nums.length - 1, sum = target - nums[j];
+                while (lo < hi) {
+                    if (nums[lo] + nums[hi] == sum) {
+
+                        List<Integer> answer = new LinkedList<Integer>();
+                        answer.add(nums[i]);
+                        answer.add(nums[j]);
+                        answer.add(nums[lo]);
+                        answer.add(nums[hi]);
+                        res.add(answer);
+
+                        while (lo < hi && nums[lo] == nums[lo++]) {
+                            lo++;
+                        }
+
+                        while (lo < hi && nums[hi] == nums[hi--]) {
+                            hi--;
+                        }
+                        lo++; hi--;
+                    } else if (nums[lo] + nums[hi] < sum) {
+                        lo++;
+                    } else {
+                        hi--;
+                    }
+                }
+            }
+        }
         return res;
     }
 }
