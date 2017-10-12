@@ -8,7 +8,7 @@ import java.util.List;
  * Created by Lix on 2017/10/12.
  */
 public class FourSum_18 {
-    public List<List<Integer>> fourSum(int[] nums, int target) {
+    public static List<List<Integer>> fourSum(int[] nums, int target) {
         Arrays.sort(nums);
 
         List<List<Integer>> res = new LinkedList<List<Integer>>();
@@ -23,9 +23,10 @@ public class FourSum_18 {
                     continue;
                 }
 
-                int lo = j + 1, hi = nums.length - 1, sum = target - nums[j];
+                int lo = j + 1, hi = nums.length - 1;
                 while (lo < hi) {
-                    if (nums[lo] + nums[hi] == sum) {
+                    int sum = nums[i] + nums[j] + nums[lo] + nums[hi];
+                    if (sum == target) {
 
                         List<Integer> answer = new LinkedList<Integer>();
                         answer.add(nums[i]);
@@ -42,7 +43,7 @@ public class FourSum_18 {
                             hi--;
                         }
                         lo++; hi--;
-                    } else if (nums[lo] + nums[hi] < sum) {
+                    } else if (sum < target) {
                         lo++;
                     } else {
                         hi--;
@@ -51,5 +52,13 @@ public class FourSum_18 {
             }
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{1, 0, -1, 0, -2, 2};
+        List<List<Integer>> res = fourSum(nums, 0);
+        for (int i = 0; i < res.size(); i++) {
+            System.out.println(res.get(i));
+        }
     }
 }
