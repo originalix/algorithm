@@ -28,8 +28,8 @@
       <file leaf-file-name="SumBy3_15.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/SumBy3_15.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="380">
+              <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,7 +40,7 @@
       <file leaf-file-name="SearchRotatedSortedArray_33.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/SearchRotatedSortedArray_33.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
+            <state relative-caret-position="663">
               <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -52,12 +52,10 @@
       <file leaf-file-name="FourSum_18.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/FourSum_18.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="160">
               <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#312#327#0" expanded="true" />
-                <element signature="e#908#917#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -183,7 +181,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,6 +228,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -822,12 +820,13 @@
       <workItem from="1507633226607" duration="6555000" />
       <workItem from="1507676479979" duration="2383000" />
       <workItem from="1507725355307" duration="5584000" />
-      <workItem from="1507810749656" duration="3570000" />
+      <workItem from="1507810749656" duration="4071000" />
+      <workItem from="1507989586837" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127888000" />
+    <option name="totallyTimeSpent" value="128396000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -840,12 +839,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="989" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32552955" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -857,7 +854,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52619845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23588924" sideWeight="0.4939577" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23801917" sideWeight="0.4939577" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -869,6 +866,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32552955" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1209,12 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1580">
           <caret line="83" column="5" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="83" selection-end-column="5" />
-          <folding>
-            <element signature="e#2288#2289#0" expanded="false" />
-            <element signature="e#2314#2315#0" expanded="false" />
-            <element signature="e#2355#2356#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,16 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="740">
           <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-          <folding>
-            <element signature="e#513#514#0" expanded="false" />
-            <element signature="e#537#538#0" expanded="false" />
-            <element signature="e#571#572#0" expanded="false" />
-            <element signature="e#595#596#0" expanded="false" />
-            <element signature="e#633#634#0" expanded="false" />
-            <element signature="e#662#663#0" expanded="false" />
-            <element signature="e#879#880#0" expanded="false" />
-            <element signature="e#934#935#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1265,9 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="1182" column="0" lean-forward="false" selection-start-line="1182" selection-start-column="0" selection-end-line="1182" selection-end-column="0" />
-          <folding>
-            <element signature="e#46266#46267#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1281,8 +1260,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/SumBy3_15.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state relative-caret-position="380">
+          <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1291,19 +1270,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/FourSum_18.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="160">
           <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#312#327#0" expanded="true" />
-            <element signature="e#908#917#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/SearchRotatedSortedArray_33.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
+        <state relative-caret-position="663">
           <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
