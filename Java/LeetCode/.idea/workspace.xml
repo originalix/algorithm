@@ -60,11 +60,11 @@
       <file leaf-file-name="SearchRange_34.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/SearchRange_34.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="120">
+              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="26" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#240#249#0" expanded="true" />
+                <element signature="e#247#256#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -277,27 +277,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NextPermutation_31">
-    <configuration default="false" name="SumBy3_15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="LeetCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="LeetCode.SumBy3_15" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="LeetCode" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.SearchRange_34">
     <configuration default="false" name="ThreeSumCloset_16" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -366,6 +346,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="LeetCode.NextPermutation_31" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="LeetCode" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SearchRange_34" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="LeetCode.SearchRange_34" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -766,19 +766,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.SumBy3_15" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ThreeSumCloset_16" />
-      <item index="2" class="java.lang.String" itemvalue="Application.FourSum_18" />
-      <item index="3" class="java.lang.String" itemvalue="Application.SearchRotatedSortedArray_33" />
-      <item index="4" class="java.lang.String" itemvalue="Application.NextPermutation_31" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ThreeSumCloset_16" />
+      <item index="1" class="java.lang.String" itemvalue="Application.FourSum_18" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SearchRotatedSortedArray_33" />
+      <item index="3" class="java.lang.String" itemvalue="Application.NextPermutation_31" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SearchRange_34" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.NextPermutation_31" />
-        <item index="1" class="java.lang.String" itemvalue="Application.SearchRotatedSortedArray_33" />
-        <item index="2" class="java.lang.String" itemvalue="Application.FourSum_18" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ThreeSumCloset_16" />
-        <item index="4" class="java.lang.String" itemvalue="Application.SumBy3_15" />
+        <item index="0" class="java.lang.String" itemvalue="Application.SearchRange_34" />
+        <item index="1" class="java.lang.String" itemvalue="Application.NextPermutation_31" />
+        <item index="2" class="java.lang.String" itemvalue="Application.SearchRotatedSortedArray_33" />
+        <item index="3" class="java.lang.String" itemvalue="Application.FourSum_18" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ThreeSumCloset_16" />
       </list>
     </recent_temporary>
   </component>
@@ -841,12 +841,12 @@
       <workItem from="1507725355307" duration="5584000" />
       <workItem from="1507810749656" duration="4071000" />
       <workItem from="1507989586837" duration="142000" />
-      <workItem from="1508069315725" duration="4361000" />
+      <workItem from="1508069315725" duration="4769000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132892000" />
+    <option name="totallyTimeSpent" value="133300000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -871,7 +871,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42996743" sideWeight="0.5022779" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62590677" sideWeight="0.4977221" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.62590677" sideWeight="0.4977221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5253886" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1302,11 +1302,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/SearchRange_34.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="120">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="26" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#240#249#0" expanded="true" />
+            <element signature="e#247#256#0" expanded="true" />
           </folding>
         </state>
       </provider>
