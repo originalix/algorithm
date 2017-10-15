@@ -1,5 +1,7 @@
 package LeetCode;
 
+import sun.security.util.Length;
+
 import java.util.Arrays;
 
 /**
@@ -10,21 +12,58 @@ public class NextPermutation_31 {
     // 若都不行 sort之后 从小到大 输出
 
     public static void nextPermutation(int[] nums) {
-        for (int i = nums.length - 1; i >= 0; i--) {
-            if (nums.length - 2 >= 0) {
-                if (nums[i] > nums[i-1]) {
-                    swap(nums, i, i-1);
-                    return;
-                }
+        int index = -1;
+        for (int i = nums.length - 2; i >= 0; i--) {
+            if (nums[i] < nums[i+1]) {
+                index = i;
+                break;
             }
         }
 
-        Arrays.sort(nums);
+        if (index == -1) {
+            reverse(nums, 0, nums.length - 1);
+            printArr(nums);
+            return;
+        }
+
+        int biggerIndex = index + 1;
+        for (int i = nums.length - 1; i > index; i--) {
+            if (nums[i] > nums[index]) {
+                biggerIndex = i;
+                break;
+            }
+        }
+
+        int temp = nums[index];
+        nums[index] = nums[biggerIndex];
+        nums[biggerIndex] = temp;
+
+        reverse(nums, index + 1, nums.length - 1);
+        printArr(nums);
+    }
+
+    public static void reverse(int[] nums, int start, int end) {
+        for (int i = start, j = end; i < j; i++, j--) {
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+        }
     }
 
     private static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+    }
+
+    private static void printArr(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("int[" + i + "] = " + arr[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{1, 3, 2};
+        nextPermutation(nums);
     }
 }
