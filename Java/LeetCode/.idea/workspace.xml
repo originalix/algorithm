@@ -60,9 +60,12 @@
       <file leaf-file-name="SearchRange_34.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/SearchRange_34.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="400">
+              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#240#249#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LeetCode/SortColors_75.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/MoveZeroes_283.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/TwoSumII_167.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/MinimumSize_209.java" />
@@ -151,6 +153,7 @@
         <option value="$PROJECT_DIR$/src/LeetCode/FourSum_18.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/SearchRotatedSortedArray_33.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/NextPermutation_31.java" />
+        <option value="$PROJECT_DIR$/src/LeetCode/SearchRange_34.java" />
       </list>
     </option>
   </component>
@@ -838,12 +841,12 @@
       <workItem from="1507725355307" duration="5584000" />
       <workItem from="1507810749656" duration="4071000" />
       <workItem from="1507989586837" duration="142000" />
-      <workItem from="1508069315725" duration="3407000" />
+      <workItem from="1508069315725" duration="4361000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131938000" />
+    <option name="totallyTimeSpent" value="132892000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -926,13 +929,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testG1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testG2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1296,11 +1292,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/util/function/ToIntFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/SearchRange_34.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="400">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#240#249#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
