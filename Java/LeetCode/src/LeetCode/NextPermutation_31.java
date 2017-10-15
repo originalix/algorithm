@@ -22,7 +22,6 @@ public class NextPermutation_31 {
 
         if (index == -1) {
             reverse(nums, 0, nums.length - 1);
-            printArr(nums);
             return;
         }
 
@@ -39,7 +38,6 @@ public class NextPermutation_31 {
         nums[biggerIndex] = temp;
 
         reverse(nums, index + 1, nums.length - 1);
-        printArr(nums);
     }
 
     public static void reverse(int[] nums, int start, int end) {
@@ -47,18 +45,6 @@ public class NextPermutation_31 {
             int temp = nums[i];
             nums[i] = nums[j];
             nums[j] = temp;
-        }
-    }
-
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-
-    private static void printArr(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println("int[" + i + "] = " + arr[i]);
         }
     }
 
