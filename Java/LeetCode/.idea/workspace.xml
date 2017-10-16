@@ -85,7 +85,17 @@
         <entry file="file://$PROJECT_DIR$/src/LeetCode/RemoveDuplicatesFromSortedList_83.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LeetCode/ListNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -124,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LeetCode/MinimumSize_209.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/BST.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/BST.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFInd.java" />
@@ -174,6 +183,7 @@
         <option value="$PROJECT_DIR$/src/LeetCode/NextPermutation_31.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/SearchRange_34.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/MergeTwoSortedLists_21.java" />
+        <option value="$PROJECT_DIR$/src/LeetCode/ListNode.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/RemoveDuplicatesFromSortedList_83.java" />
       </list>
     </option>
@@ -866,12 +876,12 @@
       <workItem from="1508110518420" duration="892000" />
       <workItem from="1508116013599" duration="1709000" />
       <workItem from="1508156166021" duration="5027000" />
-      <workItem from="1508194219064" duration="998000" />
+      <workItem from="1508194219064" duration="1061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141995000" />
+    <option name="totallyTimeSpent" value="142058000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -954,13 +964,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/ShortestPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="79" column="32" lean-forward="false" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/Components.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -1330,10 +1333,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LeetCode/ListNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/RemoveDuplicatesFromSortedList_83.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding />
         </state>
       </provider>
