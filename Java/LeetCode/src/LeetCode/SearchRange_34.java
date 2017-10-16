@@ -1,5 +1,6 @@
 package LeetCode;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,37 +11,36 @@ public class SearchRange_34 {
     public static int[] searchRange(int[] nums, int target) {
         List<Integer> res = new LinkedList<Integer>();
 
+        if (nums.length < 1) {
+            return new int[]{-1, -1};
+        }
+
         int lo = 0, hi = nums.length - 1;
-        while (lo < hi) {
+        while (lo <= hi) {
             int mid = (lo + hi) / 2;
             if (nums[mid] == target) {
-                res.add(mid);
-                
+                res.add(0, mid);
+                res.add(1, mid);
+
                 int oldMid = mid;
 
                 while (mid - 1 >= lo && nums[mid-1] == target) {
                     mid -= 1;
-                    res.add(mid);
+                    res.remove(0);
+                    res.add(0, mid);
                 }
 
                 mid = oldMid;
 
                 while (mid + 1 <= hi &&  nums[mid+1] == target) {
                     mid += 1;
-                    res.add(mid);
+                    res.remove(1);
+                    res.add(1, mid);
                 }
 
-                return res.stream().mapToInt(i -> i).toArray();
-
-//                while (mid - 1 > lo && nums[mid - 1] < target) {
-//                    lo = mid + 1;
-//                    mid -= 1;
-//                }
-//
-//                while (mid + 1 < hi && nums[mid + 1] > target) {
-//                    hi = mid - 1;
-//                    mid += 1;
-//                }
+                int[] resArray = res.stream().mapToInt(i -> i).toArray();
+//                Arrays.sort(resArray);
+                return resArray;
 
             } else if (nums[mid] < target) {
                 lo = mid + 1;
@@ -49,18 +49,12 @@ public class SearchRange_34 {
             }
         }
 
-//        if (res.size() <= 0) {
         return new int[]{-1, -1};
-//        }
-//
-//        int[] array = res.stream().mapToInt(i -> i).toArray();
-//
-//        return array;
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{5, 7, 7, 8, 8, 10};
-        int[] a = searchRange(nums, 8);
+        int[] nums = new int[]{2,2};
+        int[] a = searchRange(nums, 2);
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
         }
