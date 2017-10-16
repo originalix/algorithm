@@ -8,53 +8,21 @@ import java.util.List;
  * Created by Lix on 2017/10/16.
  */
 public class SearchRange_34 {
-    public static int[] searchRange(int[] nums, int target) {
-        List<Integer> res = new LinkedList<Integer>();
+    public int[] searchRange(int[] nums, int target) {
+        int[] range = {nums.length, -1};
+        searchRange(nums, target, 0, nums.length - 1, range);
+        if (range[0] > range[1]) range[0] = -1;
+        return range;
+    }
 
-        if (nums.length < 1) {
-            return new int[]{-1, -1};
-        }
+    public void searchRange(int[] A, int target, int left, int right, int[] range) {
 
-        int lo = 0, hi = nums.length - 1;
-        while (lo <= hi) {
-            int mid = (lo + hi) / 2;
-            if (nums[mid] == target) {
-                res.add(0, mid);
-                res.add(1, mid);
-
-                int oldMid = mid;
-
-                while (mid - 1 >= lo && nums[mid-1] == target) {
-                    mid -= 1;
-                    res.remove(0);
-                    res.add(0, mid);
-                }
-
-                mid = oldMid;
-
-                while (mid + 1 <= hi &&  nums[mid+1] == target) {
-                    mid += 1;
-                    res.remove(1);
-                    res.add(1, mid);
-                }
-
-                int[] resArray = res.stream().mapToInt(i -> i).toArray();
-//                Arrays.sort(resArray);
-                return resArray;
-
-            } else if (nums[mid] < target) {
-                lo = mid + 1;
-            } else {
-                hi = mid - 1;
-            }
-        }
-
-        return new int[]{-1, -1};
     }
 
     public static void main(String[] args) {
         int[] nums = new int[]{2,2};
-        int[] a = searchRange(nums, 2);
+        SearchRange_34 solution = new SearchRange_34();
+        int[] a = solution.searchRange(nums, 2);
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
         }
