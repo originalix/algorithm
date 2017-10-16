@@ -9,54 +9,28 @@ import java.util.List;
  */
 public class MergeTwoSortedLists_21 {
 
-    // 思路： 合并两个链表
-    // 暴力解法 时间复杂度O(n^2)
-    // 循环比较
     private static class ListNode {
         int val;
         ListNode next;
         ListNode(int x) { val = x; }
     }
 
+    // 思路： 递归求解
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode l2NextNode = l2;
-//        ListNode l1NextNode = l1.next;
-        while (l2NextNode != null) {
-//            while (l1NextNode != null) {
-//                if (l1NextNode.val <= l2NextNode.val) {
-//                    ListNode temp1 = l1NextNode;
-//                    ListNode temp2 = l2NextNode.next;
-//                    l1NextNode = l2NextNode;
-//                    l1NextNode.next = temp1;
-//                } else {
-//                    ListNode temp1 = l1NextNode.next;
-//                    ListNode temp2 = l2NextNode.next;
-//                    l1NextNode.next = l2NextNode;
-//                    l2NextNode.next = temp1;
-//                }
-//            }
+        if (l1 == null) return l2;
+        if (l2 == null) return l1;
 
-            System.out.println("now val = " + l2NextNode.val);
-            l2NextNode = l2NextNode.next;
+        if (l1.val < l2.val) {
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeTwoLists(l1, l2.next);
+            return l2;
         }
-        return null;
     }
 
     public static void main(String[] args) {
-        ListNode list = new ListNode(0);
 
-        List<ListNode> arr = new LinkedList<ListNode>();
-        for (int i = 0; i < 10; i++) {
-            ListNode random = new ListNode(i);
-            arr.add(random);
-        }
-
-        for (int i = 0; i < 10; i++) {
-            ListNode a = arr.get(i);
-            list.next = arr.get(i);
-        }
-
-        mergeTwoLists(null, list);
     }
 
 }
