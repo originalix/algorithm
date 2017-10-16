@@ -1,5 +1,7 @@
 package LeetCode;
 
+import javax.sound.sampled.Line;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -17,7 +19,7 @@ public class MergeTwoSortedLists_21 {
     }
 
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode l2NextNode = l2.next;
+        ListNode l2NextNode = l2;
 //        ListNode l1NextNode = l1.next;
         while (l2NextNode != null) {
 //            while (l1NextNode != null) {
@@ -43,9 +45,15 @@ public class MergeTwoSortedLists_21 {
     public static void main(String[] args) {
         ListNode list = new ListNode(0);
 
+        List<ListNode> arr = new LinkedList<ListNode>();
         for (int i = 0; i < 10; i++) {
-            ListNode random = new ListNode((int) (Math.random() % 100));
-            list.next = random;
+            ListNode random = new ListNode(i);
+            arr.add(random);
+        }
+
+        for (int i = 0; i < 10; i++) {
+            ListNode a = arr.get(i);
+            list.next = arr.get(i);
         }
 
         mergeTwoLists(null, list);
