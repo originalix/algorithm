@@ -15,6 +15,22 @@ public class SearchRange_34 {
             int mid = (lo + hi) / 2;
             if (nums[mid] == target) {
                 res.add(mid);
+                
+                int oldMid = mid;
+
+                while (mid - 1 >= lo && nums[mid-1] == target) {
+                    mid -= 1;
+                    res.add(mid);
+                }
+
+                mid = oldMid;
+
+                while (mid + 1 <= hi &&  nums[mid+1] == target) {
+                    mid += 1;
+                    res.add(mid);
+                }
+
+                return res.stream().mapToInt(i -> i).toArray();
 
 //                while (mid - 1 > lo && nums[mid - 1] < target) {
 //                    lo = mid + 1;
@@ -33,13 +49,13 @@ public class SearchRange_34 {
             }
         }
 
-        if (res.size() <= 0) {
-            return new int[]{-1, -1};
-        }
-
-        int[] array = res.stream().mapToInt(i -> i).toArray();
-
-        return array;
+//        if (res.size() <= 0) {
+        return new int[]{-1, -1};
+//        }
+//
+//        int[] array = res.stream().mapToInt(i -> i).toArray();
+//
+//        return array;
     }
 
     public static void main(String[] args) {
