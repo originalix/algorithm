@@ -7,23 +7,9 @@ import java.lang.annotation.Target;
  */
 public class RemoveDuplicatesFromSortedList_83 {
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null) return head;
-        head.next = deleteDuplicates(head.next, head.val);
-        return head;
+        if (head == null || head.next == null) return head;
+        head.next = deleteDuplicates(head.next);
+        return head.val == head.next.val ? head.next : head;
     }
 
-    public ListNode deleteDuplicates(ListNode node, int val) {
-
-        if (node == null) return node;
-
-        if (node.next != null) {
-            node.next = deleteDuplicates(node.next, node.val);
-        }
-
-        if (node.val == val) {
-            node = deleteDuplicates(node.next, node.val);
-        }
-
-        return node;
-    }
 }

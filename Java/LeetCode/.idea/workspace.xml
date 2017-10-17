@@ -84,8 +84,8 @@
       <file leaf-file-name="RemoveDuplicatesFromSortedList_83.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/RemoveDuplicatesFromSortedList_83.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            <state relative-caret-position="300">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -877,12 +877,12 @@
       <workItem from="1508116013599" duration="1709000" />
       <workItem from="1508156166021" duration="5027000" />
       <workItem from="1508194219064" duration="1541000" />
-      <workItem from="1508218309641" duration="1797000" />
+      <workItem from="1508218309641" duration="2520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144335000" />
+    <option name="totallyTimeSpent" value="145058000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1331,8 +1331,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/RemoveDuplicatesFromSortedList_83.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="300">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
