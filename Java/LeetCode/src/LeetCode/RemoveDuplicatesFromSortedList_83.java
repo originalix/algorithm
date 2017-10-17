@@ -15,11 +15,15 @@ public class RemoveDuplicatesFromSortedList_83 {
     public ListNode deleteDuplicates(ListNode node, int val) {
 
         if (node == null) return node;
+
         if (node.next != null) {
             node.next = deleteDuplicates(node.next, node.val);
-            return node;
         }
 
-        if (node.val != val) return node;
+        if (node.val == val) {
+            node = deleteDuplicates(node.next, node.val);
+        }
+
+        return node;
     }
 }
