@@ -5,7 +5,23 @@ package LeetCode;
  */
 public class IntersectionOfTwoLinkedLists_160 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        return null;
+        int lenA = length(headA); int lenB = length(headB);
+        while (lenA > lenB) {
+            headA = headA.next;
+            lenA --;
+        }
+
+        while (lenA < lenB) {
+            headB = headB.next;
+            lenB --;
+        }
+
+        while (headA != headB) {
+            headA = headA.next;
+            headB = headB.next;
+        }
+
+        return headA;
     }
 
     public int length(ListNode head) {
