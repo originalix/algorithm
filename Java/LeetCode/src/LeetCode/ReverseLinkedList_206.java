@@ -1,5 +1,6 @@
 package LeetCode;
 
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -19,5 +20,14 @@ public class ReverseLinkedList_206 {
         }
 
         return pre;
+    }
+
+    public ListNode reverseList1(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode nextNode = head.next;
+        ListNode newHead = reverseList1(nextNode);
+        nextNode.next = head;
+        head.next = null;
+        return newHead;
     }
 }
