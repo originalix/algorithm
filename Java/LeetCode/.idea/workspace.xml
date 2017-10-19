@@ -35,16 +35,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchRotatedSortedArray_33.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LeetCode/SearchRotatedSortedArray_33.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SearchRange_34.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/SearchRange_34.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -107,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReverseLinkedList_206.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReverseLinkedList_206.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/ReverseLinkedList_206.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
@@ -115,6 +105,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PalindromeLinkedList_234.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LeetCode/PalindromeLinkedList_234.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="25" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,7 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind2.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind3.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/UnionFind4.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Graph.java" />
@@ -203,6 +202,7 @@
         <option value="$PROJECT_DIR$/src/LeetCode/RemoveLinkedListElements_203.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/ListNode.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/ReverseLinkedList_206.java" />
+        <option value="$PROJECT_DIR$/src/LeetCode/PalindromeLinkedList_234.java" />
       </list>
     </option>
   </component>
@@ -897,12 +897,12 @@
       <workItem from="1508194219064" duration="1541000" />
       <workItem from="1508218309641" duration="2896000" />
       <workItem from="1508240871625" duration="2345000" />
-      <workItem from="1508415593873" duration="2670000" />
+      <workItem from="1508415593873" duration="3491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150449000" />
+    <option name="totallyTimeSpent" value="151270000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -985,13 +985,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testWeightG3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="923">
-          <caret line="8433" column="13" lean-forward="false" selection-start-line="8433" selection-start-column="13" selection-end-line="8433" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testWeightG4.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="923">
@@ -1356,6 +1349,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LeetCode/PalindromeLinkedList_234.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="25" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
