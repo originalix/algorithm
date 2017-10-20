@@ -8,12 +8,12 @@ public class PalindromeLinkedList_234 {
         ListNode faster = head;
         ListNode slower = head;
 
-        while (faster.next != null && faster.next.next != null) {
+        while (faster != null && faster.next != null) {
             faster = faster.next.next;
             slower = slower.next;
         }
 
-        if (slower != null) {
+        if (faster != null) {
             slower = slower.next;
         }
 
