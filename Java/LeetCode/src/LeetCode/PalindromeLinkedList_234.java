@@ -4,6 +4,10 @@ package LeetCode;
  * Created by Lix on 2017/10/20.
  */
 public class PalindromeLinkedList_234 {
+    /**
+     *  先找到链表的中部，再反转链表，然后捉对比较
+     *
+     */
     public boolean isPalindrome(ListNode head) {
         ListNode faster = head;
         ListNode slower = head;
