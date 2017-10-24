@@ -5,22 +5,13 @@ package LeetCode;
  */
 public class SwapNodesInPairs_24 {
     public ListNode swapPairs(ListNode head) {
-        ListNode temp = null;
-        while (head != null) {
-            ListNode a = head;
-            ListNode b = a.next;
-            if (b == null) {
-                break;
-            }
-            ListNode T = b.next;
-            ListNode T1 = a;
-            a = b;
-            b = T1;
-            b.next = a;
-            a.next = T;
-            temp = b;
-            head = head.next.next;
+        if (head == null || head.next == null) {
+            return head;
         }
-        return temp;
+
+        ListNode n = head.next;
+        head.next = swapPairs(head.next.next);
+        n.next = head;
+        return n;
     }
 }
