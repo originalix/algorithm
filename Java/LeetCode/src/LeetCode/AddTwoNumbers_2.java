@@ -9,11 +9,18 @@ public class AddTwoNumbers_2 {
     }
 
     public void testReversr(ListNode l1) {
-        int temp1 = reverse(l1);
+        int temp1 = calculateSum(l1);
         System.out.println("now sum = " + temp1);
+        Integer n = temp1;
+        String str = n.toString();
+        System.out.println("integer to string + " + str);
+        for (int i = 0; i < str.length(); i++) {
+            String subStr = str.substring(i, i+1);
+            System.out.println(subStr);
+        }
     }
 
-    private int reverse(ListNode node) {
+    private int calculateSum(ListNode node) {
         ListNode pre = null;
         ListNode next = null;
 
