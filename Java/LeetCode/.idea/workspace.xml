@@ -25,11 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AddTwoNumbers_2.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddTwoNumbers_2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/AddTwoNumbers_2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="520">
               <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RemoveNthNodeFromEndOfList_19.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LeetCode/RemoveNthNodeFromEndOfList_19.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -68,7 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/SparseGraph.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/ReadGraph.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Components.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/Path.java" />
@@ -119,6 +128,7 @@
         <option value="$PROJECT_DIR$/src/LeetCode/SwapNodesInPairs_24.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/ListNode.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/AddTwoNumbers_2.java" />
+        <option value="$PROJECT_DIR$/src/LeetCode/RemoveNthNodeFromEndOfList_19.java" />
       </list>
     </option>
   </component>
@@ -821,12 +831,12 @@
       <workItem from="1508827636221" duration="1315000" />
       <workItem from="1508834284209" duration="4614000" />
       <workItem from="1509002998308" duration="7910000" />
-      <workItem from="1509059132451" duration="215000" />
+      <workItem from="1509059132451" duration="752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169670000" />
+    <option name="totallyTimeSpent" value="170207000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -909,13 +919,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/MinHeap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="78" column="4" lean-forward="false" selection-start-line="78" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/DenseWeightedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1058">
@@ -1165,16 +1168,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LeetCode/ReverseLinkedList_206.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/RemoveElement_27.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="860">
@@ -1278,6 +1271,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LeetCode/ReverseLinkedList_206.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/ListNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1290,6 +1293,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LeetCode/RemoveNthNodeFromEndOfList_19.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding />
         </state>
       </provider>
