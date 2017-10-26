@@ -30,24 +30,40 @@ public class AddTwoNumbers_2 {
         String string = sum.toString();
 
         System.out.println("integer to string + " + string);
+
         ListNode res = null;
-        ListNode tmp = null;
-        for (int i = 0; i < string.length() - 1; i++) {
-            String subStr1 = string.substring(i, i+1);
-            String subStr2 = string.substring(i+1, i+2);
+        if (string.length() > 1) {
+            int first = Integer.valueOf(string.substring(0, 1));
+            res = new ListNode(first);
+            for (int i = 1; i < string.length(); i++) {
+                String subStr = string.substring(i, i+1);
+                int val = Integer.valueOf(subStr);
+                ListNode tmp = new ListNode(val);
 
-            int val1 = Integer.valueOf(subStr1);
-            int val2 = Integer.valueOf(subStr2);
+                res.next = tmp;
+                res = res.next;
+            }
 
-            System.out.print("str[" + i + "] = " + val1 + ", ");
-            System.out.print("str[" + i + "] = " + val2 + ", ");
-            res = new ListNode(val1);
-            tmp = new ListNode(val2);
-            tmp.next = res;
-
+        } else {
+//            return res;
         }
 
-        System.out.println(res);
+//        for (int i = 0; i < string.length() - 1; i++) {
+//            String subStr1 = string.substring(i, i+1);
+//            String subStr2 = string.substring(i+1, i+2);
+//
+//            int val1 = Integer.valueOf(subStr1);
+//            int val2 = Integer.valueOf(subStr2);
+//
+//            System.out.print("str[" + i + "] = " + val1 + ", ");
+//            System.out.print("str[" + i + "] = " + val2 + ", ");
+//            res = new ListNode(val1);
+//            tmp = new ListNode(val2);
+//            tmp.next = res;
+//
+//        }
+//
+//        System.out.println(res);
     }
 
     private int calculateSum(ListNode node) {
