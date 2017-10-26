@@ -10,8 +10,10 @@ public class RemoveNthNodeFromEndOfList_19 {
 
         int index = 1;
         while (reverse != null) {
-            if (index + 1 == n) {
-                reverse.next = reverse.next.next;
+
+            if (index == n) {
+                reverse = reverse.next;
+                break;
             }
 
             index += 1;
@@ -37,9 +39,9 @@ public class RemoveNthNodeFromEndOfList_19 {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(2);
-        ListNode l3 = new ListNode(3);
+//        ListNode l3 = new ListNode(3);
         l1.next = l2;
-        l2.next = l3;
+//        l2.next = l3;
 
         RemoveNthNodeFromEndOfList_19 obj = new RemoveNthNodeFromEndOfList_19();
         ListNode res = obj.removeNthFromEnd(l1, 1);
