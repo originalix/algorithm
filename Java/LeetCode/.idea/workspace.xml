@@ -28,8 +28,8 @@
       <file leaf-file-name="AddTwoNumbers_2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/AddTwoNumbers_2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="140">
+              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="22" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -820,12 +820,12 @@
       <workItem from="1508670637594" duration="57000" />
       <workItem from="1508827636221" duration="1315000" />
       <workItem from="1508834284209" duration="4614000" />
-      <workItem from="1509002998308" duration="7248000" />
+      <workItem from="1509002998308" duration="7787000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168793000" />
+    <option name="totallyTimeSpent" value="169332000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -897,18 +897,6 @@
           <line>38</line>
           <properties />
           <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LeetCode/AddTwoNumbers_2.java</url>
-          <line>65</line>
-          <properties />
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LeetCode/AddTwoNumbers_2.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="64" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="65" />
@@ -1300,8 +1288,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/AddTwoNumbers_2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        <state relative-caret-position="140">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="22" selection-end-column="25" />
           <folding />
         </state>
       </provider>
