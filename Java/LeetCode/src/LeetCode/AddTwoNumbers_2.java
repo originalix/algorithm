@@ -5,36 +5,31 @@ package LeetCode;
  */
 public class AddTwoNumbers_2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode temp1 = reverse(l1);
-        ListNode temp2 = reverse(l2);
-
-        while (temp1 != null) {
-            System.out.println("val = " + temp1.val);
-            temp1 = temp1.next;
-        }
-        return temp1;
+        return l1;
     }
 
     public void testReversr(ListNode l1) {
-        ListNode temp1 = reverse(l1);
-
-        while (temp1 != null) {
-            System.out.println("val = " + temp1.val);
-            temp1 = temp1.next;
-        }
+        int temp1 = reverse(l1);
+        System.out.println("now sum = " + temp1);
     }
 
-    private ListNode reverse(ListNode node) {
+    private int reverse(ListNode node) {
         ListNode pre = null;
         ListNode next = null;
+
+        int index = 0;
+        int sum = 0;
+
         while (node != null) {
             next = node.next;
             node.next = pre;
             pre = node;
+            sum += (node.val * Math.pow(10, index));
+            index += 1;
             node = next;
         }
 
-        return node;
+        return sum;
     }
 
     public static void main(String[] args) {
