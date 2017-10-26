@@ -5,19 +5,49 @@ package LeetCode;
  */
 public class AddTwoNumbers_2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        return l1;
+        int temp1 = calculateSum(l1);
+        int temp2 = calculateSum(l2);
+        Integer sum = temp1 + temp2;
+        String string = sum.toString();
+
+        System.out.println("integer to string + " + string);
+        ListNode res = null;
+        for (int i = 0; i < string.length(); i++) {
+            String subStr = string.substring(i, i+1);
+            int val = Integer.valueOf(subStr);
+            res.val = val;
+            res = res.next;
+        }
+
+        return res;
     }
 
     public void testReversr(ListNode l1) {
         int temp1 = calculateSum(l1);
         System.out.println("now sum = " + temp1);
-        Integer n = temp1;
-        String str = n.toString();
-        System.out.println("integer to string + " + str);
-        for (int i = 0; i < str.length(); i++) {
-            String subStr = str.substring(i, i+1);
-            System.out.println(subStr);
+
+        Integer sum = temp1;
+        String string = sum.toString();
+
+        System.out.println("integer to string + " + string);
+        ListNode res = null;
+        ListNode tmp = null;
+        for (int i = 0; i < string.length() - 1; i++) {
+            String subStr1 = string.substring(i, i+1);
+            String subStr2 = string.substring(i+1, i+2);
+
+            int val1 = Integer.valueOf(subStr1);
+            int val2 = Integer.valueOf(subStr2);
+
+            System.out.print("str[" + i + "] = " + val1 + ", ");
+            System.out.print("str[" + i + "] = " + val2 + ", ");
+            res = new ListNode(val1);
+            tmp = new ListNode(val2);
+            tmp.next = res;
+
         }
+
+        System.out.println(res);
     }
 
     private int calculateSum(ListNode node) {
