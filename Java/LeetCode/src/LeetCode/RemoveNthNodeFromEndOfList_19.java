@@ -29,7 +29,7 @@ public class RemoveNthNodeFromEndOfList_19 {
             return head.next;
         }
         index += 1;
-        head = deleteNode(head.next, n, index);
+        head.next = deleteNode(head.next, n, index);
         return head;
     }
 
