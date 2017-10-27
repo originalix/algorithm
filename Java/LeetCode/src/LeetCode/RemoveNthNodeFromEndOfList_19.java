@@ -6,22 +6,7 @@ package LeetCode;
 public class RemoveNthNodeFromEndOfList_19 {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode reverse = reverseListFor19(head);
-        ListNode node = reverse;
 
-        int index = 1;
-        while (reverse != null) {
-
-            if (index == n) {
-                reverse = reverse.next;
-                break;
-            }
-
-            index += 1;
-            reverse = reverse.next;
-        }
-
-        ListNode res = reverseListFor19(node.next);
-        return res;
     }
 
     public ListNode reverseListFor19(ListNode head) {
@@ -44,7 +29,7 @@ public class RemoveNthNodeFromEndOfList_19 {
 //        l2.next = l3;
 
         RemoveNthNodeFromEndOfList_19 obj = new RemoveNthNodeFromEndOfList_19();
-        ListNode res = obj.removeNthFromEnd(l1, 1);
+        ListNode res = obj.removeNthFromEnd(l1, 2);
         System.out.println(res);
     }
 }
