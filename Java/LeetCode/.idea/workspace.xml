@@ -48,8 +48,8 @@
       <file leaf-file-name="RotateList_61.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/RotateList_61.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="100">
+              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -855,12 +855,12 @@
       <workItem from="1509059132451" duration="2274000" />
       <workItem from="1509083985115" duration="2094000" />
       <workItem from="1509092474192" duration="108000" />
-      <workItem from="1509193333576" duration="46000" />
+      <workItem from="1509193333576" duration="250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173977000" />
+    <option name="totallyTimeSpent" value="174181000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1322,8 +1322,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/RotateList_61.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="100">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding />
         </state>
       </provider>
