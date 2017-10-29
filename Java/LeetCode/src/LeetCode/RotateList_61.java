@@ -29,4 +29,12 @@ public class RotateList_61 {
         }
         return pre;
     }
+
+    public ListNode findK(ListNode head, int k, int index) {
+        if (head == null) return head;
+        if (index == k) return head;
+        index += 1;
+        head.next = findK(head.next, k, index);
+        return head;
+    }
 }
