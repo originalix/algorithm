@@ -38,6 +38,18 @@ public class RotateList_61 {
         return head;
     }
 
+    public ListNode leftList(ListNode head, ListNode target) {
+        while (head != null) {
+            if (head == target) {
+                return head;
+            }
+
+            head = head.next;
+        }
+
+        return null;
+    }
+
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(2);
@@ -46,8 +58,15 @@ public class RotateList_61 {
 
         RotateList_61 obj = new RotateList_61();
 
+        // 查找k节点 倒序
         ListNode head = obj.reverseFor61(l1);
-        head = obj.findK(head, 3, 1);
+        head = obj.findK(head, 1, 1);
+
         System.out.println(head);
+
+        // 组建左侧链表
+
+        ListNode left = obj.leftList(l1, head);
+        System.out.println(left);
     }
 }
