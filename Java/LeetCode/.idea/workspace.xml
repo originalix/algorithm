@@ -48,9 +48,12 @@
       <file leaf-file-name="RotateList_61.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/RotateList_61.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="160">
+              <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <folding>
+                <element signature="e#143#144#0" expanded="true" />
+                <element signature="e#170#171#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -855,12 +858,12 @@
       <workItem from="1509059132451" duration="2274000" />
       <workItem from="1509083985115" duration="2094000" />
       <workItem from="1509092474192" duration="108000" />
-      <workItem from="1509193333576" duration="250000" />
+      <workItem from="1509193333576" duration="433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174181000" />
+    <option name="totallyTimeSpent" value="174364000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1322,9 +1325,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LeetCode/RotateList_61.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="160">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#143#144#0" expanded="true" />
+            <element signature="e#170#171#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
