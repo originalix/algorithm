@@ -34,7 +34,20 @@ public class RotateList_61 {
         if (head == null) return head;
         if (index == k) return head;
         index += 1;
-        head.next = findK(head.next, k, index);
+        head = findK(head.next, k, index);
         return head;
+    }
+
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(1);
+        ListNode l2 = new ListNode(2);
+        ListNode l3 = new ListNode(3);
+        l1.next = l2; l2.next = l3;
+
+        RotateList_61 obj = new RotateList_61();
+
+        ListNode head = obj.reverseFor61(l1);
+        head = obj.findK(head, 3, 1);
+        System.out.println(head);
     }
 }
