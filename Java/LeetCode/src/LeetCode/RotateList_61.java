@@ -17,4 +17,16 @@ public class RotateList_61 {
     public ListNode rotateRight(ListNode head, int k) {
         return null;
     }
+
+    public ListNode reverseFor61(ListNode head) {
+        ListNode pre = null;
+        ListNode next = null;
+        while (head != null) {
+            next = head.next;
+            head.next = pre;
+            pre = head;
+            head = next;
+        }
+        return pre;
+    }
 }
