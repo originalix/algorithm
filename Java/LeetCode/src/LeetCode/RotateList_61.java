@@ -13,23 +13,20 @@ public class RotateList_61 {
      * 3、反转k之前的节点
      * 4、反转k之后的链表，并在找到k之后，k.next 置为null
      * 5、拼接链表
+     *
+     * result： 未完成
+     *
+     * 之后思路：
+     *
+     * 将链表连成一个环
+     * The basic idea is to link the tail of the list with the head, make it a cycle. Then count to the rotate point and cut it.
      */
     public ListNode rotateRight(ListNode head, int k) {
-        return null;
-    }
+        if (head == null) return head;
 
-    public ListNode reverseFor61(ListNode head) {
-        ListNode pre = null;
-        ListNode next = null;
-        while (head != null) {
-            next = head.next;
-            head.next = pre;
-            pre = head;
-            head = next;
-        }
-        return pre;
-    }
+        ListNode copyNode = head;
 
+<<<<<<< HEAD
     public ListNode findK(ListNode head, int k, int index) {
         if (head == null) return head;
         if (index == k) {
@@ -46,12 +43,25 @@ public class RotateList_61 {
             if (head.val == target.val) {
                 return head;
             }
+=======
+        int len = 1;
+        while (copyNode.next != null) {
+            copyNode = copyNode.next;
+            len++;
+        }
 
+        copyNode.next = head;
+>>>>>>> 2a38a70176d12cc039b6a19e98b639537e1e876d
+
+        for (int i = len - k % len; i > 1; i--) {
             head = head.next;
         }
 
-        return null;
+        copyNode = head.next;
+        head.next = null;
+        return copyNode;
     }
+
 
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);
@@ -60,16 +70,8 @@ public class RotateList_61 {
         l1.next = l2; l2.next = l3;
 
         RotateList_61 obj = new RotateList_61();
-
-        // 查找k节点 倒序
-        ListNode head = obj.reverseFor61(l1);
-        head = obj.findK(head, 1, 1);
+        ListNode head = obj.rotateRight(l1, 1);
 
         System.out.println(head);
-
-        // 组建左侧链表
-
-        ListNode left = obj.leftList(l1, head);
-        System.out.println(left);
     }
 }
