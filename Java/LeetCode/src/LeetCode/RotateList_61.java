@@ -32,7 +32,10 @@ public class RotateList_61 {
 
     public ListNode findK(ListNode head, int k, int index) {
         if (head == null) return head;
-        if (index == k) return head;
+        if (index == k) {
+            head.next = null;
+            return head;
+        }
         index += 1;
         head = findK(head.next, k, index);
         return head;
@@ -40,7 +43,7 @@ public class RotateList_61 {
 
     public ListNode leftList(ListNode head, ListNode target) {
         while (head != null) {
-            if (head == target) {
+            if (head.val == target.val) {
                 return head;
             }
 
