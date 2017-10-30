@@ -15,9 +15,32 @@ public class RotateList_61 {
      * 5、拼接链表
      *
      * result： 未完成
+     *
+     * 之后思路：
+     *
+     * 将链表连成一个环
+     * The basic idea is to link the tail of the list with the head, make it a cycle. Then count to the rotate point and cut it.
      */
     public ListNode rotateRight(ListNode head, int k) {
-        return null;
+        if (head == null) return head;
+
+        ListNode copyNode = head;
+
+        int len = 1;
+        while (copyNode.next != null) {
+            copyNode = copyNode.next;
+            len++;
+        }
+
+        copyNode.next = head;
+
+        for (int i = len - k % len; i > 1; i--) {
+            head = head.next;
+        }
+
+        copyNode = head.next;
+        head.next = null;
+        return copyNode;
     }
 
 
@@ -27,5 +50,9 @@ public class RotateList_61 {
         ListNode l3 = new ListNode(3);
         l1.next = l2; l2.next = l3;
 
+        RotateList_61 obj = new RotateList_61();
+        ListNode head = obj.rotateRight(l1, 1);
+
+        System.out.println(head);
     }
 }
