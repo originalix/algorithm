@@ -4,6 +4,10 @@ package LeetCode;
  * Created by Lix on 2017/10/31.
  */
 public class RemoveDuplicatesFromSortedListII_82 {
+
+    /**
+     * 自己的解法
+     */
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) return head;
         int oldValue = 99999999;
@@ -23,6 +27,21 @@ public class RemoveDuplicatesFromSortedListII_82 {
         }
 
         head.next = deleteDuplicates(head.next);
+        return head;
+    }
+
+    public ListNode deleteDuplicates1(ListNode head) {
+        if (head == null) return null;
+        if (head.next != null && head.val == head.next.val) {
+            while (head.next != null && head.val == head.next.val) {
+                head = head.next;
+            }
+
+            return deleteDuplicates1(head.next);
+        } else {
+            head.next = deleteDuplicates1(head.next);
+        }
+
         return head;
     }
 
