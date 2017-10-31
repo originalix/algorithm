@@ -26,6 +26,24 @@ public class RotateList_61 {
 
         ListNode copyNode = head;
 
+<<<<<<< HEAD
+    public ListNode findK(ListNode head, int k, int index) {
+        if (head == null) return head;
+        if (index == k) {
+            head.next = null;
+            return head;
+        }
+        index += 1;
+        head = findK(head.next, k, index);
+        return head;
+    }
+
+    public ListNode leftList(ListNode head, ListNode target) {
+        while (head != null) {
+            if (head.val == target.val) {
+                return head;
+            }
+=======
         int len = 1;
         while (copyNode.next != null) {
             copyNode = copyNode.next;
@@ -33,6 +51,7 @@ public class RotateList_61 {
         }
 
         copyNode.next = head;
+>>>>>>> 2a38a70176d12cc039b6a19e98b639537e1e876d
 
         for (int i = len - k % len; i > 1; i--) {
             head = head.next;
