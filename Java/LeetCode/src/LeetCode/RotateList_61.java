@@ -54,5 +54,6 @@ public class RotateList_61 {
         ListNode head = obj.rotateRight(l1, 1);
 
         System.out.println(head);
+        //测试master分支
     }
 }
