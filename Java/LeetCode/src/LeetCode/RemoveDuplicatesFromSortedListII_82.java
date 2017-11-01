@@ -45,6 +45,10 @@ public class RemoveDuplicatesFromSortedListII_82 {
         return head;
     }
 
+    public ListNode deleteDuplicatesByIteration(ListNode head) {
+        return null;
+    }
+
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(1);
@@ -60,5 +64,8 @@ public class RemoveDuplicatesFromSortedListII_82 {
 
         ListNode res = obj.deleteDuplicates(l1);
         System.out.println(res);
+
+        ListNode res1 = obj.deleteDuplicates1(l1);
+        System.out.println(res1);
     }
 }
