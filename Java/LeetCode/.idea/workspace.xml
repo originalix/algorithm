@@ -56,11 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PartitionList_86.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PartitionList_86.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LeetCode/PartitionList_86.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReverseLinkedListII_92.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LeetCode/ReverseLinkedListII_92.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -104,7 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/ShortestPath.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/WeightedGraph.java" />
         <option value="$PROJECT_DIR$/src/PlayWithAlgorithms/ReadWeightedGraph.java" />
         <option value="$PROJECT_DIR$/testWeightG2.txt" />
@@ -155,6 +164,7 @@
         <option value="$PROJECT_DIR$/src/LeetCode/RotateList_61.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/RemoveDuplicatesFromSortedListII_82.java" />
         <option value="$PROJECT_DIR$/src/LeetCode/PartitionList_86.java" />
+        <option value="$PROJECT_DIR$/src/LeetCode/ReverseLinkedListII_92.java" />
       </list>
     </option>
   </component>
@@ -846,12 +856,12 @@
       <workItem from="1509350615495" duration="1630000" />
       <workItem from="1509498422189" duration="1963000" />
       <workItem from="1509577559645" duration="517000" />
-      <workItem from="1509663182240" duration="14000" />
+      <workItem from="1509663182240" duration="275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184868000" />
+    <option name="totallyTimeSpent" value="185129000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -934,13 +944,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PlayWithAlgorithms/KruskalMST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="67" column="37" lean-forward="false" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_negative_circle.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1278,6 +1281,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LeetCode/ReverseLinkedListII_92.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
           <folding />
         </state>
       </provider>
