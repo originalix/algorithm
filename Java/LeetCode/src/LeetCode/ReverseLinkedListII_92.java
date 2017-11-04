@@ -5,31 +5,6 @@ package LeetCode;
  */
 public class ReverseLinkedListII_92 {
     public ListNode reverseBetween(ListNode head, int m, int n) {
-
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        int index = 0;
-        while (head != null) {
-            index += 1;
-            System.out.println("head value = " + head.val + ", index = " + index);
-
-            ListNode pre = null, next = null;
-            ListNode cur = head;
-
-            while (index >= m && index <= n) {
-                next = cur.next;
-                cur.next = pre;
-                pre = cur;
-                cur = next;
-                index += 1;
-            }
-            if (pre != null) {
-                head = pre;
-            }
-            head = head.next;
-        }
-
-        return dummy.next;
     }
 
     public static void main(String[] args) {
