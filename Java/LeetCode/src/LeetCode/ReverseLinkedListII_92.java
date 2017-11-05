@@ -34,7 +34,7 @@ public class ReverseLinkedListII_92 {
         ListNode l4 = new ListNode(4);
         l1.next = l2;
         l2.next = l3;
-        l3.next = l4;
+//        l3.next = l4;
 
         ReverseLinkedListII_92 obj = new ReverseLinkedListII_92();
         ListNode res = obj.reverseBetween(l1, 2, 3);
