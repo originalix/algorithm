@@ -17,10 +17,16 @@ public class MergeSortedArray_88 {
         int temp = nums1[index];
         nums1[index] = obj;
 
-        for (int i = index + 1; i >= nums1.length; i++) {
+        for (int i = index + 1; i <= nums1.length; i++) {
             int oldObj = nums1[i];
             nums1[i] = temp;
             temp = oldObj;
         }
+    }
+
+    public static void main(String[] args) {
+        int[] nums1 = new int[]{1, 2, 3, 5, 9};
+        insert(nums1, 4, 3);
+        System.out.println(nums1);
     }
 }
