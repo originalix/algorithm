@@ -12,4 +12,15 @@ public class MergeSortedArray_88 {
             }
         }
     }
+
+    public void insert(int[] nums1, int obj, int index) {
+        int temp = nums1[index];
+        nums1[index] = obj;
+
+        for (int i = index + 1; i >= nums1.length; i++) {
+            int oldObj = nums1[i];
+            nums1[i] = temp;
+            temp = oldObj;
+        }
+    }
 }
