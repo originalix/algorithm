@@ -4,8 +4,10 @@ package LeetCode;
  * Created by Lix on 2017/11/8.
  */
 public class MergeSortedArray_88 {
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
-
+    public void merge(int[] A, int m, int[] B, int n) {
+        int i = m-1, j = n-1, k = m+n-1;
+        while (i > -1 && j > -1) A[k--] = (A[i] > B[j]) ? A[i--] : B[j--];
+        while (j > -1) A[k--] = B[j--];
     }
 
     public static void main(String[] args) {
