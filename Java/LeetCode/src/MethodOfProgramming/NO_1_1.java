@@ -9,6 +9,10 @@ package MethodOfProgramming;
  * 来自章节1.1.1
  */
 public class NO_1_1 {
+    /**
+     * 字符串的旋转，解法一：蛮力移位
+     *  示例 abcdef -> defabc
+     */
     public static void LeftRotateString(String[] s, int n, int m) {
         while (m > 0) {
             LeftShiftOne(s, n);
