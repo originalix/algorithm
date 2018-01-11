@@ -1,7 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-print 'hello world';
+def print_helloworld(string):
+    """根据第一个写的代码
+    
+    Arguments:
+        string {String} -- [传入的字符串]
+    """
+    print string
 
-for i in range(9, -1, -1):
-    print i
+print_helloworld('hello world')
