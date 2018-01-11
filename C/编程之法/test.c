@@ -1,6 +1,15 @@
 #include <stdio.h>
 
+void testPoint()
+{
+    char *s = "helloworld";
+    // char *str = "http://c.biancheng.net";
+    // printf("%s\n", s);
+    printf("%c\n", *(s+5));
+}
+
 int main()
 {
-    printf("Hello world\n");
+    testPoint();
+    return 0;
 }
