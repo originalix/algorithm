@@ -1,12 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def print_helloworld(string):
-    """根据第一个写的代码
-    
-    Arguments:
-        string {String} -- [传入的字符串]
-    """
-    print string
+# 编程之法 第一章——字符串 本章习题
 
-print_helloworld('hello world')
+def string_reverse(string):
+    """1.1 字符串的反转
+
+    Arguments:
+        string {String} -- 需要反转的字符串
+    """
+    reverse_str = []
+    for i in range(len(string)-1, -1, -1):
+        reverse_str.append(string[i])
+    s = ''.join(reverse_str)
+    return s
+
+print string_reverse('hello world')
