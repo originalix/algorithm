@@ -15,4 +15,30 @@ def string_reverse(string):
     s = ''.join(reverse_str)
     return s
 
-print string_reverse('hello world')
+def string_move(string):
+    """1.2 字符串的左右移动
+    
+    Arguments:
+        string {String} -- 被移动的字符串
+    """
+    strlist = list(string)
+    point = len(string) - 1
+    let = len(string) - 1
+
+    while (point != 0) and (let != 0):
+        while strlist[point] != '*' and point != 0:
+            point -= 1
+        if point == 0:
+            return
+        let = point
+        while strlist[let] == '*' and let != 0:
+            let -= 1
+        while strlist[let] != '*' and strlist[point] == '*':
+            strlist[let], strlist[point] = strlist[point], strlist[let]
+            if point != 0:
+                point -= 1
+            if let != 0:
+                let -= 1
+    return ''.join(strlist)
+        
+print string_move('a*b*c')
