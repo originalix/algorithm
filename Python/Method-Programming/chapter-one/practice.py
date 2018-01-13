@@ -29,7 +29,7 @@ def string_move(string):
         while strlist[point] != '*' and point != 0:
             point -= 1
         if point == 0:
-            return
+            return string
         let = point
         while strlist[let] == '*' and let != 0:
             let -= 1
@@ -41,4 +41,4 @@ def string_move(string):
                 let -= 1
     return ''.join(strlist)
         
-print string_move('a*b*c')
+print string_move('********a***b*c')
