@@ -12,6 +12,7 @@ function curtail(arr) {
   });
 }
 
+// 常规迭代式
 function curtailFor(arr) {
   var res = [];
   for (var i = 0; i < arr.length; i++) {
@@ -23,7 +24,25 @@ function curtailFor(arr) {
   return res;
 }
 
+// slice方法
+function curtailSlice(arr) {
+  return arr.slice(1);
+}
+
+// 使用shift删除元素
+function curtailShift(arr) {
+  var res = arr.slice(0);
+  res.shift();
+  return res;
+}
+
+function curtail(arr) {
+
+}
+
 var arr = [1, 2, 3, 4];
 // var res = curtail(arr);
-var res = curtailFor(arr);
+// var res = curtailFor(arr);
+var res = curtailSlice(arr);
+// var res = curtailShift(arr);
 console.log(res);
