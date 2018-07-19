@@ -30,6 +30,19 @@ function duplicates(arr) {
   return a;
 }
 
+// forEach + indexOf + lastIndexOf 判断
+function duplicatesIndexOf(arr) {
+  var res = [];
+  arr.forEach(function(ele, idx, arr) {
+    if (arr.indexOf(ele) !== arr.lastIndexOf(ele) && res.indexOf(ele) == -1) {
+      res.push(ele);
+    }
+  });
+
+  return res;
+}
+
 var arr = [1, 2, 4, 4, 3, 3, 1, 5, 3];
-var res = duplicates(arr);
+// var res = duplicates(arr);
+var res = duplicatesIndexOf(arr);
 console.log(res);
