@@ -18,7 +18,7 @@ function count(start, end) {
   }, 100);
 
   return {
-    cancel: function() {
+    cancel: function () {
       clearInterval(timer);
     }
   }
@@ -28,13 +28,17 @@ function countTimeout(start, end) {
   if (start <= end) {
     console.log(start);
     start += 1;
-    var st = setTimeout(function(){countTimeout(start, end)}, 100);
+    var st = setTimeout(function () {
+      countTimeout(start, end)
+    }, 100);
   }
 
   return {
-    cancel: function() { clearTimeout(st); }
+    cancel: function () {
+      clearTimeout(st);
+    }
   }
 }
 
 // count(0, 10);
-countTimeout(0, 10);
+// countTimeout(0, 10);
