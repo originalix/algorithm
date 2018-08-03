@@ -50,5 +50,14 @@ var arr = [1, 2, 3, 4];
 // var res = prependUnshift(arr, 10);
 // var res = prependApply(arr, 10);
 // var res = prependJoin(arr, 10);
-var res = prependFor(arr, 10);
+// var res = prependFor(arr, 10);
+// console.log(res);
+
+function containsNumber(str) {
+  // return /\d/g.test(str);
+  // return str.match(/\d/g);
+}
+
+var str = '1abcdeft1';
+var res = containsNumber(str);
 console.log(res);
