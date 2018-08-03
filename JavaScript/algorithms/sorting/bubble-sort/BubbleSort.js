@@ -1,8 +1,8 @@
 class BubbleSort {
   sort(originalArray) {
-    // 是否发生交换的标记
+    // 是否交换位置的标记
     let swapped = false;
-    // 克隆数组 不在原数组上操作
+    // 克隆原始数组 为了不修改原始数组
     const array = [...originalArray];
 
     for (let i = 0; i < array.length; i += 1) {
@@ -18,7 +18,7 @@ class BubbleSort {
         }
       }
 
-      // 没有交换记录就直接返回数组
+      // 如果没有交换行为发生 那么直接返回
       if (!swapped) {
         return array;
       }
@@ -28,7 +28,7 @@ class BubbleSort {
   }
 }
 
-let array = [1, 5, 2, 4, 3, 6];
+let array = [6, 1, 2, 4, 3, 0];
 let bubble = new BubbleSort();
 let res = bubble.sort(array);
 console.log(res);
