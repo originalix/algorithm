@@ -3,23 +3,18 @@ class BinarySearch {
     this.array = originalArray;
   }
   search(low, high, target) {
-    const middle = Math.floor((low + high) / 2);
+    if (low > high) {
+      return -1;
+    }
 
-    if (array[middle] === target) {
+    const middle = parseInt((low + high) / 2);
+    if (this.array[middle] > target) {
+      return this.search(low, middle - 1, target);
+    } else if (this.array[middle] < target) {
+      return this.search(middle + 1, high, target);
+    } else {
       return middle;
     }
-
-    if (array[middle] > target) {
-      high = middle;
-    } else {
-      low = middle;
-    }
-
-    // if (low === high) {
-    //   return -1;
-    // }
-
-    return this.search(low, high, target);
   }
 }
 
