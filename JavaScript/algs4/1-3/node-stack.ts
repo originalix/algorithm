@@ -1,9 +1,5 @@
+import { NodeItem } from '../types'
 const StdIn = require('../utils/std-in')
-
-class NodeItem<T> {
-  public item: T
-  public next: NodeItem<T>
-}
 
 /**
  * 下压栈(链表实现)

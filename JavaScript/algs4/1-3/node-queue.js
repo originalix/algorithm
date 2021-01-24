@@ -38,50 +38,63 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var types_1 = require("../types");
 var StdIn = require('../utils/std-in');
-/**
- * 下压栈(链表实现)
- */
-var Stack = /** @class */ (function () {
-    function Stack() {
+var Queue = /** @class */ (function () {
+    function Queue() {
         this.N = 0;
+        this.first = null;
+        this.last = null;
     }
-    Stack.prototype.isEmpty = function () { return this.N === 0; };
-    Stack.prototype.size = function () { return this.N; };
-    Stack.prototype.push = function (item) {
-        var oldFirst = this.first;
-        this.first = new types_1.NodeItem();
-        this.first.item = item;
-        this.first.next = oldFirst;
+    Queue.prototype.isEmpty = function () { return this.N === 0; };
+    Queue.prototype.size = function () { return this.N; };
+    Queue.prototype.enqueue = function (item) {
+        var oldLast = this.last;
+        this.last = new types_1.NodeItem();
+        this.last.item = item;
+        this.last.next = null;
+        if (this.isEmpty()) {
+            this.first = this.last;
+        }
+        else {
+            oldLast.next = this.last;
+        }
         this.N++;
     };
-    Stack.prototype.pop = function () {
+    Queue.prototype.dequeue = function () {
         var item = this.first.item;
         this.first = this.first.next;
+        if (this.isEmpty()) {
+            this.last = null;
+        }
         this.N--;
         return item;
     };
-    return Stack;
+    return Queue;
 }());
-function testNodeStack() {
+function testNodeQueue() {
     return __awaiter(this, void 0, void 0, function () {
-        var stack, str;
+        var queue, str;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, StdIn.readFile()];
                 case 1:
                     _a.sent();
-                    stack = new Stack();
+                    queue = new Queue();
                     while (!StdIn.isEmpty()) {
                         str = StdIn.readString();
-                        stack.push(str);
+                        if (str !== '-') {
+                            queue.enqueue(str);
+                        }
+                        else if (!queue.isEmpty()) {
+                            console.log(queue.dequeue() + " ");
+                        }
                     }
-                    console.log("stack's size is " + stack.size());
-                    while (!stack.isEmpty()) {
-                        console.log("current line: " + stack.pop());
+                    console.log("queue's size is " + queue.size());
+                    while (!queue.isEmpty()) {
+                        console.log("current line: " + queue.dequeue());
                     }
                     return [2 /*return*/];
             }
         });
     });
 }
-testNodeStack();
+testNodeQueue();
