@@ -37,7 +37,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var types_1 = require("../types");
+var stop_watch_1 = require("../utils/stop-watch");
 var StdIn = require('../utils/std-in');
+/**
+ * 先进先出队列（链表实现）
+ */
 var Queue = /** @class */ (function () {
     function Queue() {
         this.N = 0;
@@ -72,10 +76,12 @@ var Queue = /** @class */ (function () {
 }());
 function testNodeQueue() {
     return __awaiter(this, void 0, void 0, function () {
-        var queue, str;
+        var time, queue, str;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, StdIn.readFile()];
+                case 0:
+                    time = new stop_watch_1["default"]();
+                    return [4 /*yield*/, StdIn.readFile()];
                 case 1:
                     _a.sent();
                     queue = new Queue();
@@ -92,6 +98,7 @@ function testNodeQueue() {
                     while (!queue.isEmpty()) {
                         console.log("current line: " + queue.dequeue());
                     }
+                    time.elapseTime();
                     return [2 /*return*/];
             }
         });

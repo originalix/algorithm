@@ -1,6 +1,10 @@
-import { NodeItem } from '../types'
+import { NodeItem, NodeIterator } from '../types'
+import StopWatch from '../utils/stop-watch'
 const StdIn = require('../utils/std-in')
 
+/**
+ * 先进先出队列（链表实现）
+ */
 class Queue<T> {
   public first: NodeItem<T>
   public last: NodeItem<T>
@@ -40,6 +44,7 @@ class Queue<T> {
 }
 
 async function testNodeQueue() {
+  const time = new StopWatch()
   await StdIn.readFile()
   const queue = new Queue<string>()
 
@@ -56,6 +61,8 @@ async function testNodeQueue() {
   while (!queue.isEmpty()) {
     console.log(`current line: ${queue.dequeue()}`)
   }
+
+  time.elapseTime()
 }
 
 testNodeQueue()
