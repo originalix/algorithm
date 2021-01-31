@@ -9,40 +9,39 @@ var UF = /** @class */ (function () {
             this.id[i] = i;
         }
     }
-    UF.prototype.showTree = function () { return this.id; };
     UF.prototype.count = function () { return this._count; };
     UF.prototype.connected = function (p, q) {
         return this.find(p) === this.find(q);
     };
     UF.prototype.find = function (p) {
-        return this.id[p];
+        while (p != this.id[p])
+            p = this.id[p];
+        return p;
     };
     UF.prototype.union = function (p, q) {
-        var pID = this.find(p);
-        var qID = this.find(q);
-        if (pID === qID)
+        var pRoot = this.find(p);
+        var qRoot = this.find(q);
+        if (pRoot === qRoot)
             return;
-        for (var i = 0; i < this.id.length; i++) {
-            if (this.id[i] === pID)
-                this.id[i] = qID;
-        }
+        this.id[pRoot] = qRoot;
         this._count--;
     };
     return UF;
 }());
 function test() {
-    var N = 10;
+    var UnionCount = 200000;
+    var time = new utils_1.StopWatch();
+    var N = UnionCount;
     var uf = new UF(N);
-    for (var i = 0; i < 5; i++) {
-        var p = utils_1.readInt(10);
-        var q = utils_1.readInt(10);
+    for (var i = 0; i < UnionCount; i++) {
+        var p = utils_1.readInt(UnionCount);
+        var q = utils_1.readInt(UnionCount);
         if (uf.connected(p, q))
             continue;
         uf.union(p, q);
         console.log(p + ' ' + q);
-        console.log(uf.showTree());
-        console.log('==================');
     }
     console.log(uf.count() + 'components');
+    time.elapseTime();
 }
 test();

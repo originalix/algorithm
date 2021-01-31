@@ -1,4 +1,4 @@
-import { readInt } from '../utils'
+import { readInt, StopWatch } from '../utils'
 class UF {
   private _count: number
   private id: number[]
@@ -11,8 +11,6 @@ class UF {
     }
   }
 
-  showTree() { return this.id }
-
   count() { return this._count }
 
   connected(p: number, q: number): boolean {
@@ -20,34 +18,34 @@ class UF {
   }
 
   find(p: number): number {
-    return this.id[p]
+    while (p != this.id[p]) p = this.id[p]
+    return p
   }
 
   union(p:number, q: number) {
-    const pID = this.find(p)
-    const qID = this.find(q)
+    const pRoot = this.find(p)
+    const qRoot = this.find(q)
 
-    if (pID === qID) return
-
-    for (let i = 0; i < this.id.length; i++) {
-      if (this.id[i] === pID) this.id[i] = qID
-    }
+    if (pRoot === qRoot) return
+    this.id[pRoot] = qRoot
     this._count--
   }
 }
 
 function test() {
-  const N = 10
+  const UnionCount = 200000
+  const time = new StopWatch()
+  const N = UnionCount
   const uf = new UF(N)
-  for (let i = 0; i < 5; i++) {
-    const p = readInt(10)
-    const q = readInt(10)
+  for (let i = 0; i < UnionCount; i++) {
+    const p = readInt(UnionCount)
+    const q = readInt(UnionCount)
     if (uf.connected(p, q)) continue
     uf.union(p, q)
     console.log(p + ' ' + q)
-    console.log(uf.showTree())
   }
   console.log(uf.count() + 'components')
+  time.elapseTime()
 }
 
 test()
