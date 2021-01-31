@@ -5,31 +5,42 @@ var UF = /** @class */ (function () {
     function UF(N) {
         this._count = N;
         this.id = [];
+        this.sz = [];
         for (var i = 0; i < N; i++) {
             this.id[i] = i;
+            this.sz[i] = 1;
         }
     }
     UF.prototype.count = function () { return this._count; };
+    UF.prototype.showTree = function () { return this.id; };
     UF.prototype.connected = function (p, q) {
         return this.find(p) === this.find(q);
     };
     UF.prototype.find = function (p) {
+        // 跟随链接找到根节点
         while (p != this.id[p])
             p = this.id[p];
         return p;
     };
     UF.prototype.union = function (p, q) {
-        var pRoot = this.find(p);
-        var qRoot = this.find(q);
-        if (pRoot === qRoot)
+        var i = this.find(p);
+        var j = this.find(q);
+        if (i === j)
             return;
-        this.id[pRoot] = qRoot;
+        if (this.sz[i] < this.sz[j]) {
+            this.id[i] = j;
+            this.sz[j] += this.sz[i];
+        }
+        else {
+            this.id[j] = i;
+            this.sz[i] += this.sz[j];
+        }
         this._count--;
     };
     return UF;
 }());
 function test() {
-    var UnionCount = 200000;
+    var UnionCount = 1000000;
     var time = new utils_1.StopWatch();
     var N = UnionCount;
     var uf = new UF(N);
