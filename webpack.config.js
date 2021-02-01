@@ -13,7 +13,7 @@ function readFileDir(filePath) {
     const stats = fs.statSync(fileDir)
     if (stats.isFile()) {
       if (/\.[tj]s$/.test(fileName)) {
-        const key = fileName.match(/(^\w{1,})(?=\.[tj]s)/ig)
+        const key = fileName.match(/(^[\w-]{1,})(?=\.[tj]s)/ig)
         key && key.length && (entrys[key[0]] = fileDir)
       }
     }
@@ -46,6 +46,11 @@ module.exports = {
     ]
   },
   resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src/'),
+      utils: path.resolve(__dirname, 'src/utils/'),
+      mock: path.resolve(__dirname, 'src/mock/')
+    },
     extensions: ['.ts', '.js']
   },
   devServer: {
