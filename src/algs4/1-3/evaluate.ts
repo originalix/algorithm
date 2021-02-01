@@ -1,5 +1,7 @@
-// (1 + ((2 + 3) * (4 * 5)))
-// Dijkstra 的双栈算术表达式求值算法
+/**
+ * (1 + ((2 + 3) * (4 * 5)))
+ * Dijkstra 的双栈算术表达式求值算法
+ */
 class Evaluate {
   static main(args: string) {
     const ops: string[] = []

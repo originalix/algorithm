@@ -4,7 +4,13 @@
     "noImplicitAny": true,
     "module": "commonjs",
     "target": "es2017",
-    "allowJs": true
+    "allowJs": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "utils": ["utils"],
+      "mock": ["mock"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
