@@ -37,6 +37,7 @@ class WeightQuickUnionUF {
 
     if (i === j) return
 
+    // 将小树的根节点连接到大树的根节点
     if (this.sz[i] < this.sz[j]) {
       this.id[i] = j
       this.sz[j] += this.sz[i]
