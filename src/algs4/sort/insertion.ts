@@ -1,4 +1,5 @@
 import BaseSort from './base-sort'
+import { StopWatch, StdIn } from 'utils'
 
 class Insertion<T> extends BaseSort<T> {
   sort() {
@@ -11,6 +12,12 @@ class Insertion<T> extends BaseSort<T> {
   }
 }
 
-const arr = [1, 3, 33, 5, 21, 0, 50, -23, 7, 23, 9, 21, 100]
-const insertion = new Insertion<number>(arr)
-insertion.main()
+async function main() {
+  const data = await StdIn.readInt('100000Int.txt')
+  const stopWatch = new StopWatch()
+  const insertion = new Insertion<number>(data)
+  insertion.main()
+  stopWatch.elapseTime()
+}
+
+main()

@@ -46,8 +46,8 @@ function test() {
   const N = UnionCount
   const uf = new UF(N)
   for (let i = 0; i < UnionCount; i++) {
-    const p = readInt(UnionCount)
-    const q = readInt(UnionCount)
+    const p = readInt(0, UnionCount)
+    const q = readInt(0, UnionCount)
     if (uf.connected(p, q)) continue
     uf.union(p, q)
     console.log(p + ' ' + q)

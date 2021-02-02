@@ -12,8 +12,8 @@ function readFileDir(filePath) {
     const fileDir = path.join(filePath, fileName)
     const stats = fs.statSync(fileDir)
     if (stats.isFile()) {
-      if (/\.[tj]s$/.test(fileName)) {
-        const key = fileName.match(/(^[\w-]{1,})(?=\.[tj]s)/ig)
+      if (/\.(ts|js)$/.test(fileName)) {
+        const key = fileName.match(/(^[\w-]{1,})(?=\.(ts|js))/ig)
         key && key.length && (entrys[key[0]] = fileDir)
       }
     }
