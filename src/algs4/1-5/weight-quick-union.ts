@@ -1,3 +1,4 @@
+import { UnionCount } from '@/constants'
 import { readInt, StopWatch } from 'utils'
 
 /**
@@ -50,7 +51,6 @@ class WeightQuickUnionUF {
 }
 
 function test() {
-  const UnionCount = 1000000
   const time = new StopWatch()
   const N = UnionCount
   const uf = new WeightQuickUnionUF(N)

@@ -1,3 +1,4 @@
+import { UnionCount } from '@/constants'
 import { readInt, StopWatch } from 'utils'
 
 /**
@@ -41,7 +42,6 @@ class QuickUnionUF {
 }
 
 function test() {
-  const UnionCount = 100000
   const time = new StopWatch()
   const N = UnionCount
   const uf = new QuickUnionUF(N)

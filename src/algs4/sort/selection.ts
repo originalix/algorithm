@@ -1,4 +1,5 @@
 import BaseSort from './base-sort'
+import { SortMockFile } from '@/constants'
 import { StopWatch, StdIn } from 'utils'
 
 class Selection<T> extends BaseSort<T> {
@@ -15,7 +16,7 @@ class Selection<T> extends BaseSort<T> {
 }
 
 async function main() {
-  const data = await StdIn.readInt('100000Int.txt')
+  const data = await StdIn.readInt(SortMockFile)
   const stopWatch = new StopWatch()
   const selection = new Selection<number>(data)
   selection.main()
