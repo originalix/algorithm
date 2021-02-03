@@ -1,8 +1,8 @@
 import BaseSort from './base-sort'
-import { SortMockFile } from '@/constants'
 import { StdIn, StopWatch } from 'utils'
+import { SortMockFile } from '@/constants'
 
-class Shell<T> extends BaseSort<T> {
+class ShellSort<T> extends BaseSort<T> {
   sort() {
     const N = this.array.length
     let h = 1
@@ -21,7 +21,7 @@ class Shell<T> extends BaseSort<T> {
 async function main() {
   const data = await StdIn.readInt(SortMockFile)
   const stopWatch = new StopWatch()
-  const shell = new Shell<number>(data)
+  const shell = new ShellSort<number>(data)
   shell.main()
   stopWatch.elapseTime()
 }

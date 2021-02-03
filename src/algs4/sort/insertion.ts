@@ -1,6 +1,6 @@
 import BaseSort from './base-sort'
-import { SortMockFile } from '@/constants'
 import { StopWatch, StdIn } from 'utils'
+import { SortMockFile } from '@/constants'
 
 class Insertion<T> extends BaseSort<T> {
   sort() {
