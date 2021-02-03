@@ -3,34 +3,33 @@ import { StdIn, StopWatch } from 'utils'
 import { SortMockFile } from '@/constants'
 
 class MergeSort<T> extends BaseSort<T> {
-  sort() {
-    this.array = this._sort(this.array)
+  private aux: T[] // 归并所需的辅助数组
+
+  sort(a: T[]) {
+    this.aux = []
+    this._sort(a, 0, a.length - 1)
   }
 
-  private _sort(array: T[]): T[] {
-    if (array.length <= 1) return array
-    const middle = Math.floor(array.length / 2)
-    const left = array.slice(0, middle)
-    const right = array.slice(middle)
-    return this.merge(this._sort(left), this._sort(right))
+  private _sort(a: T[], lo: number, hi: number) {
+    if (hi <= lo) return
+    const mid = lo + Math.floor((hi - lo) / 2)
+    this._sort(a, lo, mid) // 将左半边排序
+    this._sort(a, mid + 1, hi) // 将右半边排序
+    this.merge(a, lo, mid, hi) // 归并结果
   }
 
-  private merge(left: T[], right: T[]): T[] {
-    const res: T[] = []
-    while (left.length && right.length) {
-      if (left[0] < right[0]) {
-        res.push(left.shift())
-      } else {
-        res.push(right.shift())
-      }
+  private merge(a: T[], lo: number, mid: number, hi: number) {
+    // 将a[lo..mid] 和 a[mid+1..hi] 归并
+    let i = lo; let j = mid + 1
+    for (let k = lo; k <= hi; k++) { // 将a[lo..mid] 复制到 aux[lo..hi]
+      this.aux[k] = a[k]
     }
-    while (left.length) {
-      res.push(left.shift())
+    for (let k = lo; k <= hi; k++) { // 归并回到 a[lo..hi]
+      if (i > mid) a[k] = this.aux[j++]
+      else if (j > hi) a[k] = this.aux[i++]
+      else if (this.less(this.aux[j], this.aux[i])) a[k] = this.aux[j++]
+      else a[k] = this.aux[i++]
     }
-    while (right.length) {
-      res.push(right.shift())
-    }
-    return res
   }
 }
 
@@ -38,7 +37,7 @@ async function main() {
   const data = await StdIn.readInt(SortMockFile)
   const stopWatch = new StopWatch()
   const merge = new MergeSort<number>(data)
-  merge.main()
+  merge.main(true)
   stopWatch.elapseTime()
 }
 

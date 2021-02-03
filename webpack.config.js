@@ -53,6 +53,7 @@ module.exports = {
     },
     extensions: ['.ts', '.js']
   },
+  devtool: 'source-map',
   devServer: {
     contentBase: './dist'
   },

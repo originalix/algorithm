@@ -7,7 +7,7 @@ abstract class BaseSort<T> {
     this.array = array
   }
 
-  abstract sort(): void
+  abstract sort(array?: T[]): void
 
   protected less(v: T, w: T): boolean {
     return v < w
@@ -30,8 +30,8 @@ abstract class BaseSort<T> {
     return true
   }
 
-  main() {
-    this.sort()
+  main(passArray?: boolean) {
+    passArray ? this.sort(this.array) : this.sort()
     assert(this.isSorted(), '数组排序错误')
     this.show()
   }
