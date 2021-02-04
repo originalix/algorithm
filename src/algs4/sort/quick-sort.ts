@@ -7,50 +7,26 @@ class QuickSort<T> extends BaseSort<T> {
     this._sort(arr, 0, arr.length)
   }
 
-  protected _sort(arr: T[], lo: number, hi: number) {
+  private _sort(arr: T[], lo: number, hi: number) {
     if (hi <= lo) return
-    const j = this.partition(arr, lo, hi)
-    this._sort(arr, lo, j - 1)
-    this._sort(arr, j + 1, hi)
+    const j = this.partition(arr, lo, hi) // 切分
+    this._sort(arr, lo, j - 1) // 将左半边部分arr[lo..j-1]排序
+    this._sort(arr, j + 1, hi) // 将右半边部分arr[j+1..hi]排序
   }
 
-  protected partition(arr: T[], lo: number, hi: number): number {
-    let i = lo; let j = hi + 1
-    const v = arr[lo]
-    while (true) {
+  private partition(arr: T[], lo: number, hi: number): number {
+    let i = lo; let j = hi + 1 // 左右扫描指针
+    const v = arr[lo] // 切分元素
+    while (true) { // 扫描左右，检查扫描是否结束并交换元素
       while (this.less(arr[++i], v)) if (i === hi) break
       while (this.less(v, arr[--j])) if (j === lo) break
       if (i >= j) break
       this.exch(i, j)
     }
-    this.exch(lo, j)
-    return j
+    this.exch(lo, j) // 将 v=a[j] 放入正确的位置
+    return j // arr[lo..j-1] <= arr[j] <= arr[j+1..hi] 达成
   }
 }
-
-function Insertion(arr: any[], lo: number, hi: number) {
-  for (let i = lo + 1; i <= hi; i++) {
-    for (let j = i; j > lo && arr[j] < arr[j - 1]; j--) {
-      const temp = arr[j]
-      arr[j] = arr[j - 1]
-      arr[j - 1] = temp
-    }
-  }
-}
-
-class QuickSortOptimize<T> extends QuickSort<T> {
-  protected _sort(arr: T[], lo: number, hi: number) {
-    if (hi <= lo + 10) {
-      Insertion(arr, lo, hi)
-      return
-    }
-    const j = this.partition(arr, lo, hi)
-    this._sort(arr, lo, j - 1)
-    this._sort(arr, j + 1, hi)
-  }
-}
-
-export { QuickSort, QuickSortOptimize }
 
 async function main() {
   const data = await StdIn.readInt(SortMockFile)
