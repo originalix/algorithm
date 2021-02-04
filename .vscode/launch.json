@@ -7,8 +7,15 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "MergeSort",
       "program": "${workspaceFolder}/src/algs4/sort/merge-sort.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "QuickSort",
+      "program": "${workspaceFolder}/src/algs4/sort/quick-sort.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]
