@@ -4,7 +4,7 @@ import { SortMockFile } from '@/constants'
 
 class QuickSort<T> extends BaseSort<T> {
   sort(arr: T[]) {
-    this._sort(arr, 0, arr.length)
+    this._sort(arr, 0, arr.length - 1)
   }
 
   private _sort(arr: T[], lo: number, hi: number) {
