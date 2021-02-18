@@ -17,6 +17,13 @@
       "name": "QuickSort",
       "program": "${workspaceFolder}/src/algs4/sort/quick-sort.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "MaxPQ",
+      "program": "${workspaceFolder}/src/algs4/sort/max-pq.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]
 }

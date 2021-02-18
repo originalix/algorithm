@@ -1,3 +1,5 @@
+import { StdIn, StopWatch } from 'utils'
+import { SortMockFile } from '@/constants'
 /**
  * 基于堆的优先序列
  */
@@ -19,10 +21,10 @@ class MaxPQ<T> {
     this.swim(this.N)
   }
 
-  delMax() {
+  delMax(): T {
     const max = this.pq[1]
     this.exch(1, this.N--)
-    this.pq[this.N - 1] = null
+    this.pq[this.N + 1] = null
     this.sink(1)
     return max
   }
@@ -55,4 +57,19 @@ class MaxPQ<T> {
   }
 }
 
-export default MaxPQ
+async function main() {
+  const data = await StdIn.readInt(SortMockFile)
+  const stopWatch = new StopWatch()
+  const res = []
+  const maxPQ = new MaxPQ()
+  for (let i = 0; i < data.length; i++) {
+    maxPQ.insert(data[i])
+  }
+  while (!maxPQ.isEmpty()) {
+    res.push(maxPQ.delMax())
+  }
+  console.log(res)
+  stopWatch.elapseTime()
+}
+
+main()
