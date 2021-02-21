@@ -24,6 +24,13 @@
       "name": "MaxPQ",
       "program": "${workspaceFolder}/src/algs4/sort/max-pq.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "HeapSort",
+      "program": "${workspaceFolder}/src/algs4/sort/heap-sort.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]
 }
