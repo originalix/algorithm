@@ -31,6 +31,13 @@
       "name": "HeapSort",
       "program": "${workspaceFolder}/src/algs4/sort/heap-sort.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "SequentialSearchST",
+      "program": "${workspaceFolder}/src/algs4/search/sequential-search-st.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]
 }
