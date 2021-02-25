@@ -1,3 +1,6 @@
+/**
+ * 二分查找（基于有序数组）
+ */
 class BinarySearchST<Key, Value> {
   private keys: Key[]
   private vals: Value[]
@@ -23,6 +26,7 @@ class BinarySearchST<Key, Value> {
     }
   }
 
+  // 查找键，找到则更新值，否则创建新的元素:w
   put(key: Key, val: Value) {
     const i = this.rank(key, 0, this.N - 1)
     if (i < this.N && this.keys[i] === key) {
