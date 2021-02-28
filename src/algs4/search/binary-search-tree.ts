@@ -5,7 +5,11 @@ export class Node<K, V> {
   public right: Node<K, V>
   public N: number // 以该节点为根的子树中的结点总数
   constructor(key: K, val: V, N: number) {
-    this.key = key; this.val = val; this.N = N
+    this.key = key
+    this.val = val
+    this.N = N
+    this.left = null
+    this.right = null
   }
 }
 
@@ -14,6 +18,9 @@ export class Node<K, V> {
  */
 export default class BST<K, V> {
   private root: Node<K, V> // 二叉查找树根节点
+  constructor() {
+    this.root = null
+  }
 
   size(): number { return this._size(this.root) }
 
@@ -59,4 +66,71 @@ export default class BST<K, V> {
 
     return x
   }
+
+  // 查找最小键
+  min(): K {
+    return this._min(this.root).key
+  }
+
+  private _min(x: Node<K, V>): Node<K, V> {
+    if (x.left === null) return x
+    return this._min(x.left)
+  }
+
+  // 向上取整
+  floor(key: K) {
+    const x = this._floor(this.root, key)
+    if (x === null) return null
+    return x.key
+  }
+
+  private _floor(x: Node<K, V>, key: K): Node<K, V> {
+    if (x === null) return null
+    if (key === x.key) return x
+    if (key < x.key) return this._floor(x.left, key)
+    const t = this._floor(x.right, key)
+    return t !== null ? t : x
+  }
+
+  //  选择操作
+  select(k: number) {
+    return this._select(this.root, k).key
+  }
+
+  // 返回排名为 k 的节点
+  private _select(x: Node<K, V>, k: number): Node<K, V> {
+    if (x === null) return null
+    const t = this._size(x.left)
+    if (t > k) return this._select(x.left, k)
+    else if (t < k) return this._select(x.right, k - t - 1)
+    else return x
+  }
+
+  // 排名
+  rank(key: K): number {
+    return this._rank(key, this.root)
+  }
+
+  // 返回以 x 为根节点的子树中小于 x.key 的数量
+  private _rank(key: K, x: Node<K, V>): number {
+    if (x === null) return 0
+    if (key < x.key) {
+      return this._rank(key, x.left)
+    } else if (key > x.key) {
+      return 1 + this._size(x.left) + this._rank(key, x.right)
+    } else {
+      return this._size(x.left)
+    }
+  }
 }
+
+function main() {
+  const words = 'XDELSKDDAOEMCD'.split('')
+  const bst = new BST<string, number>()
+  words.forEach((v, i) => {
+    bst.put(v, i)
+  })
+  console.log(bst)
+}
+
+main()
