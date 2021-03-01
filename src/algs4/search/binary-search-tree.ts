@@ -125,7 +125,7 @@ export default class BST<K, V> {
 
   // 删除最小键
   deleteMin() {
-    this._deleteMin(this.root)
+    this.root = this._deleteMin(this.root)
   }
 
   private _deleteMin(x: Node<K, V>): Node<K, V> {
@@ -182,9 +182,21 @@ function main() {
   console.log(`二叉树中，最小键为: ${minKey}`)
 
   // 排名为 k 的键，正好有 k 个小于它的键
-  const selectIdx = 0
+  const selectIdx = 5
   const selectKey = bst.select(selectIdx)
   console.log(`选择排名为 ${selectIdx} 的键: ${selectKey}`)
+  // rank() 是 select() 的逆方法，它会返回给定键的排名
+  const rank = bst.rank(selectKey)
+  console.log(`${selectKey} 键的排名是 ${rank}`)
+
+  // 删除最小键
+  bst.deleteMin()
+  const nextMinKey = bst.min()
+  console.log(`删除最小键后，此时的 min key 为 ${nextMinKey}`)
+
+  // 删除操作
+  bst.delete(nextMinKey)
+  console.log(`再次删除最小键 ${nextMinKey} 后，此时的 min key 为 ${bst.min()}`)
 }
 
 main()
