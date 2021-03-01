@@ -62,7 +62,7 @@ export default class BST<K, V> {
     } else {
       x.val = val
     }
-    x.N = this._size(x.left) + this._size(x.right)
+    x.N = this._size(x.left) + this._size(x.right) + 1
 
     return x
   }
@@ -94,7 +94,7 @@ export default class BST<K, V> {
 
   //  选择操作
   select(k: number) {
-    return this._select(this.root, k).key
+    return this._select(this.root, k)?.key
   }
 
   // 返回排名为 k 的节点
@@ -122,15 +122,69 @@ export default class BST<K, V> {
       return this._size(x.left)
     }
   }
+
+  // 删除最小键
+  deleteMin() {
+    this._deleteMin(this.root)
+  }
+
+  private _deleteMin(x: Node<K, V>): Node<K, V> {
+    if (x.left === null) return x.right
+    x.left = this._deleteMin(x.left)
+    x.N = this._size(x.left) + this._size(x.right) + 1
+    return x
+  }
+
+  // 删除操作
+  delete(key: K) {
+    this.root = this._delete(this.root, key)
+  }
+
+  /**
+   * 删除算法步骤
+   * 1、将指向即将被删除的节点的链接保存为 t
+   * 2、将 x 指向它的后继节点 min(t.right)
+   * 3、将 x 的右链接(原本指向一颗所有节点都大于x.key的二叉查找树)指向 deleteMin(t.right)，也就是在删除后所有结点仍然都大于 x.key 的子二叉查找树
+   * 4、将 x 的左连接(本为空)设为t.left(其下所有的键都小于被删除的结点和它的后继结点)
+   */
+  private _delete(x: Node<K, V>, key: K): Node<K, V> {
+    if (x === null) return null
+    if (key < x.key) {
+      x.left = this._delete(x.left, key)
+    } else if (key > x.key) {
+      x.right = this._delete(x.right, key)
+    } else {
+      if (x.right === null) return x.left
+      if (x.left === null) return x.right
+      const t = x
+      x = this._min(t.right)
+      x.right = this._deleteMin(t.right)
+      x.left = t.left
+    }
+    x.N = this._size(x.left) + this._size(x.right) + 1
+    return x
+  }
 }
 
 function main() {
   const words = 'XDELSKDDAOEMCD'.split('')
   const bst = new BST<string, number>()
   words.forEach((v, i) => {
+    // 插入
     bst.put(v, i)
   })
-  console.log(bst)
+  // 获取
+  const val = bst.get('D')
+  console.log(`key: D 的值为${val}`)
+
+  // 查找最小键
+  const minKey = bst.min()
+  console.log(`二叉树中，最小键为: ${minKey}`)
+
+  // 排名为 k 的键，正好有 k 个小于它的键
+  const selectIdx = 0
+  const selectKey = bst.select(selectIdx)
+  console.log(`选择排名为 ${selectIdx} 的键: ${selectKey}`)
 }
 
 main()
