@@ -69,12 +69,21 @@ export default class BST<K, V> {
 
   // 查找最小键
   min(): K {
-    return this._min(this.root).key
+    return this._min(this.root)?.key
   }
 
   private _min(x: Node<K, V>): Node<K, V> {
     if (x.left === null) return x
     return this._min(x.left)
+  }
+
+  max(): K {
+    return this._max(this.root)?.key
+  }
+
+  private _max(x: Node<K, V>): Node<K, V> {
+    if (x.right === null) return x
+    return this._max(x.right)
   }
 
   // 向上取整
@@ -164,6 +173,21 @@ export default class BST<K, V> {
     x.N = this._size(x.left) + this._size(x.right) + 1
     return x
   }
+
+  // 范围查找
+  keys(lo: K, hi: K) {
+    const queue: K[] = []
+    this._keys(this.root, queue, lo, hi)
+    return queue
+  }
+
+  // 中序遍历
+  private _keys(x: Node<K, V>, queue: K[], lo: K, hi: K) {
+    if (x === null) return
+    if (lo < x.key) this._keys(x.left, queue, lo, hi)
+    if (lo <= x.key && hi >= x.key) queue.push(x.key)
+    if (hi > x.key) this._keys(x.right, queue, lo, hi)
+  }
 }
 
 function main() {
@@ -180,6 +204,13 @@ function main() {
   // 查找最小键
   const minKey = bst.min()
   console.log(`二叉树中，最小键为: ${minKey}`)
+
+  // 查找最大键
+  const maxKey = bst.max()
+  console.log(`二叉树中，最大键为: ${maxKey}`)
+
+  const keys = bst.keys(minKey, maxKey)
+  console.log(`遍历二叉树,树中所有键为: ${keys}`)
 
   // 排名为 k 的键，正好有 k 个小于它的键
   const selectIdx = 5
