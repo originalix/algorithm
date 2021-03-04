@@ -35,3 +35,4 @@
 * [符号表 顺序查找(基于无序链表)](src/algs4/search/sequential-search-st.ts)
 * [符号表 二分查找(基于有序数组)](src/algs4/search/binary-search-st.ts)
 * [二叉查找树](src/algs4/search/binary-search-tree.ts)
+* [红黑树](src/algs4/search/red-black-bst.ts)
