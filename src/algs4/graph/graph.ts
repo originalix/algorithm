@@ -35,3 +35,21 @@ export class Graph implements IGraph {
     return this.adj[v]
   }
 }
+
+function createGraphFromReadIn(V: number, readIn: number[]) {
+  const graph = new Graph(V)
+  while (readIn.length) {
+    const v = readIn.shift()
+    const w = readIn.shift()
+    graph.addEdge(v, w)
+  }
+  return graph
+}
+
+function main() {
+  const readInArr = [0, 5, 4, 3, 0, 1, 9, 12, 6, 4, 5, 4, 0, 2, 11, 12, 9, 10, 0, 6, 7, 8, 9, 11, 5, 3]
+  const graph = createGraphFromReadIn(13, readInArr)
+  console.log(graph)
+}
+
+main()

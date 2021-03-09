@@ -46,6 +46,13 @@
       "name": "BST",
       "program": "${workspaceFolder}/src/algs4/search/binary-search-tree.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Graph",
+      "program": "${workspaceFolder}/src/algs4/graph/graph.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]
 }
