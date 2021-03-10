@@ -8,15 +8,15 @@ interface IGraph {
 }
 
 export class Graph implements IGraph {
-  private V: number
-  private E: number
-  private adj: Bag<number>[]
+  private V: number // 顶点数目
+  private E: number // 边的数目
+  private adj: Bag<number>[] // 邻接表
 
   constructor(V: number) {
     this.V = V
     this.E = 0
-    this.adj = []
-    for (let v = 0; v < V; v++) {
+    this.adj = [] // 创建邻接表
+    for (let v = 0; v < V; v++) { // 将所有链表初始化为空
       this.adj[v] = new Bag<number>()
     }
   }
@@ -26,8 +26,8 @@ export class Graph implements IGraph {
   countE() { return this.E }
 
   addEdge(v: number, w: number) {
-    this.adj[v].add(w)
-    this.adj[w].add(v)
+    this.adj[v].add(w) // 将 w 添加到 v 的链表中
+    this.adj[w].add(v) // 将 v 添加到 w 的链表中
     this.E++
   }
 
@@ -37,11 +37,11 @@ export class Graph implements IGraph {
 }
 
 function createGraphFromReadIn(V: number, readIn: number[]) {
-  const graph = new Graph(V)
+  const graph = new Graph(V) // 读取 V 并将图初始化
   while (readIn.length) {
-    const v = readIn.shift()
-    const w = readIn.shift()
-    graph.addEdge(v, w)
+    const v = readIn.shift() // 读取一个顶点
+    const w = readIn.shift() // 读取另一个顶点
+    graph.addEdge(v, w) // 添加一条连接它们的边
   }
   return graph
 }
