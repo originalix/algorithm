@@ -37,7 +37,7 @@ export default class Graph implements IGraph {
   }
 }
 
-function createGraphFromReadIn(V: number, readIn: number[]) {
+export function createGraphFromReadIn(V: number, readIn: number[]) {
   const graph = new Graph(V) // 读取 V 并将图初始化
   while (readIn.length) {
     const v = readIn.shift() // 读取一个顶点
@@ -51,9 +51,6 @@ function main() {
   const readInArr = [0, 5, 4, 3, 0, 1, 9, 12, 6, 4, 5, 4, 0, 2, 11, 12, 9, 10, 0, 6, 7, 8, 9, 11, 5, 3]
   const graph = createGraphFromReadIn(13, readInArr)
   console.log(graph)
-
-  // eslint-disable-next-line no-new
-  new DepthFirstSearch(graph, 0)
 }
 
 main()
