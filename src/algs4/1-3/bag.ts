@@ -35,6 +35,7 @@ export default class Bag<T> extends NodeIterator<T> {
   }
 }
 
+const __DEBUG__ = false
 function main() {
   const val = [1, 3, 3, 4, 5, 6, 7, 8, 9, 4, 3, 5234, 234, 234, 234, 234, 234, 234]
   const bag = new Bag<number>()
@@ -49,4 +50,4 @@ function main() {
   }
 }
 
-main()
+__DEBUG__ && main()

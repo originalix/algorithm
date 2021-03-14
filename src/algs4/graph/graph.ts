@@ -1,4 +1,5 @@
 import Bag from '@/algs4/1-3/bag'
+import DepthFirstSearch from './depth-first-search'
 
 interface IGraph {
   countV(): number
@@ -7,7 +8,7 @@ interface IGraph {
   getAdj(v: number): Bag<number>
 }
 
-export class Graph implements IGraph {
+export default class Graph implements IGraph {
   private V: number // 顶点数目
   private E: number // 边的数目
   private adj: Bag<number>[] // 邻接表
@@ -27,11 +28,11 @@ export class Graph implements IGraph {
 
   addEdge(v: number, w: number) {
     this.adj[v].add(w) // 将 w 添加到 v 的链表中
-    this.adj[w].add(v) // 将 v 添加到 w 的链表中
+    this.adj[w].add(v) // 将 v 添加到 w 的链表中number[]
     this.E++
   }
 
-  getAdj(v: number) {
+  getAdj(v: number): Bag<number> {
     return this.adj[v]
   }
 }
@@ -50,6 +51,9 @@ function main() {
   const readInArr = [0, 5, 4, 3, 0, 1, 9, 12, 6, 4, 5, 4, 0, 2, 11, 12, 9, 10, 0, 6, 7, 8, 9, 11, 5, 3]
   const graph = createGraphFromReadIn(13, readInArr)
   console.log(graph)
+
+  // eslint-disable-next-line no-new
+  new DepthFirstSearch(graph, 0)
 }
 
 main()
