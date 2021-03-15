@@ -1,6 +1,6 @@
 import BaseSort from './base-sort'
 import { StdIn, StopWatch } from 'utils'
-import { SortMockFile } from '@/constants'
+import { SortMockFile, __DEBUG__ } from '@/constants'
 
 class MergeSort<T> extends BaseSort<T> {
   private aux: T[] // 归并所需的辅助数组
@@ -41,4 +41,4 @@ async function main() {
   stopWatch.elapseTime()
 }
 
-main()
+__DEBUG__ && main()

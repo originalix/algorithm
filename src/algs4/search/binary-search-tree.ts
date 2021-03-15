@@ -1,3 +1,4 @@
+import { __DEBUG__ } from '@/constants'
 export class Node<K, V> {
   public key: K
   public val: V
@@ -230,4 +231,4 @@ function main() {
   console.log(`再次删除最小键 ${nextMinKey} 后，此时的 min key 为 ${bst.min()}`)
 }
 
-main()
+__DEBUG__ && main()

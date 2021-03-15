@@ -1,5 +1,5 @@
 import { StdIn, StopWatch } from 'utils'
-import { SortMockFile } from '@/constants'
+import { SortMockFile, __DEBUG__ } from '@/constants'
 const assert = require('assert')
 /**
  * 堆排序
@@ -54,4 +54,4 @@ async function main() {
   stopWatch.elapseTime()
 }
 
-main()
+__DEBUG__ && main()

@@ -1,5 +1,5 @@
 import { StdIn, StopWatch } from 'utils'
-import { SortMockFile } from '@/constants'
+import { SortMockFile, __DEBUG__ } from '@/constants'
 /**
  * 基于堆的优先序列
  */
@@ -72,4 +72,4 @@ async function main() {
   stopWatch.elapseTime()
 }
 
-main()
+__DEBUG__ && main()

@@ -1,3 +1,5 @@
+import { __DEBUG__ } from '@/constants'
+
 /**
  * 二分查找（基于有序数组）
  */
@@ -63,4 +65,4 @@ function main() {
   })
 }
 
-main()
+__DEBUG__ && main()

@@ -1,6 +1,6 @@
 import BaseSort from './base-sort'
 import { StdIn, StopWatch } from 'utils'
-import { SortMockFile } from '@/constants'
+import { SortMockFile, __DEBUG__ } from '@/constants'
 
 class ShellSort<T> extends BaseSort<T> {
   sort() {
@@ -26,4 +26,4 @@ async function main() {
   stopWatch.elapseTime()
 }
 
-main()
+__DEBUG__ && main()

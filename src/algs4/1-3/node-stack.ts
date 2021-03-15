@@ -1,5 +1,6 @@
+import { StdIn } from '@/utils'
 import { NodeItem } from '@/types'
-import { StdIn } from 'utils'
+import { __DEBUG__ } from '@/constants'
 
 /**
  * 下压栈(链表实现)
@@ -47,4 +48,4 @@ async function testNodeStack() {
   }
 }
 
-testNodeStack()
+__DEBUG__ && testNodeStack()
