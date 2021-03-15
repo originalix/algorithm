@@ -34,7 +34,7 @@ export default class DepthFirstPaths {
     return this.marked[v]
   }
 
-  pathTo(v: number) {
+  pathTo(v: number): number[] {
     if (!this.hasPathTo(v)) return null
     const path = []
     for (let x = v; x !== this.s; x = this.edgeTo[x]) {
