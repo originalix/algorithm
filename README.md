@@ -42,3 +42,4 @@
 * [无向图(邻接表表示)](src/algs4/graph/graph.ts)
 * [DFS 深度优先搜索](src/algs4/graph/dfs.ts)
 * [BFS 广度优先搜索](src/algs4/graph/bfs.ts)
+* [联通分量](src/algs4/graph/connect-components.ts)
