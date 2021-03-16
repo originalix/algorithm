@@ -2,7 +2,7 @@ import Bag from '../1-3/bag'
 import Graph, { createGraphFromReadIn } from './graph'
 
 /**
- * 联通分量
+ * 连通分量
  */
 export default class CC {
   private marked: boolean[]
