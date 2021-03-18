@@ -43,3 +43,4 @@
 * [DFS 深度优先搜索](src/algs4/graph/dfs.ts)
 * [BFS 广度优先搜索](src/algs4/graph/bfs.ts)
 * [连通分量](src/algs4/graph/connect-components.ts)
+* [符号图](src/algs4/graph/symbol-graph.ts)
