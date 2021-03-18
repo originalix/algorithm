@@ -23,8 +23,9 @@ export default class StdIn {
     }
   }
 
-  static async readFile() {
-    await this.processLine('string', null)
+  static async readFile(fileName: string = null) {
+    await this.processLine('string', fileName || null)
+    return readlineStack
   }
 
   static readString() {
