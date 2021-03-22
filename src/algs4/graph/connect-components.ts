@@ -1,5 +1,5 @@
 import Bag from '../1-3/bag'
-import Graph, { createGraphFromReadIn } from './graph'
+import Graph from './graph'
 
 /**
  * 连通分量
@@ -50,7 +50,7 @@ export default class CC {
 
 function main() {
   const readInArr = [0, 5, 4, 3, 0, 1, 9, 12, 6, 4, 5, 4, 0, 2, 11, 12, 9, 10, 0, 6, 7, 8, 9, 11, 5, 3]
-  const graph = createGraphFromReadIn(13, readInArr)
+  const graph = Graph.createByReadIn(13, readInArr)
   const cc = new CC(graph)
 
   const M = cc.getCount()

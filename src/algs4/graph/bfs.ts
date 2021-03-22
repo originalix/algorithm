@@ -1,5 +1,5 @@
 import Queue from '@/algs4/1-3/node-queue'
-import Graph, { createGraphFromReadIn } from './graph'
+import Graph from './graph'
 
 export default class BreadthFirstPaths {
   private marked: boolean[]
@@ -48,7 +48,7 @@ export default class BreadthFirstPaths {
 
 function main() {
   const pointArr = [0, 1, 0, 5, 0, 2, 2, 1, 2, 3, 3, 5, 3, 4, 2, 4]
-  const G = createGraphFromReadIn(6, pointArr)
+  const G = Graph.createByReadIn(6, pointArr)
   const s = 0
   const search = new BreadthFirstPaths(G, s)
   for (let v = 0; v < G.countV(); v++) {

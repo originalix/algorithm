@@ -1,4 +1,4 @@
-import Graph, { createGraphFromReadIn } from './graph'
+import Graph from './graph'
 
 /**
  * 使用深度优先搜索查找图中的路径
@@ -47,7 +47,7 @@ export default class DepthFirstPaths {
 
 function main() {
   const pointArr = [0, 1, 0, 5, 0, 2, 2, 1, 2, 3, 3, 5, 3, 4]
-  const G = createGraphFromReadIn(6, pointArr)
+  const G = Graph.createByReadIn(6, pointArr)
   const s = 0
   const search = new DepthFirstPaths(G, s)
   for (let v = 0; v < G.countV(); v++) {

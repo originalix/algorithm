@@ -22,6 +22,16 @@ export default class Graph implements IGraph {
     }
   }
 
+  static createByReadIn(V: number, readIn: number[]) {
+    const graph = new Graph(V) // 读取 V 并将图初始化
+    while (readIn.length) {
+      const v = readIn.shift() // 读取一个顶点
+      const w = readIn.shift() // 读取另一个顶点
+      graph.addEdge(v, w) // 添加一条连接它们的边
+    }
+    return graph
+  }
+
   countV() { return this.V }
 
   countE() { return this.E }
@@ -37,19 +47,9 @@ export default class Graph implements IGraph {
   }
 }
 
-export function createGraphFromReadIn(V: number, readIn: number[]) {
-  const graph = new Graph(V) // 读取 V 并将图初始化
-  while (readIn.length) {
-    const v = readIn.shift() // 读取一个顶点
-    const w = readIn.shift() // 读取另一个顶点
-    graph.addEdge(v, w) // 添加一条连接它们的边
-  }
-  return graph
-}
-
 function main() {
   const readInArr = [0, 5, 4, 3, 0, 1, 9, 12, 6, 4, 5, 4, 0, 2, 11, 12, 9, 10, 0, 6, 7, 8, 9, 11, 5, 3]
-  const graph = createGraphFromReadIn(13, readInArr)
+  const graph = Graph.createByReadIn(13, readInArr)
   console.log(graph)
 }
 
