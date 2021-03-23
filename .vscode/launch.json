@@ -56,8 +56,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Graph",
-      "program": "${workspaceFolder}/src/algs4/graph/graph.ts",
+      "name": "Digraph",
+      "program": "${workspaceFolder}/src/algs4/graph/digraph.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]

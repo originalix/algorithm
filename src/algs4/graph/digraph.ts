@@ -1,3 +1,4 @@
+import { StdIn } from '@/utils'
 import Bag from '@/algs4/1-3/bag'
 
 /**
@@ -16,6 +17,16 @@ export default class Digraph {
     for (let v = 0; v < V; v++) {
       this.adj[v] = new Bag<number>()
     }
+  }
+
+  static createByReadIn(V:number, readIn: number[]) {
+    const digraph = new Digraph(V)
+    while (readIn.length) {
+      const v = readIn.shift()
+      const w = readIn.shift()
+      digraph.addEdge(v, w)
+    }
+    return digraph
   }
 
   countV() { return this.V }
@@ -42,14 +53,15 @@ export default class Digraph {
     }
     return R
   }
-
-  static createDigraphFromReadIn(V:number, readIn: number[]) {
-    const digraph = new Digraph(V)
-    while (readIn.length) {
-      const v = readIn.shift()
-      const w = readIn.shift()
-      digraph.addEdge(v, w)
-    }
-    return digraph
-  }
 }
+
+async function main() {
+  const stream = await StdIn.readFile('tinyDG.txt')
+  const data = stream.reduce((prev, line) => ([...prev, ...line.split(' ')]), []).map((val: string) => +val)
+  console.log(data)
+
+  const G = Digraph.createByReadIn(13, data)
+  console.log(G)
+}
+
+main()
