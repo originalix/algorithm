@@ -56,8 +56,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Digraph",
-      "program": "${workspaceFolder}/src/algs4/graph/digraph.ts",
+      "name": "DirectedDFS",
+      "program": "${workspaceFolder}/src/algs4/graph/directed-dfs.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]

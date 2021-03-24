@@ -1,4 +1,5 @@
 import { StdIn } from '@/utils'
+import { __DEBUG__ } from '@/constants'
 import Bag from '@/algs4/1-3/bag'
 
 /**
@@ -64,4 +65,4 @@ async function main() {
   console.log(G)
 }
 
-main()
+__DEBUG__ && main()
