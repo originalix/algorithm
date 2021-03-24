@@ -5,7 +5,7 @@ import { __DEBUG__ } from '@/constants'
 /**
  * 下压栈(链表实现)
  */
-class Stack<T> {
+export default class Stack<T> {
   private first: NodeItem<T>
   private N: number
 

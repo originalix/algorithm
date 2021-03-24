@@ -46,3 +46,4 @@
 * [符号图](src/algs4/graph/symbol-graph.ts)
 * [有向图](src/algs4/graph/digraph.ts)
 * [有向图的可达性](src/algs4/graph/directed-dfs.ts)
+* [有向图中深度优先搜索的顶点排序](src/algs4/graph/depth-first-order.ts)

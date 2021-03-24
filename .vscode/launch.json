@@ -56,8 +56,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "DirectedDFS",
-      "program": "${workspaceFolder}/src/algs4/graph/directed-dfs.ts",
+      "name": "DepthFirstOrder",
+      "program": "${workspaceFolder}/src/algs4/graph/depth-first-order.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]
