@@ -4,6 +4,7 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+
     {
       "type": "node",
       "request": "launch",
@@ -58,6 +59,13 @@
       "request": "launch",
       "name": "DepthFirstOrder",
       "program": "${workspaceFolder}/src/algs4/graph/depth-first-order.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Topological",
+      "program": "${workspaceFolder}/src/algs4/graph/topological.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]

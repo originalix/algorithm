@@ -1,4 +1,5 @@
 import { StdIn } from '@/utils'
+import { __DEBUG__ } from '@/constants'
 import Queue from '../1-3/node-queue'
 import Stack from '../1-3/node-stack'
 import Digraph from './digraph'
@@ -67,4 +68,4 @@ async function main() {
   console.log('-----reversePost stack------')
 }
 
-main()
+__DEBUG__ && main()

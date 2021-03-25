@@ -43,7 +43,7 @@ export default class DritectedCycle {
   }
 
   hasCycle() {
-    return this.cycle !== undefined || this.cycle !== null
+    return this.cycle !== undefined && this.cycle !== null
   }
 
   getCycle() {
