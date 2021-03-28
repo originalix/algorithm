@@ -1,3 +1,4 @@
+import { cloneDeep } from 'lodash'
 import { StdIn } from '@/utils'
 import Stack from '../1-3/node-stack'
 import Digraph from './digraph'
@@ -11,9 +12,10 @@ export default class Topological {
   private order: Stack<number>
 
   constructor(G: Digraph) {
+    const cloneG = cloneDeep(G)
     const cyclefinder = new DirectedCycle(G)
     if (!cyclefinder.hasCycle()) {
-      const dfs = new DepthFirstOrder(G)
+      const dfs = new DepthFirstOrder(cloneG)
       this.order = dfs.getReversePost()
     }
   }
