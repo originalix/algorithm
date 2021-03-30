@@ -67,6 +67,13 @@
       "name": "Topological",
       "program": "${workspaceFolder}/src/algs4/graph/topological.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "EdgeWeightedGraph",
+      "program": "${workspaceFolder}/src/algs4/graph/edge-weighted-graph.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]
 }
