@@ -1,5 +1,7 @@
 import { StdIn, StopWatch } from 'utils'
 import { SortMockFile, __DEBUG__ } from '@/constants'
+import Edge from '../graph/edge'
+
 /**
  * 基于堆的优先序列
  */
@@ -36,7 +38,12 @@ export default class MinPQ<T> {
   }
 
   private greater(i: number, j: number) {
-    return this.pq[i] > this.pq[j]
+    const iRes = this.pq[i]
+    const jRes = this.pq[j]
+    if (iRes instanceof Edge && jRes instanceof Edge) {
+      return iRes.getWeight() > jRes.getWeight()
+    }
+    return iRes > jRes
   }
 
   private swim(k: number) {

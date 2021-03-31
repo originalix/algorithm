@@ -74,6 +74,13 @@
       "name": "EdgeWeightedGraph",
       "program": "${workspaceFolder}/src/algs4/graph/edge-weighted-graph.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "LazyPrimMst",
+      "program": "${workspaceFolder}/src/algs4/graph/lazy-prim-mst.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]
 }

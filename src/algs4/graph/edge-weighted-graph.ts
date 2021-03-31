@@ -12,25 +12,23 @@ export default class EdgeWeightedGraph {
   private E: number
   private adj: Bag<Edge>[]
 
-  constructor(V: number) {
+  constructor(V: number, readIn?: number[]) {
     this.V = V
     this.E = 0
     this.adj = []
     for (let v = 0; v < V; v++) {
       this.adj[v] = new Bag<Edge>()
     }
-  }
 
-  static createByReadIn(V:number, readIn: number[]) {
-    const G = new EdgeWeightedGraph(V)
-    while (readIn.length) {
-      const v = readIn.shift()
-      const w = readIn.shift()
-      const weight = readIn.shift()
-      const e = new Edge(v, w, weight)
-      G.addEdge(e)
+    if (readIn) {
+      while (readIn.length) {
+        const v = readIn.shift()
+        const w = readIn.shift()
+        const weight = readIn.shift()
+        const e = new Edge(v, w, weight)
+        this.addEdge(e)
+      }
     }
-    return G
   }
 
   getV() { return this.V }
@@ -65,7 +63,7 @@ async function main() {
   const data = stream.reduce((prev, line) => ([...prev, ...line.split(' ')]), []).map((val: string) => +val)
   console.log(data)
 
-  const G = EdgeWeightedGraph.createByReadIn(8, data)
+  const G = new EdgeWeightedGraph(8, data)
   console.log(G)
 }
 
