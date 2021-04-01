@@ -29,8 +29,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "MaxPQ",
-      "program": "${workspaceFolder}/src/algs4/sort/max-pq.ts",
+      "name": "IndexMinPQ",
+      "program": "${workspaceFolder}/src/algs4/graph/index-min-pq.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     },
     {
