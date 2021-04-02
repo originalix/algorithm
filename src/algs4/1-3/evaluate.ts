@@ -2,7 +2,7 @@
  * (1 + ((2 + 3) * (4 * 5)))
  * Dijkstra 的双栈算术表达式求值算法
  */
-class Evaluate {
+export default class Evaluate {
   static main(args: string) {
     const ops: string[] = []
     const vals: number[] = []
@@ -26,9 +26,6 @@ class Evaluate {
       }
     }
 
-    console.log(`final value is: ${vals.pop()}`)
+    return vals.pop()
   }
 }
-
-const formula = '(1 + ((2 + 3) * (4 * 5)))'
-Evaluate.main(formula)
