@@ -79,7 +79,7 @@
       "type": "node",
       "request": "launch",
       "name": "LazyPrimMst",
-      "program": "${workspaceFolder}/src/algs4/graph/lazy-prim-mst.ts",
+      "program": "${workspaceFolder}/src/algs4/graph/mst.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]
