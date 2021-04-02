@@ -13,6 +13,6 @@
     },
     "sourceMap": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "__test__"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }
