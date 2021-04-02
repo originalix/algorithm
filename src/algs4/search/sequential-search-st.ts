@@ -1,3 +1,5 @@
+import { __DEBUG__ } from '@/constants'
+
 // 链表结点的定义
 export class Node<Key, Value> {
   public key: Key
@@ -80,4 +82,4 @@ function main() {
   console.log(keys)
 }
 
-main()
+__DEBUG__ && main()

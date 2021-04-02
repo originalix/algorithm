@@ -1,10 +1,11 @@
+import { StdIn } from '@/utils'
 import { NodeItem } from '@/types'
-import { StdIn } from 'utils'
+import { __DEBUG__ } from '@/constants'
 
 /**
  * 下压栈(链表实现)
  */
-class Stack<T> {
+export default class Stack<T> {
   private first: NodeItem<T>
   private N: number
 
@@ -47,4 +48,4 @@ async function testNodeStack() {
   }
 }
 
-testNodeStack()
+__DEBUG__ && testNodeStack()

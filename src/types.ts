@@ -11,7 +11,7 @@ export class NodeIterator<T> {
   }
 
   hasNext(): boolean {
-    return this.current !== null
+    return this.current && this.current !== null
   }
 
   remove() {}

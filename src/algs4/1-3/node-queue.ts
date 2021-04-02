@@ -1,9 +1,10 @@
+import { __DEBUG__ } from '@/constants'
 import { NodeItem } from '@/types'
 import { StdIn, StopWatch } from 'utils'
 /**
  * 先进先出队列（链表实现）
  */
-class Queue<T> {
+export default class Queue<T> {
   public first: NodeItem<T>
   public last: NodeItem<T>
   private N: number
@@ -63,4 +64,4 @@ async function testNodeQueue() {
   time.elapseTime()
 }
 
-testNodeQueue()
+__DEBUG__ && testNodeQueue()

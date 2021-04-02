@@ -1,7 +1,9 @@
+import { __DEBUG__ } from '@/constants'
+
 /**
  * 二分查找（基于有序数组）
  */
-class BinarySearchST<Key, Value> {
+export default class BinarySearchST<Key, Value> {
   private keys: Key[]
   private vals: Value[]
   private N: number
@@ -15,6 +17,12 @@ class BinarySearchST<Key, Value> {
   size(): number { return this.N }
 
   isEmpty(): boolean { return this.N === 0 }
+
+  contains(key: Key) {
+    return this.get(key) != null
+  }
+
+  getKeys() { return this.keys }
 
   get(key: Key): Value | null {
     if (this.isEmpty()) return null
@@ -63,4 +71,4 @@ function main() {
   })
 }
 
-main()
+__DEBUG__ && main()

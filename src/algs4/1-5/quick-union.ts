@@ -1,5 +1,5 @@
-import { UnionCount } from '@/constants'
 import { readInt, StopWatch } from 'utils'
+import { UnionCount, __DEBUG__ } from '@/constants'
 
 /**
  * 并查集
@@ -56,4 +56,4 @@ function test() {
   time.elapseTime()
 }
 
-test()
+__DEBUG__ && test()

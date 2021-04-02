@@ -1,9 +1,11 @@
 import { StdIn, StopWatch } from 'utils'
 import { SortMockFile, __DEBUG__ } from '@/constants'
+import Edge from '../graph/edge'
+
 /**
  * 基于堆的优先序列
  */
-class MaxPQ<T> {
+export default class MinPQ<T> {
   private pq: T[]
   private N: number
 
@@ -21,12 +23,12 @@ class MaxPQ<T> {
     this.swim(this.N)
   }
 
-  delMax(): T {
-    const max = this.pq[1]
+  delMin(): T {
+    const min = this.pq[1]
     this.exch(1, this.N--)
     this.pq[this.N + 1] = null
     this.sink(1)
-    return max
+    return min
   }
 
   private exch(i: number, j: number) {
@@ -35,12 +37,17 @@ class MaxPQ<T> {
     this.pq[j] = temp
   }
 
-  private less(i: number, j: number) {
-    return this.pq[i] < this.pq[j]
+  private greater(i: number, j: number) {
+    const iRes = this.pq[i]
+    const jRes = this.pq[j]
+    if (iRes instanceof Edge && jRes instanceof Edge) {
+      return iRes.getWeight() > jRes.getWeight()
+    }
+    return iRes > jRes
   }
 
   private swim(k: number) {
-    while (k > 1 && this.less(Math.floor(k / 2), k)) {
+    while (k > 1 && this.greater(Math.floor(k / 2), k)) {
       this.exch(Math.floor(k / 2), k)
       k = Math.floor(k / 2)
     }
@@ -49,8 +56,8 @@ class MaxPQ<T> {
   private sink(dad: number) {
     while (2 * dad <= this.N) {
       let son = 2 * dad
-      if (son < this.N && this.less(son, son + 1)) son++
-      if (!this.less(dad, son)) break
+      if (son < this.N && this.greater(son, son + 1)) son++
+      if (!this.greater(dad, son)) break
       this.exch(dad, son)
       dad = son
     }
@@ -61,12 +68,12 @@ async function main() {
   const data = await StdIn.readInt(SortMockFile)
   const stopWatch = new StopWatch()
   const res = []
-  const maxPQ = new MaxPQ()
+  const maxPQ = new MinPQ()
   for (let i = 0; i < data.length; i++) {
     maxPQ.insert(data[i])
   }
   while (!maxPQ.isEmpty()) {
-    res.push(maxPQ.delMax())
+    res.push(maxPQ.delMin())
   }
   console.log(res)
   stopWatch.elapseTime()

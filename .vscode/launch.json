@@ -4,6 +4,14 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Bag",
+      "program": "${workspaceFolder}/src/algs4/1-3/bag.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
     {
       "type": "node",
       "request": "launch",
@@ -21,8 +29,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "MaxPQ",
-      "program": "${workspaceFolder}/src/algs4/sort/max-pq.ts",
+      "name": "IndexMinPQ",
+      "program": "${workspaceFolder}/src/algs4/graph/index-min-pq.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     },
     {
@@ -37,6 +45,41 @@
       "request": "launch",
       "name": "SequentialSearchST",
       "program": "${workspaceFolder}/src/algs4/search/sequential-search-st.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "BST",
+      "program": "${workspaceFolder}/src/algs4/search/binary-search-tree.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "DepthFirstOrder",
+      "program": "${workspaceFolder}/src/algs4/graph/depth-first-order.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Topological",
+      "program": "${workspaceFolder}/src/algs4/graph/topological.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "EdgeWeightedGraph",
+      "program": "${workspaceFolder}/src/algs4/graph/edge-weighted-graph.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "LazyPrimMst",
+      "program": "${workspaceFolder}/src/algs4/graph/lazy-prim-mst.ts",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]
