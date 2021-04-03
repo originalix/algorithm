@@ -2,7 +2,7 @@ import Bag from '../../src/algs4/1-3/bag'
 import { StdIn } from '../../src/utils'
 import { TinyIntFile } from '../../src/constants'
 
-describe('Bag 背包测试', () => {
+describe('Bag 背包', () => {
   test('bag size and loop', async () => {
     const bag = new Bag<number>()
     const val = await StdIn.readInt(TinyIntFile)
