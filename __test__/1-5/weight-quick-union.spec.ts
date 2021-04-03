@@ -1,12 +1,12 @@
-import { UnionCount } from '../src/constants'
-import { readInt, StopWatch } from '../src/utils'
-import QuickUnionUF from '../src/algs4/1-5/quick-union'
+import { UnionCount } from '../../src/constants'
+import { readInt, StopWatch } from '../../src/utils'
+import WeightQuickUnionUF from '../../src/algs4/1-5/weight-quick-union'
 
-describe('并查集 QuickUnion测试SP', () => {
-  test('quick union connected', () => {
+describe('加权并查集 WeightQuickUnion测试', () => {
+  test('weight quick union connected', () => {
     const time = new StopWatch()
     const N = UnionCount
-    const uf = new QuickUnionUF(N)
+    const uf = new WeightQuickUnionUF(N)
     for (let i = 0; i < UnionCount; i++) {
       const p = readInt(0, UnionCount)
       const q = readInt(0, UnionCount)

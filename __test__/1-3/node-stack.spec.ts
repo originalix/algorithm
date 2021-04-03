@@ -1,6 +1,6 @@
-import { StdIn, StopWatch } from '../src/utils'
-import { TinyIntFile } from '../src/constants'
-import Stack from '../src/algs4/1-3/node-stack'
+import { StdIn, StopWatch } from '../../src/utils'
+import { TinyIntFile } from '../../src/constants'
+import Stack from '../../src/algs4/1-3/node-stack'
 
 describe('Stack 下压栈测试', () => {
   test('stack push and pop', async () => {

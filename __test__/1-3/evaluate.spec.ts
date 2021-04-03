@@ -1,4 +1,4 @@
-import Evaluate from '../src/algs4/1-3/evaluate'
+import Evaluate from '../../src/algs4/1-3/evaluate'
 
 describe('Dijkstra 的双栈算术表达式求值算法', () => {
   test('(1 + ((2 + 3) * (4 * 5))) = 101', () => {
