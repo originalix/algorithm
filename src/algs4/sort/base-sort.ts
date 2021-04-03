@@ -23,7 +23,7 @@ abstract class BaseSort<T> {
     console.log(this.array)
   }
 
-  protected isSorted(): boolean {
+  isSorted(): boolean {
     for (let i = 1; i < this.array.length; i++) {
       if (this.less(this.array[i], this.array[i - 1])) return false
     }
