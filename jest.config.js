@@ -3,8 +3,8 @@ module.exports = {
   testEnvironment: 'node',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    '^utils$': '<rootDir>/utils/$1',
-    '^mock$': '<rootDir>/mock/$1'
+    '^utils$': '<rootDir>/src/utils',
+    '^mock$': '<rootDir>/src/mock'
   },
   verbose: true
 }
