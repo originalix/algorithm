@@ -1,15 +1,18 @@
 import Bag from '../src/algs4/1-3/bag'
+import { StdIn } from '../src/utils'
+import { TinyIntFile } from '../src/constants'
 
-let bag: Bag<number> | null
-let val: number[]
-beforeEach(() => {
-  val = [1, 3, 3, 4, 5, 6, 7, 8, 9, 4, 3, 5234, 234, 234, 234, 234, 234, 234]
-  bag = new Bag<number>()
-  for (const v of val) {
-    bag.add(v)
-  }
-})
 describe('背包 Bag 数据结构', () => {
+  let bag: Bag<number> | null
+  let val: number[]
+  beforeAll(async () => {
+    val = await StdIn.readInt(TinyIntFile)
+    bag = new Bag<number>()
+    for (const v of val) {
+      bag.add(v)
+    }
+  })
+
   test('bag size', () => {
     expect(bag.size()).toBe(val.length)
   })

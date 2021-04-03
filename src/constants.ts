@@ -4,3 +4,6 @@ export const __DEBUG__ = false
 export const UnionCount = 100000
 // 排序Mock数据文件
 export const SortMockFile = '100000Int.txt'
+export const TinyIntFile = '1000Int.txt'
+export const MediumIntFile = '10000Int.txt'
+export const LargeIntFile = '10000Int.txt'

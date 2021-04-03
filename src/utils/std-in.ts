@@ -11,7 +11,7 @@ export default class StdIn {
 
   static async processLine(type: 'string' | 'number', fileName: string | null) {
     const fromFile = !!fileName
-    const filePath = fromFile ? path.resolve(__dirname, `../src/mock/${fileName}`) : null
+    const filePath = fromFile ? path.resolve(__dirname, `../mock/${fileName}`) : null
     const fileStream = fs.createReadStream(filePath)
     const rl = readline.createInterface({
       input: fromFile ? fileStream : process.stdin,

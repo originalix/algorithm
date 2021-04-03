@@ -1,6 +1,6 @@
-const jestVariable =
-['describe', 'it', 'test', 'expect', 'beforeEach']
-  .reduce((pre, api) => ({ ...pre, [api]: 'readonly' }), {})
+const jestVariable = ['describe', 'it', 'test', 'expect', 'beforeEach']
+const jestSetupAPI = ['beforeEach', 'beforeAll', 'afterEach', 'afterAll']
+const jestMap = [...jestVariable, ...jestSetupAPI].reduce((pre, api) => ({ ...pre, [api]: 'readonly' }), {})
 
 module.exports = {
   env: {
@@ -8,7 +8,7 @@ module.exports = {
     commonjs: true,
     es2021: true
   },
-  globals: { ...jestVariable },
+  globals: { ...jestMap },
   extends: [
     'standard'
   ],
