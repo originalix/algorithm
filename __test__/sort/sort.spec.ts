@@ -3,8 +3,10 @@ import { TinyIntFile } from '../../src/constants'
 import Insertion from '../../src/algs4/sort/insertion'
 import Selection from '../../src/algs4/sort/selection'
 import HeapSort from '../../src/algs4/sort/heap-sort'
+import ShellSort from '../../src/algs4/sort/shell-sort'
+import MergeSort from '../../src/algs4/sort/merge-sort'
 
-describe('插入排序 & 选择排序', () => {
+describe('排序算法测试', () => {
   let data: number[] | null = null
   beforeEach(async () => {
     data = await StdIn.readInt(TinyIntFile)
@@ -23,6 +25,18 @@ describe('插入排序 & 选择排序', () => {
   })
 
   test('希尔排序', () => {
+    const shell = new ShellSort<number>(data)
+    shell.sort()
+    expect(shell.isSorted()).toBeTruthy()
+  })
+
+  test('归并排序', () => {
+    const mergeSort = new MergeSort(data)
+    mergeSort.sort(data)
+    expect(mergeSort.isSorted()).toBeTruthy()
+  })
+
+  test('堆排序', () => {
     const heapSort = new HeapSort()
     heapSort.sort(data)
     expect(heapSort.isSorted(data)).toBeTruthy()

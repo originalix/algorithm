@@ -1,8 +1,9 @@
 import BaseSort from './base-sort'
-import { StdIn, StopWatch } from 'utils'
-import { SortMockFile, __DEBUG__ } from '@/constants'
 
-class ShellSort<T> extends BaseSort<T> {
+/**
+ * 希尔排序
+ */
+export default class ShellSort<T> extends BaseSort<T> {
   sort() {
     const N = this.array.length
     let h = 1
@@ -17,13 +18,3 @@ class ShellSort<T> extends BaseSort<T> {
     }
   }
 }
-
-async function main() {
-  const data = await StdIn.readInt(SortMockFile)
-  const stopWatch = new StopWatch()
-  const shell = new ShellSort<number>(data)
-  shell.main()
-  stopWatch.elapseTime()
-}
-
-__DEBUG__ && main()
