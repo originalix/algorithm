@@ -7,6 +7,8 @@ import ShellSort from '../../src/algs4/sort/shell-sort'
 import MergeSort from '../../src/algs4/sort/merge-sort'
 import QuickSort from '../../src/algs4/sort/quick-sort'
 import Quick3Way from '../../src/algs4/sort/quick3way'
+import MinPQ from '../../src/algs4/sort/min-pq'
+import MaxPQ from '../../src/algs4/sort/max-pq'
 
 describe('排序算法测试', () => {
   let data: number[] | null = null
@@ -54,5 +56,40 @@ describe('排序算法测试', () => {
     const heapSort = new HeapSort()
     heapSort.sort(data)
     expect(heapSort.isSorted(data)).toBeTruthy()
+  })
+
+  test('最小优先队列', () => {
+    const minPQ = new MinPQ()
+    for (let i = 0; i < data.length; i++) {
+      minPQ.insert(data[i])
+    }
+    expect(minPQ.size()).toBe(data.length)
+
+    const res = []
+    while (!minPQ.isEmpty()) {
+      res.push(minPQ.delMin())
+    }
+    expect(minPQ.size()).toBe(0)
+    expect(res.length).toBe(data.length)
+
+    const sortData = data.sort((a, b) => a - b)
+    expect(res).toStrictEqual(sortData)
+  })
+
+  test('最大优先队列', () => {
+    const maxPQ = new MaxPQ()
+    for (let i = 0; i < data.length; i++) {
+      maxPQ.insert(data[i])
+    }
+    expect(maxPQ.size()).toBe(data.length)
+
+    const res = []
+    while (!maxPQ.isEmpty()) {
+      res.push(maxPQ.delMax())
+    }
+    expect(maxPQ.size()).toBe(0)
+    expect(res.length).toBe(data.length)
+    const sortData = data.sort((a, b) => b - a)
+    expect(res).toStrictEqual(sortData)
   })
 })
