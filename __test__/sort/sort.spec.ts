@@ -5,6 +5,8 @@ import Selection from '../../src/algs4/sort/selection'
 import HeapSort from '../../src/algs4/sort/heap-sort'
 import ShellSort from '../../src/algs4/sort/shell-sort'
 import MergeSort from '../../src/algs4/sort/merge-sort'
+import QuickSort from '../../src/algs4/sort/quick-sort'
+import Quick3Way from '../../src/algs4/sort/quick3way'
 
 describe('排序算法测试', () => {
   let data: number[] | null = null
@@ -34,6 +36,18 @@ describe('排序算法测试', () => {
     const mergeSort = new MergeSort(data)
     mergeSort.sort(data)
     expect(mergeSort.isSorted()).toBeTruthy()
+  })
+
+  test('快速排序', () => {
+    const quickSort = new QuickSort(data)
+    quickSort.sort(data)
+    expect(quickSort.isSorted()).toBeTruthy()
+  })
+
+  test('三路快排', () => {
+    const quick3Way = new Quick3Way(data)
+    quick3Way.sort(data)
+    expect(quick3Way.isSorted()).toBeTruthy()
   })
 
   test('堆排序', () => {

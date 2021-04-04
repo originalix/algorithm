@@ -1,8 +1,6 @@
 import BaseSort from './base-sort'
-import { StdIn, StopWatch } from 'utils'
-import { SortMockFile, __DEBUG__ } from '@/constants'
 
-class QuickSort<T> extends BaseSort<T> {
+export default class QuickSort<T> extends BaseSort<T> {
   sort(arr: T[]) {
     this._sort(arr, 0, arr.length - 1)
   }
@@ -27,13 +25,3 @@ class QuickSort<T> extends BaseSort<T> {
     return j // arr[lo..j-1] <= arr[j] <= arr[j+1..hi] 达成
   }
 }
-
-async function main() {
-  const data = await StdIn.readInt(SortMockFile)
-  const stopWatch = new StopWatch()
-  const quick = new QuickSort<number>(data)
-  quick.main(true)
-  stopWatch.elapseTime()
-}
-
-__DEBUG__ && main()

@@ -1,8 +1,6 @@
 import BaseSort from './base-sort'
-import { StdIn, StopWatch } from 'utils'
-import { SortMockFile, __DEBUG__ } from '@/constants'
 
-class Quick3Way<T> extends BaseSort<T> {
+export default class Quick3Way<T> extends BaseSort<T> {
   sort(arr: T[]) {
     this._sort(arr, 0, arr.length)
   }
@@ -27,13 +25,3 @@ class Quick3Way<T> extends BaseSort<T> {
     this._sort(arr, gt + 1, hi)
   }
 }
-
-async function main() {
-  const data = await StdIn.readInt(SortMockFile)
-  const stopWatch = new StopWatch()
-  const quick = new Quick3Way<number>(data)
-  quick.main(true)
-  stopWatch.elapseTime()
-}
-
-__DEBUG__ && main()
