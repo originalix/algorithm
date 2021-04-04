@@ -9,6 +9,7 @@ import QuickSort from '../../src/algs4/sort/quick-sort'
 import Quick3Way from '../../src/algs4/sort/quick3way'
 import MinPQ from '../../src/algs4/sort/min-pq'
 import MaxPQ from '../../src/algs4/sort/max-pq'
+import IndexMinPQ from '../../src/algs4/sort/index-min-pq'
 
 describe('排序算法测试', () => {
   let data: number[] | null = null
@@ -90,6 +91,26 @@ describe('排序算法测试', () => {
     expect(maxPQ.size()).toBe(0)
     expect(res.length).toBe(data.length)
     const sortData = data.sort((a, b) => b - a)
+    expect(res).toStrictEqual(sortData)
+  })
+
+  test('索引优先队列', () => {
+    const indexMinPQ = new IndexMinPQ()
+    for (let i = 0; i < data.length; i++) {
+      indexMinPQ.insert(i + 1, data[i])
+    }
+
+    expect(indexMinPQ.size()).toBe(data.length)
+
+    const res = []
+    while (!indexMinPQ.isEmpty()) {
+      const minKey = indexMinPQ.minKey()
+      indexMinPQ.delMin()
+      res.push(minKey)
+    }
+
+    expect(res.length).toBe(data.length)
+    const sortData = data.sort((a, b) => a - b)
     expect(res).toStrictEqual(sortData)
   })
 })

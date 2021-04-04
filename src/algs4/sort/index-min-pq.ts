@@ -1,6 +1,6 @@
-import { StdIn, StopWatch } from 'utils'
-import { SortMockFile, __DEBUG__ } from '@/constants'
-
+/**
+ * 索引优先队列
+ */
 export default class IndexMinPQ<K> {
   private pq: number[]
   private qp: number[]
@@ -88,22 +88,3 @@ export default class IndexMinPQ<K> {
     }
   }
 }
-
-async function main() {
-  const data = await StdIn.readInt(SortMockFile)
-  const stopWatch = new StopWatch()
-  const res = []
-  const indexMinPQ = new IndexMinPQ<number>()
-  for (let i = 0; i < data.length; i++) {
-    indexMinPQ.insert(i + 1, data[i])
-  }
-  while (!indexMinPQ.isEmpty()) {
-    const minKey = indexMinPQ.minKey()
-    indexMinPQ.delMin()
-    res.push(minKey)
-  }
-  console.log(res)
-  stopWatch.elapseTime()
-}
-
-__DEBUG__ && main()
