@@ -10,11 +10,13 @@ module.exports = {
   },
   globals: { ...jestMap },
   extends: [
-    'standard'
+    'standard',
+    'eslint:recommended',
+    'plugin:node/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 12
+    ecmaVersion: 2020
   },
   plugins: [
     '@typescript-eslint'
@@ -24,6 +26,8 @@ module.exports = {
       anonymous: 'never',
       named: 'never',
       asyncArrow: 'always'
-    }]
+    }],
+    'node/no-unsupported-features/es-syntax': 'off',
+    'node/no-missing-import': 'off'
   }
 }
