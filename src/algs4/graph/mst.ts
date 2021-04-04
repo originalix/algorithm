@@ -1,5 +1,4 @@
 import { StdIn } from '@/utils'
-import { __DEBUG__ } from '@/constants'
 import { cloneDeep } from 'lodash'
 import Edge from './edge'
 import Queue from '../1-3/node-queue'
