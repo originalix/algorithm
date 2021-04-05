@@ -1,5 +1,3 @@
-import { StdIn, StopWatch } from 'utils'
-import { SortMockFile, __DEBUG__ } from '@/constants'
 import Edge from '../graph/edge'
 
 /**
@@ -63,20 +61,3 @@ export default class MinPQ<T> {
     }
   }
 }
-
-async function main() {
-  const data = await StdIn.readInt(SortMockFile)
-  const stopWatch = new StopWatch()
-  const res = []
-  const maxPQ = new MinPQ()
-  for (let i = 0; i < data.length; i++) {
-    maxPQ.insert(data[i])
-  }
-  while (!maxPQ.isEmpty()) {
-    res.push(maxPQ.delMin())
-  }
-  console.log(res)
-  stopWatch.elapseTime()
-}
-
-__DEBUG__ && main()

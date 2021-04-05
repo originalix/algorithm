@@ -1,11 +1,8 @@
-import { readInt, StopWatch } from 'utils'
-import { UnionCount, __DEBUG__ } from '@/constants'
-
 /**
  * 并查集
  * 加权 quick-union 算法
  */
-class WeightQuickUnionUF {
+export default class WeightQuickUnionUF {
   private _count: number
   private id: number[]
   private sz: number[]
@@ -49,20 +46,3 @@ class WeightQuickUnionUF {
     this._count--
   }
 }
-
-function test() {
-  const time = new StopWatch()
-  const N = UnionCount
-  const uf = new WeightQuickUnionUF(N)
-  for (let i = 0; i < UnionCount; i++) {
-    const p = readInt(0, UnionCount)
-    const q = readInt(0, UnionCount)
-    if (uf.connected(p, q)) continue
-    uf.union(p, q)
-    console.log(p + ' ' + q)
-  }
-  console.log(uf.count() + 'components')
-  time.elapseTime()
-}
-
-__DEBUG__ && test()

@@ -1,9 +1,7 @@
-import { StdIn, StopWatch } from 'utils'
-import { SortMockFile, __DEBUG__ } from '@/constants'
 /**
  * 基于堆的优先序列
  */
-class MaxPQ<T> {
+export default class MaxPQ<T> {
   private pq: T[]
   private N: number
 
@@ -56,20 +54,3 @@ class MaxPQ<T> {
     }
   }
 }
-
-async function main() {
-  const data = await StdIn.readInt(SortMockFile)
-  const stopWatch = new StopWatch()
-  const res = []
-  const maxPQ = new MaxPQ()
-  for (let i = 0; i < data.length; i++) {
-    maxPQ.insert(data[i])
-  }
-  while (!maxPQ.isEmpty()) {
-    res.push(maxPQ.delMax())
-  }
-  console.log(res)
-  stopWatch.elapseTime()
-}
-
-__DEBUG__ && main()

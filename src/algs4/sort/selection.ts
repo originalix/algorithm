@@ -1,8 +1,9 @@
 import BaseSort from './base-sort'
-import { StopWatch, StdIn } from 'utils'
-import { SortMockFile, __DEBUG__ } from '@/constants'
 
-class Selection<T> extends BaseSort<T> {
+/**
+ * 选择排序
+ */
+export default class Selection<T> extends BaseSort<T> {
   sort() {
     const N = this.array.length
     for (let i = 0; i < N; i++) {
@@ -14,13 +15,3 @@ class Selection<T> extends BaseSort<T> {
     }
   }
 }
-
-async function main() {
-  const data = await StdIn.readInt(SortMockFile)
-  const stopWatch = new StopWatch()
-  const selection = new Selection<number>(data)
-  selection.main()
-  stopWatch.elapseTime()
-}
-
-__DEBUG__ && main()

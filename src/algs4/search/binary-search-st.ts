@@ -1,5 +1,3 @@
-import { __DEBUG__ } from '@/constants'
-
 /**
  * 二分查找（基于有序数组）
  */
@@ -62,13 +60,3 @@ export default class BinarySearchST<Key, Value> {
     }
   }
 }
-
-function main() {
-  const words = 'XDELSKDDAOEMCD'.split('')
-  const st = new BinarySearchST<number, string>()
-  words.forEach((v, i) => {
-    st.put(i, v)
-  })
-}
-
-__DEBUG__ && main()

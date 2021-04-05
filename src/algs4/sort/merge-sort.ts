@@ -1,8 +1,9 @@
 import BaseSort from './base-sort'
-import { StdIn, StopWatch } from 'utils'
-import { SortMockFile, __DEBUG__ } from '@/constants'
 
-class MergeSort<T> extends BaseSort<T> {
+/**
+ * 归并排序
+ */
+export default class MergeSort<T> extends BaseSort<T> {
   private aux: T[] // 归并所需的辅助数组
 
   sort(arr: T[]) {
@@ -32,13 +33,3 @@ class MergeSort<T> extends BaseSort<T> {
     }
   }
 }
-
-async function main() {
-  const data = await StdIn.readInt(SortMockFile)
-  const stopWatch = new StopWatch()
-  const merge = new MergeSort<number>(data)
-  merge.main(true)
-  stopWatch.elapseTime()
-}
-
-__DEBUG__ && main()

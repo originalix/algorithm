@@ -1,11 +1,8 @@
-import { readInt, StopWatch } from 'utils'
-import { UnionCount, __DEBUG__ } from '@/constants'
-
 /**
  * 并查集
  * 树型森林的表示
  */
-class QuickUnionUF {
+export default class QuickUnionUF {
   private _count: number
   private id: number[]
 
@@ -40,20 +37,3 @@ class QuickUnionUF {
     this._count--
   }
 }
-
-function test() {
-  const time = new StopWatch()
-  const N = UnionCount
-  const uf = new QuickUnionUF(N)
-  for (let i = 0; i < UnionCount; i++) {
-    const p = readInt(0, UnionCount)
-    const q = readInt(0, UnionCount)
-    if (uf.connected(p, q)) continue
-    uf.union(p, q)
-    console.log(p + ' ' + q)
-  }
-  console.log(uf.count() + 'components')
-  time.elapseTime()
-}
-
-__DEBUG__ && test()

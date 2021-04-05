@@ -1,6 +1,5 @@
-import { __DEBUG__ } from '@/constants'
 import { NodeItem } from '@/types'
-import { StdIn, StopWatch } from 'utils'
+
 /**
  * 先进先出队列（链表实现）
  */
@@ -41,27 +40,3 @@ export default class Queue<T> {
     return item
   }
 }
-
-async function testNodeQueue() {
-  const time = new StopWatch()
-  await StdIn.readFile()
-  const queue = new Queue<string>()
-
-  while (!StdIn.isEmpty()) {
-    const str = StdIn.readString()
-    if (str !== '-') {
-      queue.enqueue(str)
-    } else if (!queue.isEmpty()) {
-      console.log(`${queue.dequeue()} `)
-    }
-  }
-  console.log(`queue's size is ${queue.size()}`)
-
-  while (!queue.isEmpty()) {
-    console.log(`current line: ${queue.dequeue()}`)
-  }
-
-  time.elapseTime()
-}
-
-__DEBUG__ && testNodeQueue()

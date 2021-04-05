@@ -1,4 +1,3 @@
-import { __DEBUG__ } from '@/constants'
 export class Node<K, V> {
   public key: K
   public val: V
@@ -190,45 +189,3 @@ export default class BST<K, V> {
     if (hi > x.key) this._keys(x.right, queue, lo, hi)
   }
 }
-
-function main() {
-  const words = 'XDELSKDDAOEMCD'.split('')
-  const bst = new BST<string, number>()
-  words.forEach((v, i) => {
-    // 插入
-    bst.put(v, i)
-  })
-  // 获取
-  const val = bst.get('D')
-  console.log(`key: D 的值为${val}`)
-
-  // 查找最小键
-  const minKey = bst.min()
-  console.log(`二叉树中，最小键为: ${minKey}`)
-
-  // 查找最大键
-  const maxKey = bst.max()
-  console.log(`二叉树中，最大键为: ${maxKey}`)
-
-  const keys = bst.keys(minKey, maxKey)
-  console.log(`遍历二叉树,树中所有键为: ${keys}`)
-
-  // 排名为 k 的键，正好有 k 个小于它的键
-  const selectIdx = 5
-  const selectKey = bst.select(selectIdx)
-  console.log(`选择排名为 ${selectIdx} 的键: ${selectKey}`)
-  // rank() 是 select() 的逆方法，它会返回给定键的排名
-  const rank = bst.rank(selectKey)
-  console.log(`${selectKey} 键的排名是 ${rank}`)
-
-  // 删除最小键
-  bst.deleteMin()
-  const nextMinKey = bst.min()
-  console.log(`删除最小键后，此时的 min key 为 ${nextMinKey}`)
-
-  // 删除操作
-  bst.delete(nextMinKey)
-  console.log(`再次删除最小键 ${nextMinKey} 后，此时的 min key 为 ${bst.min()}`)
-}
-
-__DEBUG__ && main()
