@@ -1,5 +1,6 @@
 import BinarySearchST from '../../src/algs4/search/binary-search-st'
 import BST from '../../src/algs4/search/binary-search-tree'
+import SequentialSearchSt from '../../src/algs4/search/sequential-search-st'
 
 describe('查找', () => {
   let words: string[]
@@ -9,7 +10,7 @@ describe('查找', () => {
 
   test('二分查找（基于有序数组）', () => {
     const st = new BinarySearchST<string, string>()
-    words.forEach((v, i) => st.put(v, v))
+    words.forEach(v => st.put(v, v))
     expect(st.get('L')).toBe('L')
     expect(st.get('N')).toBeNull()
   })
@@ -39,5 +40,12 @@ describe('查找', () => {
     // 删除操作
     bst.delete(nextMinKey)
     expect(bst.min()).toBe('D')
+  })
+
+  test('顺序查找（基于无序链表）', () => {
+    const st = new SequentialSearchSt<string, string>()
+    words.forEach(v => st.put(v, v))
+    expect(st.get('L')).toBe('L')
+    expect(st.get('N')).toBeNull()
   })
 })

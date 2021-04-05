@@ -1,5 +1,3 @@
-import { __DEBUG__ } from '@/constants'
-
 // 链表结点的定义
 export class Node<Key, Value> {
   public key: Key
@@ -15,7 +13,7 @@ export class Node<Key, Value> {
 /**
  * 顺序查找（基于无序链表）
  */
-class SequentialSearchST<Key, Value> {
+export default class SequentialSearchST<Key, Value> {
   private first: Node<Key, Value> // 链表首结点
   private N: number
 
@@ -70,16 +68,3 @@ class SequentialSearchST<Key, Value> {
     return node
   }
 }
-
-function main() {
-  const words = 'helloworld'.split('')
-  const st = new SequentialSearchST<string, number>()
-  words.forEach((v, i) => {
-    st.put(v, i + 1)
-  })
-  st.delete('o')
-  const keys = st.keys()
-  console.log(keys)
-}
-
-__DEBUG__ && main()
