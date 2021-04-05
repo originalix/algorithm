@@ -5,7 +5,7 @@ import { UnionCount, __DEBUG__ } from '@/constants'
  * 并查集
  * 联合-查找数据结构
  */
-class UF {
+export default class UF {
   private _count: number
   private id: number[]
 
