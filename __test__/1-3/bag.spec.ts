@@ -1,6 +1,6 @@
-import Bag from '../../src/algs4/1-3/bag'
-import { StdIn } from '../../src/utils'
-import { TinyIntFile } from '../../src/constants'
+import Bag from '@/algs4/1-3/bag'
+import { StdIn } from '@/utils'
+import { TinyIntFile } from '@/constants'
 
 describe('Bag 背包', () => {
   test('bag size and loop', async () => {

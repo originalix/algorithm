@@ -1,6 +1,6 @@
-import { StdIn } from '../../src/utils'
-import { TinyIntFile } from '../../src/constants'
-import Stack from '../../src/algs4/1-3/node-stack'
+import { StdIn } from '@/utils'
+import { TinyIntFile } from '@/constants'
+import Stack from '@/algs4/1-3/node-stack'
 
 describe('Stack 下压栈', () => {
   test('stack push and pop', async () => {

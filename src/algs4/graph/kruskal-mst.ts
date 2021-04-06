@@ -34,13 +34,13 @@ export default class KruskalMST {
     return this.mst
   }
 
-  weight() {
+  weight(): number {
     let weight = 0.0
     const edges = cloneDeep(this.edges())
     while (!edges.isEmpty()) {
       const e = edges.dequeue()
       weight += e.getWeight()
     }
-    return weight.toFixed(2)
+    return +weight.toFixed(2)
   }
 }

@@ -1,4 +1,3 @@
-import { StdIn } from '@/utils'
 import { cloneDeep } from 'lodash'
 import Edge from './edge'
 import Queue from '../1-3/node-queue'
@@ -61,28 +60,12 @@ export default class PrimMST {
     return mst
   }
 
-  getWeight() {
+  getWeight(): number {
     let weight = 0.0
     const edges = cloneDeep(this.getEdges())
     while (!edges.isEmpty()) {
-      const e = edges.dequeue()
-      weight += e.getWeight()
+      weight += edges.dequeue().getWeight()
     }
-    return weight.toFixed(2)
+    return +weight.toFixed(2)
   }
 }
-
-async function main() {
-  const stream = await StdIn.readFile('tinyEDG.txt')
-  const data = stream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
-
-  const G = new EdgeWeightedGraph(8, data)
-  const mst = new PrimMST(G)
-  const edges = mst.getEdges()
-  while (!edges.isEmpty()) {
-    console.log(edges.dequeue())
-  }
-  console.log(mst.getWeight())
-}
-
-main()

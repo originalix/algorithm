@@ -3,6 +3,7 @@ import Bag from '@/algs4/1-3/bag'
 import Digraph from '@/algs4/graph/digraph'
 import DirectedDFS from '@/algs4/graph/directed-dfs'
 import DepthFirstOrder from '@/algs4/graph/depth-first-order'
+import Topological from '@/algs4/graph/topological'
 
 describe('有向图', () => {
   let data: number[] | null
@@ -58,5 +59,21 @@ describe('有向图', () => {
       reversePostRes.push(reversePost.pop())
     }
     expect(reversePostRes).toStrictEqual([8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4])
+  })
+
+  test('拓补排序', () => {
+    const G = Digraph.createByReadIn(13, data)
+    const top = new Topological(G)
+    const res = []
+    if (top.isDAG()) {
+      const order = top.getOrder()
+      while (!order.isEmpty()) {
+        res.push(order.pop())
+      }
+    } else {
+      console.log('图中存在有向环')
+    }
+
+    expect(res).toStrictEqual([8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4])
   })
 })
