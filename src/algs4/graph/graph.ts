@@ -1,4 +1,3 @@
-import { __DEBUG__ } from '@/constants'
 import Bag from '@/algs4/1-3/bag'
 
 interface IGraph {
@@ -46,11 +45,3 @@ export default class Graph implements IGraph {
     return this.adj[v]
   }
 }
-
-function main() {
-  const readInArr = [0, 5, 4, 3, 0, 1, 9, 12, 6, 4, 5, 4, 0, 2, 11, 12, 9, 10, 0, 6, 7, 8, 9, 11, 5, 3]
-  const graph = Graph.createByReadIn(13, readInArr)
-  console.log(graph)
-}
-
-__DEBUG__ && main()
