@@ -1,7 +1,9 @@
-import { StdIn } from '../../src/utils'
-import Graph from '../../src/algs4/graph/graph'
-import DepthFirstPaths from '../../src/algs4/graph/dfs'
-import BreadthFirstPaths from '../../src/algs4/graph/bfs'
+import { StdIn } from '@/utils'
+import Bag from '@/algs4/1-3/bag'
+import Graph from '@/algs4/graph/graph'
+import DepthFirstPaths from '@/algs4/graph/dfs'
+import BreadthFirstPaths from '@/algs4/graph/bfs'
+import ConnectComponents from '@/algs4/graph/connect-components'
 
 describe('无向图', () => {
   let data: number[] | null
@@ -52,5 +54,37 @@ describe('无向图', () => {
       }
     }
     expect(res.reverse()).toStrictEqual([0, 6, 9, 10])
+  })
+
+  test('图的连通分量', () => {
+    const ccData = [0, 5, 4, 3, 0, 1, 9, 12, 6, 4, 5, 4, 0, 2, 11, 12, 9, 10, 0, 6, 7, 8, 9, 11, 5, 3]
+    const G = Graph.createByReadIn(13, ccData)
+    const cc = new ConnectComponents(G)
+
+    const M = cc.getCount()
+    expect(M).toBe(3) // 连通分量数量
+
+    const components: Bag<number>[] = []
+    for (let i = 0; i < M; i++) {
+      components[i] = new Bag<number>()
+    }
+    for (let v = 0; v < G.countV(); v++) {
+      components[cc.getId(v)].add(v)
+    }
+    const res = []
+    for (let i = 0; i < M; i++) {
+      const subRes = []
+      while (components[i].hasNext()) {
+        const v = components[i].next()
+        subRes.push(v)
+      }
+
+      res.push(subRes.reverse())
+    }
+    expect(res).toStrictEqual([
+      [0, 1, 2, 3, 4, 5, 6],
+      [7, 8],
+      [9, 10, 11, 12],
+    ])
   })
 })

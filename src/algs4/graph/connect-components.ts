@@ -1,4 +1,3 @@
-import Bag from '../1-3/bag'
 import Graph from './graph'
 
 /**
@@ -47,30 +46,3 @@ export default class CC {
     return this.id[v]
   }
 }
-
-function main() {
-  const readInArr = [0, 5, 4, 3, 0, 1, 9, 12, 6, 4, 5, 4, 0, 2, 11, 12, 9, 10, 0, 6, 7, 8, 9, 11, 5, 3]
-  const graph = Graph.createByReadIn(13, readInArr)
-  const cc = new CC(graph)
-
-  const M = cc.getCount()
-  console.log(`${M} components`)
-
-  const components: Bag<number>[] = []
-  for (let i = 0; i < M; i++) {
-    components[i] = new Bag<number>()
-  }
-  for (let v = 0; v < graph.countV(); v++) {
-    components[cc.getId(v)].add(v)
-  }
-  for (let i = 0; i < M; i++) {
-    const res = []
-    while (components[i].hasNext()) {
-      const v = components[i].next()
-      res.push(v)
-    }
-    console.log(res.reverse().join('-'))
-  }
-}
-
-main()
