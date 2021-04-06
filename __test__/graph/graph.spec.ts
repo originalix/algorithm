@@ -1,6 +1,7 @@
 import { StdIn } from '../../src/utils'
 import Graph from '../../src/algs4/graph/graph'
 import DepthFirstPaths from '../../src/algs4/graph/dfs'
+import BreadthFirstPaths from '../../src/algs4/graph/bfs'
 
 describe('无向图', () => {
   let data: number[] | null
@@ -35,6 +36,20 @@ describe('无向图', () => {
         res.push(x)
       }
     }
-    expect(res).toStrictEqual([2, 3, 5, 0])
+    expect(res.reverse()).toStrictEqual([0, 5, 3, 2])
+  })
+
+  test('BFS 广度优先遍历', () => {
+    const G = Graph.createByReadIn(13, data)
+    const s = 0
+    const bfs = new BreadthFirstPaths(G, s)
+    const searchV = 10
+    const res = []
+    if (bfs.hasPathTo(searchV)) {
+      for (const x of bfs.pathTo(searchV)) {
+        res.push(x)
+      }
+    }
+    expect(res.reverse()).toStrictEqual([0, 6, 9, 10])
   })
 })
