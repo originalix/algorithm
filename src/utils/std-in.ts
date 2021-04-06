@@ -15,7 +15,7 @@ export default class StdIn {
     const fileStream = fs.createReadStream(filePath)
     const rl = readline.createInterface({
       input: fromFile ? fileStream : process.stdin,
-      crlfDelay: Infinity,
+      crlfDelay: Infinity
     })
     readlineStack.length = 0
     for await (const line of rl) {

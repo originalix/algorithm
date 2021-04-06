@@ -1,4 +1,3 @@
-import { StdIn } from '@/utils'
 import ST from '@/algs4/search/binary-search-st'
 import Graph from './graph'
 
