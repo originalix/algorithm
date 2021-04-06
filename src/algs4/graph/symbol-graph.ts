@@ -31,10 +31,18 @@ export default class SymbolGraph {
     }
   }
 
-  contains(s: string): boolean { return this.st.contains(s) }
-  index(s: string): number { return this.st.get(s) }
-  name(v: number): string { return this.keys[v] }
-  getG(): Graph { return this.G }
+  contains(s: string): boolean {
+    return this.st.contains(s)
+  }
+  index(s: string): number {
+    return this.st.get(s)
+  }
+  name(v: number): string {
+    return this.keys[v]
+  }
+  getG(): Graph {
+    return this.G
+  }
 }
 
 async function main() {

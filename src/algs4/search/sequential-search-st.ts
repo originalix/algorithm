@@ -22,7 +22,9 @@ export default class SequentialSearchST<Key, Value> {
     this.N = 0
   }
 
-  size(): number { return this.N }
+  size(): number {
+    return this.N
+  }
 
   keys(): Key[] {
     const keys = []

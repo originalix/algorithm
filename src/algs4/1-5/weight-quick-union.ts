@@ -17,9 +17,11 @@ export default class WeightQuickUnionUF {
     }
   }
 
-  count(): number { return this._count }
+  count(): number {
+    return this._count
+  }
 
-  connected(p: number, q:number): boolean {
+  connected(p: number, q: number): boolean {
     return this.find(p) === this.find(q)
   }
 
@@ -29,7 +31,7 @@ export default class WeightQuickUnionUF {
     return p
   }
 
-  union(p: number, q:number) {
+  union(p: number, q: number) {
     const i = this.find(p)
     const j = this.find(q)
 

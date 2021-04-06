@@ -1,4 +1,4 @@
-const assert = require('assert')
+import assert = require('assert')
 
 abstract class BaseSort<T> {
   protected array: T[]
@@ -13,7 +13,7 @@ abstract class BaseSort<T> {
     return v < w
   }
 
-  protected exch(i: number, j:number) {
+  protected exch(i: number, j: number) {
     const temp = this.array[i]
     this.array[i] = this.array[j]
     this.array[j] = temp

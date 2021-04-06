@@ -14,8 +14,12 @@ export default class Queue<T> {
     this.last = null
   }
 
-  isEmpty(): boolean { return this.N === 0 }
-  size(): number { return this.N }
+  isEmpty(): boolean {
+    return this.N === 0
+  }
+  size(): number {
+    return this.N
+  }
 
   enqueue(item: T) {
     const oldLast = this.last

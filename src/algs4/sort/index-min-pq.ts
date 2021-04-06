@@ -17,11 +17,17 @@ export default class IndexMinPQ<K> {
     }
   }
 
-  isEmpty(): boolean { return this.N === 0 }
+  isEmpty(): boolean {
+    return this.N === 0
+  }
 
-  size(): number { return this.N }
+  size(): number {
+    return this.N
+  }
 
-  contains(i: number) { return this.qp[i] !== -1 }
+  contains(i: number) {
+    return this.qp[i] !== -1
+  }
 
   insert(i: number, key: K) {
     this.N++
@@ -35,7 +41,7 @@ export default class IndexMinPQ<K> {
     return this.keys[this.pq[1]]
   }
 
-  keyOf(i :number) {
+  keyOf(i: number) {
     return this.keys[i]
   }
 

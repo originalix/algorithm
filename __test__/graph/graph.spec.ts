@@ -7,7 +7,7 @@ describe('无向图', () => {
   let data: number[] | null
   beforeEach(async () => {
     const stream = await StdIn.readFile('tinyDG.txt')
-    data = stream.reduce((prev, line) => ([...prev, ...line.split(' ')]), []).map((val: string) => +val)
+    data = stream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
   })
 
   test('无向图数据结构', () => {
@@ -31,7 +31,8 @@ describe('无向图', () => {
     const dfs = new DepthFirstPaths(G, s)
     const searchV = 2
     const res = []
-    if (dfs.hasPathTo(searchV)) { // dfs 遍历 0 - 2 的路径
+    if (dfs.hasPathTo(searchV)) {
+      // dfs 遍历 0 - 2 的路径
       for (const x of dfs.pathTo(searchV)) {
         res.push(x)
       }

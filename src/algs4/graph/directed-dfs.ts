@@ -31,12 +31,14 @@ export default class DirectedDFS {
     }
   }
 
-  isMarked(v: number) { return this.marked[v] }
+  isMarked(v: number) {
+    return this.marked[v]
+  }
 }
 
 async function main() {
   const stream = await StdIn.readFile('tinyDG.txt')
-  const data = stream.reduce((prev, line) => ([...prev, ...line.split(' ')]), []).map((val: string) => +val)
+  const data = stream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
 
   const G = Digraph.createByReadIn(13, data)
   const sources = new Bag<number>()

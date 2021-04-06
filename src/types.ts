@@ -14,7 +14,9 @@ export class NodeIterator<T> {
     return this.current && this.current !== null
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   remove() {}
+
   next(): T {
     const item = this.current.item
     this.current = this.current.next

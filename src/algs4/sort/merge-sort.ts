@@ -21,11 +21,14 @@ export default class MergeSort<T> extends BaseSort<T> {
 
   private merge(arr: T[], lo: number, mid: number, hi: number) {
     // 将 arr[lo..mid] 和 arr[mid+1..hi] 归并jj
-    let i = lo; let j = mid + 1
-    for (let k = lo; k <= hi; k++) { // 将 arr[lo..hi] 复制到aux[lo..hi]
+    let i = lo
+    let j = mid + 1
+    for (let k = lo; k <= hi; k++) {
+      // 将 arr[lo..hi] 复制到aux[lo..hi]
       this.aux[k] = arr[k]
     }
-    for (let k = lo; k <= hi; k++) { // 归并回到arr[lo..hi]
+    for (let k = lo; k <= hi; k++) {
+      // 归并回到arr[lo..hi]
       if (i > mid) arr[k] = this.aux[j++]
       else if (j > hi) arr[k] = this.aux[i++]
       else if (this.less(this.aux[j], this.aux[i])) arr[k] = this.aux[j++]

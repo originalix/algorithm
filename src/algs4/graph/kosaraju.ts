@@ -37,9 +37,15 @@ export default class KosarajuSCC {
     }
   }
 
-  stronglyConnected(v: number, w: number) { return this.id[v] === this.id[w] }
+  stronglyConnected(v: number, w: number) {
+    return this.id[v] === this.id[w]
+  }
 
-  getId(v: number) { return this.id[v] }
+  getId(v: number) {
+    return this.id[v]
+  }
 
-  getCount() { return this.count }
+  getCount() {
+    return this.count
+  }
 }

@@ -13,9 +13,13 @@ export default class Edge {
     this.weight = weight
   }
 
-  getWeight() { return this.weight }
+  getWeight() {
+    return this.weight
+  }
 
-  either() { return this.v }
+  either() {
+    return this.v
+  }
 
   other(vertex: number) {
     if (vertex === this.v) return this.w
@@ -29,5 +33,7 @@ export default class Edge {
     else return 0
   }
 
-  toString() { return `${this.v} ${this.w} ${this.weight}` }
+  toString() {
+    return `${this.v} ${this.w} ${this.weight}`
+  }
 }

@@ -22,7 +22,9 @@ export default class BST<K, V> {
     this.root = null
   }
 
-  size(): number { return this._size(this.root) }
+  size(): number {
+    return this._size(this.root)
+  }
 
   private _size(x: Node<K, V>): number {
     if (x === null) return 0

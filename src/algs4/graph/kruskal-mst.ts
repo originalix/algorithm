@@ -30,7 +30,9 @@ export default class KruskalMST {
     }
   }
 
-  edges() { return this.mst }
+  edges() {
+    return this.mst
+  }
 
   weight() {
     let weight = 0.0

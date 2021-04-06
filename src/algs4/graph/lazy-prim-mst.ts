@@ -44,7 +44,9 @@ export default class LazyPrimMST {
     }
   }
 
-  getEdges() { return this.mst }
+  getEdges() {
+    return this.mst
+  }
 
   getWeight() {
     let weight = 0.0
@@ -58,7 +60,7 @@ export default class LazyPrimMST {
 
 async function main() {
   const stream = await StdIn.readFile('tinyEDG.txt')
-  const data = stream.reduce((prev, line) => ([...prev, ...line.split(' ')]), []).map((val: string) => +val)
+  const data = stream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
   console.log(data)
 
   const G = new EdgeWeightedGraph(8, data)

@@ -16,7 +16,8 @@ export default class Graph implements IGraph {
     this.V = V
     this.E = 0
     this.adj = [] // 创建邻接表
-    for (let v = 0; v < V; v++) { // 将所有链表初始化为空
+    for (let v = 0; v < V; v++) {
+      // 将所有链表初始化为空
       this.adj[v] = new Bag<number>()
     }
   }
@@ -31,9 +32,13 @@ export default class Graph implements IGraph {
     return graph
   }
 
-  countV() { return this.V }
+  countV() {
+    return this.V
+  }
 
-  countE() { return this.E }
+  countE() {
+    return this.E
+  }
 
   addEdge(v: number, w: number) {
     this.adj[v].add(w) // 将 w 添加到 v 的链表中

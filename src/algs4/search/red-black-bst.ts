@@ -1,5 +1,5 @@
-const RED: boolean = true
-const BLACK: boolean = false
+const RED = true
+const BLACK = false
 
 export class Node<K, V> {
   public key: K
@@ -25,16 +25,20 @@ export default class RedBlackBST<K, V> {
     this.root = null
   }
 
-  size(): number { return this._size(this.root) }
+  size(): number {
+    return this._size(this.root)
+  }
 
   private _size(h: Node<K, V>): number {
     if (h === null) return 0
     return h.N
   }
 
-  isEmpty() { return this.root === null }
+  isEmpty() {
+    return this.root === null
+  }
 
-  isRed(h: Node<K, V>):boolean {
+  isRed(h: Node<K, V>): boolean {
     if (h === null) return false
     return h.color === RED
   }

@@ -11,9 +11,13 @@ export default class Stack<T> {
     this.N = 0
   }
 
-  isEmpty(): boolean { return this.N === 0 }
+  isEmpty(): boolean {
+    return this.N === 0
+  }
 
-  size(): number { return this.N }
+  size(): number {
+    return this.N
+  }
 
   push(item: T) {
     const oldFirst = this.first

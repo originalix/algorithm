@@ -37,14 +37,20 @@ export default class DepthFirshOrder {
     this.reversePost.push(v)
   }
 
-  getPre() { return this.pre }
-  getPost() { return this.post }
-  getReversePost() { return this.reversePost }
+  getPre() {
+    return this.pre
+  }
+  getPost() {
+    return this.post
+  }
+  getReversePost() {
+    return this.reversePost
+  }
 }
 
 async function main() {
   const stream = await StdIn.readFile('tinyDG.txt')
-  const data = stream.reduce((prev, line) => ([...prev, ...line.split(' ')]), []).map((val: string) => +val)
+  const data = stream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
 
   const G = Digraph.createByReadIn(13, data)
   const dfsOrder = new DepthFirshOrder(G)

@@ -26,7 +26,8 @@ export default class PrimMST {
 
     this.distTo[0] = 0.0
     this.pq.insert(0, 0.0)
-    while (!this.pq.isEmpty()) { // 用顶点 0 和权重 0 初始化 pq
+    while (!this.pq.isEmpty()) {
+      // 用顶点 0 和权重 0 初始化 pq
       this.visit(G, this.pq.delMin()) // 将最近的顶点添加到树中
     }
   }
@@ -73,7 +74,7 @@ export default class PrimMST {
 
 async function main() {
   const stream = await StdIn.readFile('tinyEDG.txt')
-  const data = stream.reduce((prev, line) => ([...prev, ...line.split(' ')]), []).map((val: string) => +val)
+  const data = stream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
 
   const G = new EdgeWeightedGraph(8, data)
   const mst = new PrimMST(G)

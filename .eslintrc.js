@@ -31,6 +31,8 @@ module.exports = {
         asyncArrow: 'always',
       },
     ],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'no-constant-condition': 'off',
     'node/no-unsupported-features/es-syntax': 'off',
     'node/no-missing-import': 'off',
   },

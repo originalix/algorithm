@@ -13,9 +13,11 @@ export default class QuickSort<T> extends BaseSort<T> {
   }
 
   private partition(arr: T[], lo: number, hi: number): number {
-    let i = lo; let j = hi + 1 // 左右扫描指针
+    let i = lo
+    let j = hi + 1 // 左右扫描指针
     const v = arr[lo] // 切分元素
-    while (true) { // 扫描左右，检查扫描是否结束并交换元素
+    while (true) {
+      // 扫描左右，检查扫描是否结束并交换元素
       while (this.less(arr[++i], v)) if (i === hi) break
       while (this.less(v, arr[--j])) if (j === lo) break
       if (i >= j) break

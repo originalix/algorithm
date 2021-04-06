@@ -12,9 +12,13 @@ export default class MinPQ<T> {
     this.N = 0
   }
 
-  isEmpty(): boolean { return this.N === 0 }
+  isEmpty(): boolean {
+    return this.N === 0
+  }
 
-  size(): number { return this.N }
+  size(): number {
+    return this.N
+  }
 
   insert(v: T) {
     this.pq[++this.N] = v
