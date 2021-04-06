@@ -4,6 +4,7 @@ import Graph from '@/algs4/graph/graph'
 import DepthFirstPaths from '@/algs4/graph/dfs'
 import BreadthFirstPaths from '@/algs4/graph/bfs'
 import ConnectComponents from '@/algs4/graph/connect-components'
+import SymbolGraph from '@/algs4/graph/symbol-graph'
 
 describe('无向图', () => {
   let data: number[] | null
@@ -86,5 +87,20 @@ describe('无向图', () => {
       [7, 8],
       [9, 10, 11, 12],
     ])
+  })
+
+  test('符号图', async () => {
+    const symbolData = await StdIn.readFile('routes.txt')
+    const sg = new SymbolGraph(symbolData, ' ')
+    const G = sg.getG()
+    const routeName = 'ORD'
+    const adj = G.getAdj(sg.index(routeName))
+    const res = []
+    while (adj.hasNext()) {
+      const w = adj.next()
+      res.push(sg.name(w))
+    }
+
+    expect(res.reverse()).toStrictEqual(['DEN', 'HOU', 'DFW', 'PHX', 'JFK', 'ATL'])
   })
 })

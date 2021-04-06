@@ -59,14 +59,3 @@ export default class Digraph {
     return R
   }
 }
-
-async function main() {
-  const stream = await StdIn.readFile('tinyDG.txt')
-  const data = stream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
-  console.log(data)
-
-  const G = Digraph.createByReadIn(13, data)
-  console.log(G)
-}
-
-__DEBUG__ && main()

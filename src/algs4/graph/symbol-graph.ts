@@ -44,17 +44,3 @@ export default class SymbolGraph {
     return this.G
   }
 }
-
-async function main() {
-  const res = await StdIn.readFile('routes.txt')
-  const sg = new SymbolGraph(res, ' ')
-  const G = sg.getG()
-  const routeName = 'ORD'
-  const adj = G.getAdj(sg.index(routeName))
-  while (adj.hasNext()) {
-    const w = adj.next()
-    console.log(sg.name(w))
-  }
-}
-
-main()
