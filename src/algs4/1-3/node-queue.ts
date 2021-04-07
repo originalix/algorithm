@@ -1,9 +1,10 @@
+import { IQueue } from '@/types'
 import { NodeItem } from '@/algs4/1-3/node-item'
 
 /**
  * 先进先出队列（链表实现）
  */
-export default class Queue<T> {
+export default class Queue<T> implements IQueue<T> {
   public first: NodeItem<T>
   public last: NodeItem<T>
   private N: number

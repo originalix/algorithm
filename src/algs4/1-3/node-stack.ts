@@ -1,9 +1,10 @@
+import { IStack } from '@/types'
 import { NodeItem } from '@/algs4/1-3/node-item'
 
 /**
  * 下压栈(链表实现)
  */
-export default class Stack<T> {
+export default class Stack<T> implements IStack<T> {
   private first: NodeItem<T>
   private N: number
 

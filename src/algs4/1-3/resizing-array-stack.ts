@@ -1,7 +1,8 @@
+import { IStack } from '@/types'
 /**
  * 下压栈 (能够动态调整数组大小的实现)
  */
-class ResizingArrayStack<T> {
+class ResizingArrayStack<T> implements IStack<T> {
   private a: T[]
   private N: number
   constructor() {
