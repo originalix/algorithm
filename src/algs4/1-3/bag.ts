@@ -1,4 +1,4 @@
-import { NodeItem, NodeIterator } from '@/types'
+import { NodeItem, NodeIterator } from '@/algs4/1-3/node-item'
 
 /**
  * 数据结构 背包

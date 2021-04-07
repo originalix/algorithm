@@ -1,4 +1,4 @@
-import { NodeItem } from '@/types'
+import { NodeItem } from '@/algs4/1-3/node-item'
 
 /**
  * 下压栈(链表实现)
