@@ -1,4 +1,5 @@
-import { NodeItem, NodeIterator } from '@/types'
+import { IBag } from '@/types'
+import { NodeItem, NodeIterator } from '@/algs4/1-3/node-item'
 
 /**
  * 数据结构 背包
@@ -7,7 +8,7 @@ import { NodeItem, NodeIterator } from '@/types'
  * @class Bag
  * @template T
  */
-export default class Bag<T> extends NodeIterator<T> {
+export default class Bag<T> extends NodeIterator<T> implements IBag<T> {
   private first: NodeItem<T>
   private N: number
 

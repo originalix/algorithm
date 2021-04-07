@@ -1,7 +1,8 @@
+import { ISearch } from '@/types'
 /**
  * 二分查找（基于有序数组）
  */
-export default class BinarySearchST<Key, Value> {
+export default class BinarySearchST<Key, Value> implements ISearch<Key, Value> {
   private keys: Key[]
   private vals: Value[]
   private N: number
