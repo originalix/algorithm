@@ -45,3 +45,30 @@ export interface ISort<T = number> {
   isSorted: () => boolean
   main: (passArray?: boolean) => void
 }
+
+/**
+ * 查找接口
+ */
+export interface ISearch<K, V> extends ICommonFn {
+  contains: (key: K) => boolean
+  getKeys: () => K[]
+  get: (key: K) => V | null
+  put: (key: K, val: V) => void
+  rank: (key: K, lo: number, hi: number) => number
+}
+
+/**
+ * 二叉查找树 接口
+ */
+export interface IBst<K, V> extends ICommonFn {
+  get: (key: K) => V | null
+  put: (key: K, val: V) => void
+  rank: (key: K) => number
+  min: () => K
+  max: () => K
+  floor: (key: K) => K
+  select: (key: number) => K
+  deleteMin: () => void
+  delete: (key: K) => void
+  keys: (lo: K, hi: K) => K[]
+}
