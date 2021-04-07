@@ -1,7 +1,8 @@
+import { IStack } from '@/types'
 /**
  * 下压栈 (能够动态调整数组大小的实现)
  */
-class ResizingArrayStack<T> {
+class ResizingArrayStack<T> implements IStack<T> {
   private a: T[]
   private N: number
   constructor() {
@@ -9,8 +10,12 @@ class ResizingArrayStack<T> {
     this.N = 0
   }
 
-  isEmpty(): boolean { return this.N === 0 }
-  size(): number { return this.N }
+  isEmpty(): boolean {
+    return this.N === 0
+  }
+  size(): number {
+    return this.N
+  }
   private resize(max: number) {
     const temp: T[] = new Array(max)
     for (let i = 0; i < this.N; i++) {
@@ -34,7 +39,7 @@ class ResizingArrayStack<T> {
   }
 }
 
-const stack = new ResizingArrayStack<Number>()
+const stack = new ResizingArrayStack<number>()
 console.log(`stack should empty: ${stack.isEmpty()}`)
 for (let i = 0; i < 10; i++) {
   stack.push(i)

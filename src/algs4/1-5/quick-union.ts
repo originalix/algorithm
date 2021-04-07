@@ -14,9 +14,11 @@ export default class QuickUnionUF {
     }
   }
 
-  count(): number { return this._count }
+  count(): number {
+    return this._count
+  }
 
-  connected(p: number, q:number): boolean {
+  connected(p: number, q: number): boolean {
     return this.find(p) === this.find(q)
   }
 
@@ -26,7 +28,7 @@ export default class QuickUnionUF {
     return p
   }
 
-  union(p: number, q:number) {
+  union(p: number, q: number) {
     // 将 p 和 q 的根节点统一
     const pRoot = this.find(p)
     const qRoot = this.find(q)

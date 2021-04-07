@@ -10,7 +10,7 @@ describe('查找', () => {
 
   test('二分查找（基于有序数组）', () => {
     const st = new BinarySearchST<string, string>()
-    words.forEach(v => st.put(v, v))
+    words.forEach((v) => st.put(v, v))
     expect(st.get('L')).toBe('L')
     expect(st.get('N')).toBeNull()
   })
@@ -44,7 +44,7 @@ describe('查找', () => {
 
   test('顺序查找（基于无序链表）', () => {
     const st = new SequentialSearchSt<string, string>()
-    words.forEach(v => st.put(v, v))
+    words.forEach((v) => st.put(v, v))
     expect(st.get('L')).toBe('L')
     expect(st.get('N')).toBeNull()
   })

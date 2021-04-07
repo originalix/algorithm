@@ -45,22 +45,3 @@ export default class BreadthFirstPaths {
     return path
   }
 }
-
-function main() {
-  const pointArr = [0, 1, 0, 5, 0, 2, 2, 1, 2, 3, 3, 5, 3, 4, 2, 4]
-  const G = Graph.createByReadIn(6, pointArr)
-  const s = 0
-  const search = new BreadthFirstPaths(G, s)
-  for (let v = 0; v < G.countV(); v++) {
-    const str = `${s} to ${v}: `
-    const res = []
-    if (search.hasPathTo(v)) {
-      for (const x of search.pathTo(v)) {
-        res.push(x)
-      }
-    }
-    console.log(str + res.reverse().join('-'))
-  }
-}
-
-main()

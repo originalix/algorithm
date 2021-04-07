@@ -1,5 +1,3 @@
-import { StdIn } from '@/utils'
-import { __DEBUG__ } from '@/constants'
 import Queue from '../1-3/node-queue'
 import Stack from '../1-3/node-stack'
 import Digraph from './digraph'
@@ -37,35 +35,13 @@ export default class DepthFirshOrder {
     this.reversePost.push(v)
   }
 
-  getPre() { return this.pre }
-  getPost() { return this.post }
-  getReversePost() { return this.reversePost }
+  getPre() {
+    return this.pre
+  }
+  getPost() {
+    return this.post
+  }
+  getReversePost() {
+    return this.reversePost
+  }
 }
-
-async function main() {
-  const stream = await StdIn.readFile('tinyDG.txt')
-  const data = stream.reduce((prev, line) => ([...prev, ...line.split(' ')]), []).map((val: string) => +val)
-
-  const G = Digraph.createByReadIn(13, data)
-  const dfsOrder = new DepthFirshOrder(G)
-
-  const pre = dfsOrder.getPre()
-  while (!pre.isEmpty()) {
-    console.log(pre.dequeue())
-  }
-  console.log('-----pre queue------')
-
-  const post = dfsOrder.getPost()
-  while (!post.isEmpty()) {
-    console.log(post.dequeue())
-  }
-  console.log('-----post queue------')
-
-  const reversePost = dfsOrder.getReversePost()
-  while (!reversePost.isEmpty()) {
-    console.log(reversePost.pop())
-  }
-  console.log('-----reversePost stack------')
-}
-
-__DEBUG__ && main()

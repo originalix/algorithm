@@ -1,7 +1,8 @@
+import { ISearch } from '@/types'
 /**
  * 二分查找（基于有序数组）
  */
-export default class BinarySearchST<Key, Value> {
+export default class BinarySearchST<Key, Value> implements ISearch<Key, Value> {
   private keys: Key[]
   private vals: Value[]
   private N: number
@@ -12,15 +13,21 @@ export default class BinarySearchST<Key, Value> {
     this.N = 0
   }
 
-  size(): number { return this.N }
+  size(): number {
+    return this.N
+  }
 
-  isEmpty(): boolean { return this.N === 0 }
+  isEmpty(): boolean {
+    return this.N === 0
+  }
 
   contains(key: Key) {
     return this.get(key) != null
   }
 
-  getKeys() { return this.keys }
+  getKeys() {
+    return this.keys
+  }
 
   get(key: Key): Value | null {
     if (this.isEmpty()) return null

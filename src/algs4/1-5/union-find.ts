@@ -14,7 +14,9 @@ export default class UF {
     }
   }
 
-  count() { return this._count }
+  count() {
+    return this._count
+  }
 
   connected(p: number, q: number): boolean {
     return this.find(p) === this.find(q)
@@ -24,7 +26,7 @@ export default class UF {
     return this.id[p]
   }
 
-  union(p:number, q: number) {
+  union(p: number, q: number) {
     const pID = this.find(p)
     const qID = this.find(q)
     if (pID === qID) return

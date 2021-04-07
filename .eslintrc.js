@@ -6,28 +6,34 @@ module.exports = {
   env: {
     browser: true,
     commonjs: true,
-    es2021: true
+    es2021: true,
   },
   globals: { ...jestMap },
   extends: [
-    'standard',
     'eslint:recommended',
-    'plugin:node/recommended'
+    'plugin:node/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2020
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
-  plugins: [
-    '@typescript-eslint'
-  ],
+  plugins: ['@typescript-eslint'],
   rules: {
-    'space-before-function-paren': ['error', {
-      anonymous: 'never',
-      named: 'never',
-      asyncArrow: 'always'
-    }],
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'never',
+        named: 'never',
+        asyncArrow: 'always',
+      },
+    ],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'no-constant-condition': 'off',
     'node/no-unsupported-features/es-syntax': 'off',
-    'node/no-missing-import': 'off'
-  }
+    'node/no-missing-import': 'off',
+  },
 }

@@ -1,3 +1,4 @@
+import { IBst } from '@/types'
 export class Node<K, V> {
   public key: K
   public val: V
@@ -16,17 +17,23 @@ export class Node<K, V> {
 /**
  * 二叉查找树
  */
-export default class BST<K, V> {
+export default class BST<K, V> implements IBst<K, V> {
   private root: Node<K, V> // 二叉查找树根节点
   constructor() {
     this.root = null
   }
 
-  size(): number { return this._size(this.root) }
+  size(): number {
+    return this._size(this.root)
+  }
 
   private _size(x: Node<K, V>): number {
     if (x === null) return 0
     else return x.N
+  }
+
+  isEmpty() {
+    return this.size() === 0
   }
 
   get(key: K) {
@@ -34,7 +41,7 @@ export default class BST<K, V> {
   }
 
   // 在以 x 为根节点的子树中查找并返回 key 对应的值
-  private _get(x: Node<K, V>, key: K): V {
+  private _get(x: Node<K, V>, key: K): V | null {
     // 如果找不到则返回 null
     if (x === null) return null
     if (key < x.key) {

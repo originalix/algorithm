@@ -1,5 +1,3 @@
-import { StdIn } from '@/utils'
-import { __DEBUG__ } from '@/constants'
 import { cloneDeep } from 'lodash'
 import Queue from '../1-3/node-queue'
 import MinPQ from '../sort/min-pq'
@@ -44,7 +42,9 @@ export default class LazyPrimMST {
     }
   }
 
-  getEdges() { return this.mst }
+  getEdges() {
+    return this.mst
+  }
 
   getWeight() {
     let weight = 0.0
@@ -55,19 +55,3 @@ export default class LazyPrimMST {
     return weight
   }
 }
-
-async function main() {
-  const stream = await StdIn.readFile('tinyEDG.txt')
-  const data = stream.reduce((prev, line) => ([...prev, ...line.split(' ')]), []).map((val: string) => +val)
-  console.log(data)
-
-  const G = new EdgeWeightedGraph(8, data)
-  const mst = new LazyPrimMST(G)
-  const edges = cloneDeep(mst.getEdges())
-  while (!edges.isEmpty()) {
-    console.log(edges.dequeue())
-  }
-  console.log(mst.getWeight())
-}
-
-__DEBUG__ && main()

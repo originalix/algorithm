@@ -1,6 +1,6 @@
-import { StdIn } from '../../src/utils'
-import { TinyIntFile } from '../../src/constants'
-import Queue from '../../src/algs4/1-3/node-queue'
+import { StdIn } from '@/utils'
+import { TinyIntFile } from '@/constants'
+import Queue from '@/algs4/1-3/node-queue'
 
 describe('Queue 队列', () => {
   test('queue enqueue and dequeue', async () => {

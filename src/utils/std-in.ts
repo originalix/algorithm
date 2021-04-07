@@ -1,8 +1,8 @@
-const fs = require('fs')
-const path = require('path')
-const readline = require('readline')
+import fs = require('fs')
+import path = require('path')
+import readline = require('readline')
 
-const readlineStack: any[] = []
+const readlineStack: string[] = []
 
 export default class StdIn {
   static isEmpty(): boolean {
@@ -19,7 +19,7 @@ export default class StdIn {
     })
     readlineStack.length = 0
     for await (const line of rl) {
-      readlineStack.push(type === 'number' ? Number(line) as number : line as string)
+      readlineStack.push(line)
     }
   }
 
@@ -34,6 +34,6 @@ export default class StdIn {
 
   static async readInt(fileName: string): Promise<number[]> {
     await this.processLine('number', fileName)
-    return readlineStack
+    return readlineStack.map((v) => +v)
   }
 }

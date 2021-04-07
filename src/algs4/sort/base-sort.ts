@@ -1,6 +1,7 @@
-const assert = require('assert')
+import { ISort } from '@/types'
+import assert = require('assert')
 
-abstract class BaseSort<T> {
+abstract class BaseSort<T> implements ISort<T> {
   protected array: T[]
 
   constructor(array: T[]) {
@@ -9,11 +10,11 @@ abstract class BaseSort<T> {
 
   abstract sort(array?: T[]): void
 
-  protected less(v: T, w: T): boolean {
+  less(v: T, w: T): boolean {
     return v < w
   }
 
-  protected exch(i: number, j:number) {
+  exch(i: number, j: number) {
     const temp = this.array[i]
     this.array[i] = this.array[j]
     this.array[j] = temp

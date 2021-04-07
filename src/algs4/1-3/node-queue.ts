@@ -1,9 +1,10 @@
-import { NodeItem } from '@/types'
+import { IQueue } from '@/types'
+import { NodeItem } from '@/algs4/1-3/node-item'
 
 /**
  * 先进先出队列（链表实现）
  */
-export default class Queue<T> {
+export default class Queue<T> implements IQueue<T> {
   public first: NodeItem<T>
   public last: NodeItem<T>
   private N: number
@@ -14,8 +15,12 @@ export default class Queue<T> {
     this.last = null
   }
 
-  isEmpty(): boolean { return this.N === 0 }
-  size(): number { return this.N }
+  isEmpty(): boolean {
+    return this.N === 0
+  }
+  size(): number {
+    return this.N
+  }
 
   enqueue(item: T) {
     const oldLast = this.last

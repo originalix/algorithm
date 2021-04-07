@@ -20,27 +20,11 @@ export default class Topological {
     }
   }
 
-  getOrder() { return this.order }
+  getOrder() {
+    return this.order
+  }
 
   isDAG() {
     return this.order !== undefined && this.order !== null
   }
 }
-
-async function main() {
-  const stream = await StdIn.readFile('tinyDG.txt')
-  const data = stream.reduce((prev, line) => ([...prev, ...line.split(' ')]), []).map((val: string) => +val)
-
-  const G = Digraph.createByReadIn(13, data)
-  const top = new Topological(G)
-  if (top.isDAG()) {
-    const order = top.getOrder()
-    while (!order.isEmpty()) {
-      console.log(order.pop())
-    }
-  } else {
-    console.log('图中存在有向环')
-  }
-}
-
-main()

@@ -1,4 +1,3 @@
-import { __DEBUG__ } from '@/constants'
 import Bag from '@/algs4/1-3/bag'
 
 interface IGraph {
@@ -17,7 +16,8 @@ export default class Graph implements IGraph {
     this.V = V
     this.E = 0
     this.adj = [] // 创建邻接表
-    for (let v = 0; v < V; v++) { // 将所有链表初始化为空
+    for (let v = 0; v < V; v++) {
+      // 将所有链表初始化为空
       this.adj[v] = new Bag<number>()
     }
   }
@@ -32,9 +32,13 @@ export default class Graph implements IGraph {
     return graph
   }
 
-  countV() { return this.V }
+  countV() {
+    return this.V
+  }
 
-  countE() { return this.E }
+  countE() {
+    return this.E
+  }
 
   addEdge(v: number, w: number) {
     this.adj[v].add(w) // 将 w 添加到 v 的链表中
@@ -46,11 +50,3 @@ export default class Graph implements IGraph {
     return this.adj[v]
   }
 }
-
-function main() {
-  const readInArr = [0, 5, 4, 3, 0, 1, 9, 12, 6, 4, 5, 4, 0, 2, 11, 12, 9, 10, 0, 6, 7, 8, 9, 11, 5, 3]
-  const graph = Graph.createByReadIn(13, readInArr)
-  console.log(graph)
-}
-
-__DEBUG__ && main()

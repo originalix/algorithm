@@ -1,4 +1,3 @@
-import { StdIn } from '@/utils'
 import ST from '@/algs4/search/binary-search-st'
 import Graph from './graph'
 
@@ -31,22 +30,16 @@ export default class SymbolGraph {
     }
   }
 
-  contains(s: string): boolean { return this.st.contains(s) }
-  index(s: string): number { return this.st.get(s) }
-  name(v: number): string { return this.keys[v] }
-  getG(): Graph { return this.G }
-}
-
-async function main() {
-  const res = await StdIn.readFile('routes.txt')
-  const sg = new SymbolGraph(res, ' ')
-  const G = sg.getG()
-  const routeName = 'ORD'
-  const adj = G.getAdj(sg.index(routeName))
-  while (adj.hasNext()) {
-    const w = adj.next()
-    console.log(sg.name(w))
+  contains(s: string): boolean {
+    return this.st.contains(s)
+  }
+  index(s: string): number {
+    return this.st.get(s)
+  }
+  name(v: number): string {
+    return this.keys[v]
+  }
+  getG(): Graph {
+    return this.G
   }
 }
-
-main()

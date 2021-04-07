@@ -13,7 +13,9 @@ export default class Quick3Way<T> extends BaseSort<T> {
 
   private _sort(arr: T[], lo: number, hi: number) {
     if (hi <= lo) return
-    let lt = lo; let i = lo + 1; let gt = hi
+    let lt = lo
+    let i = lo + 1
+    let gt = hi
     const v = arr[lo]
     while (i <= gt) {
       const cmp = this.compareTo(arr[i], v)

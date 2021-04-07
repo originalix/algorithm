@@ -1,8 +1,8 @@
-import { UnionCount } from '../../src/constants'
-import { readInt } from '../../src/utils'
-import UF from '../../src/algs4/1-5/union-find'
-import QuickUnionUF from '../../src/algs4/1-5/quick-union'
-import WeightQuickUnionUF from '../../src/algs4/1-5/weight-quick-union'
+import { UnionCount } from '@/constants'
+import { readInt } from '@/utils'
+import UF from '@/algs4/1-5/union-find'
+import QuickUnionUF from '@/algs4/1-5/quick-union'
+import WeightQuickUnionUF from '@/algs4/1-5/weight-quick-union'
 
 describe('并查集测试', () => {
   test('并查集', () => {

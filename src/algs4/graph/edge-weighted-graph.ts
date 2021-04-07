@@ -1,5 +1,3 @@
-import { StdIn } from '@/utils'
-import { __DEBUG__ } from '@/constants'
 import Bag from '../1-3/bag'
 import Edge from './edge'
 
@@ -31,9 +29,13 @@ export default class EdgeWeightedGraph {
     }
   }
 
-  getV() { return this.V }
+  getV() {
+    return this.V
+  }
 
-  getE() { return this.E }
+  getE() {
+    return this.E
+  }
 
   addEdge(e: Edge) {
     const v = e.either()
@@ -43,7 +45,9 @@ export default class EdgeWeightedGraph {
     this.E++
   }
 
-  getAdj(v: number) { return this.adj[v] }
+  getAdj(v: number) {
+    return this.adj[v]
+  }
 
   edges() {
     const b = new Bag<Edge>()
@@ -57,14 +61,3 @@ export default class EdgeWeightedGraph {
     return b
   }
 }
-
-async function main() {
-  const stream = await StdIn.readFile('tinyEDG.txt')
-  const data = stream.reduce((prev, line) => ([...prev, ...line.split(' ')]), []).map((val: string) => +val)
-  console.log(data)
-
-  const G = new EdgeWeightedGraph(8, data)
-  console.log(G)
-}
-
-__DEBUG__ && main()
