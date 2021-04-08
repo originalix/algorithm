@@ -8,7 +8,7 @@
     "build": "webpack",
     "test": "jest",
     "test:sp": "jest -t SP",
-    "lint": "eslint src __test__ --ext .ts --fix"
+    "lint": "eslint --ext .ts  src __test__"
   },
   "repository": {
     "type": "git",
