@@ -15,11 +15,19 @@ export default class DirectedEdge implements IDirectedEdge {
     this.weight = weight
   }
 
-  getWeight() { return this.weight }
+  getWeight() {
+    return this.weight
+  }
 
-  from() { return this.v }
+  from() {
+    return this.v
+  }
 
-  to() { return this.w }
+  to() {
+    return this.w
+  }
 
-  toString() { return `${this.v}->${this.w} ${this.weight}` }
+  toString() {
+    return `${this.v}->${this.w} ${this.weight}`
+  }
 }

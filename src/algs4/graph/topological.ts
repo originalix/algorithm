@@ -1,5 +1,4 @@
 import { cloneDeep } from 'lodash'
-import { StdIn } from '@/utils'
 import Stack from '../1-3/node-stack'
 import Digraph from './digraph'
 import DirectedCycle from './directed-cycle'

@@ -16,7 +16,7 @@ export default class EdgeWeightedDigraph implements IEdgeWeightedDigraph {
 
   constructor(V: number)
   constructor(data: number[])
-  constructor(V?: any, data?: any[]) {
+  constructor(V?: never, data?: never[]) {
     this.V = V
     this.E = 0
     this.adj = []
@@ -27,14 +27,20 @@ export default class EdgeWeightedDigraph implements IEdgeWeightedDigraph {
     console.log(data)
   }
 
-  countV() { return this.V }
-  countE() { return this.E }
+  countV() {
+    return this.V
+  }
+  countE() {
+    return this.E
+  }
   addEdge(e: DirectedEdge) {
     this.adj[e.from()].add(e)
     this.E++
   }
 
-  getAdj(v: number) { return this.adj[v] }
+  getAdj(v: number) {
+    return this.adj[v]
+  }
   edges() {
     const bag = new Bag<DirectedEdge>()
     for (let v = 0; v < this.V; v++) {
