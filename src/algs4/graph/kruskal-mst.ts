@@ -18,9 +18,9 @@ export default class KruskalMST {
     while (edges.hasNext()) {
       pq.insert(edges.next())
     }
-    const uf = new UF(G.getV())
+    const uf = new UF(G.countV())
 
-    while (!pq.isEmpty() && this.mst.size() < G.getV() - 1) {
+    while (!pq.isEmpty() && this.mst.size() < G.countV() - 1) {
       const e = pq.delMin()
       const v = e.either()
       const w = e.other(v)

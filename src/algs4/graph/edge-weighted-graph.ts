@@ -29,11 +29,11 @@ export default class EdgeWeightedGraph {
     }
   }
 
-  getV() {
+  countV() {
     return this.V
   }
 
-  getE() {
+  countE() {
     return this.E
   }
 

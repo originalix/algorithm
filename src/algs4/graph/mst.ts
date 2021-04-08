@@ -19,7 +19,7 @@ export default class PrimMST {
     this.marked = []
     this.pq = new IndexMinPQ()
 
-    for (let v = 0; v < G.getV(); v++) {
+    for (let v = 0; v < G.countV(); v++) {
       this.distTo[v] = Number.POSITIVE_INFINITY
     }
 
