@@ -12,7 +12,9 @@ export default class Graph implements IGraph {
   private E: number // 边的数目
   private adj: Bag<number>[] // 邻接表
 
-  constructor(V: number) {
+  constructor(V: number)
+  constructor(V: number, readIn: number[])
+  constructor(V?: never, readIn?: never[]) {
     this.V = V
     this.E = 0
     this.adj = [] // 创建邻接表
@@ -20,16 +22,12 @@ export default class Graph implements IGraph {
       // 将所有链表初始化为空
       this.adj[v] = new Bag<number>()
     }
-  }
 
-  static createByReadIn(V: number, readIn: number[]) {
-    const graph = new Graph(V) // 读取 V 并将图初始化
-    while (readIn.length) {
+    while (readIn && readIn.length) {
       const v = readIn.shift() // 读取一个顶点
       const w = readIn.shift() // 读取另一个顶点
-      graph.addEdge(v, w) // 添加一条连接它们的边
+      this.addEdge(v, w) // 添加一条连接它们的边
     }
-    return graph
   }
 
   countV() {

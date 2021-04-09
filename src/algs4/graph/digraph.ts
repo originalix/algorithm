@@ -9,23 +9,21 @@ export default class Digraph {
   private E: number
   private adj: Bag<number>[]
 
-  constructor(V: number) {
+  constructor(V: number)
+  constructor(V: number, readIn: number[])
+  constructor(V?: never, readIn?: never[]) {
     this.V = V
     this.E = 0
     this.adj = []
     for (let v = 0; v < V; v++) {
       this.adj[v] = new Bag<number>()
     }
-  }
 
-  static createByReadIn(V: number, readIn: number[]) {
-    const digraph = new Digraph(V)
-    while (readIn.length) {
+    while (readIn && readIn.length) {
       const v = readIn.shift()
       const w = readIn.shift()
-      digraph.addEdge(v, w)
+      this.addEdge(v, w)
     }
-    return digraph
   }
 
   countV() {

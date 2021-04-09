@@ -14,7 +14,7 @@ describe('无向图', () => {
   })
 
   test('无向图数据结构', () => {
-    const graph = Graph.createByReadIn(13, data)
+    const graph = new Graph(13, data)
     expect(graph.countE()).toBe(15)
     expect(graph.countV()).toBe(13)
 
@@ -29,7 +29,7 @@ describe('无向图', () => {
   })
 
   test('DFS 深度优先遍历', () => {
-    const G = Graph.createByReadIn(13, data)
+    const G = new Graph(13, data)
     const s = 0
     const dfs = new DepthFirstPaths(G, s)
     const searchV = 2
@@ -44,7 +44,7 @@ describe('无向图', () => {
   })
 
   test('BFS 广度优先遍历', () => {
-    const G = Graph.createByReadIn(13, data)
+    const G = new Graph(13, data)
     const s = 0
     const bfs = new BreadthFirstPaths(G, s)
     const searchV = 10
@@ -59,7 +59,7 @@ describe('无向图', () => {
 
   test('图的连通分量', () => {
     const ccData = [0, 5, 4, 3, 0, 1, 9, 12, 6, 4, 5, 4, 0, 2, 11, 12, 9, 10, 0, 6, 7, 8, 9, 11, 5, 3]
-    const G = Graph.createByReadIn(13, ccData)
+    const G = new Graph(13, ccData)
     const cc = new ConnectComponents(G)
 
     const M = cc.getCount()
