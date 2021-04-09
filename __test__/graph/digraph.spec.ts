@@ -13,13 +13,13 @@ describe('有向图', () => {
   })
 
   test('有向图数据结构', () => {
-    const graph = Digraph.createByReadIn(13, data)
+    const graph = new Digraph(13, data)
     expect(graph.countE()).toBe(15)
     expect(graph.countV()).toBe(13)
   })
 
   test('有向图的可达性', () => {
-    const G = Digraph.createByReadIn(13, data)
+    const G = new Digraph(13, data)
     const sources = new Bag<number>()
     sources.add(9)
 
@@ -33,7 +33,7 @@ describe('有向图', () => {
   })
 
   test('有向图中基于深度优先搜索的顶点排序', () => {
-    const G = Digraph.createByReadIn(13, data)
+    const G = new Digraph(13, data)
     const dfsOrder = new DepthFirstOrder(G)
 
     // 前序遍历
@@ -62,7 +62,7 @@ describe('有向图', () => {
   })
 
   test('拓补排序', () => {
-    const G = Digraph.createByReadIn(13, data)
+    const G = new Digraph(13, data)
     const top = new Topological(G)
     const res = []
     if (top.isDAG()) {
