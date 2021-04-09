@@ -94,3 +94,12 @@ export interface IEdgeWeightedDigraph {
   getAdj: (v: number) => void
   edges: () => void
 }
+
+/**
+ * 最短路径的API
+ */
+export interface ISP {
+  getDistTo: (v: number) => number
+  hasPathTo: (v: number) => boolean
+  pathTo: (v: number) => void
+}

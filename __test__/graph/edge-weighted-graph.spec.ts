@@ -1,7 +1,7 @@
 import { StdIn } from '@/utils'
 import EdgeWeightedGraph from '@/algs4/graph/edge-weighted-graph'
 import LazyPrimMst from '@/algs4/graph/lazy-prim-mst'
-import MST from '@/algs4/graph/mst'
+import MST from '@/algs4/graph/prim-mst'
 import KruskalMST from '@/algs4/graph/kruskal-mst'
 import EdgeWeightedDigraph from '@/algs4/graph/edge-weighted-digraph'
 

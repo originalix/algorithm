@@ -49,5 +49,5 @@
 * [有向图中深度优先搜索的顶点排序](src/algs4/graph/depth-first-order.ts)
 * [拓补排序](src/algs4/graph/topological.ts)
 * [有向图的强连通分量](src/algs4/graph/kosaraju.ts)
-* [最小生成树的 Prim 算法](src/algs4/graph/mst.ts)
+* [最小生成树的 Prim 算法](src/algs4/graph/prim-mst.ts)
 * [最小生成树的 Kruskal 算法](src/algs4/graph/kruskal-mst.ts)

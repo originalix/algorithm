@@ -35,7 +35,7 @@ export default class EdgeWeightedDigraph implements IEdgeWeightedDigraph {
     }
   }
 
-  countV() {
+  countV(): number {
     return this.V
   }
 
