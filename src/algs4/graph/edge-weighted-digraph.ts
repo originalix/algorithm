@@ -24,14 +24,12 @@ export default class EdgeWeightedDigraph implements IEdgeWeightedDigraph {
       this.adj[v] = new Bag<DirectedEdge>()
     }
 
-    if (readIn) {
-      while (readIn.length) {
-        const v = readIn.shift()
-        const w = readIn.shift()
-        const weight = readIn.shift()
-        const e = new DirectedEdge(v, w, weight)
-        this.addEdge(e)
-      }
+    while (readIn && readIn.length) {
+      const v = readIn.shift()
+      const w = readIn.shift()
+      const weight = readIn.shift()
+      const e = new DirectedEdge(v, w, weight)
+      this.addEdge(e)
     }
   }
 
