@@ -7,7 +7,7 @@
     "start": "webpack --watch",
     "build": "webpack",
     "test": "jest",
-    "test:sp": "jest -t SP",
+    "test:sp": "jest -t lix",
     "lint": "eslint --ext .ts  src __test__"
   },
   "repository": {

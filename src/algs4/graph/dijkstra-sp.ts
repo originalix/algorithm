@@ -42,16 +42,19 @@ export default class DijkstraSP implements ISP {
   }
 
   getDistTo(v: number) {
-    // TODO
-    return 0
+    return this.distTo[v]
   }
 
   hasPathTo(v: number) {
-    // TODO
-    return true
+    return this.distTo[v] < Number.POSITIVE_INFINITY
   }
 
-  pathTo(v: number) {
-    // TODO
+  pathTo(v: number): DirectedEdge[] | null {
+    if (!this.hasPathTo(v)) return null
+    const path: DirectedEdge[] = []
+    for (let e = this.edgeTo[v]; e !== null; e = this.edgeTo[e.from()]) {
+      path.push(e)
+    }
+    return path
   }
 }

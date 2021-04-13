@@ -4,6 +4,7 @@ import LazyPrimMst from '@/algs4/graph/lazy-prim-mst'
 import MST from '@/algs4/graph/prim-mst'
 import KruskalMST from '@/algs4/graph/kruskal-mst'
 import EdgeWeightedDigraph from '@/algs4/graph/edge-weighted-digraph'
+import SP from '@/algs4/graph/dijkstra-sp'
 
 describe('加权图', () => {
   let data: number[] | null
@@ -40,7 +41,7 @@ describe('加权图', () => {
   })
 })
 
-describe('最小生成树', () => {
+describe('最小生成树/最短路径', () => {
   let data: number[] | null
   beforeEach(async () => {
     const stream = await StdIn.readFile('tinyEDG.txt')
@@ -63,5 +64,29 @@ describe('最小生成树', () => {
     const G = new EdgeWeightedGraph(8, data)
     const mst = new KruskalMST(G)
     expect(mst.weight()).toBe(1.81)
+  })
+})
+
+describe('最短路径', () => {
+  let ewdData: number[] | null
+  beforeEach(async () => {
+    const edwStream = await StdIn.readFile('tinyEWD.txt')
+    ewdData = edwStream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
+  })
+
+  test('Dijkstra 算法 lix', () => {
+    const G = new EdgeWeightedDigraph(8, ewdData)
+    const s = 0
+    const sp = new SP(G, s)
+
+    for (let t = 0; t < G.countV(); t++) {
+      console.log(s + 'to' + t)
+      console.log(sp.getDistTo(t))
+      if (sp.hasPathTo(t)) {
+        for (const e of sp.pathTo(t)) {
+          console.log(e + ' ')
+        }
+      }
+    }
   })
 })
