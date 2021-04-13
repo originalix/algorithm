@@ -67,6 +67,8 @@ describe('最小生成树/最短路径', () => {
   })
 })
 
+type DijkstraRes = [number, string[]][]
+
 describe('最短路径', () => {
   let ewdData: number[] | null
   beforeEach(async () => {
@@ -78,15 +80,20 @@ describe('最短路径', () => {
     const G = new EdgeWeightedDigraph(8, ewdData)
     const s = 0
     const sp = new SP(G, s)
-
+    const res: DijkstraRes = []
     for (let t = 0; t < G.countV(); t++) {
-      console.log(s + 'to' + t)
-      console.log(sp.getDistTo(t))
+      res[t] = [sp.getDistTo(t), []]
       if (sp.hasPathTo(t)) {
-        for (const e of sp.pathTo(t)) {
-          console.log(e + ' ')
+        for (const e of sp.pathTo(t)?.reverse()) {
+          res[t][1].push(e.toString())
         }
       }
     }
+
+    expect(res[0]).toStrictEqual([0, []])
+    expect(res[1]).toStrictEqual([1.05, ['0->4 0.38', '4->5 0.35', '5->1 0.32']])
+    expect(res[2]).toStrictEqual([0.26, ['0->2 0.26']])
+    expect(res[3]).toStrictEqual([0.99, ['0->2 0.26', '2->7 0.34', '7->3 0.39']])
+    expect(res[4]).toStrictEqual([0.38, ['0->4 0.38']])
   })
 })
