@@ -51,3 +51,4 @@
 * [有向图的强连通分量](src/algs4/graph/kosaraju.ts)
 * [最小生成树的 Prim 算法](src/algs4/graph/prim-mst.ts)
 * [最小生成树的 Kruskal 算法](src/algs4/graph/kruskal-mst.ts)
+* [最短路径 Dijkstra 算法](src/algs4/graph/dijkstra-sp.ts)
