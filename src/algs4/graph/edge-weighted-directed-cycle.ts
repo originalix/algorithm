@@ -1,16 +1,17 @@
 import Stack from '../1-3/node-stack'
-import Digraph from './digraph'
+import DirectedEdge from './directed-edge'
+import EdgeWeightedDigraph from './edge-weighted-digraph'
 
 /**
- * 寻找有向环
+ * 寻找加权有向图中的环
  */
-export default class DirectedCycle {
+export default class EdgeWeightedDirectedCycle {
   private marked: boolean[]
-  private edgeTo: number[]
-  private cycle: Stack<number>
+  private edgeTo: DirectedEdge[]
+  private cycle: Stack<DirectedEdge>
   private onStack: boolean[]
 
-  constructor(G: Digraph) {
+  constructor(G: EdgeWeightedDigraph) {
     this.marked = []
     this.edgeTo = []
     this.onStack = []
@@ -20,23 +21,25 @@ export default class DirectedCycle {
     }
   }
 
-  private dfs(G: Digraph, v: number) {
+  private dfs(G: EdgeWeightedDigraph, v: number) {
     this.onStack[v] = true
     this.marked[v] = true
     const adj = G.getAdj(v)
     while (adj.hasNext()) {
-      const w = adj.next()
+      const e = adj.next()
+      const w = e.to()
       if (this.hasCycle()) return
       else if (!this.marked[w]) {
-        this.edgeTo[w] = v
         this.dfs(G, w)
       } else if (this.onStack[w]) {
-        this.cycle = new Stack()
-        for (let x = v; x !== w; x = this.edgeTo[x]) {
-          this.cycle.push(x)
+        this.cycle = new Stack<DirectedEdge>()
+        let f = e
+        while (f.from() !== w) {
+          this.cycle.push(f)
+          f = this.edgeTo[f.from()]
         }
-        this.cycle.push(w)
-        this.cycle.push(v)
+        this.cycle.push(f)
+        return
       }
     }
     this.onStack[v] = false
