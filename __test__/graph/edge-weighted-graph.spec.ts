@@ -76,7 +76,7 @@ describe('最短路径', () => {
     ewdData = edwStream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
   })
 
-  test('Dijkstra 算法 lix', () => {
+  test('Dijkstra 算法', () => {
     const G = new EdgeWeightedDigraph(8, ewdData)
     const s = 0
     const sp = new SP(G, s)

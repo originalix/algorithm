@@ -30,6 +30,7 @@ export default class EdgeWeightedDirectedCycle {
       const w = e.to()
       if (this.hasCycle()) return
       else if (!this.marked[w]) {
+        this.edgeTo[w] = e
         this.dfs(G, w)
       } else if (this.onStack[w]) {
         this.cycle = new Stack<DirectedEdge>()
