@@ -5,6 +5,7 @@ import MST from '@/algs4/graph/prim-mst'
 import KruskalMST from '@/algs4/graph/kruskal-mst'
 import EdgeWeightedDigraph from '@/algs4/graph/edge-weighted-digraph'
 import SP from '@/algs4/graph/dijkstra-sp'
+import AcyclicSP from '@/algs4/graph/acyclic-sp'
 
 describe('加权图', () => {
   let data: number[] | null
@@ -67,20 +68,23 @@ describe('最小生成树/最短路径', () => {
   })
 })
 
-type DijkstraRes = [number, string[]][]
+type SPRes = [number, string[]][]
 
 describe('最短路径', () => {
   let ewdData: number[] | null
+  let ewdagData: number[] | null
   beforeEach(async () => {
     const edwStream = await StdIn.readFile('tinyEWD.txt')
     ewdData = edwStream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
+    const ewdagStream = await StdIn.readFile('tinyEWDAG.txt')
+    ewdagData = ewdagStream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
   })
 
   test('Dijkstra 算法', () => {
     const G = new EdgeWeightedDigraph(8, ewdData)
     const s = 0
     const sp = new SP(G, s)
-    const res: DijkstraRes = []
+    const res: SPRes = []
     for (let t = 0; t < G.countV(); t++) {
       res[t] = [sp.getDistTo(t), []]
       if (sp.hasPathTo(t)) {
@@ -95,5 +99,29 @@ describe('最短路径', () => {
     expect(res[2]).toStrictEqual([0.26, ['0->2 0.26']])
     expect(res[3]).toStrictEqual([0.99, ['0->2 0.26', '2->7 0.34', '7->3 0.39']])
     expect(res[4]).toStrictEqual([0.38, ['0->4 0.38']])
+  })
+
+  test('AcyclicSP 算法', () => {
+    const G = new EdgeWeightedDigraph(8, ewdagData)
+    const s = 5
+    const acyclicSP = new AcyclicSP(G, s)
+    const res: SPRes = []
+    for (let t = 0; t < G.countV(); t++) {
+      res[t] = [acyclicSP.getDistTo(t), []]
+      if (acyclicSP.hasPathTo(t)) {
+        for (const e of acyclicSP.pathTo(t)?.reverse()) {
+          res[t][1].push(e.toString())
+        }
+      }
+    }
+
+    expect(res[0]).toStrictEqual([0.73, ['5->4 0.35', '4->0 0.38']])
+    expect(res[1]).toStrictEqual([0.32, ['5->1 0.32']])
+    expect(res[2]).toStrictEqual([0.62, ['5->7 0.28', '7->2 0.34']])
+    expect(res[3]).toStrictEqual([0.61, ['5->1 0.32', '1->3 0.29']])
+    expect(res[4]).toStrictEqual([0.35, ['5->4 0.35']])
+    expect(res[5]).toStrictEqual([0.0, []])
+    expect(res[6]).toStrictEqual([1.13, ['5->1 0.32', '1->3 0.29', '3->6 0.52']])
+    expect(res[7]).toStrictEqual([0.28, ['5->7 0.28']])
   })
 })
