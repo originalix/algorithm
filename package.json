@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack --watch",
     "build": "webpack",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:sp": "jest -t lix",
     "lint": "eslint --ext .ts  src __test__"
   },
