@@ -6,6 +6,7 @@ import KruskalMST from '@/algs4/graph/kruskal-mst'
 import EdgeWeightedDigraph from '@/algs4/graph/edge-weighted-digraph'
 import SP from '@/algs4/graph/dijkstra-sp'
 import AcyclicSP from '@/algs4/graph/acyclic-sp'
+import BellmanFordSp from '@/algs4/graph/bellman-ford-sp'
 
 describe('加权图', () => {
   let data: number[] | null
@@ -124,4 +125,32 @@ describe('最短路径', () => {
     expect(res[6]).toStrictEqual([1.13, ['5->1 0.32', '1->3 0.29', '3->6 0.52']])
     expect(res[7]).toStrictEqual([0.28, ['5->7 0.28']])
   })
+
+  test('BellmanFordSP 算法 lix', async () => {
+    const dataStream = await StdIn.readFile('tinyEWDn.txt')
+    const data = dataStream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
+    const G = new EdgeWeightedDigraph(8, data)
+    const s = 0
+    const bellmanFordSP = new BellmanFordSp(G, s)
+    const res: SPRes = []
+    for (let t = 0; t < G.countV(); t++) {
+      res[t] = [bellmanFordSP.getDistTo(t), []]
+      if (bellmanFordSP.hasPathTo(t)) {
+        for (const e of bellmanFordSP.pathTo(t)?.reverse()) {
+          res[t][1].push(e.toString())
+        }
+      }
+    }
+
+    expect(res[1]).toStrictEqual([
+      1.05,
+      ['0->2 0.26', '2->7 0.34', '7->3 0.39', '3->6 0.52', '6->4 -1.25', '4->5 0.35', '5->1 0.32']
+    ])
+    expect(res[5]).toStrictEqual([
+      0.73,
+      ['0->2 0.26', '2->7 0.34', '7->3 0.39', '3->6 0.52', '6->4 -1.25', '4->5 0.35']
+    ])
+  })
 })
+
+0.26 + 0.34 + 0.39 + 0.52 - 1.25 + 0.35 + 0.32
