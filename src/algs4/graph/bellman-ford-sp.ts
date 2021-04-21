@@ -1,3 +1,4 @@
+import { cloneDeep } from 'lodash'
 import type { ISP } from '@/types'
 import Stack from '@/algs4/1-3/node-stack'
 import Queue from '@/algs4/1-3/node-queue'
@@ -29,7 +30,7 @@ export default class BellmanFordSP implements ISP {
     while (!this.queue.isEmpty() && !this.hasNegativeCycle()) {
       const v = this.queue.dequeue()
       this.onQ[v] = false
-      this.relax(G, v)
+      this.relax(cloneDeep(G), v)
     }
   }
 
@@ -39,7 +40,7 @@ export default class BellmanFordSP implements ISP {
       const e = adj.next()
       const w = e.to()
       if (this.distTo[w] > this.distTo[v] + e.getWeight()) {
-        this.distTo[w] = this.distTo[v] + e.getWeight()
+        this.distTo[w] = +(this.distTo[v] + e.getWeight()).toFixed(2)
         this.edgeTo[w] = e
         if (!this.onQ[w]) {
           this.queue.enqueue(w)
