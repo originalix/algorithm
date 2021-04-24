@@ -126,7 +126,7 @@ describe('最短路径', () => {
     expect(res[7]).toStrictEqual([0.28, ['5->7 0.28']])
   })
 
-  test('BellmanFordSP 算法 lix', async () => {
+  test('BellmanFordSP 算法', async () => {
     const dataStream = await StdIn.readFile('tinyEWDn.txt')
     const data = dataStream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
     const G = new EdgeWeightedDigraph(8, data)
