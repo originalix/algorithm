@@ -1,3 +1,5 @@
+import Queue from '@/algs4/1-3/node-queue'
+
 const R = 26 // 基数 小型字母表
 /**
  * 以字符串为键的符号表的 API
@@ -9,10 +11,10 @@ interface StringST {
   // contains: (key: string) => boolean
   // isEmpty: () => boolean
   // longestPrefixOf: (s: string) => string
-  // keysWithPrefix: (s: string) => string
-  // keysThatMatch: (s: string) => string
+  keysWithPrefix: (s: string) => Queue<string>
+  keysThatMatch: (s: string) => Queue<string>
   // size: () => number
-  // keys: () => string
+  keys: () => Queue<string>
 }
 
 type NodeVal = string | number
@@ -72,6 +74,46 @@ export default class TrieST implements StringST {
     const c = key.charCodeAt(d) - 97
     x.next[c] = this._put(x.next[c], key, val, d + 1)
     return x
+  }
+
+  keys() {
+    return this.keysWithPrefix('')
+  }
+
+  keysWithPrefix(pre: string) {
+    const q = new Queue<string>()
+    this.collect(this._get(this.root, pre, 0), pre, q)
+    return q
+  }
+
+  private collect(x: Node, pre: string, q: Queue<string>) {
+    if (!x) return
+    if (x.val !== null) q.enqueue(pre)
+    for (let i = 0; i < R; i++) {
+      const c = String.fromCodePoint(i + 97)
+      this.collect(x.next[i], pre + c, q)
+    }
+  }
+
+  keysThatMatch(pat: string) {
+    const q = new Queue<string>()
+    this.matchCollect(this.root, '', pat, q)
+    return q
+  }
+
+  private matchCollect(x: Node, pre: string, pat: string, q: Queue<string>) {
+    const d = pre.length
+    if (!x) return
+    if (d === pat.length && x.val !== null) q.enqueue(pre)
+    if (d === pat.length) return
+
+    const next = pat.charAt(d)
+    for (let i = 0; i < R; i++) {
+      const c = String.fromCodePoint(i + 97)
+      if (next === '.' || next === c) {
+        this.matchCollect(x.next[i], pre + c, pat, q)
+      }
+    }
   }
 
   getRoot() {

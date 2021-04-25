@@ -19,24 +19,29 @@ describe('字符串算法测试', () => {
       '3ATW723'
     ]
     LSD.sort(strings, 1)
-    console.log(strings)
     expect(strings).toStrictEqual([
-      '10HV845',
-      '10HV845',
+      '1ICK750',
       '10HV845',
       '1ICK750',
-      '1ICK750',
+      '10HV845',
+      '10HV845',
       '2IYE230',
       '2RLA629',
       '2RLA629',
+      '3CI0720',
+      '3CI0720',
       '3ATW723',
-      '3CI0720',
-      '3CI0720',
-      '4JZY524',
-      '4PGC938'
+      '4PGC938',
+      '4JZY524'
     ])
   })
+
   describe('单词查找树', () => {
+    let data: string[]
+    beforeEach(() => {
+      data = ['by', 'sea', 'sells', 'she', 'shells', 'shore', 'the']
+    })
+
     test('TrieSt put abc', () => {
       const s = 'abc'
       const tree = new TrieST()
@@ -49,7 +54,7 @@ describe('字符串算法测试', () => {
       expect(node.next[2]).not.toBeNull()
     })
 
-    test('TrieSt get abc lix', () => {
+    test('TrieSt get', () => {
       const s = 'abc'
       const tree = new TrieST()
       let val
@@ -61,5 +66,34 @@ describe('字符串算法测试', () => {
       val = tree.get('Hello World')
       expect(val).toBe('test')
     })
+
+    test('TrieSt keysWithPrefix', () => {
+      const tree = new TrieST()
+      data.forEach((key, index) => tree.put(key, index))
+      const queue = tree.keysWithPrefix('s')
+      const res = []
+      while (!queue.isEmpty()) {
+        res.push(queue.dequeue())
+      }
+      expect(res).toStrictEqual(['sea', 'sells', 'she', 'shells', 'shore'])
+    })
+
+    test('TrieSt keys', () => {
+      const tree = new TrieST()
+      data.forEach((key, index) => tree.put(key, index))
+      const queue = tree.keys()
+      const res = []
+      while (!queue.isEmpty()) {
+        res.push(queue.dequeue())
+      }
+      expect(res).toStrictEqual(['by', 'sea', 'sells', 'she', 'shells', 'shore', 'the'])
+    })
+
+    // test('TrieSt keysThatMatch lix', () => {
+    //   const tree = new TrieST()
+    //   data.forEach((key, index) => tree.put(key, index))
+    //   const queue = tree.keysThatMatch('be')
+    //   console.log(queue)
+    // })
   })
 })
