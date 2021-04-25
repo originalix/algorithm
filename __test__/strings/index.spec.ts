@@ -1,5 +1,7 @@
 import LSD from '@/algs4/strings/lsd'
-describe('字符串算法测试 lix', () => {
+import TrieST from '@/algs4/strings/tries-st'
+
+describe('字符串算法测试', () => {
   test('LSD', () => {
     const strings = [
       '4PGC938',
@@ -16,7 +18,8 @@ describe('字符串算法测试 lix', () => {
       '2RLA629',
       '3ATW723'
     ]
-    LSD.sort(strings, 7)
+    LSD.sort(strings, 1)
+    console.log(strings)
     expect(strings).toStrictEqual([
       '10HV845',
       '10HV845',
@@ -32,5 +35,18 @@ describe('字符串算法测试 lix', () => {
       '4JZY524',
       '4PGC938'
     ])
+  })
+  describe('单词查找树', () => {
+    test('TrieSt put abc', () => {
+      const s = 'abc'
+      const tree = new TrieST()
+      tree.put(s, 1)
+      let node = tree.getRoot()
+      expect(node.next[0]).not.toBeNull()
+      node = node.next[0]
+      expect(node.next[1]).not.toBeNull()
+      node = node.next[1]
+      expect(node.next[2]).not.toBeNull()
+    })
   })
 })
