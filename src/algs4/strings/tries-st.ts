@@ -1,4 +1,4 @@
-const R = 26
+const R = 26 // 基数 小型字母表
 /**
  * 以字符串为键的符号表的 API
  */
@@ -34,8 +34,11 @@ class Node implements INode {
   }
 }
 
+/**
+ * 基于单词查找树的符号表
+ */
 export default class TrieST implements StringST {
-  private root: Node
+  private root: Node // 单词查找树 根节点
 
   constructor() {
     this.root = new Node()
@@ -47,10 +50,11 @@ export default class TrieST implements StringST {
     return x.val
   }
 
+  // 返回以 x 作为根节点的紫丹慈查找树中与 key 相关联的值
   private _get(x: Node, key: string, d: number): Node {
     if (!x) return null
     if (d === key.length) return x
-    const c = key.charCodeAt(d) - 97
+    const c = key.charCodeAt(d) - 97 // 找到第 d 个字符所对应的子单词查找树
     return this._get(x.next[c], key, d + 1)
   }
 
@@ -58,6 +62,7 @@ export default class TrieST implements StringST {
     this._put(this.root, key, val, 0)
   }
 
+  // 如果 key 存在于以 x 为根节点的子单词查找树中则更新与它相关联的值
   private _put(x: Node, key: string, val: NodeVal, d: number) {
     if (!x) x = new Node()
     if (d === key.length) {

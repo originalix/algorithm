@@ -48,5 +48,18 @@ describe('字符串算法测试', () => {
       node = node.next[1]
       expect(node.next[2]).not.toBeNull()
     })
+
+    test('TrieSt get abc lix', () => {
+      const s = 'abc'
+      const tree = new TrieST()
+      let val
+      tree.put(s, 1)
+      val = tree.get('abc')
+      expect(val).toBe(1)
+
+      tree.put('Hello World', 'test')
+      val = tree.get('Hello World')
+      expect(val).toBe('test')
+    })
   })
 })

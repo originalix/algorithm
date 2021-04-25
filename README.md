@@ -77,3 +77,8 @@ npm run test
 * [最小生成树的 Kruskal 算法](src/algs4/graph/kruskal-mst.ts)
 * [最短路径 Dijkstra 算法](src/algs4/graph/dijkstra-sp.ts)
 * [无环加权有向图的最短路径算法](src/algs4/graph/acyclic-sp.ts)
+
+## 字符串
+
+*[LSD(低位优先的字符串排序)](src/algs4/strings/LSD.ts)
+*[基于单词查找树的符号表](src/algs4/strings/tries-st.ts)
