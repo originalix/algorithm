@@ -5,15 +5,40 @@ const R = 26 // 基数 小型字母表
  * 以字符串为键的符号表的 API
  */
 interface StringST {
+  /**
+   * 向表中插入键值对 (如果值为 null 则删除键 key)
+   */
   put: (key: string, val: NodeVal) => void
+
+  /**
+   * 键 key 所对应的值 (如果键不存在则返回 null)
+   */
   get: (key: string) => NodeVal
+
   // delete: (key: string) => void
   // contains: (key: string) => boolean
   // isEmpty: () => boolean
-  // longestPrefixOf: (s: string) => string
+
+  /**
+   * s 的前缀中最长的键
+   */
+  longestPrefixOf: (s: string) => string
+
+  /**
+   * 所有以 s 为前缀的键
+   */
   keysWithPrefix: (s: string) => Queue<string>
+
+  /**
+   * 所有和 s 匹配的键（其中 '.' 能匹配任意字符）
+   */
   keysThatMatch: (s: string) => Queue<string>
+
   // size: () => number
+
+  /**
+   * 符号表中的所有键
+   */
   keys: () => Queue<string>
 }
 
@@ -114,6 +139,19 @@ export default class TrieST implements StringST {
         this.matchCollect(x.next[i], pre + c, pat, q)
       }
     }
+  }
+
+  longestPrefixOf(s: string) {
+    const length = this.search(this.root, s, 0, 0)
+    return s.substring(0, length)
+  }
+
+  private search(x: Node, s: string, d: number, length: number): number {
+    if (!x) return length
+    if (x.val !== null) length = d
+    if (d === s.length) return length
+    const c = s.charCodeAt(d) - 97
+    return this.search(x.next[c], s, d + 1, length)
   }
 
   getRoot() {

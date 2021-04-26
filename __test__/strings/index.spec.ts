@@ -89,11 +89,44 @@ describe('字符串算法测试', () => {
       expect(res).toStrictEqual(['by', 'sea', 'sells', 'she', 'shells', 'shore', 'the'])
     })
 
-    // test('TrieSt keysThatMatch lix', () => {
-    //   const tree = new TrieST()
-    //   data.forEach((key, index) => tree.put(key, index))
-    //   const queue = tree.keysThatMatch('be')
-    //   console.log(queue)
-    // })
+    test('TrieSt keysThatMatch', () => {
+      const tree = new TrieST()
+      data.forEach((key, index) => tree.put(key, index))
+      let queue
+      let res = []
+      queue = tree.keysThatMatch('by')
+      while (!queue.isEmpty()) {
+        res.push(queue.dequeue())
+      }
+      expect(res).toStrictEqual(['by'])
+
+      queue = tree.keysThatMatch('se...')
+      res = []
+      while (!queue.isEmpty()) {
+        res.push(queue.dequeue())
+      }
+      expect(res).toStrictEqual(['sells'])
+
+      queue = tree.keysThatMatch('sh....')
+      res = []
+      while (!queue.isEmpty()) {
+        res.push(queue.dequeue())
+      }
+      expect(res).toStrictEqual(['shells'])
+    })
+
+    test('TrieSt longestPrefixOf', () => {
+      const tree = new TrieST()
+      data.forEach((key, index) => tree.put(key, index))
+      let res
+      res = tree.longestPrefixOf('by')
+      expect(res).toBe('by')
+
+      res = tree.longestPrefixOf('she')
+      expect(res).toBe('she')
+
+      res = tree.longestPrefixOf('shellssssssss31231231')
+      expect(res).toBe('shells')
+    })
   })
 })
