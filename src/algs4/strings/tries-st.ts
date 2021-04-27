@@ -15,9 +15,20 @@ interface StringST {
    */
   get: (key: string) => NodeVal
 
-  // delete: (key: string) => void
-  // contains: (key: string) => boolean
-  // isEmpty: () => boolean
+  /**
+   * 删除键 key (和它的值)
+   */
+  delete: (key: string) => void
+
+  /**
+   * 表中是否保存着 key 的值
+   */
+  contains: (key: string) => boolean
+
+  /**
+   * 符号表是否为空
+   */
+  isEmpty: () => boolean
 
   /**
    * s 的前缀中最长的键
@@ -34,7 +45,10 @@ interface StringST {
    */
   keysThatMatch: (s: string) => Queue<string>
 
-  // size: () => number
+  /**
+   * 键值对的数量
+   */
+  size: () => number
 
   /**
    * 符号表中的所有键
@@ -66,9 +80,23 @@ class Node implements INode {
  */
 export default class TrieST implements StringST {
   private root: Node // 单词查找树 根节点
+  private n: number
 
   constructor() {
     this.root = new Node()
+    this.n = 0
+  }
+
+  contains(key: string) {
+    return this.get(key) !== null
+  }
+
+  size() {
+    return this.n
+  }
+
+  isEmpty() {
+    return this.n === 0
   }
 
   get(key: string): NodeVal {
@@ -93,6 +121,7 @@ export default class TrieST implements StringST {
   private _put(x: Node, key: string, val: NodeVal, d: number) {
     if (!x) x = new Node()
     if (d === key.length) {
+      if (x.val === null) this.n++
       x.val = val
       return x
     }
@@ -152,6 +181,27 @@ export default class TrieST implements StringST {
     if (d === s.length) return length
     const c = s.charCodeAt(d) - 97
     return this.search(x.next[c], s, d + 1, length)
+  }
+
+  delete(key: string) {
+    this.root = this._delete(this.root, key, 0)
+  }
+
+  private _delete(x: Node, key: string, d: number): Node {
+    if (!x) return null
+    if (d === key.length) {
+      if (x.val !== null) this.n--
+      x.val = null
+    } else {
+      const c = key.charCodeAt(d) - 97
+      x.next[c] = this._delete(x.next[c], key, d + 1)
+    }
+
+    if (x.val !== null) return x
+    for (let c = 0; c < R; c++) {
+      if (x.next[c] !== null) return x
+    }
+    return null
   }
 
   getRoot() {

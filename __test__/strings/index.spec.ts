@@ -128,5 +128,46 @@ describe('字符串算法测试', () => {
       res = tree.longestPrefixOf('shellssssssss31231231')
       expect(res).toBe('shells')
     })
+
+    test('TrieSt delete', () => {
+      const tree = new TrieST()
+      data.forEach((key, index) => tree.put(key, index))
+      expect(tree.get('by')).toBe(0)
+      tree.delete('by')
+      expect(tree.get('by')).toBeNull()
+
+      expect(tree.get('the')).toBe(6)
+      tree.delete('the')
+      expect(tree.get('the')).toBeNull()
+    })
+
+    test('TrieSt size', () => {
+      const tree = new TrieST()
+      data.forEach((key, index) => tree.put(key, index))
+      expect(tree.size()).toBe(7)
+
+      let n = 7
+      data.forEach((key) => {
+        tree.delete(key)
+        expect(tree.size()).toBe(--n)
+      })
+    })
+
+    test('TrieSt isEmpty', () => {
+      const tree = new TrieST()
+      expect(tree.isEmpty()).toBeTruthy()
+      tree.put('Lix', 2150)
+      expect(tree.isEmpty()).toBeFalsy()
+      tree.delete('Lix')
+      expect(tree.isEmpty()).toBeTruthy()
+    })
+
+    test('TrieSt contains', () => {
+      const tree = new TrieST()
+      expect(tree.contains('Lix')).toBeFalsy()
+      tree.put('Lix', 2150)
+      expect(tree.contains('Lix')).toBeTruthy()
+      expect(tree.contains('Hello')).toBeFalsy()
+    })
   })
 })
