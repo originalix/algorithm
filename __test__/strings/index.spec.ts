@@ -1,5 +1,6 @@
 import LSD from '@/algs4/strings/lsd'
 import TrieST from '@/algs4/strings/tries-st'
+import KMP from '@/algs4/strings/kmp'
 
 describe('字符串算法测试', () => {
   test('LSD', () => {
@@ -156,18 +157,25 @@ describe('字符串算法测试', () => {
     test('TrieSt isEmpty', () => {
       const tree = new TrieST()
       expect(tree.isEmpty()).toBeTruthy()
-      tree.put('Lix', 2150)
+      tree.put('XX', 2150)
       expect(tree.isEmpty()).toBeFalsy()
-      tree.delete('Lix')
+      tree.delete('XX')
       expect(tree.isEmpty()).toBeTruthy()
     })
 
     test('TrieSt contains', () => {
       const tree = new TrieST()
-      expect(tree.contains('Lix')).toBeFalsy()
-      tree.put('Lix', 2150)
-      expect(tree.contains('Lix')).toBeTruthy()
+      expect(tree.contains('XX')).toBeFalsy()
+      tree.put('XX', 2150)
+      expect(tree.contains('XX')).toBeTruthy()
       expect(tree.contains('Hello')).toBeFalsy()
+    })
+  })
+
+  describe('KMP', () => {
+    test('KMP 构造函数 lix', () => {
+      const kmp = new KMP('ababc')
+      expect(kmp).not.toBeNull()
     })
   })
 })
