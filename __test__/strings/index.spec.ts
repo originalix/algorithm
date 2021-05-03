@@ -172,10 +172,12 @@ describe('字符串算法测试', () => {
     })
   })
 
-  describe('KMP', () => {
-    test('KMP 构造函数 lix', () => {
-      const kmp = new KMP('ababc')
-      expect(kmp).not.toBeNull()
-    })
-  })
+  // describe('KMP', () => {
+  //   test('KMP 构造函数 lix', () => {
+  //     const kmp = new KMP('ababac')
+  //     expect(kmp).not.toBeNull()
+  //     const index = kmp.search('aaaaabbbbbababacaaaaaaaaaaaaaaaaaa')
+  //     expect(index).toBe(0)
+  //   })
+  // })
 })

@@ -24,4 +24,18 @@ export default class KMP {
       X = this.dfa[this.pat.charCodeAt(j) - ACode][X]
     }
   }
+
+  search(txt: string): number {
+    let i, j
+    const N = txt.length
+    const M = this.pat.length
+    for (i = 0, j = 0; i < N && j < M; i++) {
+      j = this.dfa[txt.charCodeAt(i) - ACode][j]
+    }
+    if (j === M) {
+      return i - M
+    } else {
+      return N
+    }
+  }
 }
