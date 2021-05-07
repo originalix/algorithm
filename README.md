@@ -80,5 +80,5 @@ npm run test
 
 ## 字符串
 
-*[LSD(低位优先的字符串排序)](src/algs4/strings/LSD.ts)
-*[基于单词查找树的符号表](src/algs4/strings/tries-st.ts)
+* [LSD(低位优先的字符串排序)](src/algs4/strings/LSD.ts)
+* [基于单词查找树的符号表](src/algs4/strings/tries-st.ts)
