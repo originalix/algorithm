@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack --watch",
     "build": "webpack",
-    "test": "jest",
-    "test:sp": "jest -t SP",
+    "test": "jest --coverage",
+    "test:sp": "jest -t lix",
     "lint": "eslint --ext .ts  src __test__"
   },
   "repository": {

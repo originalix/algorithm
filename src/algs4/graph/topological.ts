@@ -3,6 +3,8 @@ import Stack from '../1-3/node-stack'
 import Digraph from './digraph'
 import DirectedCycle from './directed-cycle'
 import DepthFirstOrder from './depth-first-order'
+import EdgeWeightedDigraph from './edge-weighted-digraph'
+import EdgeWeightedDirectedCycle from './edge-weighted-directed-cycle'
 
 /**
  * 拓补排序
@@ -10,9 +12,15 @@ import DepthFirstOrder from './depth-first-order'
 export default class Topological {
   private order: Stack<number>
 
-  constructor(G: Digraph) {
+  // override Topological constructor
+  constructor(G: EdgeWeightedDigraph)
+
+  constructor(G: Digraph)
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  constructor(G: any) {
     const cloneG = cloneDeep(G)
-    const cyclefinder = new DirectedCycle(G)
+    const cyclefinder = G instanceof EdgeWeightedDigraph ? new EdgeWeightedDirectedCycle(G) : new DirectedCycle(G)
     if (!cyclefinder.hasCycle()) {
       const dfs = new DepthFirstOrder(cloneG)
       this.order = dfs.getReversePost()

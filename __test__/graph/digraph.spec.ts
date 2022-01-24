@@ -4,6 +4,7 @@ import Digraph from '@/algs4/graph/digraph'
 import DirectedDFS from '@/algs4/graph/directed-dfs'
 import DepthFirstOrder from '@/algs4/graph/depth-first-order'
 import Topological from '@/algs4/graph/topological'
+import EdgeWeightedDigraph from '@/algs4/graph/edge-weighted-digraph'
 
 describe('有向图', () => {
   let data: number[] | null
@@ -61,7 +62,7 @@ describe('有向图', () => {
     expect(reversePostRes).toStrictEqual([8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4])
   })
 
-  test('拓补排序', () => {
+  test('拓补排序 有向图', () => {
     const G = new Digraph(13, data)
     const top = new Topological(G)
     const res = []
@@ -75,5 +76,24 @@ describe('有向图', () => {
     }
 
     expect(res).toStrictEqual([8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4])
+  })
+
+  test('拓补排序 加权有向图', async () => {
+    const edwStream = await StdIn.readFile('tinyEWDAG.txt')
+    const ewdData = edwStream.reduce((prev, line) => [...prev, ...line.split(' ')], []).map((val: string) => +val)
+
+    const G = new EdgeWeightedDigraph(8, ewdData)
+    const top = new Topological(G)
+    const res = []
+    if (top.isDAG()) {
+      const order = top.getOrder()
+      while (!order.isEmpty()) {
+        res.push(order.pop())
+      }
+    } else {
+      console.log('图中存在有向环')
+    }
+
+    expect(res).toStrictEqual([5, 1, 3, 6, 4, 7, 0, 2])
   })
 })

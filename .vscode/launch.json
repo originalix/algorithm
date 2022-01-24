@@ -13,6 +13,7 @@
         "${workspaceRoot}/node_modules/.bin/jest",
         "--runInBand"
       ],
+      "args": ["-t lix",],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "port": 9229
