@@ -11,7 +11,7 @@ export default class Digraph {
 
   constructor(V: number)
   constructor(V: number, readIn: number[])
-  constructor(V?: never, readIn?: never[]) {
+  constructor(V: never, readIn?: never[]) {
     this.V = V
     this.E = 0
     this.adj = []
